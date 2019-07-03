@@ -48,17 +48,66 @@
                 </a>
             </li>
             <li>
-                <a href="./tables.php">
+                <a href="<?php echo base_url()?>ntsdetails">
                     <i class="nc-icon nc-tile-56"></i>
-                    <p>Table List</p>
+                    <p>NTS Details</p>
                 </a>
             </li>
             <li>
-                <a href="./typography.php">
+                <a href="<?php echo base_url()?>programchoices">
                     <i class="nc-icon nc-caps-small"></i>
-                    <p>Typography</p>
+                    <p>Program Choices</p>
                 </a>
             </li>
+            <li>
+                <a href="<?php echo base_url()?>workhistory">
+                    <i class="nc-icon nc-caps-small"></i>
+                    <p>Work History</p>
+                </a>
+            </li>
+            <li>
+                <a href="<?php echo base_url()?>funddetails">
+                    <i class="nc-icon nc-caps-small"></i>
+                    <p>Fund Details</p>
+                </a>
+            </li>
+            <li>
+                <a href="<?php echo base_url()?>publicationdetails">
+                    <i class="nc-icon nc-tile-56"></i>
+                    <p>Publication Details</p>
+                </a>
+            </li>
+            <li>
+                <a href="<?php echo base_url()?>researchinterests">
+                    <i class="nc-icon nc-tile-56"></i>
+                    <p>Research Interests</p>
+                </a>
+            </li>
+            <li>
+                <a href="<?php echo base_url()?>documentsupload">
+                    <i class="nc-icon nc-tile-56"></i>
+                    <p>Documents Upload</p>
+                </a>
+            </li>
+            <li>
+                <a href="<?php echo base_url()?>otherdetail">
+                    <i class="nc-icon nc-tile-56"></i>
+                    <p>Other Detail</p>
+                </a>
+            </li>
+            <li>
+                <a href="<?php echo base_url()?>confirmfee">
+                    <i class="nc-icon nc-tile-56"></i>
+                    <p>Confirm Fee</p>
+                </a>
+            </li>
+            <li>
+                <a href="<?php echo base_url()?>submitapplication">
+                    <i class="nc-icon nc-tile-56"></i>
+                    <p>Submit Application</p>
+                </a>
+            </li>
+
             <li class="active-pro">
                 <a href="./upgrade.php">
                     <i class="nc-icon nc-spaceship"></i>

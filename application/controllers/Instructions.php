@@ -52,6 +52,56 @@ class Instructions extends CI_Controller {
         $this->load->view('educationdetails');
     }
 
+    public function nts()
+    {
+        $this->load->view('ntsdetails');
+    }
+
+    public function program()
+    {
+        $this->load->view('programchoices');
+    }
+
+    public function workh()
+    {
+        $this->load->view('workhistory');
+    }
+
+    public function fund()
+    {
+        $this->load->view('funddetails');
+    }
+
+    public function publish()
+    {
+        $this->load->view('publicationdetails');
+    }
+
+    public function research()
+    {
+        $this->load->view('researchinterests');
+    }
+
+    public function documents()
+    {
+        $this->load->view('documentsupload');
+    }
+
+    public function other()
+    {
+        $this->load->view('otherdetail');
+    }
+
+    public function fee()
+    {
+        $this->load->view('confirmfee');
+    }
+
+    public function application()
+    {
+        $this->load->view('submitapplication');
+    }
+
 
 }
 

@@ -243,7 +243,8 @@
                                                             </div><!-- /.modal-dialog -->
                                                         </div><!-- /.modal -->
                                                     </td>
-                                                    <td><i class="far fa-edit"></i></td>
+                                                    <td><a href="" data-toggle="modal" data-target="#ModalLoginForm"><i class="far fa-edit" style="font-size: 22px;">
+                                                            </i></a></td>
                                                     <td>Incomplete</td>
                                                     <td>Incomplete</td>
                                                 </tr>
@@ -402,7 +403,9 @@
                                                             </div><!-- /.modal-dialog -->
                                                         </div><!-- /.modal -->
                                                     </td>
-                                                    <td><i class="far fa-edit"></i></td>
+                                                    <td><a href="" data-toggle="modal" data-target="#IntermediateForm">
+                                                            <i class="far fa-edit" style="font-size: 22px;"></i>
+                                                        </a></td>
                                                     <td>Incomplete</td>
                                                     <td>Incomplete</td>
                                                 </tr>
@@ -593,7 +596,9 @@
                                                             </div><!-- /.modal-dialog -->
                                                         </div><!-- /.modal -->
                                                     </td>
-                                                    <td><i class="fas fa-edit"></i></td>
+                                                    <td><a href="" data-toggle="modal" data-target="#14yearForm">
+                                                            <i class="far fa-edit" style="font-size: 22px;"></i>
+                                                        </a></td>
                                                     <td>Incomplete</td>
                                                     <td>Incomplete</td>
                                                 </tr>
@@ -739,7 +744,9 @@
                                                             </div><!-- /.modal-dialog -->
                                                         </div><!-- /.modal -->
                                                     </td>
-                                                    <td><i class="far fa-edit"></i></td>
+                                                    <td><a href="" data-toggle="modal" data-target="#16yearform">
+                                                            <i class="far fa-edit" style="font-size: 22px;"></i>
+                                                        </a></td>
                                                     <td>Incomplete</td>
                                                     <td>Incomplete</td>
                                                 </tr>
@@ -766,22 +773,16 @@
                         <div class="card-body">
                             <ul>
                                 <li>
-                                    Enter Your full name consisting of First Name, Middle Name & Last Name as Per CNIC.
+                                    Enter your education details in this form.
                                 </li>
                                 <li>
-                                    Enter Full Name of Father/ Gurdian as per CNIC consisting of First Name, Middle Name & Last Name.
+                                    If you are applying in <b>undergraduate</b> proggram and your intermediate result is not arrived yet, click the <b>Result Awaiting</b> checkbox.
                                 </li>
                                 <li>
-                                    Enter the date of birth as on your Matriculation Certificate/ O Level Certificate.
+                                    Select the Board / University from the dropdown list and if your Board / University are not mentioned in the dropdownlist, select <b>Other</b> option and enter your Board / University name manually.
                                 </li>
                                 <li>
-                                    Enter Nationality as displayed on your CNIC card or Domicile Certificate.
-                                </li>
-                                <li>
-                                    Enter exactly the same CNIC no as displayed on your CNIC card without dashes.
-                                </li>
-                                <li>
-                                    Enter the mobile number where to contact you.
+                                    Select the subjects of your degree from the dropdown list and if they are not appearing our dropdown then select <b>Other</b> option and enter your subject name manually.
                                 </li>
                             </ul>
                         </div>
