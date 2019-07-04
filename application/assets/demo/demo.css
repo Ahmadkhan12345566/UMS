@@ -53,7 +53,7 @@
   .sidebar .nav>li.active-pro {
     position: absolute;
     width: 100%;
-    bottom: -50%;
+    bottom: -80%;
   }
 }
 

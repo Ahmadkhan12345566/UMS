@@ -19,13 +19,13 @@
         <ul class="nav">
             <li class="active ">
                 <a href="<?php echo base_url()?>instructions">
-                    <i class="nc-icon nc-bank"></i>
+                    <i class="fas fa-exclamation"></i>
                     <p>Instructions</p>
                 </a>
             </li>
             <li>
                 <a href="<?php echo base_url()?>personalinformation">
-                    <i class="nc-icon nc-diamond"></i>
+                    <i class="fas fa-user-graduate"></i>
                     <p>Personal Information</p>
                 </a>
             </li>
@@ -37,73 +37,73 @@
             </li>
             <li>
                 <a href="<?php echo base_url()?>photoupload">
-                    <i class="nc-icon nc-bell-55"></i>
+                    <i class="fas fa-image"></i>
                     <p>Photo Upload</p>
                 </a>
             </li>
             <li>
                 <a href="<?php echo base_url()?>educationdetails">
-                    <i class="nc-icon nc-single-02"></i>
+                    <i class="fas fa-star"></i>
                     <p>Education Details</p>
                 </a>
             </li>
             <li>
                 <a href="<?php echo base_url()?>ntsdetails">
-                    <i class="nc-icon nc-tile-56"></i>
+                    <i class="far fa-chart-bar"></i>
                     <p>NTS Details</p>
                 </a>
             </li>
             <li>
                 <a href="<?php echo base_url()?>programchoices">
-                    <i class="nc-icon nc-caps-small"></i>
+                    <i class="fas fa-star"></i>
                     <p>Program Choices</p>
                 </a>
             </li>
             <li>
                 <a href="<?php echo base_url()?>workhistory">
-                    <i class="nc-icon nc-caps-small"></i>
+                    <i class="fas fa-briefcase"></i>
                     <p>Work History</p>
                 </a>
             </li>
             <li>
                 <a href="<?php echo base_url()?>funddetails">
-                    <i class="nc-icon nc-caps-small"></i>
+                    <i class="fas fa-calculator"></i>
                     <p>Fund Details</p>
                 </a>
             </li>
             <li>
                 <a href="<?php echo base_url()?>publicationdetails">
-                    <i class="nc-icon nc-tile-56"></i>
+                    <i class="fas fa-star"></i>
                     <p>Publication Details</p>
                 </a>
             </li>
             <li>
                 <a href="<?php echo base_url()?>researchinterests">
-                    <i class="nc-icon nc-tile-56"></i>
+                    <i class="far fa-lightbulb"></i>
                     <p>Research Interests</p>
                 </a>
             </li>
             <li>
                 <a href="<?php echo base_url()?>documentsupload">
-                    <i class="nc-icon nc-tile-56"></i>
+                    <i class="fas fa-file"></i>
                     <p>Documents Upload</p>
                 </a>
             </li>
             <li>
                 <a href="<?php echo base_url()?>otherdetail">
-                    <i class="nc-icon nc-tile-56"></i>
+                    <i class="fas fa-ellipsis-h"></i>
                     <p>Other Detail</p>
                 </a>
             </li>
             <li>
                 <a href="<?php echo base_url()?>confirmfee">
-                    <i class="nc-icon nc-tile-56"></i>
+                    <i class="fas fa-check-circle"></i>
                     <p>Confirm Fee</p>
                 </a>
             </li>
             <li>
                 <a href="<?php echo base_url()?>submitapplication">
-                    <i class="nc-icon nc-tile-56"></i>
+                    <i class="fas fa-share"></i>
                     <p>Submit Application</p>
                 </a>
             </li>
