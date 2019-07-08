@@ -83,8 +83,8 @@
                                     <div class="col-md-12 col-sm-12 col-xs-12  pr-1">
                                         <div class="form-group">
                                             <label><b>Funding Agence? </b></label> <br>
-                                            <input type="radio" name="yesFunding" id="yesFunding"> Yes
-                                            <input type="radio" name="noFunding" id="noFunding" checked>   No
+                                            <input type="radio" name="yesFunding" id="yesFunding" required> Yes
+                                            <input type="radio" name="noFunding" id="noFunding" checked required>   No
                                         </div>
                                     </div>
                                 </div>
@@ -92,7 +92,7 @@
                                     <div class="col-md-12 col-sm-12 col-xs-12 pr-1">
                                         <div class="form-group">
                                             <label>Source</label>
-                                            <input type="text" class="form-control" id="source" aria-describedby="sourceHelp" placeholder="">
+                                            <input type="text" class="form-control" id="source" aria-describedby="sourceHelp" required>
                                         </div>
                                     </div>
                                 </div>
@@ -100,13 +100,13 @@
                                     <div class="col-md-6 col-sm-12 col-xs-12">
                                         <div class="form-group">
                                             <label>Amount</label>
-                                            <input type="text" class="form-control" id="amount" aria-describedby="AmountHelp" placeholder="">
+                                            <input type="text" class="form-control" id="amount" aria-describedby="AmountHelp" required>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label>Duration (Month)</label>
-                                            <input type="text" class="form-control" id="duration" aria-describedby="DurationHelp" placeholder="">
+                                            <input type="text" class="form-control" id="duration" aria-describedby="DurationHelp" required>
                                         </div>
                                     </div>
                                 </div>
@@ -142,13 +142,13 @@
                             <hr>
                             <div class="button-container">
                                 <div class="row">
-                                    <div class="col-lg-12 col-md-6 col-6 ml-auto mr-auto">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ml-auto mr-auto">
                                         <small><b>50% marks in NTS is mandatory for admissoin in all undergraduate engineering programs.</b></small>
                                     </div>
                                 </div>
                                 <br>
                                 <div class="row">
-                                    <div class="col-lg-12 col-md-6 col-6 ml-auto mr-auto">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ml-auto mr-auto">
                                         <small><b>Any misuse or false attempt will result in cancellation of your application.
                                                 You are liable to provide the information that is true to the best of your knowledge.
                                                 Administration is not responsible for any misuse or false attempt.</b></small>

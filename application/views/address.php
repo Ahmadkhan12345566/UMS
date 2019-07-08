@@ -82,20 +82,20 @@
                                 <div class="row">
                                     <div class="col-md-12 col-sm-12 col-xs-12  pr-1">
                                         <fieldset class="scheduler-border">
-                                            <legend class="scheduler-border">Permanent Address</legend>
+                                            <legend class="scheduler-border" style="color: black;">Permanent Address</legend>
                                             <div class="form-group">
                                                 <label>Line 1</label>
-                                                <input type="text" class="form-control" id="line1" aria-describedby="line1Help" placeholder="House # 12 Lane G, G-9/2">
+                                                <input type="text" class="form-control" id="line1" aria-describedby="line1Help" placeholder="House # 12 Lane G, G-9/2" required>
                                             </div>
                                             <div class="form-group">
                                                 <label>Line 2</label>
-                                                <input type="text" class="form-control" id="line2" aria-describedby="line2Help" placeholder="">
+                                                <input type="text" class="form-control" id="line2" aria-describedby="line2Help" placeholder="" required>
                                             </div>
                                             <div class="row">
                                                 <div class="col-md-6 col-sm-12 col-xs-12">
                                                     <div class="form-group">
                                                         <label>City</label>
-                                                        <select name="Location" id="Location" required class="form-control">
+                                                        <select name="Location" id="Location" required class="form-control" required>
                                                             <option value="" disabled selected>Select The City</option>
                                                             <option value="Islamabad">Islamabad</option>
                                                             <option value="" disabled>Punjab Cities</option>
@@ -342,7 +342,7 @@
                                                 <div class="col-md-6 col-sm-12 col-xs-12">
                                                     <div class="form-group">
                                                         <label>Phone</label>
-                                                        <input type="text" class="form-control" id="line2" aria-describedby="line2Help" placeholder="051-1234567" style="padding: 9px;">
+                                                        <input type="text" class="form-control" id="line2" aria-describedby="line2Help" placeholder="051-1234567" style="padding: 9px;" required>
                                                     </div>
                                                 </div>
                                             </div>
@@ -353,20 +353,20 @@
                                 <div class="row">
                                     <div class="col-md-12 col-sm-12 col-xs-12 pr-1">
                                         <fieldset class="scheduler-border">
-                                            <legend class="scheduler-border">Mailing Address</legend>
+                                            <legend class="scheduler-border" style="color: black;">Mailing Address</legend>
                                             <div class="form-group">
                                                 <label>Line 1</label>
-                                                <input type="text" class="form-control" id="line1" aria-describedby="line1Help" placeholder="House # 12 Lane G, G-9/2">
+                                                <input type="text" class="form-control" id="line1" aria-describedby="line1Help" placeholder="House # 12 Lane G, G-9/2" required>
                                             </div>
                                             <div class="form-group">
                                                 <label>Line 2</label>
-                                                <input type="text" class="form-control" id="line2" aria-describedby="line2Help" placeholder="">
+                                                <input type="text" class="form-control" id="line2" aria-describedby="line2Help" placeholder="" required>
                                             </div>
                                             <div class="row">
-                                                <div class="col-md-6">
+                                                <div class="col-md-6 col-sm-12 col-xs-12">
                                                     <div class="form-group">
                                                         <label>City</label>
-                                                        <select name='day' id='city' class="form-control">
+                                                        <select name='day' id='city' class="form-control" required>
                                                             <option>Islamabad</option>
                                                             <option>Karachi</option>
                                                             <option>Multan</option>
@@ -375,10 +375,10 @@
                                                         </select>
                                                     </div>
                                                 </div>
-                                                <div class="col-md-6">
+                                                <div class="col-md-6 col-sm-12 col-xs-12">
                                                     <div class="form-group">
                                                         <label>Phone</label>
-                                                        <input type="text" class="form-control" id="line2" aria-describedby="line2Help" placeholder="051-1234567" style="padding: 9px;">
+                                                        <input type="text" class="form-control" id="line2" aria-describedby="line2Help" placeholder="051-1234567" style="padding: 9px;" required>
                                                     </div>
                                                 </div>
                                             </div>
@@ -389,20 +389,20 @@
                                 <div class="row">
                                     <div class="col-md-12 col-sm-12 col-xs-12">
                                         <fieldset class="scheduler-border">
-                                            <legend class="scheduler-border">Father / Guardian Address</legend>
+                                            <legend class="scheduler-border" style="color: black;">Father / Guardian Address</legend>
                                             <div class="form-group">
                                                 <label>Line 1</label>
-                                                <input type="text" class="form-control" id="line1" aria-describedby="line1Help" placeholder="House # 12 Lane G, G-9/2">
+                                                <input type="text" class="form-control" id="line1" aria-describedby="line1Help" placeholder="House # 12 Lane G, G-9/2" required>
                                             </div>
                                             <div class="form-group">
                                                 <label>Line 2</label>
-                                                <input type="text" class="form-control" id="line2" aria-describedby="line2Help" placeholder="">
+                                                <input type="text" class="form-control" id="line2" aria-describedby="line2Help" placeholder="" required>
                                             </div>
                                             <div class="row">
                                                 <div class="col-md-6 col-sm-12 col-xs-12">
                                                     <div class="form-group">
                                                         <label>City</label>
-                                                        <select name='day' id='city' class="form-control">
+                                                        <select name='day' id='city' class="form-control" required>
                                                             <option>Islamabad</option>
                                                             <option>Karachi</option>
                                                             <option>Multan</option>
@@ -414,7 +414,7 @@
                                                 <div class="col-md-6 col-sm-12 col-xs-12">
                                                     <div class="form-group">
                                                         <label>Phone</label>
-                                                        <input type="text" class="form-control" id="line2" aria-describedby="line2Help" placeholder="051-1234567" style="padding: 9px;">
+                                                        <input type="text" class="form-control" id="line2" aria-describedby="line2Help" placeholder="051-1234567" style="padding: 9px;" required>
                                                     </div>
                                                 </div>
                                             </div>
@@ -422,7 +422,7 @@
                                                 <div class="col-md-12 col-sm-12 col-xs-12">
                                                     <div class="form-group">
                                                         <label>Mobile</label>
-                                                        <input type="text" class="form-control" id="line2" aria-describedby="line2Help" placeholder="0300-xxxxxxx" style="padding: 9px;">
+                                                        <input type="text" class="form-control" id="line2" aria-describedby="line2Help" placeholder="0300-xxxxxxx" style="padding: 9px;" required>
                                                         <small">Enter you <b>Father / Guardian</b> mobile number here</small>
                                                     </div>
                                                 </div>
@@ -439,7 +439,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-12 col-xs-12 col">
+                <div class="col-md-4 col-sm-12 col-xs-12">
                     <div class="card card-body">
                         <div class="author">
                             <h5 class="title" style="color: #51CBCE;">Help Center</h5>
@@ -461,7 +461,7 @@
                             <hr>
                             <div class="button-container">
                                 <div class="row">
-                                    <div class="col-lg-12 col-md-6 col-6 ml-auto mr-auto">
+                                    <div class="col-md-12 col-sm-12 col-xs-12 ml-auto mr-auto">
                                         <small><b>Any misuse or false attempt will result in cancellation of your application.
                                                 You are liable to provide the information that is true to the best of your knowledge.
                                                 Administration is not responsible for any misuse or false attempt.</b></small>

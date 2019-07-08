@@ -136,13 +136,13 @@
                                     <div class="col-md-6 col-sm-12 col-xs-12  pr-1">
                                         <div class="form-group">
                                             <label for="control-label">Bank Name</label>
-                                            <input type="text" name="bankname" id="bankname" class="form-control">
+                                            <input type="text" name="bankname" id="bankname" class="form-control" required>
                                         </div>
                                     </div>
                                     <div class="col-md-4 col-sm-12 col-xs-12  pr-1">
                                         <div class="form-group">
                                             <label for="control-label">Branch Code</label>
-                                            <input type="text" name="branchcode" id="branchcode" class="form-control">
+                                            <input type="text" name="branchcode" id="branchcode" class="form-control" required>
                                         </div>
                                     </div>
                                 </div>
@@ -150,13 +150,13 @@
                                     <div class="col-md-6 col-sm-12 col-xs-12  pr-1">
                                         <div class="form-group">
                                             <label for="control-label">Bank Address</label>
-                                            <input type="text" name="bankaddress" id="bankaddress" class="form-control">
+                                            <input type="text" name="bankaddress" id="bankaddress" class="form-control" required>
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-sm-12 col-xs-12  pr-1">
                                         <div class="form-group">
                                             <label for="control-label">Deposit Date</label>
-                                            <input type="date" name="depositdate" id="depositdate" class="form-control">
+                                            <input type="date" name="depositdate" id="depositdate" class="form-control" required>
                                         </div>
                                     </div>
                                 </div>
@@ -180,7 +180,7 @@
                                                         <div id="progress1" style="width: 0%;" class="progress-bar progress-bar-success"></div>
                                                     </div>
                                                 </div>
-                                                <div class="col-xs-4">
+                                                <div class="col-sm-6 col-xs-4">
                                                     <a class="image-link" data-bind="attr: { href: SSCDocument() }" href="/Content/Images/ed_details/ssc/">
                                                         <img data-bind="attr: { src: SSCDocument() }" src="/Content/Images/ed_details/ssc/" width="60" height="60">
                                                     </a>
@@ -196,13 +196,13 @@
                                     <div class="col-md-6 col-sm-12 col-xs-12  pr-1">
                                         <div class="form-group">
                                             <label for="control-label">Bank Name</label>
-                                            <input type="text" name="bankname" id="bankname" class="form-control">
+                                            <input type="text" name="bankname" id="bankname" class="form-control" required>
                                         </div>
                                     </div>
                                     <div class="col-md-4 col-sm-12 col-xs-12  pr-1">
                                         <div class="form-group">
                                             <label for="control-label">Branch Code</label>
-                                            <input type="text" name="branchcode" id="branchcode" class="form-control">
+                                            <input type="text" name="branchcode" id="branchcode" class="form-control" required>
                                         </div>
                                     </div>
                                 </div>
@@ -210,27 +210,27 @@
                                     <div class="col-md-6 col-sm-12 col-xs-12  pr-1">
                                         <div class="form-group">
                                             <label for="control-label">Bank Address</label>
-                                            <input type="text" name="bankaddress" id="bankaddress" class="form-control">
+                                            <input type="text" name="bankaddress" id="bankaddress" class="form-control" required>
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-sm-12 col-xs-12  pr-1">
                                         <div class="form-group">
                                             <label for="control-label">Deposit Date</label>
-                                            <input type="date" name="depositdate" id="depositdate" class="form-control">
+                                            <input type="date" name="depositdate" id="depositdate" class="form-control" required>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-md-12 col-sm-12 col-xs-12  pr-1">
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
                                         <fieldset class="scheduler-border">
-                                            <legend class="scheduler-border">Upload NTS Challan</legend>
+                                            <legend class="scheduler-border" style="color: black;">Upload NTS Challan</legend>
                                             <div class="form-group">
                                                 <div class="alert alert-primary" role="alert">
                                                     Make sure that bank stamp and signatures are clearly visible on the NTS challan image.
                                                 </div>
                                             </div>
                                             <div class="row">
-                                                <div class="col-md-6" data-bind="ifnot: $root.isSubmitted()">
+                                                <div class="col-md-6 col-sm-6" data-bind="ifnot: $root.isSubmitted()">
                                                     <div class="form-group">
                                                         <label class="btn btn-success" style="color: white;">
                                                             <i class="fas fa-plus"></i> Upload NTS Challan <input type="file" id="challan" name="fileupload" hidden>
@@ -240,7 +240,7 @@
                                                         <div id="progress1" style="width: 0%;" class="progress-bar progress-bar-success"></div>
                                                     </div>
                                                 </div>
-                                                <div class="col-xs-4">
+                                                <div class="col-sm-4 col-xs-4">
                                                     <a class="image-link" data-bind="attr: { href: SSCDocument() }" href="/Content/Images/ed_details/ssc/">
                                                         <img data-bind="attr: { src: SSCDocument() }" src="/Content/Images/ed_details/ssc/" width="60" height="60">
                                                     </a>
@@ -290,7 +290,7 @@
                             <hr>
                             <div class="button-container">
                                 <div class="row">
-                                    <div class="col-lg-12 col-md-6 col-sm-12 col-xs-12 ml-auto mr-auto">
+                                    <div class="col-md-12 col-sm-12 col-xs-12 ml-auto mr-auto">
                                         <small><b>Any misuse or false attempt will result in cancellation of your application.
                                                 You are liable to provide the information that is true to the best of your knowledge.
                                                 Administration is not responsible for any misuse or false attempt.</b></small>

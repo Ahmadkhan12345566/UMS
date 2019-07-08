@@ -94,27 +94,27 @@
                                                 <div class="form-group">
                                                     <label class="control-label">Self Employed?</label>
                                                     <div>
-                                                        Yes <input type="radio" name="selfyes" value="">
-                                                        No <input type="radio" name="selfno" value="">
+                                                        Yes <input type="radio" name="selfyes" required>
+                                                        No <input type="radio" name="selfno" required>
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
                                                     <label class="control-label">Job Title</label>
                                                     <div>
-                                                        <input type="text" class="form-control" name="jobtitle" value="">
+                                                        <input type="text" class="form-control" name="jobtitle" required>
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
                                                     <label class="control-label">Employer</label>
                                                     <div>
-                                                        <input type="text" class="form-control" name="employer" value="">
+                                                        <input type="text" class="form-control" name="employer" required>
                                                     </div>
                                                 </div>
                                                 <label for="control-label">From</label>
                                                 <div class="row">
-                                                    <div class="col-md-3 pr-1">
+                                                    <div class="col-md-3">
                                                         <div class="form-group">
-                                                            <select name='date' id='dateddl' class="form-control">
+                                                            <select name='date' id='dateddl' class="form-control" required>
                                                                 <option value='Day'>Date</option>
                                                                 <option value='1'>1</option>
                                                                 <option value='2'>2</option>
@@ -150,9 +150,9 @@
                                                             </select>
                                                         </div>
                                                     </div>
-                                                    <div class="col-md-3 pl-1">
+                                                    <div class="col-md-3">
                                                         <div class="form-group">
-                                                            <select name='month' id='monthddl' class="form-control">
+                                                            <select name='month' id='monthddl' class="form-control" required>
                                                                 <option value="Month">Month</option>
                                                                 <option value="January">January</option>
                                                                 <option value="February">February</option>
@@ -169,9 +169,9 @@
                                                             </select>
                                                         </div>
                                                     </div>
-                                                    <div class="col-md-3 pl-1">
+                                                    <div class="col-md-3">
                                                         <div class="form-group">
-                                                            <select name='year' id='year' class="form-control">
+                                                            <select name='year' id='year' class="form-control" required>
                                                                 <option value='Years'>Years</option>
                                                                 <option value='1970'>1970</option>
                                                                 <option value='1971'>1971</option>
@@ -215,15 +215,15 @@
                                                 <div class="form-group">
                                                     <label for="board">Currently Working?</label>
                                                     <div>
-                                                        Yes <input type="radio" name="selfyes">
-                                                        No <input type="radio" name="selfno" checked>
+                                                        Yes <input type="radio" name="selfyes" required>
+                                                        No <input type="radio" name="selfno" checked required>
                                                     </div>
                                                 </div>
                                                 <label for="control-label">To</label>
                                                 <div class="row">
-                                                    <div class="col-md-3 pr-1">
+                                                    <div class="col-md-3">
                                                         <div class="form-group">
-                                                            <select name='date' id='dateddl' class="form-control">
+                                                            <select name='date' id='dateddl' class="form-control" required>
                                                                 <option value='Day'>Date</option>
                                                                 <option value='1'>1</option>
                                                                 <option value='2'>2</option>
@@ -259,9 +259,9 @@
                                                             </select>
                                                         </div>
                                                     </div>
-                                                    <div class="col-md-3 pl-1">
+                                                    <div class="col-md-3">
                                                         <div class="form-group">
-                                                            <select name='month' id='monthddl' class="form-control">
+                                                            <select name='month' id='monthddl' class="form-control" required>
                                                                 <option value="Month">Month</option>
                                                                 <option value="January">January</option>
                                                                 <option value="February">February</option>
@@ -278,9 +278,9 @@
                                                             </select>
                                                         </div>
                                                     </div>
-                                                    <div class="col-md-3 pl-1">
+                                                    <div class="col-md-3">
                                                         <div class="form-group">
-                                                            <select name='year' id='year' class="form-control">
+                                                            <select name='year' id='year' class="form-control" required>
                                                                 <option value='Years'>Years</option>
                                                                 <option value='1970'>1970</option>
                                                                 <option value='1971'>1971</option>
@@ -326,7 +326,7 @@
                                                         <div class="form-group">
                                                             <label class="control-label">Address</label>
                                                             <div>
-                                                                <textarea name="addressOrg" id="addressOrg" cols="45" rows="3"></textarea>
+                                                                <textarea name="addressOrg" id="addressOrg" cols="45" rows="3" required></textarea>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -334,13 +334,13 @@
                                                 <div class="form-group">
                                                     <label class="control-label">Phone</label>
                                                     <div>
-                                                        <input type="text" class="form-control" name="phone" value="">
+                                                        <input type="text" class="form-control" name="phone" id="phone" required>
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
                                                     <label class="control-label">Email</label>
                                                     <div>
-                                                        <input type="email" class="form-control" name="email" value="">
+                                                        <input type="email" class="form-control" name="email" id="email" required>
                                                     </div>
                                                 </div>
                                                 <div class="row">
@@ -348,7 +348,7 @@
                                                         <div class="form-group">
                                                             <label class="control-label">Job Description</label>
                                                             <div>
-                                                                <textarea name="descriptionJob" id="descriptionJob" cols="45" rows="3"></textarea>
+                                                                <textarea name="descriptionJob" id="descriptionJob" cols="45" rows="3" required></textarea>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -372,7 +372,7 @@
                         <div class="card-body">
                             <form>
                                 <div class="row">
-                                    <div class="col-md-12 col-sm-12 col-xs-12 px-1">
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
                                         <div class="form-group">
                                             <table class="table">
                                                 <thead class="thead-light">
@@ -428,7 +428,7 @@
                             <hr>
                             <div class="button-container">
                                 <div class="row">
-                                    <div class="col-lg-12 col-md-6 col-6 ml-auto mr-auto">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ml-auto mr-auto">
                                         <small><b>Any misuse or false attempt will result in cancellation of your application.
                                                 You are liable to provide the information that is true to the best of your knowledge.
                                                 Administration is not responsible for any misuse or false attempt.</b></small>

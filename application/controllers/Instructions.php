@@ -27,6 +27,11 @@ class Instructions extends CI_Controller {
         $this->load->helper(array('form', 'url'));
     }
 
+    public function signup()
+    {
+        $this->load->view('index');
+    }
+
     public function index()
     {
         $this->load->view('instructions');

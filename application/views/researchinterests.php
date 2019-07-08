@@ -80,18 +80,18 @@
                         <div class="card-body">
                             <form>
                                 <div class="row">
-                                    <div class="col-md-12 col-sm-12 col-xs-12  pr-1">
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
                                         <input type="hidden" class="form-control" value="">
                                         <div class="form-group">
                                             <label>Research Interest 2</label>
-                                            <input type="text" class="form-control" id="ResearchIn1" aria-describedby="ResearchIn1" placeholder="">
+                                            <input type="text" class="form-control" id="ResearchIn1" aria-describedby="ResearchIn1" required>
                                         </div>
                                         <div class="form-group">
                                             <label>Research Interest 2</label>
-                                            <input type="text" class="form-control" id="ResearchIn2" aria-describedby="ResearchIn2" placeholder="">
+                                            <input type="text" class="form-control" id="ResearchIn2" aria-describedby="ResearchIn2" required>
                                         </div>
                                         <label>Research Interest 3</label>
-                                        <input type="text" class="form-control" id="ResearchIn3" aria-describedby="ResearchIn3" placeholder="">
+                                        <input type="text" class="form-control" id="ResearchIn3" aria-describedby="ResearchIn3" required>
                                     </div>
                                 </div>
                                 <div class="row">
@@ -103,7 +103,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-12 col-xs-12 col">
+                <div class="col-md-4 col-sm-12 col-xs-12">
                     <div class="card card-body">
                         <div class="author">
                             <h5 class="title" style="color: #51CBCE;">Help Center</h5>
@@ -125,7 +125,7 @@
                             <hr>
                             <div class="button-container">
                                 <div class="row">
-                                    <div class="col-lg-12 col-md-6 col-sm-6 col-xs-12 ml-auto mr-auto">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ml-auto mr-auto">
                                         <small><b>Any misuse or false attempt will result in cancellation of your application.
                                                 You are liable to provide the information that is true to the best of your knowledge.
                                                 Administration is not responsible for any misuse or false attempt.</b></small>

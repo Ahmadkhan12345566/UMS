@@ -107,7 +107,7 @@
                                                        <div id="progress1" style="width: 0%;" class="progress-bar progress-bar-success"></div>
                                                    </div>
                                                </div>
-                                               <div class="col-xs-4">
+                                               <div class="col-sm-4 col-xs-4">
                                                    <a class="image-link" data-bind="attr: { href: SSCDocument() }" href="/Content/Images/ed_details/ssc/">
                                                        <img data-bind="attr: { src: SSCDocument() }" src="/Content/Images/ed_details/ssc/" width="60" height="60">
                                                    </a>
@@ -129,7 +129,7 @@
                                                             <div id="progress1" style="width: 0%;" class="progress-bar progress-bar-success"></div>
                                                         </div>
                                                     </div>
-                                                    <div class="col-xs-4">
+                                                    <div class="col-sm-6 col-xs-4">
                                                         <a class="image-link" data-bind="attr: { href: SSCDocument() }" href="/Content/Images/ed_details/ssc/">
                                                             <img data-bind="attr: { src: SSCDocument() }" src="/Content/Images/ed_details/ssc/" width="60" height="60">
                                                         </a>
@@ -141,10 +141,10 @@
                                         <fieldset>
                                             <legend>Upload CNIC</legend>
                                             <div class="row">
-                                                <div class="col-md-6" data-bind="ifnot: $root.isSubmitted()">
+                                                <div class="col-md-6 col-sm-12 col-xs-12" data-bind="ifnot: $root.isSubmitted()">
                                                     <div class="form-group">
-                                                        <input type="radio" name="cnicoption" id="cnicoption" checked> CNIC
-                                                        <input type="radio" name="b-foamoption" id="b-foamoption"> B-Foam
+                                                        <input type="radio" name="cnicoption" id="cnicoption" checked required> CNIC
+                                                        <input type="radio" name="b-foamoption" id="b-foamoption" required> B-Foam
                                                     </div>
                                                     <div class="form-group">
                                                         <label class="btn btn-success" style="color: white;">
@@ -155,7 +155,7 @@
                                                         <div id="progress1" style="width: 0%;" class="progress-bar progress-bar-success"></div>
                                                     </div>
                                                 </div>
-                                                <div class="col-md-4">
+                                                <div class="col-xs-4 col-sm-6">
                                                     <br><br>
                                                     <a class="image-link" data-bind="attr: { href: SSCDocument() }" href="/Content/Images/ed_details/ssc/">
                                                         <img data-bind="attr: { src: SSCDocument() }" src="/Content/Images/ed_details/ssc/" width="60" height="60">
@@ -173,7 +173,7 @@
                                                         <div id="progress1" style="width: 0%;" class="progress-bar progress-bar-success"></div>
                                                     </div>
                                                 </div>
-                                                <div class="col-xs-4">
+                                                <div class="col-xs-4 col-sm-6">
                                                     <a class="image-link" data-bind="attr: { href: SSCDocument() }" href="/Content/Images/ed_details/ssc/">
                                                         <img data-bind="attr: { src: SSCDocument() }" src="/Content/Images/ed_details/ssc/" width="60" height="60">
                                                     </a>
@@ -190,7 +190,7 @@
                                                         <div id="progress1" style="width: 0%;" class="progress-bar progress-bar-success"></div>
                                                     </div>
                                                 </div>
-                                                <div class="col-xs-4">
+                                                <div class="col-xs-4 col-sm-6">
                                                     <a class="image-link" data-bind="attr: { href: SSCDocument() }" href="/Content/Images/ed_details/ssc/">
                                                         <img data-bind="attr: { src: SSCDocument() }" src="/Content/Images/ed_details/ssc/" width="60" height="60">
                                                     </a>
@@ -213,7 +213,7 @@
                                                         <div id="progress1" style="width: 0%;" class="progress-bar progress-bar-success"></div>
                                                     </div>
                                                 </div>
-                                                <div class="col-xs-4">
+                                                <div class="col-xs-4 col-sm-6">
                                                     <a class="image-link" data-bind="attr: { href: SSCDocument() }" href="/Content/Images/ed_details/ssc/">
                                                         <img data-bind="attr: { src: SSCDocument() }" src="/Content/Images/ed_details/ssc/" width="60" height="60">
                                                     </a>
@@ -235,7 +235,7 @@
                                                         <div id="progress1" style="width: 0%;" class="progress-bar progress-bar-success"></div>
                                                     </div>
                                                 </div>
-                                                <div class="col-xs-4">
+                                                <div class="col-xs-4 col-sm-6">
                                                     <a class="image-link" data-bind="attr: { href: SSCDocument() }" href="/Content/Images/ed_details/ssc/">
                                                         <img data-bind="attr: { src: SSCDocument() }" src="/Content/Images/ed_details/ssc/" width="60" height="60">
                                                     </a>
@@ -296,7 +296,7 @@
                             <hr>
                             <div class="button-container">
                                 <div class="row">
-                                    <div class="col-md-12 col-sm-6 col-xs-6 ml-auto mr-auto">
+                                    <div class="col-md-12 col-sm-12 col-xs-12 ml-auto mr-auto">
                                         <small><b>Any misuse or false attempt will result in cancellation of your application.
                                                 You are liable to provide the information that is true to the best of your knowledge.
                                                 Administration is not responsible for any misuse or false attempt.</b></small>

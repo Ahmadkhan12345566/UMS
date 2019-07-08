@@ -94,19 +94,19 @@
                                                 <div class="form-group">
                                                     <label class="control-label">Title</label>
                                                     <div>
-                                                        <input type="text" class="form-control" name="title" value="">
+                                                        <input type="text" name="title" id="title" class="form-control" name="title" required>
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
                                                     <label class="control-label">Type</label>
-                                                    <select name="typejob" id="typejob" class="form-control">
+                                                    <select name="typejob" id="typejob" class="form-control" required>
                                                         <option value="Conference">Conference</option>
                                                         <option value="Journal">Journal</option>
                                                     </select>
                                                 </div>
                                                 <div class="form-group">
                                                     <label class="control-label">Level</label>
-                                                    <select name="level" id="level" class="form-control">
+                                                    <select name="level" id="level" class="form-control" required>
                                                         <option value="National">National</option>
                                                         <option value="International">International</option>
                                                     </select>
@@ -114,30 +114,30 @@
                                                 <div class="form-group">
                                                     <label class="control-label">First Author</label>
                                                     <div>
-                                                        <input type="text" class="form-control" name="firstauthor" value="">
+                                                        <input type="text" class="form-control" name="firstauthor" required>
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
                                                     <label class="control-label">Second Author</label>
                                                     <div>
-                                                        <input type="text" class="form-control" name="secondauthor" value="">
+                                                        <input type="text" class="form-control" name="secondauthor" required>
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
                                                     <label class="control-label">Third Author</label>
                                                     <div>
-                                                        <input type="text" class="form-control" name="thirdauthor" value="">
+                                                        <input type="text" class="form-control" name="thirdauthor" required>
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
                                                     <label class="control-label">Publisher</label>
                                                     <div>
-                                                        <input type="text" class="form-control" name="publisher" value="">
+                                                        <input type="text" class="form-control" name="publisher" required>
                                                     </div>
                                                 </div>
                                                     <div class="form-group">
                                                         <label for="board">Publishing Years</label>
-                                                        <select name='year' id='year' class="form-control">
+                                                        <select name='year' id='year' class="form-control" required>
                                                             <option value='Years'>Years</option>
                                                             <option value='1970'>1970</option>
                                                             <option value='1971'>1971</option>
@@ -177,19 +177,19 @@
                                                         </select>
                                                     </div>
                                                 <div class="form-group">
-                                                    <label for="board">Volume</label>
-                                                    <input type="text" class="form-control" name="volume">
+                                                    <label for="control-label">Volume</label>
+                                                    <input type="text" class="form-control" name="volume" id="volume" required>
                                                 </div>
                                                 <div class="form-group">
                                                     <label class="control-label">Chapters</label>
                                                     <div>
-                                                        <input type="text" class="form-control" name="chapters" value="">
+                                                        <input type="text" class="form-control" name="chapters" id="chapters">
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
                                                     <label class="control-label">Pages</label>
                                                     <div>
-                                                        <input type="text" class="form-control" name="pages" value="">
+                                                        <input type="text" class="form-control" name="pages" id="pages" required>
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
@@ -211,7 +211,7 @@
                         <div class="card-body">
                             <form>
                                 <div class="row">
-                                    <div class="col-md-12 col-sm-12 col-xs-12 px-1">
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
                                         <div class="form-group">
                                             <table class="table">
                                                 <thead class="thead-light">
@@ -264,7 +264,7 @@
                             <hr>
                             <div class="button-container">
                                 <div class="row">
-                                    <div class="col-lg-12 col-md-6 col-6 ml-auto mr-auto">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ml-auto mr-auto">
                                         <small><b>Any misuse or false attempt will result in cancellation of your application.
                                                 You are liable to provide the information that is true to the best of your knowledge.
                                                 Administration is not responsible for any misuse or false attempt.</b></small>

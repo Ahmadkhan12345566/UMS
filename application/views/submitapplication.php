@@ -80,7 +80,7 @@
                         <div class="card-body">
                             <form>
                                 <div class="row">
-                                    <div class="col-md-12 col-sm-12 col-xs-12  pr-1">
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
                                         <div class="form-group">
                                             <h4>Submit Application </h4>
                                             <div class="alert alert-success" role="alert">
@@ -90,16 +90,14 @@
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-md-12 col-sm-12 col-xs-12  pr-1">
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
                                         <fieldset class="scheduler-border">
-                                            <legend class="scheduler-border">Undertaking</legend>
+                                            <legend class="scheduler-border" style="color: black;">Undertaking</legend>
                                             <div class="form-group">
-                                                <div>
-                                                    <p>
+                                                <div style="color: black;">
                                                         I hereby solemnly declare that the information provided on the Admission System Sections / Admission Form,
                                                         is true and correct to best of my knowledge . I also undertake that I have read and understood all the
                                                         instructions provided in the current prospectus and agree to abide by them.
-                                                    </p>
                                                 </div>
                                             </div>
                                         </fieldset>
@@ -107,7 +105,7 @@
                                 </div>
                                 <br>
                                 <div class="row">
-                                    <div class="col-md-12 col-sm-12 col-xs-12  pr-1">
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
                                         <div class="form-group">
                                             <div class="alert alert-danger" role="alert">
                                                 <b>Note:</b> If you click <b>Submit Application</b> button, your application form will be submitted online.
@@ -126,7 +124,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-12 col-xs-12 col">
+                <div class="col-md-4 col-sm-12 col-xs-12">
                     <div class="card card-body">
                         <div class="author">
                             <h5 class="title" style="color: #51CBCE;">Help Center</h5>
@@ -148,7 +146,7 @@
                             <hr>
                             <div class="button-container">
                                 <div class="row">
-                                    <div class="col-lg-12 col-md-6 col-sm-12 col-xs-12 ml-auto mr-auto">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ml-auto mr-auto">
                                         <small><b>Any misuse or false attempt will result in cancellation of your application.
                                                 You are liable to provide the information that is true to the best of your knowledge.
                                                 Administration is not responsible for any misuse or false attempt.</b></small>

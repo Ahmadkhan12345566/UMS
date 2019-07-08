@@ -75,7 +75,7 @@
 
         <div class="content">
             <div class="row">
-                <div class="col-md-8">
+                <div class="col-md-8 col-sm-12 col-xs-12">
                     <div class="card card-user">
                         <div class="card-header">
                             <h5 class="card-title">Personal Information</h5>
@@ -83,7 +83,7 @@
                         <div class="card-body">
                             <form>
                                 <div class="row">
-                                    <div class="col-md-12 col-sm-12 col-xs-12 px-1">
+                                    <div class="col-md-12 col-sm-8 col-xs-8">
                                         <div class="form-group">
                                             <table class="table table-bordered">
                                                 <thead>
@@ -111,7 +111,7 @@
                                                                     </div>
                                                                     <div class="modal-body">
                                                                         <form role="form" method="POST" action="">
-                                                                            <input type="hidden" name="_token" value="">
+                                                                            <input type="hidden" name="_token" value="" required>
                                                                             <div class="form-group">
                                                                                 <label class="control-label">Degree</label>
                                                                                 <select name="degree" id="degree" required class="form-control">
@@ -122,7 +122,7 @@
                                                                             </div>
                                                                             <div class="form-group">
                                                                                 <label class="control-label">Year of Passing</label>
-                                                                                <select name='day' id='blah' class="form-control">
+                                                                                <select name='passingyear' id='passingyear' class="form-control" required>
                                                                                     <option value='Years'>Years</option>
                                                                                     <option value='2019'>2019</option>
                                                                                     <option value='2018'>2018</option>
@@ -168,7 +168,7 @@
                                                                             </div>
                                                                             <div class="form-group">
                                                                                 <label for="board">Board</label>
-                                                                                <select class="form-control">
+                                                                                <select name="board/uni" id="board/uni" class="form-control" required>
                                                                                     <option value="">Select Board / University</option>
                                                                                     <option value="Agha Khan University Board, Karachi">Agha Khan University Board, Karachi</option>
                                                                                     <option value="BISE, Abbotabad">BISE, Abbotabad</option>
@@ -208,7 +208,7 @@
                                                                             </div>
                                                                             <div class="form-group">
                                                                                 <label class="control-label">Subjects</label>
-                                                                                <select name="degree" id="degree" required class="form-control">
+                                                                                <select name="subject" id="subject" required class="form-control">
                                                                                     <option value="Select">Select Subject</option>
                                                                                     <option value="Science">Science</option>
                                                                                     <option value="Arts">Arts</option>
@@ -218,13 +218,13 @@
                                                                             <div class="form-group">
                                                                                 <label class="control-label">Minimum Marks</label>
                                                                                 <div>
-                                                                                    <input type="text" class="form-control" name="minimum-marks" value="">
+                                                                                    <input type="text" class="form-control" name="minimum-marks" required>
                                                                                 </div>
                                                                             </div>
                                                                             <div class="form-group">
                                                                                 <label class="control-label">Obtained Marks</label>
                                                                                 <div>
-                                                                                    <input type="text" class="form-control" name="obtainedmarks" value="">
+                                                                                    <input type="text" class="form-control" name="obtainedmarks" required>
                                                                                 </div>
                                                                             </div>
                                                                             <div class="form-group">
@@ -278,7 +278,7 @@
                                                                             </div>
                                                                             <div class="form-group">
                                                                                 <label class="control-label">Year of Passing</label>
-                                                                                <select name='day' id='blah' class="form-control">
+                                                                                <select name="passyear" id="passyear" class="form-control" required>
                                                                                     <option value='Years'>Years</option>
                                                                                     <option value='2019'>2019</option>
                                                                                     <option value='2018'>2018</option>
@@ -324,7 +324,7 @@
                                                                             </div>
                                                                             <div class="form-group">
                                                                                 <label for="board">Board</label>
-                                                                                <select class="form-control">
+                                                                                <select name="board/uni" id="board/uni" class="form-control" required>
                                                                                     <option value="">Select Board / University</option>
                                                                                     <option value="Agha Khan University Board, Karachi">Agha Khan University Board, Karachi</option>
                                                                                     <option value="BISE, Abbotabad">BISE, Abbotabad</option>
@@ -378,13 +378,13 @@
                                                                             <div class="form-group">
                                                                                 <label class="control-label">Minimum Marks</label>
                                                                                 <div>
-                                                                                    <input type="text" class="form-control" name="minimum-marks" value="">
+                                                                                    <input type="text" class="form-control" name="minimum-marks" required>
                                                                                 </div>
                                                                             </div>
                                                                             <div class="form-group">
                                                                                 <label class="control-label">Obtained Marks</label>
                                                                                 <div>
-                                                                                    <input type="text" class="form-control" name="obtainedmarks" value="">
+                                                                                    <input type="text" class="form-control" name="obtainedmarks" required>
                                                                                 </div>
                                                                             </div>
                                                                             <div class="form-group">
@@ -427,7 +427,7 @@
                                                                             <input type="hidden" name="_token" value="">
                                                                             <div class="form-group">
                                                                                 <label class="control-label">Degree</label>
-                                                                                <select name="degree" id="degree" required class="form-control">
+                                                                                <select name="degree" id="degree" class="form-control" required>
                                                                                     <option value="Select">Select Degree</option>
                                                                                     <option value="BA">BA</option>
                                                                                     <option value="BSC">BSC</option>
@@ -437,7 +437,7 @@
                                                                             </div>
                                                                             <div class="form-group">
                                                                                 <label class="control-label">Year of Passing</label>
-                                                                                <select name='day' id='blah' class="form-control">
+                                                                                <select name='passyear' id='passyear' class="form-control" required>
                                                                                     <option value='Years'>Years</option>
                                                                                     <option value='2019'>2019</option>
                                                                                     <option value='2018'>2018</option>
@@ -483,7 +483,7 @@
                                                                             </div>
                                                                             <div class="form-group">
                                                                                 <label for="board">Board</label>
-                                                                                <select name="" id="" class="form-control">
+                                                                                <select name="board/uni" id="board/uni" class="form-control" required>
                                                                                     <option value="">Select Board / University</option>
                                                                                     <option value="Abdul Wali Khan University Mardan">Abdul Wali Khan University Mardan</option>
                                                                                     <option value="Aga Khan University">Aga Khan University</option>
@@ -556,7 +556,7 @@
                                                                             </div>
                                                                             <div class="form-group">
                                                                                 <label class="control-label">Subjects</label>
-                                                                                <select name="degree" id="degree" required class="form-control">
+                                                                                <select name="subject" id="subject" class="form-control" required>
                                                                                     <option value="Select">Select Subject</option>
                                                                                     <option value="Arts">Arts</option>
                                                                                     <option value="Biological Science">Biological Science</option>
@@ -571,13 +571,13 @@
                                                                             <div class="form-group">
                                                                                 <label class="control-label">Minimum Marks</label>
                                                                                 <div>
-                                                                                    <input type="text" class="form-control" name="minimum-marks" value="">
+                                                                                    <input type="text" class="form-control" name="minimum-marks" required>
                                                                                 </div>
                                                                             </div>
                                                                             <div class="form-group">
                                                                                 <label class="control-label">Obtained Marks</label>
                                                                                 <div>
-                                                                                    <input type="text" class="form-control" name="obtainedmarks" value="">
+                                                                                    <input type="text" class="form-control" name="obtainedmarks" required>
                                                                                 </div>
                                                                             </div>
                                                                             <div class="form-group">
@@ -621,12 +621,12 @@
                                                                             <div class="form-group">
                                                                                 <label class="control-label">Degree</label>
                                                                                 <div>
-                                                                                    <input type="text" class="form-control" name="degreename" value="">
+                                                                                    <input type="text" class="form-control" name="degreename" required>
                                                                                 </div>
                                                                             </div>
                                                                             <div class="form-group">
                                                                                 <label class="control-label">Year of Passing</label>
-                                                                                <select name='day' id='blah' class="form-control">
+                                                                                <select name="passyear" id="passyear" class="form-control">
                                                                                     <option value='Years'>Years</option>
                                                                                     <option value='2019'>2019</option>
                                                                                     <option value='2018'>2018</option>
@@ -672,7 +672,7 @@
                                                                             </div>
                                                                             <div class="form-group">
                                                                                 <label for="board">Board</label>
-                                                                                <select class="form-control">
+                                                                                <select name="board/uni" id="board/uni" class="form-control">
                                                                                     <option value="">Select Board / University</option>
                                                                                     <option value="Agha Khan University Board, Karachi">Agha Khan University Board, Karachi</option>
                                                                                     <option value="BISE, Abbotabad">BISE, Abbotabad</option>
@@ -713,19 +713,19 @@
                                                                             <div class="form-group">
                                                                                 <label class="control-label">Subjects</label>
                                                                                 <div>
-                                                                                    <input type="text" class="form-control" name="subjectname" value="">
+                                                                                    <input type="text" class="form-control" name="subjectname" required>
                                                                                 </div>
                                                                             </div>
                                                                             <div class="form-group">
                                                                                 <label class="control-label">CGPA Max / Max Marks</label>
                                                                                 <div>
-                                                                                    <input type="text" class="form-control" name="cgpa" value="">
+                                                                                    <input type="text" class="form-control" name="cgpa" required>
                                                                                 </div>
                                                                             </div>
                                                                             <div class="form-group">
                                                                                 <label class="control-label">CGPA Obtained / Obtained Marks</label>
                                                                                 <div>
-                                                                                    <input type="text" class="form-control" name="cgpaobtained" value="">
+                                                                                    <input type="text" class="form-control" name="cgpaobtained" required>
                                                                                 </div>
                                                                             </div>
                                                                             <div class="form-group">
@@ -790,7 +790,7 @@
                             <hr>
                             <div class="button-container">
                                 <div class="row">
-                                    <div class="col-lg-12 col-md-6 col-6 ml-auto mr-auto">
+                                    <div class="col-md-12 col-sm-12 col-xs-12 ml-auto mr-auto">
                                         <small><b>Any misuse or false attempt will result in cancellation of your application.
                                                 You are liable to provide the information that is true to the best of your knowledge.
                                                 Administration is not responsible for any misuse or false attempt.</b></small>

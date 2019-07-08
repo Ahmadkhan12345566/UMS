@@ -83,17 +83,17 @@
                                     <div class="col-md-7 col-sm-12 col-xs-12  pr-1">
                                         <div class="form-group">
                                             <label>Hostel Facility: (limited seats available)</label> &nbsp;&nbsp;&nbsp;
-                                            <input type="radio" name="yesseats" id="yesseats"> Yes &nbsp;
-                                            <input type="radio" name="noseats" id="noseats" checked> No
+                                            <input type="radio" name="yesseats" id="yesseats"required> Yes &nbsp;
+                                            <input type="radio" name="noseats" id="noseats" checked required> No
                                         </div>
                                         <div class="form-group">
                                             <label>Transport Facility</label> &nbsp;&nbsp;&nbsp;
-                                            <input type="radio" name="transport" id="transport"> Yes &nbsp;
-                                            <input type="radio" name="transport" id="transport" checked> No
+                                            <input type="radio" name="transport" id="transport" required> Yes &nbsp;
+                                            <input type="radio" name="transport" id="transport" checked required> No
                                         </div>
                                         <div class="form-group">
                                             <label>How you Know</label>&nbsp;&nbsp;
-                                            <select name="aboutums" id="aboutums" class="form-control">
+                                            <select name="aboutums" id="aboutums" class="form-control" required>
                                                 <option value="How you come to know about us">How you come to know about us </option>
                                                 <option value="Facebook">Facebook</option>
                                                 <option value="Person">Referred By a person</option>
@@ -129,7 +129,7 @@
                             <hr>
                             <div class="button-container">
                                 <div class="row">
-                                    <div class="col-lg-12 col-md-6 col-sm-12 col-xs-12 ml-auto mr-auto">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ml-auto mr-auto">
                                         <small><b>Any misuse or false attempt will result in cancellation of your application.
                                                 You are liable to provide the information that is true to the best of your knowledge.
                                                 Administration is not responsible for any misuse or false attempt.</b></small>

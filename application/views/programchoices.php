@@ -90,9 +90,9 @@
                                 </div>
                                 <label>Program Choice 1</label>
                                 <div class="row">
-                                    <div class="col-md-8 col-sm-12 col-xs-12 pr-1">
+                                    <div class="col-md-8 col-sm-12 col-xs-12">
                                         <div class="form-group">
-                                            <select name='day' id='dayddl' class="form-control">
+                                            <select name='subject1' id='subject1' class="form-control" required>
                                                 <option value="">Select 1st Choice</option>
                                                 <option value="2">MBA (1.5 years)</option>
                                                 <option value="5">MS(Biochemistry and Molecular Biology)</option>
@@ -123,9 +123,9 @@
                                 </div>
                                 <label>Program Choice 2</label>
                                 <div class="row">
-                                    <div class="col-md-8 col-sm-12 col-xs-12 pr-1">
+                                    <div class="col-md-8 col-sm-12 col-xs-12">
                                         <div class="form-group">
-                                            <select name='day' id='dayddl' class="form-control">
+                                            <select name='subject2' id='subject2' class="form-control" required>
                                                 <option value="">Select 2nd Choice</option>
                                                 <option value="2">MBA (1.5 years)</option>
                                                 <option value="5">MS(Biochemistry and Molecular Biology)</option>
@@ -156,9 +156,9 @@
                                 </div>
                                 <label>Program Choice 3</label>
                                 <div class="row">
-                                    <div class="col-md-8 col-sm-12 col-xs-12 pr-1">
+                                    <div class="col-md-8 col-sm-12 col-xs-12">
                                         <div class="form-group">
-                                            <select name='day' id='dayddl' class="form-control">
+                                            <select name='subject3' id='subject3' class="form-control" required>
                                                 <option value="">Select 3rd Choice</option>
                                                 <option value="2">MBA (1.5 years)</option>
                                                 <option value="5">MS(Biochemistry and Molecular Biology)</option>
@@ -189,9 +189,9 @@
                                 </div>
                                 <label>Program Choice 4</label>
                                 <div class="row">
-                                    <div class="col-md-8 col-sm-12 col-xs-12 pr-1">
+                                    <div class="col-md-8 col-sm-12 col-xs-12">
                                         <div class="form-group">
-                                            <select name='day' id='dayddl' class="form-control">
+                                            <select name=subject4' id='subject4' class="form-control" required>
                                                 <option value="">Select 4th Choice</option>
                                                 <option value="2">MBA (1.5 years)</option>
                                                 <option value="5">MS(Biochemistry and Molecular Biology)</option>
@@ -222,9 +222,9 @@
                                 </div>
                                 <label>Program Choice 5</label>
                                 <div class="row">
-                                    <div class="col-md-8 col-sm-12 col-xs-12 pr-1">
+                                    <div class="col-md-8 col-sm-12 col-xs-12">
                                         <div class="form-group">
-                                            <select name='day' id='dayddl' class="form-control">
+                                            <select name='subject5' id='subject5' class="form-control" required>
                                                 <option value="">Select 5th Choice</option>
                                                 <option value="2">MBA (1.5 years)</option>
                                                 <option value="5">MS(Biochemistry and Molecular Biology)</option>
@@ -255,9 +255,9 @@
                                 </div>
                                 <label>Program Choice 6</label>
                                 <div class="row">
-                                    <div class="col-md-8 col-sm-12 col-xs-12 pr-1">
+                                    <div class="col-md-8 col-sm-12 col-xs-12">
                                         <div class="form-group">
-                                            <select name='day' id='dayddl' class="form-control">
+                                            <select name='subject6' id='subject6' class="form-control" required>
                                                 <option value="">Select 6th Choice</option>
                                                 <option value="2">MBA (1.5 years)</option>
                                                 <option value="5">MS(Biochemistry and Molecular Biology)</option>
@@ -288,9 +288,9 @@
                                 </div>
                                 <label>Program Choice 7</label>
                                 <div class="row">
-                                    <div class="col-md-8 col-sm-12 col-xs-12 pr-1">
+                                    <div class="col-md-8 col-sm-12 col-xs-12">
                                         <div class="form-group">
-                                            <select name='day' id='dayddl' class="form-control">
+                                            <select name='subject7' id='subject7' class="form-control" required>
                                                 <option value="">Select 7th Choice</option>
                                                 <option value="2">MBA (1.5 years)</option>
                                                 <option value="5">MS(Biochemistry and Molecular Biology)</option>
@@ -336,7 +336,7 @@
                         <div class="card-footer">
                             <div class="button-container">
                                 <div class="row">
-                                    <div class="col-lg-12 col-sm-12 col-xm-12 ml-auto mr-auto">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xm-12 ml-auto mr-auto">
                                         <small><b>Upon selection of a program choice, the eligibility criteria for that program appears below the program
                                                 dropdown list. Carefully read that and make sure you are eligibile to apply in that program.
                                                 In case, the admission office finds that your qualification doesn't meet the eligibility criteria for that
@@ -358,7 +358,7 @@
                             <hr>
                             <div class="button-container">
                                 <div class="row">
-                                    <div class="col-lg-12 col-md-6 col-6 ml-auto mr-auto">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xm-12 ml-auto mr-auto">
                                         <small><b>Any misuse or false attempt will result in cancellation of your application.
                                                 You are liable to provide the information that is true to the best of your knowledge.
                                                 Administration is not responsible for any misuse or false attempt.</b></small>

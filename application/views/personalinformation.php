@@ -83,24 +83,24 @@
                         <div class="card-body">
                             <form>
                                 <div class="row">
-                                    <div class="col-md-6 pr-1">
+                                    <div class="col-md-6 col-sm-12 col-xs-12">
                                         <div class="form-group">
                                             <label>Full Name</label>
-                                            <input type="text" class="form-control"  placeholder="Your full name" value="">
+                                            <input type="text" class="form-control"  placeholder="Your full name" required>
                                         </div>
                                     </div>
-                                    <div class="col-md-6 px-1">
+                                    <div class="col-md-6 col-sm-12 col-xs-12">
                                         <div class="form-group">
                                             <label>Father Name</label>
-                                            <input type="text" class="form-control" placeholder="Your father full name" value="">
+                                            <input type="text" class="form-control" placeholder="Your father full name" required>
                                         </div>
                                     </div>
                                 </div>
                                 <label>DOB</label>
                                 <div class="row">
-                                    <div class="col-md-2 pr-1">
+                                    <div class="col-md-2">
                                         <div class="form-group">
-                                            <select name='day' id='dayddl' class="form-control">
+                                            <select name='day' id='dayddl' class="form-control" required>
                                                 <option value='Day'>Day</option>
                                                 <option value='1'>1</option>
                                                 <option value='2'>2</option>
@@ -136,9 +136,9 @@
                                             </select>
                                         </div>
                                     </div>
-                                    <div class="col-md-3 pl-1">
+                                    <div class="col-md-3">
                                         <div class="form-group">
-                                            <select name='month' id='monthddl' class="form-control">
+                                            <select name='month' id='monthddl' class="form-control" required>
                                                 <option value="Month">Month</option>
                                                 <option value="January">January</option>
                                                 <option value="February">February</option>
@@ -155,9 +155,9 @@
                                             </select>
                                         </div>
                                     </div>
-                                    <div class="col-md-3 pl-1">
+                                    <div class="col-md-3">
                                         <div class="form-group">
-                                            <select name='day' id='blah' class="form-control">
+                                            <select name='day' id='blah' class="form-control" required>
                                                 <option value='Years'>Years</option>
                                                 <option value='1970'>1970</option>
                                                 <option value='1971'>1971</option>
@@ -202,7 +202,7 @@
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <label>Gender</label>
-                                            <select name='gender' id='gender' class="form-control">
+                                            <select name='gender' id='gender' class="form-control" required>
                                                 <option value="SelectGender">Select Gender</option>
                                                 <option value="Male">Male</option>
                                                 <option value="Female">Female</option>
@@ -212,10 +212,10 @@
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-md-6 pr-1">
+                                    <div class="col-md-6">
                                         <div class="form-group">
                                             <label>Nationality</label>
-                                            <select name="nationality" class="form-control" id="nationality">
+                                            <select name="nationality" class="form-control" id="nationality"required>
                                                 <option value="">Pakistan</option>
                                                 <option value="afghan">Afghan</option>
                                                 <option value="albanian">Albanian</option>
@@ -412,10 +412,10 @@
                                             </select>
                                         </div>
                                     </div>
-                                    <div class="col-md-6 px-1">
+                                    <div class="col-md-6">
                                         <div class="form-group">
                                             <label>Domicile</label>
-                                            <select name='domicile' id='Domicile' class="form-control">
+                                            <select name='domicile' id='Domicile' class="form-control" required>
                                                 <option value="SelectGender">Select</option>
                                                 <option value="AJK">AJK</option>
                                                 <option value="Balochistan">Balochistan</option>
@@ -433,23 +433,23 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label>CNIC</label>
-                                            <input type="text" class="form-control" placeholder="xxxxx-xxxxxxx-x" value="" maxlength="15">
+                                            <input type="text" class="form-control" name="cnic" id="cnic" placeholder="xxxxx-xxxxxxx-x" maxlength="15" required>
                                             <small>Format : 61101-1234567-8</small>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <label>Father / Guardian CNIC</label>
                                         <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="xxxxx-xxxxxxx-x" value="" maxlength="15">
+                                            <input type="text" class="form-control" name="fcnic" id="cnic" placeholder="xxxxx-xxxxxxx-x" maxlength="15" required>
 
                                         </div>
                                     </div>
                                 </div>
                                 <label>Mobile Number</label>
                                 <div class="row">
-                                    <div class="col-md-2">
+                                    <div class="col-md-2 col-sm-2 col-xs-2">
                                         <div class="form-group">
-                                            <select name='ICT' id='serialcodes' class="form-control form">
+                                            <select name='ICT' id='serialcodes' class="form-control form" required>
                                                 <option value='0300'>0300</option>
                                                 <option value='0301'>0301</option>
                                                 <option value='0302'>0302</option>
@@ -495,9 +495,9 @@
                                         </div>
                                     </div>
                                     <div style="margin-top: 6px;">&#8722;</div>
-                                    <div class="col-md-4">
+                                    <div class="col-md-4 col-sm-4 col-xs-4">
                                         <div class="form-group">
-                                            <input type="text" name="numbers" class="form-control" id="numbers" maxlength="7" style="padding: 9px; font-size: 14px;">
+                                            <input type="text" name="mobnumbers" class="form-control" id="mobnumbers" maxlength="7" required style="padding: 9px; font-size: 14px;">
                                         </div>
                                     </div>
                                 </div>
@@ -541,7 +541,7 @@
                             <hr>
                             <div class="button-container">
                                 <div class="row">
-                                    <div class="col-lg-12 col-md-6 col-6 ml-auto mr-auto">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ml-auto mr-auto">
                                             <small><b>Any misuse or false attempt will result in cancellation of your application.
                                                     You are liable to provide the information that is true to the best of your knowledge.
                                                     Administration is not responsible for any misuse or false attempt.</b></small>
