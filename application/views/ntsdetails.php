@@ -78,7 +78,7 @@
                 <div class="col-md-8">
                     <div class="card card-user">
                         <div class="card-body">
-                            <form>
+                            <form method="post" action="<?php echo base_url("Student/nts_detail")?>">
                                 <div class="row">
                                     <div class="col-md-12 col-sm-12 col-xs-12  pr-1">
                                         <fieldset class="scheduler-border">
@@ -88,8 +88,8 @@
                                             </div>
                                             <div class="form-group">
                                                 <label><b>Print NTS Challan?</b></label> <br>
-                                                Yes <input type="radio" name="yesnts" id="yesnts" required >
-                                                No <input type="radio" name="nonts" id="nonts" checked required>
+                                                Yes <input type="radio" name="nts" id="nts">
+                                                No <input type="radio" name="nts" id="nts"  checked="checked">
                                             </div>
                                         </fieldset>
                                     </div>
@@ -106,7 +106,7 @@
                                                 <div class="col-md-6">
                                                     <div class="form-group">
                                                         <label>Roll Number</label>
-                                                        <input type="text" class="form-control" id="ntsrollnumber" aria-describedby="ntsrollnumberHelp" required>
+                                                        <input type="text" class="form-control" name="ntsrollnumber" id="ntsrollnumber" aria-describedby="ntsrollnumberHelp" required>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6">
@@ -123,7 +123,7 @@
                                                 <div class="col-md-6">
                                                     <div class="form-group">
                                                         <label>Obtained Marks</label>
-                                                        <input type="text" class="form-control" id="obtainedmarks" aria-describedby="obtainedmarksHelp" required>
+                                                        <input type="text" class="form-control" name="obtainedmarks" id="obtainedmarks" aria-describedby="obtainedmarksHelp" required>
                                                     </div>
                                                 </div>
                                             </div>
@@ -211,13 +211,13 @@
                                                 <div class="col-md-6">
                                                     <div class="form-group">
                                                         <label>NTS Test Centre Name</label>
-                                                        <input type="text" class="form-control" id="ntscenter" aria-describedby="ntscenterHelp" required>
+                                                        <input type="text" class="form-control" name="ntscenter" id="ntscenter" aria-describedby="ntscenterHelp" required>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6">
                                                     <div class="form-group">
                                                         <label>Roll Number</label>
-                                                        <input type="text" class="form-control" id="ntsrollnumber" aria-describedby="ntsrollnumberHelp" required>
+                                                        <input type="text" class="form-control" name="allntsrollnumber" id="allntsrollnumber" aria-describedby="ntsrollnumberHelp" required>
                                                     </div>
                                                 </div>
                                             </div>

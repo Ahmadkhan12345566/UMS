@@ -78,13 +78,13 @@
                 <div class="col-md-8">
                     <div class="card card-user">
                         <div class="card-body">
-                            <form>
+                            <form method="post" action="<?php echo base_url("Student/fund_detail")?>">
                                 <div class="row">
                                     <div class="col-md-12 col-sm-12 col-xs-12  pr-1">
                                         <div class="form-group">
                                             <label><b>Funding Agence? </b></label> <br>
-                                            <input type="radio" name="yesFunding" id="yesFunding" required> Yes
-                                            <input type="radio" name="noFunding" id="noFunding" checked required>   No
+                                            <input type="radio" name="Funding" id="Funding" value="Yes"> Yes
+                                            <input type="radio" name="Funding" id="Funding" value="No" checked >   No
                                         </div>
                                     </div>
                                 </div>
@@ -92,7 +92,7 @@
                                     <div class="col-md-12 col-sm-12 col-xs-12 pr-1">
                                         <div class="form-group">
                                             <label>Source</label>
-                                            <input type="text" class="form-control" id="source" aria-describedby="sourceHelp" required>
+                                            <input type="text" class="form-control" name="source" id="source" aria-describedby="sourceHelp" required>
                                         </div>
                                     </div>
                                 </div>
@@ -100,13 +100,13 @@
                                     <div class="col-md-6 col-sm-12 col-xs-12">
                                         <div class="form-group">
                                             <label>Amount</label>
-                                            <input type="text" class="form-control" id="amount" aria-describedby="AmountHelp" required>
+                                            <input type="text" class="form-control" name="amount" id="amount" aria-describedby="AmountHelp" required>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label>Duration (Month)</label>
-                                            <input type="text" class="form-control" id="duration" aria-describedby="DurationHelp" required>
+                                            <input type="text" class="form-control" name="duration" id="duration" aria-describedby="DurationHelp" required>
                                         </div>
                                     </div>
                                 </div>

@@ -78,26 +78,26 @@
                 <div class="col-md-8">
                     <div class="card card-user">
                         <div class="card-body">
-                            <form><br><br>
+                            <form method="post" action="<?php echo base_url("Student/other_detail")?>"><br><br>
                                 <div class="row">
                                     <div class="col-md-7 col-sm-12 col-xs-12  pr-1">
                                         <div class="form-group">
                                             <label>Hostel Facility: (limited seats available)</label> &nbsp;&nbsp;&nbsp;
-                                            <input type="radio" name="yesseats" id="yesseats"required> Yes &nbsp;
-                                            <input type="radio" name="noseats" id="noseats" checked required> No
+                                            <input type="radio" name="seats" id="seats" value="Yes"> Yes &nbsp;
+                                            <input type="radio" name="seats" id="seats" value="No" checked> No
                                         </div>
                                         <div class="form-group">
                                             <label>Transport Facility</label> &nbsp;&nbsp;&nbsp;
-                                            <input type="radio" name="transport" id="transport" required> Yes &nbsp;
-                                            <input type="radio" name="transport" id="transport" checked required> No
+                                            <input type="radio" name="transport" id="transport" value="Yes"> Yes &nbsp;
+                                            <input type="radio" name="transport" id="transport" value="No" checked> No
                                         </div>
                                         <div class="form-group">
                                             <label>How you Know</label>&nbsp;&nbsp;
                                             <select name="aboutums" id="aboutums" class="form-control" required>
                                                 <option value="How you come to know about us">How you come to know about us </option>
                                                 <option value="Facebook">Facebook</option>
-                                                <option value="Person">Referred By a person</option>
-                                                <option value="other">Other</option>
+                                                <option value="Referred By a person">Referred By a person</option>
+                                                <option value="Other">Other</option>
                                             </select>
                                         </div>
                                     </div>

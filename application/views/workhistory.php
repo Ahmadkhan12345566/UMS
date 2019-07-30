@@ -89,32 +89,31 @@
                                             <h3 class="modal-title">Enter Work Detail</h3>
                                         </div>
                                         <div class="modal-body">
-                                            <form role="form" method="POST" action="">
-                                                <input type="hidden" name="_token" value="">
+                                            <form role="form" method="POST" action="<?php echo base_url("Student/work_history")?>">
                                                 <div class="form-group">
                                                     <label class="control-label">Self Employed?</label>
                                                     <div>
-                                                        Yes <input type="radio" name="selfyes" required>
-                                                        No <input type="radio" name="selfno" required>
+                                                        Yes <input type="radio" name="self">
+                                                        No <input type="radio" name="self" checked>
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
                                                     <label class="control-label">Job Title</label>
                                                     <div>
-                                                        <input type="text" class="form-control" name="jobtitle" required>
+                                                        <input type="text" class="form-control" name="jobtitle" id="jobtitle" required>
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
                                                     <label class="control-label">Employer</label>
                                                     <div>
-                                                        <input type="text" class="form-control" name="employer" required>
+                                                        <input type="text" class="form-control" name="employer" id="employer" required>
                                                     </div>
                                                 </div>
                                                 <label for="control-label">From</label>
                                                 <div class="row">
                                                     <div class="col-md-3">
                                                         <div class="form-group">
-                                                            <select name='date' id='dateddl' class="form-control" required>
+                                                            <select name='formdate' id='formdateddl' class="form-control" required>
                                                                 <option value='Day'>Date</option>
                                                                 <option value='1'>1</option>
                                                                 <option value='2'>2</option>
@@ -152,7 +151,7 @@
                                                     </div>
                                                     <div class="col-md-3">
                                                         <div class="form-group">
-                                                            <select name='month' id='monthddl' class="form-control" required>
+                                                            <select name='formmonth' id='formmonthddl' class="form-control" required>
                                                                 <option value="Month">Month</option>
                                                                 <option value="January">January</option>
                                                                 <option value="February">February</option>
@@ -171,7 +170,7 @@
                                                     </div>
                                                     <div class="col-md-3">
                                                         <div class="form-group">
-                                                            <select name='year' id='year' class="form-control" required>
+                                                            <select name='formyear' id='formyear' class="form-control" required>
                                                                 <option value='Years'>Years</option>
                                                                 <option value='1970'>1970</option>
                                                                 <option value='1971'>1971</option>
@@ -215,15 +214,15 @@
                                                 <div class="form-group">
                                                     <label for="board">Currently Working?</label>
                                                     <div>
-                                                        Yes <input type="radio" name="selfyes" required>
-                                                        No <input type="radio" name="selfno" checked required>
+                                                        Yes <input type="radio" name="currentlyworking">
+                                                        No <input type="radio" name="currentlyworking">
                                                     </div>
                                                 </div>
                                                 <label for="control-label">To</label>
                                                 <div class="row">
                                                     <div class="col-md-3">
                                                         <div class="form-group">
-                                                            <select name='date' id='dateddl' class="form-control" required>
+                                                            <select name='Todate' id='Todateddl' class="form-control" required>
                                                                 <option value='Day'>Date</option>
                                                                 <option value='1'>1</option>
                                                                 <option value='2'>2</option>
@@ -261,7 +260,7 @@
                                                     </div>
                                                     <div class="col-md-3">
                                                         <div class="form-group">
-                                                            <select name='month' id='monthddl' class="form-control" required>
+                                                            <select name='Tomonth' id='Tomonthddl' class="form-control" required>
                                                                 <option value="Month">Month</option>
                                                                 <option value="January">January</option>
                                                                 <option value="February">February</option>
@@ -280,7 +279,7 @@
                                                     </div>
                                                     <div class="col-md-3">
                                                         <div class="form-group">
-                                                            <select name='year' id='year' class="form-control" required>
+                                                            <select name='Toyear' id='Toyear' class="form-control" required>
                                                                 <option value='Years'>Years</option>
                                                                 <option value='1970'>1970</option>
                                                                 <option value='1971'>1971</option>
@@ -348,7 +347,7 @@
                                                         <div class="form-group">
                                                             <label class="control-label">Job Description</label>
                                                             <div>
-                                                                <textarea name="descriptionJob" id="descriptionJob" cols="45" rows="3" required></textarea>
+                                                                <textarea name="description" id="description" cols="45" rows="3" required></textarea>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -370,7 +369,7 @@
                             </div><!-- /.modal -->
                         </div>
                         <div class="card-body">
-                            <form>
+                            <form method="post" action="<?php echo base_url("Student/work_history_submit")?>">
                                 <div class="row">
                                     <div class="col-md-12 col-sm-12 col-xs-12">
                                         <div class="form-group">

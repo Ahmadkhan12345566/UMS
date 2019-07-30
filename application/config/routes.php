@@ -71,3 +71,9 @@ $route['documentsupload'] = 'Instructions/documents';
 $route['otherdetail'] = 'Instructions/other';
 $route['confirmfee'] = 'Instructions/fee';
 $route['submitapplication'] = 'Instructions/application';
+
+$route['admin'] = 'Admin/index';
+$route['admissionrequests'] = 'Admin/ad_requests';
+$route['users'] = 'Admin/usersadd';
+$route['user'] = 'Admin/user';
+$route['studentlist'] = 'Admin/studentlist';

@@ -89,12 +89,11 @@
                                             <h3 class="modal-title">Enter Publication Details</h3>
                                         </div>
                                         <div class="modal-body">
-                                            <form role="form" method="POST" action="">
-                                                <input type="hidden" name="_token" value="">
+                                            <form role="form" method="POST" action="<?php echo base_url("Student/publication_details")?>">
                                                 <div class="form-group">
                                                     <label class="control-label">Title</label>
                                                     <div>
-                                                        <input type="text" name="title" id="title" class="form-control" name="title" required>
+                                                        <input type="text" name="title" id="title" class="form-control" required>
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
@@ -114,25 +113,25 @@
                                                 <div class="form-group">
                                                     <label class="control-label">First Author</label>
                                                     <div>
-                                                        <input type="text" class="form-control" name="firstauthor" required>
+                                                        <input type="text" class="form-control" name="firstauthor" id="firstauthor" required>
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
                                                     <label class="control-label">Second Author</label>
                                                     <div>
-                                                        <input type="text" class="form-control" name="secondauthor" required>
+                                                        <input type="text" class="form-control" name="secondauthor" id="secondauthor" required>
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
                                                     <label class="control-label">Third Author</label>
                                                     <div>
-                                                        <input type="text" class="form-control" name="thirdauthor" required>
+                                                        <input type="text" class="form-control" name="thirdauthor" id="thirdauthor" required>
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
                                                     <label class="control-label">Publisher</label>
                                                     <div>
-                                                        <input type="text" class="form-control" name="publisher" required>
+                                                        <input type="text" class="form-control" name="publisher" id="publisher" required>
                                                     </div>
                                                 </div>
                                                     <div class="form-group">
@@ -209,7 +208,7 @@
                             </div><!-- /.modal -->
                         </div>
                         <div class="card-body">
-                            <form>
+                            <form method="post" action="<?php echo base_url("Student/publication_details_submit")?>">
                                 <div class="row">
                                     <div class="col-md-12 col-sm-12 col-xs-12">
                                         <div class="form-group">
@@ -223,9 +222,9 @@
                                                 </thead>
                                                 <tbody>
                                                 <tr>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
+                                                    <td name="title"></td>
+                                                    <td name="organization"></td>
+                                                    <td name="action"></td>
                                                 </tr>
                                                 </tbody>
                                             </table>

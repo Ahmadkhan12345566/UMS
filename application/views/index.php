@@ -57,7 +57,7 @@
                             <form action="#" method="post">
                                     <div class="form-group">
                                         <label>Universities</label>
-                                        <select class="form-control">
+                                        <select class="form-control" name="universities">
                                             <option>Choose University</option>
                                             <option>Karachi</option>
                                             <option>Islamabad</option>
@@ -67,7 +67,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label>Campuses</label>
-                                        <select class="form-control">
+                                        <select class="form-control" name="campuses">
                                             <option>Choose Campus</option>
                                             <option>Karachi</option>
                                             <option>Islamabad</option>
@@ -77,19 +77,19 @@
                                     </div>
                                     <div class="form-group">
                                         <label>Name</label>
-                                        <input type="text" class="form-control" id="name" aria-describedby="nameHelp" placeholder="Enter your name">
+                                        <input type="text" class="form-control" id="name"  name="name" aria-describedby="nameHelp" placeholder="Enter your name">
                                     </div>
                                     <div class="form-group">
                                         <label>Email</label>
-                                        <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter your email address">
+                                        <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Enter your email address">
                                     </div>
                                     <div class="form-group">
                                         <label>Password</label>
-                                        <input type="password" class="form-control" id="name" aria-describedby="passwordHelp" placeholder="Enter your password">
+                                        <input type="password" class="form-control" id="password" name="password" aria-describedby="passwordHelp" placeholder="Enter your password">
                                     </div>
                                     <div class="form-group">
                                         <label>Renter Password</label>
-                                        <input type="password" class="form-control" id="name" aria-describedby="nameHelp" placeholder="Enter your confirm password">
+                                        <input type="password" class="form-control" id="password" name="password" aria-describedby="nameHelp" placeholder="Enter your confirm password">
                                     </div>
                                     <!--<input placeholder="Search Location" name="name" type="text" required="">
                                     <input placeholder="Search Location" name="name" type="text" required="">

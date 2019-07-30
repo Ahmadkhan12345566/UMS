@@ -13,7 +13,7 @@
                             <span class="navbar-toggler-bar bar3"></span>
                         </button>
                     </div>
-                    <a class="navbar-brand" href="#pablo">Personal Information</a>
+                    <a class="navbar-brand" href="#pablo">Instructions</a>
                 </div>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-bar navbar-kebab"></span>
@@ -81,26 +81,26 @@
                             <h5 class="card-title">Personal Information</h5>
                         </div>
                         <div class="card-body">
-                            <form method="post" action="<?php echo base_url("Student/personal_information");?>">
+                            <form>
                                 <div class="row">
-                                    <div class="col-md-6 col-sm-12 col-xs-12">
+                                    <div class="col-md-6 pr-1">
                                         <div class="form-group">
                                             <label>Full Name</label>
-                                            <input type="text" class="form-control" name="fullname" placeholder="Your full name" required>
+                                            <input type="text" class="form-control"  placeholder="Your full name" value="">
                                         </div>
                                     </div>
-                                    <div class="col-md-6 col-sm-12 col-xs-12">
+                                    <div class="col-md-6 px-1">
                                         <div class="form-group">
                                             <label>Father Name</label>
-                                            <input type="text" class="form-control" name="fathername" placeholder="Your father full name" required>
+                                            <input type="text" class="form-control" placeholder="Your father full name" value="">
                                         </div>
                                     </div>
                                 </div>
                                 <label>DOB</label>
                                 <div class="row">
-                                    <div class="col-md-2">
+                                    <div class="col-md-2 pr-1">
                                         <div class="form-group">
-                                            <select name='day' id='dayddl' class="form-control" required>
+                                            <select name='day' id='dayddl' class="form-control">
                                                 <option value='Day'>Day</option>
                                                 <option value='1'>1</option>
                                                 <option value='2'>2</option>
@@ -136,9 +136,9 @@
                                             </select>
                                         </div>
                                     </div>
-                                    <div class="col-md-3">
+                                    <div class="col-md-3 pl-1">
                                         <div class="form-group">
-                                            <select name='month' id='monthddl' class="form-control" required>
+                                            <select name='month' id='monthddl' class="form-control">
                                                 <option value="Month">Month</option>
                                                 <option value="January">January</option>
                                                 <option value="February">February</option>
@@ -155,9 +155,9 @@
                                             </select>
                                         </div>
                                     </div>
-                                    <div class="col-md-3">
+                                    <div class="col-md-3 pl-1">
                                         <div class="form-group">
-                                            <select name='year' id='year' class="form-control" required>
+                                            <select name='day' id='blah' class="form-control">
                                                 <option value='Years'>Years</option>
                                                 <option value='1970'>1970</option>
                                                 <option value='1971'>1971</option>
@@ -202,7 +202,7 @@
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <label>Gender</label>
-                                            <select name='gender' id='gender' class="form-control" required>
+                                            <select name='gender' id='gender' class="form-control">
                                                 <option value="SelectGender">Select Gender</option>
                                                 <option value="Male">Male</option>
                                                 <option value="Female">Female</option>
@@ -212,10 +212,10 @@
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-md-6">
+                                    <div class="col-md-6 pr-1">
                                         <div class="form-group">
                                             <label>Nationality</label>
-                                            <select name="nationality" class="form-control" id="nationality"required>
+                                            <select name="nationality" class="form-control" id="nationality">
                                                 <option value="">Pakistan</option>
                                                 <option value="afghan">Afghan</option>
                                                 <option value="albanian">Albanian</option>
@@ -412,10 +412,10 @@
                                             </select>
                                         </div>
                                     </div>
-                                    <div class="col-md-6">
+                                    <div class="col-md-6 px-1">
                                         <div class="form-group">
                                             <label>Domicile</label>
-                                            <select name='domicile' id='Domicile' class="form-control" required>
+                                            <select name='domicile' id='Domicile' class="form-control">
                                                 <option value="SelectGender">Select</option>
                                                 <option value="AJK">AJK</option>
                                                 <option value="Balochistan">Balochistan</option>
@@ -433,23 +433,71 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label>CNIC</label>
-                                            <input type="text" class="form-control" name="cnic" id="cnic" placeholder="xxxxx-xxxxxxx-x" maxlength="15" required>
+                                            <input type="text" class="form-control" placeholder="xxxxx-xxxxxxx-x" value="" maxlength="15">
                                             <small>Format : 61101-1234567-8</small>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <label>Father / Guardian CNIC</label>
                                         <div class="form-group">
-                                            <input type="text" class="form-control" name="fcnic" id="cnic" placeholder="xxxxx-xxxxxxx-x" maxlength="15" required>
+                                            <input type="text" class="form-control" placeholder="xxxxx-xxxxxxx-x" value="" maxlength="15">
 
                                         </div>
                                     </div>
                                 </div>
                                 <label>Mobile Number</label>
                                 <div class="row">
-                                    <div class="col-md-6 col-sm-4 col-xs-4">
+                                    <div class="col-md-2">
                                         <div class="form-group">
-                                            <input type="text" name="mobnumbers" class="form-control" id="mobnumbers" maxlength="7" required style="padding: 9px; font-size: 14px;">
+                                            <select name='ICT' id='serialcodes' class="form-control form">
+                                                <option value='0300'>0300</option>
+                                                <option value='0301'>0301</option>
+                                                <option value='0302'>0302</option>
+                                                <option value='0303'>0303</option>
+                                                <option value='0304'>0304</option>
+                                                <option value='0305'>0305</option>
+                                                <option value='0306'>0306</option>
+                                                <option value='0307'>0307</option>
+                                                <option value='0308'>0308</option>
+                                                <option value='0309'>0309</option>
+                                                <option value='0310'>0310</option>
+                                                <option value='0311'>0311</option>
+                                                <option value='0312'>0312</option>
+                                                <option value='0313'>0313</option>
+                                                <option value='0314'>0314</option>
+                                                <option value='0315'>0315</option>
+                                                <option value='0316'>0316</option>
+                                                <option value='0317'>0317</option>
+                                                <option value='0320'>0320</option>
+                                                <option value='0321'>0321</option>
+                                                <option value='0322'>0322</option>
+                                                <option value='0323'>0323</option>
+                                                <option value='0324'>0324</option>
+                                                <option value='0330'>0330</option>
+                                                <option value='0331'>0331</option>
+                                                <option value='0332'>0332</option>
+                                                <option value='0333'>0333</option>
+                                                <option value='0334'>0334</option>
+                                                <option value='0335'>0335</option>
+                                                <option value='0336'>0336</option>
+                                                <option value='0337'>0337</option>
+                                                <option value='0340'>0340</option>
+                                                <option value='0341'>0341</option>
+                                                <option value='0342'>0342</option>
+                                                <option value='0343'>0343</option>
+                                                <option value='0344'>0344</option>
+                                                <option value='0345'>0345</option>
+                                                <option value='0346'>0346</option>
+                                                <option value='0347'>0347</option>
+                                                <option value='0348'>0348</option>
+                                                <option value='0349'>0349</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div style="margin-top: 6px;">&#8722;</div>
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <input type="text" name="numbers" class="form-control" id="numbers" maxlength="7" style="padding: 9px; font-size: 14px;">
                                         </div>
                                     </div>
                                 </div>
@@ -493,7 +541,7 @@
                             <hr>
                             <div class="button-container">
                                 <div class="row">
-                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ml-auto mr-auto">
+                                    <div class="col-lg-12 col-md-6 col-6 ml-auto mr-auto">
                                             <small><b>Any misuse or false attempt will result in cancellation of your application.
                                                     You are liable to provide the information that is true to the best of your knowledge.
                                                     Administration is not responsible for any misuse or false attempt.</b></small>

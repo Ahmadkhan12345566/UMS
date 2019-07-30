@@ -78,7 +78,7 @@
                 <div class="col-md-8">
                     <div class="card card-user">
                         <div class="card-body">
-                            <form>
+                            <form method="post" action="<?php echo base_url("Student/documents_upload")?>">
                                 <div class="row">
                                     <div class="col-md-12 col-sm-12 col-xs-12  pr-1">
                                         <h5>Please Upload Your Documents</h5>
@@ -100,7 +100,7 @@
                                                <div class="col-md-6" data-bind="ifnot: $root.isSubmitted()">
                                                    <div class="form-group">
                                                        <label class="btn btn-success" style="color: white;">
-                                                           <i class="fas fa-plus"></i> Upload SSC... <input type="file" id="sscDoc" name="fileupload" hidden>
+                                                           <i class="fas fa-plus"></i> Upload SSC... <input type="file" id="SscDoc" name="SSCfileupload" hidden>
                                                        </label>
                                                    </div>
                                                    <div aria-valuemax="100" aria-valuemin="0" role="progressbar" class="progress progress-striped active">
@@ -122,7 +122,7 @@
                                                     <div class="col-md-6" data-bind="ifnot: $root.isSubmitted()">
                                                         <div class="form-group">
                                                             <label class="btn btn-success" style="color: white;">
-                                                                <i class="fas fa-plus"></i> Upload HSSC <input type="file" id="sscDoc" name="fileupload" hidden>
+                                                                <i class="fas fa-plus"></i> Upload HSSC <input type="file" id="HsscDoc" name="HSSCfileupload" hidden>
                                                             </label>
                                                         </div>
                                                         <div aria-valuemax="100" aria-valuemin="0" role="progressbar" class="progress progress-striped active">
@@ -130,8 +130,8 @@
                                                         </div>
                                                     </div>
                                                     <div class="col-sm-6 col-xs-4">
-                                                        <a class="image-link" data-bind="attr: { href: SSCDocument() }" href="/Content/Images/ed_details/ssc/">
-                                                            <img data-bind="attr: { src: SSCDocument() }" src="/Content/Images/ed_details/ssc/" width="60" height="60">
+                                                        <a class="image-link" data-bind="attr: { href: HSSCDocument() }" href="/Content/Images/ed_details/hssc/">
+                                                            <img data-bind="attr: { src: HSSCDocument() }" src="/Content/Images/ed_details/hssc/" width="60" height="60">
                                                         </a>
                                                     </div>
                                                 </div>
@@ -143,12 +143,12 @@
                                             <div class="row">
                                                 <div class="col-md-6 col-sm-12 col-xs-12" data-bind="ifnot: $root.isSubmitted()">
                                                     <div class="form-group">
-                                                        <input type="radio" name="cnicoption" id="cnicoption" checked required> CNIC
-                                                        <input type="radio" name="b-foamoption" id="b-foamoption" required> B-Foam
+                                                        <input type="radio" name="RegistrationOption" id="CNICoption" value="CNIC" checked required> CNIC
+                                                        <input type="radio" name="RegistrationOption" id="b-foamoption" value="b-foam" required> B-Foam
                                                     </div>
                                                     <div class="form-group">
                                                         <label class="btn btn-success" style="color: white;">
-                                                            <i class="fas fa-plus"></i> Upload CNIC Front <input type="file" id="sscDoc" name="fileupload" hidden>
+                                                            <i class="fas fa-plus"></i> Upload CNIC Front <input type="file" id="CNICFront" name="CNICFront" hidden>
                                                         </label>
                                                     </div>
                                                     <div aria-valuemax="100" aria-valuemin="0" role="progressbar" class="progress progress-striped active">
@@ -157,8 +157,8 @@
                                                 </div>
                                                 <div class="col-xs-4 col-sm-6">
                                                     <br><br>
-                                                    <a class="image-link" data-bind="attr: { href: SSCDocument() }" href="/Content/Images/ed_details/ssc/">
-                                                        <img data-bind="attr: { src: SSCDocument() }" src="/Content/Images/ed_details/ssc/" width="60" height="60">
+                                                    <a class="image-link" data-bind="attr: { href: CNICFront() }" href="/Content/Images/ed_details/cnicfront/">
+                                                        <img data-bind="attr: { src: CNICFront() }" src="/Content/Images/ed_details/cnicfront/" width="60" height="60">
                                                     </a>
                                                 </div>
                                             </div>
@@ -166,7 +166,7 @@
                                                 <div class="col-md-6" data-bind="ifnot: $root.isSubmitted()">
                                                     <div class="form-group">
                                                         <label class="btn btn-success" style="color: white;">
-                                                            <i class="fas fa-plus"></i> Upload CNIC Back <input type="file" id="sscDoc" name="fileupload" hidden>
+                                                            <i class="fas fa-plus"></i> Upload CNIC Back <input type="file" id="CNICBack" name="CNICBack]" hidden>
                                                         </label>
                                                     </div>
                                                     <div aria-valuemax="100" aria-valuemin="0" role="progressbar" class="progress progress-striped active">
@@ -174,8 +174,8 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-xs-4 col-sm-6">
-                                                    <a class="image-link" data-bind="attr: { href: SSCDocument() }" href="/Content/Images/ed_details/ssc/">
-                                                        <img data-bind="attr: { src: SSCDocument() }" src="/Content/Images/ed_details/ssc/" width="60" height="60">
+                                                    <a class="image-link" data-bind="attr: { href: CNICBack() }" href="/Content/Images/ed_details/cnicback/">
+                                                        <img data-bind="attr: { src: CNICBack() }" src="/Content/Images/ed_details/cnicback/" width="60" height="60">
                                                     </a>
                                                 </div>
                                             </div>
@@ -183,7 +183,7 @@
                                                 <div class="col-md-6" data-bind="ifnot: $root.isSubmitted()">
                                                     <div class="form-group">
                                                         <label class="btn btn-success" style="color: white;">
-                                                            <i class="fas fa-plus"></i> Upload B-Foam <input type="file" id="sscDoc" name="fileupload" hidden>
+                                                            <i class="fas fa-plus"></i> Upload B-Foam <input type="file" id="B-FoamDoc" name="B-Foam" hidden>
                                                         </label>
                                                     </div>
                                                     <div aria-valuemax="100" aria-valuemin="0" role="progressbar" class="progress progress-striped active">
@@ -191,8 +191,8 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-xs-4 col-sm-6">
-                                                    <a class="image-link" data-bind="attr: { href: SSCDocument() }" href="/Content/Images/ed_details/ssc/">
-                                                        <img data-bind="attr: { src: SSCDocument() }" src="/Content/Images/ed_details/ssc/" width="60" height="60">
+                                                    <a class="image-link" data-bind="attr: { href: BFoam() }" href="/Content/Images/ed_details/bfoam/">
+                                                        <img data-bind="attr: { src: BFoam() }" src="/Content/Images/ed_details/bfoam/" width="60" height="60">
                                                     </a>
                                                 </div>
                                             </div>
@@ -206,7 +206,7 @@
                                                 <div class="col-md-6">
                                                     <div class="form-group">
                                                         <label class="btn btn-success" style="color: white;">
-                                                            <i class="fas fa-plus"></i> Upload Transcript... <input type="file" id="sscDoc" name="fileupload" hidden>
+                                                            <i class="fas fa-plus"></i> Upload Transcript... <input type="file" id="TranscriptDoc" name="Transcript" hidden>
                                                         </label>
                                                     </div>
                                                     <div aria-valuemax="100" aria-valuemin="0" role="progressbar" class="progress progress-striped active">
@@ -214,8 +214,8 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-xs-4 col-sm-6">
-                                                    <a class="image-link" data-bind="attr: { href: SSCDocument() }" href="/Content/Images/ed_details/ssc/">
-                                                        <img data-bind="attr: { src: SSCDocument() }" src="/Content/Images/ed_details/ssc/" width="60" height="60">
+                                                    <a class="image-link" data-bind="attr: { href: Transcript() }" href="/Content/Images/ed_details/transcript/">
+                                                        <img data-bind="attr: { src: Transcript() }" src="/Content/Images/ed_details/transcript/" width="60" height="60">
                                                     </a>
                                                 </div>
                                             </div>
@@ -228,7 +228,7 @@
                                                 <div class="col-md-6" data-bind="ifnot: $root.isSubmitted()">
                                                     <div class="form-group">
                                                         <label class="btn btn-success" style="color: white;">
-                                                            <i class="fas fa-plus"></i> Upload NTS... <input type="file" id="sscDoc" name="fileupload" hidden>
+                                                            <i class="fas fa-plus"></i> Upload NTS... <input type="file" id="NTSDoc" name="NTS" hidden>
                                                         </label>
                                                     </div>
                                                     <div aria-valuemax="100" aria-valuemin="0" role="progressbar" class="progress progress-striped active">
@@ -236,8 +236,8 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-xs-4 col-sm-6">
-                                                    <a class="image-link" data-bind="attr: { href: SSCDocument() }" href="/Content/Images/ed_details/ssc/">
-                                                        <img data-bind="attr: { src: SSCDocument() }" src="/Content/Images/ed_details/ssc/" width="60" height="60">
+                                                    <a class="image-link" data-bind="attr: { href: NTS() }" href="/Content/Images/ed_details/nts/">
+                                                        <img data-bind="attr: { src: NTS() }" src="/Content/Images/ed_details/nts/" width="60" height="60">
                                                     </a>
                                                 </div>
                                             </div>

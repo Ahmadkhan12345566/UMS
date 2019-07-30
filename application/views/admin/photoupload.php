@@ -13,7 +13,7 @@
                             <span class="navbar-toggler-bar bar3"></span>
                         </button>
                     </div>
-                    <a class="navbar-brand" href="#pablo">Photo Upload</a>
+                    <a class="navbar-brand" href="#pablo">Address Detail</a>
                 </div>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-bar navbar-kebab"></span>
@@ -21,7 +21,7 @@
                     <span class="navbar-toggler-bar navbar-kebab"></span>
                 </button>
                 <div class="collapse navbar-collapse justify-content-end" id="navigation">
-                    <form method="post" action="">
+                    <form>
                         <div class="input-group no-border">
                             <input type="text" value="" class="form-control" placeholder="Search...">
                             <div class="input-group-append">
@@ -78,13 +78,13 @@
                 <div class="col-md-8">
                     <div class="card card-user">
                         <div class="card-body">
-                            <form method="post" action="<?php echo base_url("Student/photo_upload")?>">
+                            <form>
                                 <div class="row">
-                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                    <div class="col-md-12 col-sm-12 col-xs-12  pr-1">
                                         <div class="form-group">
                                             <h5>Please Upload Photo</h5>
                                             <label class="btn btn-success" style="color: white;">
-                                                Upload Photo <input type="file" name="StudentPhoto" id="StudentPhoto" hidden required>
+                                                Upload Photo <input type="file" hidden>
                                             </label>
                                         </div>
                                     </div>
@@ -98,7 +98,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-12 col-xs-12">
+                <div class="col-md-4 col-sm-12 col-xs-12 col">
                     <div class="card card-body">
                         <div class="author">
                             <h5 class="title" style="color: #51CBCE;">Help Center</h5>
@@ -156,7 +156,7 @@
                             <hr>
                             <div class="button-container">
                                 <div class="row">
-                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ml-auto mr-auto">
+                                    <div class="col-lg-12 col-md-6 col-6 ml-auto mr-auto">
                                         <small><b>Any misuse or false attempt will result in cancellation of your application.
                                                 You are liable to provide the information that is true to the best of your knowledge.
                                                 Administration is not responsible for any misuse or false attempt.</b></small>

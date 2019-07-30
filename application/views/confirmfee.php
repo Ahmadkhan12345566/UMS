@@ -78,7 +78,7 @@
                 <div class="col-md-8">
                     <div class="card card-user">
                         <div class="card-body">
-                            <form>
+                            <form method="post" action="<?php echo base_url("Student/confirm_fee")?>">
                                 <div class="row">
                                     <div class="col-md-12 col-sm-12 col-xs-12  pr-1">
                                         <div class="form-group">
@@ -118,11 +118,11 @@
                                                 <br><br>
 
                                                 <center>
-                                                    <a href="/Candidate/Pdf/FeeChallan" class="btn-success" target="_blank" title="print application form" style="font-size: 30px; background: transparent; text-align: center;">
+                                                    <a href="/Candidate/Pdf/FeeChallan" class="btn-success" name="print" target="_blank" title="print application form" style="font-size: 30px; background: transparent; text-align: center;">
                                                         <i class="fas fa-print"></i>
                                                     </a>
                                                 &nbsp;&nbsp;
-                                                    <a href="/Candidate/Pdf/FeeChallan?download=true" class="btn-success" title="download application form" style="font-size: 30px; background: transparent;  text-align: center;">
+                                                    <a href="/Candidate/Pdf/FeeChallan?download=true" name="download" class="btn-success" title="download application form" style="font-size: 30px; background: transparent;  text-align: center;">
                                                         <i class="fas fa-cloud-download-alt"></i>
                                                     </a>
                                                 </center>
@@ -173,7 +173,7 @@
                                                 <div class="col-md-6" data-bind="ifnot: $root.isSubmitted()">
                                                     <div class="form-group">
                                                         <label class="btn btn-success" style="color: white;">
-                                                            <i class="fas fa-plus"></i> Upload Challan <input type="file" id="challan" name="fileupload" hidden>
+                                                            <i class="fas fa-plus"></i> Upload Challan <input type="file"  id="challan" name="Challanfileupload" hidden>
                                                         </label>
                                                     </div>
                                                     <div aria-valuemax="100" aria-valuemin="0" role="progressbar" class="progress progress-striped active">
@@ -196,13 +196,13 @@
                                     <div class="col-md-6 col-sm-12 col-xs-12  pr-1">
                                         <div class="form-group">
                                             <label for="control-label">Bank Name</label>
-                                            <input type="text" name="bankname" id="bankname" class="form-control" required>
+                                            <input type="text" name="NTSbankname" id="NTSbankname" class="form-control" required>
                                         </div>
                                     </div>
                                     <div class="col-md-4 col-sm-12 col-xs-12  pr-1">
                                         <div class="form-group">
                                             <label for="control-label">Branch Code</label>
-                                            <input type="text" name="branchcode" id="branchcode" class="form-control" required>
+                                            <input type="text" name="NTSbranchcode" id="NTSbranchcode" class="form-control" required>
                                         </div>
                                     </div>
                                 </div>
@@ -210,13 +210,13 @@
                                     <div class="col-md-6 col-sm-12 col-xs-12  pr-1">
                                         <div class="form-group">
                                             <label for="control-label">Bank Address</label>
-                                            <input type="text" name="bankaddress" id="bankaddress" class="form-control" required>
+                                            <input type="text" name="NTSbankaddress" id="NTSbankaddress" class="form-control" required>
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-sm-12 col-xs-12  pr-1">
                                         <div class="form-group">
                                             <label for="control-label">Deposit Date</label>
-                                            <input type="date" name="depositdate" id="depositdate" class="form-control" required>
+                                            <input type="date" name="NTSdepositdate" id="NTSdepositdate" class="form-control" required>
                                         </div>
                                     </div>
                                 </div>
@@ -233,7 +233,7 @@
                                                 <div class="col-md-6 col-sm-6" data-bind="ifnot: $root.isSubmitted()">
                                                     <div class="form-group">
                                                         <label class="btn btn-success" style="color: white;">
-                                                            <i class="fas fa-plus"></i> Upload NTS Challan <input type="file" id="challan" name="fileupload" hidden>
+                                                            <i class="fas fa-plus"></i> Upload NTS Challan <input type="file" id="challan" name="NTSChallanfileupload" hidden>
                                                         </label>
                                                     </div>
                                                     <div aria-valuemax="100" aria-valuemin="0" role="progressbar" class="progress progress-striped active">
