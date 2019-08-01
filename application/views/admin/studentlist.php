@@ -75,13 +75,16 @@
           <div class="col-md-12">
             <div class="card">
               <div class="card-header">
-                <h4 class="card-title"> Simple Table</h4>
+                <h4 class="card-title"> Students List</h4>
               </div>
               <div class="card-body">
-                <div class="table-responsive">
-                  <table class="table">
-                    <thead class=" text-primary">
-                      <th>
+                <div class="table">
+                  <table class="table cell-border" id="umsTable">
+                    <thead class="text-primary text-center">
+                    <th>
+                        #
+                    </th>
+                    <th>
                         Name
                       </th>
                       <th>
@@ -90,237 +93,33 @@
                       <th>
                         City
                       </th>
-                      <th class="text-right">
-                        Salary
+                      <th>
+                          Email Verified
+                      </th>
+                      <th>
+                        Status
                       </th>
                     </thead>
-                    <tbody>
-                      <tr>
-                        <td>
-                          Dakota Rice
-                        </td>
-                        <td>
-                          Niger
-                        </td>
-                        <td>
-                          Oud-Turnhout
-                        </td>
-                        <td class="text-right">
-                          $36,738
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Minerva Hooper
-                        </td>
-                        <td>
-                          Curaçao
-                        </td>
-                        <td>
-                          Sinaai-Waas
-                        </td>
-                        <td class="text-right">
-                          $23,789
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Sage Rodriguez
-                        </td>
-                        <td>
-                          Netherlands
-                        </td>
-                        <td>
-                          Baileux
-                        </td>
-                        <td class="text-right">
-                          $56,142
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Philip Chaney
-                        </td>
-                        <td>
-                          Korea, South
-                        </td>
-                        <td>
-                          Overland Park
-                        </td>
-                        <td class="text-right">
-                          $38,735
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Doris Greene
-                        </td>
-                        <td>
-                          Malawi
-                        </td>
-                        <td>
-                          Feldkirchen in Kärnten
-                        </td>
-                        <td class="text-right">
-                          $63,542
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Mason Porter
-                        </td>
-                        <td>
-                          Chile
-                        </td>
-                        <td>
-                          Gloucester
-                        </td>
-                        <td class="text-right">
-                          $78,615
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Jon Porter
-                        </td>
-                        <td>
-                          Portugal
-                        </td>
-                        <td>
-                          Gloucester
-                        </td>
-                        <td class="text-right">
-                          $98,615
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-12">
-            <div class="card card-plain">
-              <div class="card-header">
-                <h4 class="card-title"> Table on Plain Background</h4>
-                <p class="card-category"> Here is a subtitle for this table</p>
-              </div>
-              <div class="card-body">
-                <div class="table-responsive">
-                  <table class="table">
-                    <thead class=" text-primary">
-                      <th>
-                        Name
-                      </th>
-                      <th>
-                        Country
-                      </th>
-                      <th>
-                        City
-                      </th>
-                      <th class="text-right">
-                        Salary
-                      </th>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>
-                          Dakota Rice
-                        </td>
-                        <td>
-                          Niger
-                        </td>
-                        <td>
-                          Oud-Turnhout
-                        </td>
-                        <td class="text-right">
-                          $36,738
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Minerva Hooper
-                        </td>
-                        <td>
-                          Curaçao
-                        </td>
-                        <td>
-                          Sinaai-Waas
-                        </td>
-                        <td class="text-right">
-                          $23,789
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Sage Rodriguez
-                        </td>
-                        <td>
-                          Netherlands
-                        </td>
-                        <td>
-                          Baileux
-                        </td>
-                        <td class="text-right">
-                          $56,142
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Philip Chaney
-                        </td>
-                        <td>
-                          Korea, South
-                        </td>
-                        <td>
-                          Overland Park
-                        </td>
-                        <td class="text-right">
-                          $38,735
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Doris Greene
-                        </td>
-                        <td>
-                          Malawi
-                        </td>
-                        <td>
-                          Feldkirchen in Kärnten
-                        </td>
-                        <td class="text-right">
-                          $63,542
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Mason Porter
-                        </td>
-                        <td>
-                          Chile
-                        </td>
-                        <td>
-                          Gloucester
-                        </td>
-                        <td class="text-right">
-                          $78,615
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Jon Porter
-                        </td>
-                        <td>
-                          Portugal
-                        </td>
-                        <td>
-                          Gloucester
-                        </td>
-                        <td class="text-right">
-                          $98,615
-                        </td>
-                      </tr>
+                    <tbody class="text-center">
+                      <tr><td>1</td><td>Sage Rodriguez</td><td>Netherlands</td><td>Baileux</td><td>Yes</td><td class="text-right"></td></tr>
+                      <tr><td>2</td><td>Sage Rodriguez</td><td>Netherlands</td><td>Baileux</td><td>Yes</td><td class="text-right"></td></tr>
+                      <tr><td>3</td><td>Sage Rodriguez</td><td>Netherlands</td><td>Baileux</td><td>Yes</td><td class="text-right"></td></tr>
+                      <tr><td>4</td><td>Sage Rodriguez</td><td>Netherlands</td><td>Baileux</td><td>Yes</td><td class="text-right"></td></tr>
+                      <tr><td>5</td><td>Sage Rodriguez</td><td>Netherlands</td><td>Baileux</td><td>Yes</td><td class="text-right"></td></tr>
+                      <tr><td>6</td><td>Sage Rodriguez</td><td>Netherlands</td><td>Baileux</td><td>Yes</td><td class="text-right"></td></tr>
+                      <tr><td>7</td><td>Sage Rodriguez</td><td>Netherlands</td><td>Baileux</td><td>Yes</td><td class="text-right"></td></tr>
+                      <tr><td>8</td><td>Sage Rodriguez</td><td>Netherlands</td><td>Baileux</td><td>Yes</td><td class="text-right"></td></tr>
+                      <tr><td>9</td><td>Sage Rodriguez</td><td>Netherlands</td><td>Baileux</td><td>Yes</td><td class="text-right"></td></tr>
+                      <tr><td>10</td><td>Sage Rodriguez</td><td>Netherlands</td><td>Baileux</td><td>Yes</td><td class="text-right"></td></tr>
+                      <tr><td>11</td><td>Sage Rodriguez</td><td>Netherlands</td><td>Baileux</td><td>Yes</td><td class="text-right"></td></tr>
+                      <tr><td>12</td><td>Sage Rodriguez</td><td>Netherlands</td><td>Baileux</td><td>Yes</td><td class="text-right"></td></tr>
+                      <tr><td>13</td><td>Sage Rodriguez</td><td>Netherlands</td><td>Baileux</td><td>Yes</td><td class="text-right"></td></tr>
+                      <tr><td>14</td><td>Sage Rodriguez</td><td>Netherlands</td><td>Baileux</td><td>Yes</td><td class="text-right"></td></tr>
+                      <tr><td>15</td><td>Sage Rodriguez</td><td>Netherlands</td><td>Baileux</td><td>Yes</td><td class="text-right"></td></tr>
+                      <tr><td>16</td><td>Sage Rodriguez</td><td>Netherlands</td><td>Baileux</td><td>Yes</td><td class="text-right"></td></tr>
+                      <tr><td>17</td><td>Sage Rodriguez</td><td>Netherlands</td><td>Baileux</td><td>Yes</td><td class="text-right"></td></tr>
+                      <tr><td>18</td><td>Sage Rodriguez</td><td>Netherlands</td><td>Baileux</td><td>Yes</td><td class="text-right"></td></tr>
+
                     </tbody>
                   </table>
                 </div>

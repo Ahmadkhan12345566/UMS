@@ -52,10 +52,16 @@ class Admin extends CI_Controller
     }
 
     public function studentlist()
-        {
-            $this->load->view('admin/studentlist');
+    {
+        $this->load->view('admin/studentlist');
 
-        }
+    }
+
+    public function statistics()
+    {
+        $this->load->view('admin/statistics');
+
+    }
 
 }
 

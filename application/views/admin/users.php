@@ -80,9 +80,9 @@
                                     <h5 class="card-title">Users</h5>
                                 </div>
                             </div>
-                            <div class="col-md-2">
+                            <div class="col-md-2 col-sm-12 col-xs-12">
                                 <div class="card-header">
-                                    <form>
+                                    <form action="" method="post">
                                         <div class="update ml-auto mr-auto">
                                             <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#ModalLoginForm">Add User</button>
                                             <!-- Modal HTML Markup -->
@@ -93,27 +93,30 @@
                                                             <h3 class="modal-title">New User</h3>
                                                         </div>
                                                         <div class="modal-body">
-                                                            <form method="post" action="<?php echo base_url("");?>">
+                                                            <form method="post" action="<?php echo base_url("");?>" onsubmit="CheckValidation()">
+                                                                    <input type="hidden" class="form-control" name="serialnumber" id="serialnumber" value="1" required>
                                                                 <div class="form-group">
                                                                     <label class="control-label">User Name</label>
-                                                                    <input type="text" class="form-control" name="username" id="usernam" required>
+                                                                    <input type="text" class="form-control" name="username" id="username" autofocus required>
                                                                 </div>
                                                                 <div class="form-group">
                                                                     <label class="control-label">Email</label>
-                                                                    <input type="email" class="form-control" pattern="[A-Za-z]{3}" name="email" id="email" required>
+                                                                    <input type="email" class="form-control" name="email" id="email" pattern="[A-Za-z0-9._%+-]{3,}@[a-zA-Z]{3,}([.]{1}[a-zA-Z]{2,}|[.]{1}[a-zA-Z]{2,}[.]{1}[a-zA-Z]{2,})" required>
                                                                 </div>
                                                                 <div class="form-group">
-                                                                    <label for="board">Role</label>
-                                                                    <select name="responsibilities" id="responsibilities" required class="form-control">
+                                                                    <label for="control-label">Role</label>
+                                                                    <select name="role" id="role" required class="form-control">
                                                                         <option value="Select">Select Roles</option>
+                                                                        <option value="Admin">Admin</option>
+                                                                        <option value="Moderator">Moderator</option>
                                                                     </select>
                                                                 </div>
                                                                 <div class="form-group">
                                                                     <div>
-                                                                        <button type="submit" class="btn btn-primary">
+                                                                        <button type="submit" class="btn btn-primary" onclick="SaveData()">
                                                                             Save
                                                                         </button>
-                                                                        <button type="reset" class="btn btn-ignore">
+                                                                        <button type="button" class="btn btn-ignore" data-dismiss="modal">
                                                                             Cancel
                                                                         </button>
                                                                     </div>
@@ -129,24 +132,35 @@
                             </div>
                         </div>
                         <div class="card-body">
-                            <table class="table table-bordered">
-                                <thead>
-                                <tr class="text-center">
-                                    <th scope="col">#</th>
-                                    <th scope="col">Name</th>
-                                    <th scope="col">Role</th>
-                                    <th scope="col">Action</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr class="text-center">
-                                    <th scope="row">1</th>
-                                    <td>Mark</td>
-                                    <td>Reader</td>
-                                    <td>Nothing</td>
-                                </tr>
-                                </tbody>
-                            </table>
+                            <style type="text/css">
+                                table {
+                                    counter-reset: rowNumber[0ss];
+                                }
+
+                                table tr {
+                                    counter-increment: rowNumber;
+                                }
+
+                                table tr td:first-child::before {
+                                    content: counter(rowNumber);
+                                    min-width: 1em;
+                                    margin-right: 0.5em;
+                                }
+                            </style>
+                            <div class="table">
+                                <table id="umsTable" class="table table-primary auto-index">
+                                    <thead>
+                                    <tr class="text-center">
+                                        <th scope="col">#</th>
+                                        <th scope="col">Name</th>
+                                        <th scope="col">Email</th>
+                                        <th scope="col">Role</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody class="text-center">
+                                    </tbody>
+                                </table>
+                            </div>
 <!--                            <form>-->
 <!--                                <div class="row">-->
 <!--                                    <div class="update ml-auto mr-auto">-->
@@ -159,4 +173,54 @@
                 </div>
             </div>
         </div>
+
+    <script type="text/javascript">
+
+        function CheckValidation() {
+
+            if (document.getElementById("username" == "")){
+                document.getElementById("username").style.borderColor = "red";
+                return false;
+            }
+
+            var rows = "";
+            var serial = "";
+            var name = document.getElementById("username").value;
+            var email = document.getElementById("email").value;
+            var role = document.getElementById("role").value;
+
+            rows += "<tr><td>" + serial + "</td><td>" + name + "</td><td>" + email + "</td><td>" + role + "</td></tr>";
+            $(rows).appendTo("#umsTable tbody");
+
+        }
+
+
+        // function SaveData() {
+        //
+        //     var rows = "";
+        //     var serial = "";
+        //     var name = document.getElementById("username").value;
+        //     var email = document.getElementById("email").value;
+        //     var role = document.getElementById("role").value;
+        //
+        //     rows += "<tr><td>" + serial + "</td><td>" + name + "</td><td>" + email + "</td><td>" + role + "</td></tr>";
+        //     $(rows).appendTo("#tabledata tbody");
+        // }
+
+
+        // function AddRow() {
+        //
+        //     var table = document.getElementById("tabledata").insertRow(tabledata.rows.length - 0);
+        //     var ser = table.insertCell(0);
+        //     var name = table.insertCell(1);
+        //     var email = table.insertCell(2);
+        //     var role = table.insertCell(3);
+        //
+        //     ser.innerHTML = "";
+        //     name.innerHTML = "";
+        //     email.innerHTML = "";
+        //     role.innerHTML = "";
+        // }
+    </script>
+
         <?php $this->load->view('admin/inc/footer');?>

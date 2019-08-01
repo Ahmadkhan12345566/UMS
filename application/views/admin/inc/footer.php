@@ -1,25 +1,12 @@
 <footer class="footer footer-black  footer-white ">
     <div class="container-fluid">
         <div class="row">
-            <nav class="footer-nav">
-                <ul>
-                    <li>
-                        <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a>
-                    </li>
-                    <li>
-                        <a href="http://blog.creative-tim.com/" target="_blank">Blog</a>
-                    </li>
-                    <li>
-                        <a href="https://www.creative-tim.com/license" target="_blank">Licenses</a>
-                    </li>
-                </ul>
-            </nav>
             <div class="credits ml-auto">
               <span class="copyright">
                 ©
                 <script>
                   document.write(new Date().getFullYear())
-                </script>, made with <i class="fa fa-heart heart"></i> by Creative Tim
+                </script>, made with <i class="fa fa-heart heart"></i> by Tritechteal
               </span>
             </div>
         </div>
@@ -27,13 +14,22 @@
 </footer>
 </div>
 </div>
+
+<!--   DataTable jQuery Files   -->
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
+
 <!--   Core JS Files   -->
-<script src="<?php echo base_url()?>application/assets/js/core/jquery.min.js"></script>
+<!--<script src="--><?php //echo base_url()?><!--application/assets/js/core/jquery.min.js"></script>-->
 <script src="<?php echo base_url()?>application/assets/js/core/popper.min.js"></script>
 <script src="<?php echo base_url()?>application/assets/js/core/bootstrap.min.js"></script>
-<script src="<?php echo base_url()?>application/assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+<!--<script src="--><?php //echo base_url()?><!--application/assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>-->
 <!--  Google Maps Plugin    -->
-<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+<!--<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>-->
 <!-- Chart JS -->
 <script src="<?php echo base_url()?>application/assets/js/plugins/chartjs.min.js"></script>
 <!--  Notifications Plugin    -->
@@ -47,6 +43,10 @@
         // Javascript method's body can be found in assets/assets-for-demo/js/demo.js
         demo.initChartsPages();
     });
+
+    $(document).ready( function () {
+        $('#umsTable').DataTable();
+    } );
 </script>
 </body>
 

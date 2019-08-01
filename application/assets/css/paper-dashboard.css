@@ -4984,6 +4984,7 @@ License - nucleoapp.com/license/
   opacity: 1;
 }
 
+
 .sidebar[data-active-color="danger"] .nav li.active>a,
 .sidebar[data-active-color="danger"] .nav li.active>a i,
 .sidebar[data-active-color="danger"] .nav li.active>a[data-toggle="collapse"],

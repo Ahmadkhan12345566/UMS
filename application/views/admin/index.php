@@ -80,13 +80,13 @@
                 <div class="row">
                   <div class="col-5 col-md-4">
                     <div class="icon-big text-center icon-warning">
-                      <i class="nc-icon nc-globe text-warning"></i>
+                        <i class="fas fa-user-plus text-warning"></i>
                     </div>
                   </div>
                   <div class="col-7 col-md-8">
                     <div class="numbers">
                       <p class="card-category">Today Requests</p>
-                      <p class="card-title">150
+                      <p class="card-title">15
                         <p>
                     </div>
                   </div>
@@ -112,7 +112,7 @@
                   <div class="col-7 col-md-8">
                     <div class="numbers">
                       <p class="card-category">Session</p>
-                      <p class="card-title"> 1000
+                      <p class="card-title"> Fall
                         <p>
                     </div>
                   </div>
@@ -138,7 +138,7 @@
                   <div class="col-7 col-md-8">
                     <div class="numbers">
                       <p class="card-category">Month</p>
-                      <p class="card-title">23
+                      <p class="card-title">July
                         <p>
                     </div>
                   </div>
@@ -158,13 +158,13 @@
                 <div class="row">
                   <div class="col-5 col-md-4">
                     <div class="icon-big text-center icon-warning">
-                      <i class="nc-icon nc-favourite-28 text-primary"></i>
+                        <i class="fas fa-user-graduate text-primary"></i>
                     </div>
                   </div>
                   <div class="col-7 col-md-8">
                     <div class="numbers">
                       <p class="card-category">Total Requests</p>
-                      <p class="card-title">+45K
+                      <p class="card-title">200
                         <p>
                     </div>
                   </div>
@@ -245,33 +245,4 @@
           </div>
         </div>
       </div>
-      <footer class="footer footer-black  footer-white ">
-        <div class="container-fluid">
-          <div class="row">
-            <nav class="footer-nav">
-              <ul>
-                <li>
-                  <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a>
-                </li>
-                <li>
-                  <a href="http://blog.creative-tim.com/" target="_blank">Blog</a>
-                </li>
-                <li>
-                  <a href="https://www.creative-tim.com/license" target="_blank">Licenses</a>
-                </li>
-              </ul>
-            </nav>
-            <div class="credits ml-auto">
-              <span class="copyright">
-                ©
-                <script>
-                  document.write(new Date().getFullYear())
-                </script>, made with <i class="fa fa-heart heart"></i> by Creative Tim
-              </span>
-            </div>
-          </div>
-        </div>
-      </footer>
-    </div>
-  </div>
- <?php include 'inc/footer.php';?>
+ <?php $this->load->view('admin/inc/footer');?>
