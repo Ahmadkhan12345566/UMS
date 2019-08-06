@@ -53,6 +53,24 @@
                     <p>Statistics</p>
                 </a>
             </li>
+            <li>
+                <a href="<?php echo base_url()?>department">
+                    <i class="far fa-building"></i>
+                    <p>Departments</p>
+                </a>
+            </li>
+            <li>
+                <a href="<?php echo base_url()?>degree">
+                    <i class="nc-icon nc-chart-bar-32"></i>
+                    <p>Degrees</p>
+                </a>
+            </li>
+            <li>
+                <a href="<?php echo base_url()?>courses">
+                    <i class="fab fa-discourse"></i>
+                    <p>Courses</p>
+                </a>
+            </li>
         </ul>
     </div>
 </div>

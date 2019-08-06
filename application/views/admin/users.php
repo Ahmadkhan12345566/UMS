@@ -148,7 +148,7 @@
                                 }
                             </style>
                             <div class="table">
-                                <table id="umsTable" class="table table-primary auto-index">
+                                <table id="umsTable" class="table">
                                     <thead>
                                     <tr class="text-center">
                                         <th scope="col">#</th>

@@ -88,8 +88,8 @@
                             <div class="col-md-3">
                                 <div class="form-group">
                                     <label>Session</label>
-                                    <select name="session" id="session" class="form-control" required>-->
-                                      <option value="Session">Select Session</option>
+                                    <select name="UMSsession" id="UMSsession" class="form-control" style="padding-top: 6px;" required>
+                                      <option value="">Select Session</option>
                                       <option value="Spring">Spring</option>
                                       <option value="Fall">Fall</option>
                                     </select>
@@ -98,7 +98,7 @@
                             <div class="col-md-3">
                                 <div class="form-group">
                                     <label>Month</label>
-                                    <select name="month" id="month" class="form-control" required>
+                                    <select name="UMSmonth" id="UMSmonth" class="form-control" style="padding-top: 6px;" required>
                                         <option value="Month">Month</option>
                                         <option value="January">January</option>
                                         <option value="February">February</option>
@@ -115,6 +115,11 @@
                                     </select>
                                 </div>
                             </div>
+<!--                            <div class="col-md-3">-->
+<!--                                <div class="form-group">-->
+<!--                                    <button type="button" class="btn btn-primary">Search</button>-->
+<!--                                </div>-->
+<!--                            </div>-->
                         </div>
                     </form>
                 </div>

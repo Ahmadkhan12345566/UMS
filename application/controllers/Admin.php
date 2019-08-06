@@ -62,6 +62,21 @@ class Admin extends CI_Controller
         $this->load->view('admin/statistics');
 
     }
+    public function department()
+    {
+        $this->load->view('admin/departments');
+
+    }
+    public function degree()
+    {
+        $this->load->view('admin/degree');
+
+    }
+    public function courses()
+    {
+        $this->load->view('admin/courses');
+
+    }
 
 }
 

@@ -638,7 +638,7 @@ fieldset[disabled] .navbar .navbar-nav>a.btn.active {
 .show>.btn-primary.dropdown-toggle,
 .show>.btn-primary.dropdown-toggle:focus,
 .show>.btn-primary.dropdown-toggle:hover {
-  background-color: #34b5b8 !important;
+  background-color: #51cbce !important;
   color: #FFFFFF !important;
   box-shadow: none !important;
 }

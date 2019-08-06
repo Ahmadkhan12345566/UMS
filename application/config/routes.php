@@ -78,3 +78,6 @@ $route['users'] = 'Admin/usersadd';
 $route['user'] = 'Admin/user';
 $route['studentlist'] = 'Admin/studentlist';
 $route['statistics'] = 'Admin/statistics';
+$route['department'] = 'Admin/department';
+$route['degree'] = 'Admin/degree';
+$route['courses'] = 'Admin/courses';

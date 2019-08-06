@@ -16,20 +16,20 @@
 </div>
 
 <!--   DataTable jQuery Files   -->
-<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-
-<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
-<script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
+<!--<script src="https://code.jquery.com/jquery-3.3.1.js"></script>-->
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>-->
+<!--<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>-->
+<!---->
+<!--<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>-->
+<!--<script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>-->
 
 <!--   Core JS Files   -->
-<!--<script src="--><?php //echo base_url()?><!--application/assets/js/core/jquery.min.js"></script>-->
+<script src="<?php echo base_url()?>application/assets/js/core/jquery.min.js"></script>
 <script src="<?php echo base_url()?>application/assets/js/core/popper.min.js"></script>
 <script src="<?php echo base_url()?>application/assets/js/core/bootstrap.min.js"></script>
-<!--<script src="--><?php //echo base_url()?><!--application/assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>-->
+<script src="<?php echo base_url()?>application/assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
 <!--  Google Maps Plugin    -->
-<!--<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>-->
+<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
 <!-- Chart JS -->
 <script src="<?php echo base_url()?>application/assets/js/plugins/chartjs.min.js"></script>
 <!--  Notifications Plugin    -->
@@ -44,9 +44,9 @@
         demo.initChartsPages();
     });
 
-    $(document).ready( function () {
-        $('#umsTable').DataTable();
-    } );
+    // $(document).ready( function () {
+    //     $('#umsTable').DataTable();
+    // } );
 </script>
 </body>
 
