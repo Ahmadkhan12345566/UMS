@@ -83,8 +83,8 @@
                                     <div class="col-md-12 col-sm-12 col-xs-12  pr-1">
                                         <div class="form-group">
                                             <label><b>Funding Agence? </b></label> <br>
-                                            <input type="radio" name="Funding" id="Funding" value="Yes"> Yes
-                                            <input type="radio" name="Funding" id="Funding" value="No" checked >   No
+                                            <input type="radio" name="funding" id="funding" value="Yes"> Yes
+                                            <input type="radio" name="funding" id="funding" value="No" checked >   No
                                         </div>
                                     </div>
                                 </div>

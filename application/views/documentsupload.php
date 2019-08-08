@@ -100,7 +100,7 @@
                                                <div class="col-md-6" data-bind="ifnot: $root.isSubmitted()">
                                                    <div class="form-group">
                                                        <label class="btn btn-success" style="color: white;">
-                                                           <i class="fas fa-plus"></i> Upload SSC... <input type="file" id="SscDoc" name="SSCfileupload" hidden>
+                                                           <i class="fas fa-plus"></i> Upload SSC... <input type="file" id="SscDoc" name="sscfileupload" hidden>
                                                        </label>
                                                    </div>
                                                    <div aria-valuemax="100" aria-valuemin="0" role="progressbar" class="progress progress-striped active">
@@ -122,7 +122,7 @@
                                                     <div class="col-md-6" data-bind="ifnot: $root.isSubmitted()">
                                                         <div class="form-group">
                                                             <label class="btn btn-success" style="color: white;">
-                                                                <i class="fas fa-plus"></i> Upload HSSC <input type="file" id="HsscDoc" name="HSSCfileupload" hidden>
+                                                                <i class="fas fa-plus"></i> Upload HSSC <input type="file" id="HsscDoc" name="hsscfileupload" hidden>
                                                             </label>
                                                         </div>
                                                         <div aria-valuemax="100" aria-valuemin="0" role="progressbar" class="progress progress-striped active">
@@ -148,7 +148,7 @@
                                                     </div>
                                                     <div class="form-group">
                                                         <label class="btn btn-success" style="color: white;">
-                                                            <i class="fas fa-plus"></i> Upload CNIC Front <input type="file" id="CNICFront" name="CNICFront" hidden>
+                                                            <i class="fas fa-plus"></i> Upload CNIC Front <input type="file" id="CNICFront" name="cnicfront" hidden>
                                                         </label>
                                                     </div>
                                                     <div aria-valuemax="100" aria-valuemin="0" role="progressbar" class="progress progress-striped active">
@@ -166,7 +166,7 @@
                                                 <div class="col-md-6" data-bind="ifnot: $root.isSubmitted()">
                                                     <div class="form-group">
                                                         <label class="btn btn-success" style="color: white;">
-                                                            <i class="fas fa-plus"></i> Upload CNIC Back <input type="file" id="CNICBack" name="CNICBack]" hidden>
+                                                            <i class="fas fa-plus"></i> Upload CNIC Back <input type="file" id="CNICBack" name="cnicback" hidden>
                                                         </label>
                                                     </div>
                                                     <div aria-valuemax="100" aria-valuemin="0" role="progressbar" class="progress progress-striped active">
@@ -183,7 +183,7 @@
                                                 <div class="col-md-6" data-bind="ifnot: $root.isSubmitted()">
                                                     <div class="form-group">
                                                         <label class="btn btn-success" style="color: white;">
-                                                            <i class="fas fa-plus"></i> Upload B-Foam <input type="file" id="B-FoamDoc" name="B-Foam" hidden>
+                                                            <i class="fas fa-plus"></i> Upload B-Foam <input type="file" id="B-FoamDoc" name="bfoam" hidden>
                                                         </label>
                                                     </div>
                                                     <div aria-valuemax="100" aria-valuemin="0" role="progressbar" class="progress progress-striped active">
@@ -206,7 +206,7 @@
                                                 <div class="col-md-6">
                                                     <div class="form-group">
                                                         <label class="btn btn-success" style="color: white;">
-                                                            <i class="fas fa-plus"></i> Upload Transcript... <input type="file" id="TranscriptDoc" name="Transcript" hidden>
+                                                            <i class="fas fa-plus"></i> Upload Transcript... <input type="file" id="TranscriptDoc" name="transcript" hidden>
                                                         </label>
                                                     </div>
                                                     <div aria-valuemax="100" aria-valuemin="0" role="progressbar" class="progress progress-striped active">
@@ -228,7 +228,7 @@
                                                 <div class="col-md-6" data-bind="ifnot: $root.isSubmitted()">
                                                     <div class="form-group">
                                                         <label class="btn btn-success" style="color: white;">
-                                                            <i class="fas fa-plus"></i> Upload NTS... <input type="file" id="NTSDoc" name="NTS" hidden>
+                                                            <i class="fas fa-plus"></i> Upload NTS... <input type="file" id="NTSDoc" name="nts" hidden>
                                                         </label>
                                                     </div>
                                                     <div aria-valuemax="100" aria-valuemin="0" role="progressbar" class="progress progress-striped active">

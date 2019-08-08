@@ -83,14 +83,14 @@
                                     <div class="col-md-12 col-sm-12 col-xs-12">
                                         <div class="form-group">
                                             <label>Research Interest 2</label>
-                                            <input type="text" class="form-control" name="ResearchIn1" id="ResearchIn1" aria-describedby="ResearchIn1" required>
+                                            <input type="text" class="form-control" name="researchIn1" id="ResearchIn1" aria-describedby="ResearchIn1" required>
                                         </div>
                                         <div class="form-group">
                                             <label>Research Interest 2</label>
-                                            <input type="text" class="form-control" name="ResearchIn2" id="ResearchIn2" aria-describedby="ResearchIn2" required>
+                                            <input type="text" class="form-control" name="researchIn2" id="ResearchIn2" aria-describedby="ResearchIn2" required>
                                         </div>
                                         <label>Research Interest 3</label>
-                                        <input type="text" class="form-control" name="ResearchIn3" id="ResearchIn3" aria-describedby="ResearchIn3" required>
+                                        <input type="text" class="form-control" name="researchIn3" id="ResearchIn3" aria-describedby="ResearchIn3" required>
                                     </div>
                                 </div>
                                 <div class="row">

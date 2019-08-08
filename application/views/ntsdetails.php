@@ -131,7 +131,7 @@
                                             <div class="row">
                                                 <div class="col-md-2 col-sm-2 col-xs-2">
                                                     <div class="form-group">
-                                                        <select name='tdate' id='tdate' class="form-control" required>
+                                                        <select name='testdate' id='tdate' class="form-control" required>
                                                             <option value='Day'>Day</option>
                                                             <option value='1'>1</option>
                                                             <option value='2'>2</option>

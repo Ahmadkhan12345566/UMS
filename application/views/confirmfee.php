@@ -173,7 +173,7 @@
                                                 <div class="col-md-6" data-bind="ifnot: $root.isSubmitted()">
                                                     <div class="form-group">
                                                         <label class="btn btn-success" style="color: white;">
-                                                            <i class="fas fa-plus"></i> Upload Challan <input type="file"  id="challan" name="Challanfileupload" hidden>
+                                                            <i class="fas fa-plus"></i> Upload Challan <input type="file"  id="challan" name="challanfileupload" hidden>
                                                         </label>
                                                     </div>
                                                     <div aria-valuemax="100" aria-valuemin="0" role="progressbar" class="progress progress-striped active">
@@ -196,13 +196,13 @@
                                     <div class="col-md-6 col-sm-12 col-xs-12  pr-1">
                                         <div class="form-group">
                                             <label for="control-label">Bank Name</label>
-                                            <input type="text" name="NTSbankname" id="NTSbankname" class="form-control" required>
+                                            <input type="text" name="ntsbankname" id="NTSbankname" class="form-control" required>
                                         </div>
                                     </div>
                                     <div class="col-md-4 col-sm-12 col-xs-12  pr-1">
                                         <div class="form-group">
                                             <label for="control-label">Branch Code</label>
-                                            <input type="text" name="NTSbranchcode" id="NTSbranchcode" class="form-control" required>
+                                            <input type="text" name="ntsbranchcode" id="NTSbranchcode" class="form-control" required>
                                         </div>
                                     </div>
                                 </div>
@@ -210,13 +210,13 @@
                                     <div class="col-md-6 col-sm-12 col-xs-12  pr-1">
                                         <div class="form-group">
                                             <label for="control-label">Bank Address</label>
-                                            <input type="text" name="NTSbankaddress" id="NTSbankaddress" class="form-control" required>
+                                            <input type="text" name="ntsbankaddress" id="NTSbankaddress" class="form-control" required>
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-sm-12 col-xs-12  pr-1">
                                         <div class="form-group">
                                             <label for="control-label">Deposit Date</label>
-                                            <input type="date" name="NTSdepositdate" id="NTSdepositdate" class="form-control" required>
+                                            <input type="date" name="ntsdepositdate" id="NTSdepositdate" class="form-control" required>
                                         </div>
                                     </div>
                                 </div>
@@ -233,7 +233,7 @@
                                                 <div class="col-md-6 col-sm-6" data-bind="ifnot: $root.isSubmitted()">
                                                     <div class="form-group">
                                                         <label class="btn btn-success" style="color: white;">
-                                                            <i class="fas fa-plus"></i> Upload NTS Challan <input type="file" id="challan" name="NTSChallanfileupload" hidden>
+                                                            <i class="fas fa-plus"></i> Upload NTS Challan <input type="file" id="challan" name="ntschallanfileupload" hidden>
                                                         </label>
                                                     </div>
                                                     <div aria-valuemax="100" aria-valuemin="0" role="progressbar" class="progress progress-striped active">

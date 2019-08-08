@@ -93,8 +93,8 @@
                                                 <div class="form-group">
                                                     <label class="control-label">Self Employed?</label>
                                                     <div>
-                                                        Yes <input type="radio" name="self">
-                                                        No <input type="radio" name="self" checked>
+                                                        Yes <input type="radio" name="selfemployed">
+                                                        No <input type="radio" name="selfemployed" checked>
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
@@ -222,7 +222,7 @@
                                                 <div class="row">
                                                     <div class="col-md-3">
                                                         <div class="form-group">
-                                                            <select name='Todate' id='Todateddl' class="form-control" required>
+                                                            <select name='todate' id='Todateddl' class="form-control" required>
                                                                 <option value='Day'>Date</option>
                                                                 <option value='1'>1</option>
                                                                 <option value='2'>2</option>

@@ -94,7 +94,7 @@
                                                 </div>
                                                 <div class="form-group">
                                                     <label class="control-label">Degree Title</label>
-                                                    <input type="text" class="form-control" name="degree" id="degree" value="Bs / Ms / Phd">
+                                                    <input type="text" class="form-control" name="degreetitle" id="degree" value="Bs / Ms / Phd">
                                                 </div>
                                                 <div class="form-group">
                                                     <label class="control-label">Select Department</label>

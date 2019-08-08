@@ -107,7 +107,7 @@
                                                     </div>
                                                     <div class="form-group">
                                                         <label class="control-label">Course pre-requisite</label>
-                                                        <select name="coursetype" id="coursetype" class="form-control">
+                                                        <select name="coursepre-requisite" id="coursepre-requisite" class="form-control">
                                                             <option value="Select Department">Select Course pre-requisite</option>
                                                         </select>
                                                     </div>

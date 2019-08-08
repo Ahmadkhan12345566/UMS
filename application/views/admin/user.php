@@ -78,18 +78,18 @@
                 <h5 class="card-title">Edit Profile</h5>
               </div>
               <div class="card-body">
-                <form>
+                <form method="post" action="">
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>First Name</label>
-                                <input type="text" class="form-control" placeholder="First Name" value="">
+                                <input type="text" class="form-control" name="fname" placeholder="First Name" value="">
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>Last Name</label>
-                                <input type="text" class="form-control" placeholder="Last Name" value="">
+                                <input type="text" class="form-control" name="lname" placeholder="Last Name" value="">
                             </div>
                         </div>
                     </div>
@@ -97,7 +97,7 @@
                       <div class="col-md-12">
                           <div class="form-group">
                             <label for="exampleInputEmail1">Email address</label>
-                            <input type="email" class="form-control" placeholder="Email">
+                            <input type="email" name="email" class="form-control" placeholder="Email">
                           </div>
                       </div>
                   </div>
@@ -105,7 +105,7 @@
                     <div class="col-md-12">
                       <div class="form-group">
                         <label>Address</label>
-                        <input type="text" class="form-control" placeholder="Home Address" value="">
+                        <input type="text" class="form-control" name="homeaddress" placeholder="Home Address" value="">
                       </div>
                     </div>
                   </div>
@@ -113,19 +113,19 @@
                     <div class="col-md-4">
                       <div class="form-group">
                         <label>City</label>
-                        <input type="text" class="form-control" placeholder="City" value="">
+                        <input type="text" class="form-control" name="city" placeholder="City" value="">
                       </div>
                     </div>
                     <div class="col-md-4">
                       <div class="form-group">
                         <label>Country</label>
-                        <input type="text" class="form-control" placeholder="Country" value="">
+                        <input type="text" class="form-control" name="country" placeholder="Country" value="">
                       </div>
                     </div>
                     <div class="col-md-4">
                       <div class="form-group">
                         <label>Postal Code</label>
-                        <input type="number" class="form-control" placeholder="ZIP Code">
+                        <input type="text" class="form-control" name="zipcode" placeholder="ZIP Code">
                       </div>
                     </div>
                   </div>
@@ -133,7 +133,7 @@
                     <div class="col-md-12">
                       <div class="form-group">
                         <label>About Me</label>
-                        <textarea class="form-control textarea">Something about you</textarea>
+                        <textarea class="form-control textarea" name="aboutme">Something about you</textarea>
                       </div>
                     </div>
                   </div>

@@ -66,12 +66,6 @@
             </div>
         </nav>
         <!-- End Navbar -->
-        <!-- <div class="panel-header panel-header-lg">
-
-    <canvas id="bigDashboardChart"></canvas>
-
-
-  </div> -->
 
         <div class="content">
             <div class="row">
@@ -98,7 +92,7 @@
                                                 </div>
                                                 <div class="form-group">
                                                     <label class="control-label">Type</label>
-                                                    <select name="typejob" id="typejob" class="form-control" required>
+                                                    <select name="jobtype" id="jobtype" class="form-control" required>
                                                         <option value="Conference">Conference</option>
                                                         <option value="Journal">Journal</option>
                                                     </select>

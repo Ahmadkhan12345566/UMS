@@ -24,6 +24,7 @@ class Admin extends CI_Controller
     {
 
         parent::__construct();
+        $this->load->model('Adminm');
         $this->load->helper(array('form'));
     }
 
@@ -42,13 +43,24 @@ class Admin extends CI_Controller
     public function usersadd()
     {
         $this->load->view('admin/users');
+        if ($data=$this->input->post()){
+          //  $this->Adminm->admin_users($data);
+            var_dump($data);
+            die();
+        }
+        //$this->Adminm->admin_users($data);
+
 
     }
 
     public function user()
     {
         $this->load->view('admin/user');
-
+        if ($data=$this->input->post()){
+            var_dump($data);
+            die();
+        }
+        //$this->Adminm->admin($data);
     }
 
     public function studentlist()
@@ -65,17 +77,26 @@ class Admin extends CI_Controller
     public function department()
     {
         $this->load->view('admin/departments');
-
+        if ($data=$this->input->post()){
+            var_dump($data);
+            die();
+        }
     }
     public function degree()
     {
         $this->load->view('admin/degree');
-
+        if ($data=$this->input->post()){
+            var_dump($data);
+            die();
+        }
     }
     public function courses()
     {
         $this->load->view('admin/courses');
-
+        if ($data=$this->input->post()){
+            var_dump($data);
+            die();
+        }
     }
 
 }
