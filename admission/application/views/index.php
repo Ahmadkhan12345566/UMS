@@ -56,17 +56,13 @@
                         <div class="card-body">
                             <form action="#" method="post">
                                     <div class="form-group">
-                                        <label>Universities</label>
+                                        <label>University</label>
                                         <select class="form-control" name="universities">
                                             <option>Choose University</option>
-                                            <option>Karachi</option>
-                                            <option>Islamabad</option>
-                                            <option>Peshawar</option>
-                                            <option>Lahore</option>
                                         </select>
                                     </div>
                                     <div class="form-group">
-                                        <label>Campuses</label>
+                                        <label>Campus</label>
                                         <select class="form-control" name="campuses">
                                             <option>Choose Campus</option>
                                             <option>Karachi</option>
@@ -81,7 +77,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label>Email</label>
-                                        <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Enter your email address">
+                                        <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$" placeholder="Enter your email address">
                                     </div>
                                     <div class="form-group">
                                         <label>Password</label>
