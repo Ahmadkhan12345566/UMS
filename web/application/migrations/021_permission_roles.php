@@ -11,16 +11,16 @@ class Migration_permission_roles extends CI_Migration {
      * Create table.
      */
     public function up() {
-        $this->dbforge->add_field([
-            'role_id' => [
+        $this->dbforge->add_field(array(
+            'role_id' => array(
                 'type' => 'INT',
                 'constraint' => 11,
-            ],
-            'permission_id' => [
+            ),
+            'permission_id' => array(
                 'type' => 'INT',
                 'constraint' => 11,
-            ]
-        ]);
+            )
+        ));
         
         $this->dbforge->add_key('role_id', TRUE);
         $this->dbforge->add_key('permission_id', TRUE);
