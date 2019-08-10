@@ -55,6 +55,8 @@ $route['index'] = 'Department/index';
 $route['department'] = 'Department/department';
 $route['degree'] = 'Department/degree';
 $route['courses'] = 'Department/courses';
+$route['migrate'] = 'Migrate/index';
+
 
 
 $route['default_controller'] = 'welcome';
