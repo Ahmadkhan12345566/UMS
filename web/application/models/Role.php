@@ -1,18 +1,5 @@
 <?php
-/**
- * Author: Firoz Ahmad Likhon <likh.deshi@gmail.com>
- * Website: https://github.com/firoz-ahmad-likhon
- *
- * Copyright (c) 2018 Firoz Ahmad Likhon
- * Released under the MIT license
- *       ___            ___  ___    __    ___      ___  ___________  ___      ___
- *      /  /           /  / /  /  _/ /   /  /     /  / / _______  / /   \    /  /
- *     /  /           /  / /  /_ / /    /  /_____/  / / /      / / /     \  /  /
- *    /  /           /  / /   __|      /   _____   / / /      / / /  / \  \/  /
- *   /  /_ _ _ _ _  /  / /  /   \ \   /  /     /  / / /______/ / /  /   \    /
- *  /____________/ /__/ /__/     \_\ /__/     /__/ /__________/ /__/     /__/
- * Likhon the hackman, who claims himself as a hacker but really he isn't.
- */
+
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Role extends CI_Model
