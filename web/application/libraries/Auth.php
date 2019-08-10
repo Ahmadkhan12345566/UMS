@@ -67,7 +67,7 @@ class Auth
      */
     public function showLoginForm($data = array())
     {
-        return $this->CI->load->view("auth/login", $data);
+        return $this->CI->load->view("index", $data);
     }
 
     /**
