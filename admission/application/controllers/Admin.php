@@ -33,6 +33,11 @@ class Admin extends CI_Controller
         $this->load->view('admin/index');
 
     }
+    public function dashboard()
+    {
+        $this->load->view('admin/dashboard');
+
+    }
 
     public function ad_requests()
     {

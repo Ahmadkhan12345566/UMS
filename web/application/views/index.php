@@ -1,11 +1,10 @@
 <?php $this->load->view('inc/header');?>
 <style>
-    body{
-        background: linear-gradient(to right, #ECF0F1   0%,#fff 100%);
+    .body-background{
+        background: linear-gradient(90deg, #ECF0F1   0%,#fff 100%);
         margin-top: 150px !important;
     }
 </style>
-<body>
     <div class="container">
     <div class="row">
         <div class="col-md-10 offset-md-1">
@@ -24,8 +23,8 @@
                             <div class="form-group">
                                 <a href="#">Forget password?</a>
                             </div>
-                            <div class="form-group">
-                                <button type="submit" class="btn btn-primary">Login</button>
+                            <div class="form-group pt-3">
+                                <button type="submit" class="btn btn-primary pull-right">Login</button>
                             </div>
                         </form>
                     </div>
@@ -34,5 +33,4 @@
         </div>
     </div>
 </div>
-</body>
 <?php $this->load->view('inc/header');?>
