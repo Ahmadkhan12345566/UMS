@@ -94,7 +94,7 @@
                                     <!--<input placeholder="Search Location" name="name" type="text" required="">
                                     <input placeholder="Search Location" name="name" type="text" required="">
                                     <input placeholder="Price Range" name="name" type="text" required=""> -->
-                                <a href="<?php echo base_url() ?>instructions" Class="btn btn-success">Register</a>
+                                <button type="submit" Class="btn btn-success">Register</button>
                             </form>
                         </div>
 <!--                        <div class="card-footer">-->

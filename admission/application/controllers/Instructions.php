@@ -30,6 +30,10 @@ class Instructions extends CI_Controller {
     public function signup()
     {
         $this->load->view('index');
+        if ($data=$this->input->post()){
+            var_dump($data);
+            die();
+        }
     }
 
     public function index()

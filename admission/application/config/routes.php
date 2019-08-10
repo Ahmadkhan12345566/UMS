@@ -72,7 +72,7 @@ $route['otherdetail'] = 'Instructions/other';
 $route['confirmfee'] = 'Instructions/fee';
 $route['submitapplication'] = 'Instructions/application';
 
-$route['index'] = 'Admin/index';
+$route['login'] = 'Admin/index';
 $route['dashboard'] = 'Admin/dashboard';
 $route['admissionrequests'] = 'Admin/ad_requests';
 $route['users'] = 'Admin/usersadd';
