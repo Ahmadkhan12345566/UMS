@@ -24,7 +24,6 @@ class Department extends CI_Controller
     {
 
         parent::__construct();
-        $this->load->model('Adminm');
         $this->load->helper(array('form'));
     }
 
