@@ -20,7 +20,6 @@ class Login extends CI_Controller
         $this->load->database();
         $this->load->library('auth', 'form_validation');
     }
-
     /**
      * handle the login.
      */
