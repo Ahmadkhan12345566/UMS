@@ -11,41 +11,41 @@ class Migration_permissions extends CI_Migration {
      * Create table.
      */
     public function up() {
-        $this->dbforge->add_field([
-            'id' => [
+        $this->dbforge->add_field(array(
+            'id' => array(
                 'type' => 'INT',
                 'constraint' => 11,
                 'auto_increment' => TRUE
-            ],
-            'name' => [
+            ),
+            'name' => array(
                 'type' => 'VARCHAR',
                 'constraint' => 128,
-            ],
-            'display_name' => [
+            ),
+            'display_name' => array(
                 'type' => 'VARCHAR',
                 'constraint' => 30,
-            ],
-            'description' => [
+            ),
+            'description' => array(
                 'type' => 'TINYTEXT',
-            ],
-            'status' => [
+            ),
+            'status' => array(
                 'type' => 'TINYINT',
                 'constraint' => 1,
                 'default' => 1
-            ],
-            'created_at' => [
+            ),
+            'created_at' => array(
                 'type' => 'timestamp',
                 'default' => NULL,
-            ],
-            'updated_at' => [
+            ),
+            'updated_at' => array(
                 'type' => 'timestamp',
                 'default' => NULL,
-            ],
-            'deleted_at' => [
+            ),
+            'deleted_at' => array(
                 'type' => 'timestamp',
                 'default' => NULL,
-            ],
-        ]);
+            ),
+        ));
         
         $this->dbforge->add_key('id', TRUE);
         $this->dbforge->create_table('permissions');

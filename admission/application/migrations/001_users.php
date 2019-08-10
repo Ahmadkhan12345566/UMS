@@ -1,11 +1,11 @@
 <?php
 /**
- * Migration_roles Class
+ * Migration_users Class
  *
  * @author       Firoz Ahmad Likhon <likh.deshi@gmail.com>
  * @purpose      Migration.
  */
-class Migration_roles extends CI_Migration {
+class Migration_users extends CI_Migration {
 
     /**
      * Create table.
@@ -13,20 +13,21 @@ class Migration_roles extends CI_Migration {
     public function up() {
         $this->dbforge->add_field(array(
             'id' => array(
-                'type' => 'INT',
-                'constraint' => 11,
+                'type' => 'BIGINT',
+                'unsigned' => TRUE,
                 'auto_increment' => TRUE
             ),
-            'name' => array(
+            'email' => array(
+                'type' => 'VARCHAR',
+                'constraint' => 150,
+            ),
+            'username' =>array (
                 'type' => 'VARCHAR',
                 'constraint' => 128,
             ),
-            'display_name' => array(
+            'password' => array(
                 'type' => 'VARCHAR',
-                'constraint' => 30,
-            ),
-            'description' => array(
-                'type' => 'TINYTEXT',
+                'constraint' => 255,
             ),
             'status' => array(
                 'type' => 'TINYINT',
@@ -37,7 +38,7 @@ class Migration_roles extends CI_Migration {
                 'type' => 'timestamp',
                 'default' => NULL,
             ),
-            'updated_at' => array(
+            'updated_at' =>array (
                 'type' => 'timestamp',
                 'default' => NULL,
             ),
@@ -46,16 +47,16 @@ class Migration_roles extends CI_Migration {
                 'default' => NULL,
             ),
         ));
-        
-        $this->dbforge->add_key('id', TRUE);
-        $this->dbforge->create_table('roles');
+
+        $this->dbforge->add_key('id', true);
+        $this->dbforge->create_table('users');
     }
 
     /**
      * Drop table.
      */
     public function down() {
-        $this->dbforge->drop_table('roles');
+        $this->dbforge->drop_table('users');
     }
 
 }
