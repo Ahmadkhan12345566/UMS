@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d2272c63-a99a-4369-9ef5-6a942b3a36d6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/admission/application/views/admin/dashboard.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/application/config/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/admission/application/config/routes.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admission/application/controllers/Admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/admission/application/controllers/Admin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/application/views/admin/inc/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/admission/application/views/admin/inc/header.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admission/application/views/admin/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/admission/application/views/admin/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/application/views/inc/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/application/views/inc/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/application/controllers/Department.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/application/controllers/Department.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/application/views/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/application/views/index.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,17 +19,35 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/application/views/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="18" selection-end-line="35" selection-end-column="40" />
+            <state relative-caret-position="340">
+              <caret line="20" column="95" selection-start-line="20" selection-start-column="95" selection-end-line="20" selection-end-column="95" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/admission/application/views/admin/index.php">
+        <entry file="file://$PROJECT_DIR$/web/application/controllers/Department.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="595">
-              <caret line="35" column="31" selection-start-line="35" selection-start-column="31" selection-end-line="35" selection-end-column="31" />
+              <caret line="35" column="18" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admission/application/views/admin/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="20" column="99" selection-start-line="20" selection-start-column="99" selection-end-line="20" selection-end-column="99" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admission/application/controllers/Admin.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="35" column="18" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -65,11 +80,12 @@
         <option value="$PROJECT_DIR$/departments/application/config/routes.php" />
         <option value="$PROJECT_DIR$/departments/application/views/index.php" />
         <option value="$PROJECT_DIR$/web/application/views/inc/header.php" />
-        <option value="$PROJECT_DIR$/web/application/views/index.php" />
         <option value="$PROJECT_DIR$/admission/application/config/routes.php" />
-        <option value="$PROJECT_DIR$/admission/application/controllers/Admin.php" />
         <option value="$PROJECT_DIR$/admission/application/views/admin/inc/header.php" />
+        <option value="$PROJECT_DIR$/admission/application/controllers/Admin.php" />
         <option value="$PROJECT_DIR$/admission/application/views/admin/index.php" />
+        <option value="$PROJECT_DIR$/web/application/views/index.php" />
+        <option value="$PROJECT_DIR$/web/application/controllers/Department.php" />
       </list>
     </option>
   </component>
@@ -93,51 +109,27 @@
             <path>
               <item name="UMS" type="b2602c69:ProjectViewProjectNode" />
               <item name="UMS" type="462c0819:PsiDirectoryNode" />
-              <item name="admission" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="UMS" type="b2602c69:ProjectViewProjectNode" />
               <item name="UMS" type="462c0819:PsiDirectoryNode" />
-              <item name="admission" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
               <item name="application" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="UMS" type="b2602c69:ProjectViewProjectNode" />
               <item name="UMS" type="462c0819:PsiDirectoryNode" />
-              <item name="admission" type="462c0819:PsiDirectoryNode" />
-              <item name="application" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="UMS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="UMS" type="462c0819:PsiDirectoryNode" />
-              <item name="admission" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
               <item name="application" type="462c0819:PsiDirectoryNode" />
               <item name="controllers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="UMS" type="b2602c69:ProjectViewProjectNode" />
               <item name="UMS" type="462c0819:PsiDirectoryNode" />
-              <item name="admission" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
               <item name="application" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="UMS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="UMS" type="462c0819:PsiDirectoryNode" />
-              <item name="admission" type="462c0819:PsiDirectoryNode" />
-              <item name="application" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="UMS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="UMS" type="462c0819:PsiDirectoryNode" />
-              <item name="admission" type="462c0819:PsiDirectoryNode" />
-              <item name="application" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="inc" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -175,12 +167,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1565415225005</updated>
-      <workItem from="1565415226557" duration="9041000" />
+      <workItem from="1565415226557" duration="9773000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9041000" />
+    <option name="totallyTimeSpent" value="9773000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -330,24 +322,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/application/views/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="18" selection-end-line="35" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/admission/application/config/routes.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
           <caret line="75" column="38" selection-start-line="75" selection-start-column="38" selection-end-line="75" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admission/application/controllers/Admin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="36" column="4" selection-start-line="36" selection-start-column="4" selection-end-line="39" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -358,10 +336,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/admission/application/controllers/Admin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="35" column="18" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/admission/application/views/admin/index.php">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="20" column="99" selection-start-line="20" selection-start-column="99" selection-end-line="20" selection-end-column="99" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/application/views/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="95" selection-start-line="20" selection-start-column="95" selection-end-line="20" selection-end-column="95" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/application/controllers/Department.php">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="595">
-          <caret line="35" column="31" selection-start-line="35" selection-start-column="31" selection-end-line="35" selection-end-column="31" />
+          <caret line="35" column="18" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="18" />
         </state>
       </provider>
     </entry>

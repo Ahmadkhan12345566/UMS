@@ -18,7 +18,7 @@
                                     <input type="email" class="form-control" name="loginemail" placeholder="Email Address">
                                 </div>
                                 <div class="form-group">
-                                    <input type="password" class="form-control" name="loginemail" placeholder="Password">
+                                    <input type="password" class="form-control" name="loginpassword" placeholder="Password">
                                 </div>
                                 <div class="form-group">
                                     <a href="#">Forget password?</a>
