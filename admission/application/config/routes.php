@@ -72,12 +72,11 @@ $route['otherdetail'] = 'Instructions/other';
 $route['confirmfee'] = 'Instructions/fee';
 $route['submitapplication'] = 'Instructions/application';
 
-$route['Department'] = 'Admin/index';
+$route['index'] = 'Admin/index';
+$route['dashboard'] = 'Admin/dashboard';
 $route['admissionrequests'] = 'Admin/ad_requests';
 $route['users'] = 'Admin/usersadd';
 $route['user'] = 'Admin/user';
 $route['studentlist'] = 'Admin/studentlist';
 $route['statistics'] = 'Admin/statistics';
-$route['department'] = 'Admin/department';
-$route['degree'] = 'Admin/degree';
-$route['courses'] = 'Admin/courses';
+
