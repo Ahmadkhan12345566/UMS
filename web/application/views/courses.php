@@ -140,99 +140,101 @@
                         </div>
                     </div>
                     <div class="card-body">
-                        <table class="table" id="umsTable">
-                            <thead>
-                            <tr class="text-primary text-center">
-                                <th scope="col">#</th>
-                                <th scope="col">Course Code</th>
-                                <th scope="col">Name</th>
-                                <th scope="col">Credit Hours</th>
-                                <th scope="col">Type</th>
-                                <th scope="col">Pre-requisite</th>
-                                <th scope="col">Semester</th>
-                                <th scope="col">Degree</th>
-                                <th scope="col">Suspend</th>
-                                <th scope="col">Action</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr class="text-center">
-                                <th scope="row">1</th>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td>
-                                    <button class="btn btn-primary">Suspend</button>
-                                </td>
-                                <td>
+                        <div class="table-responsive{-sm|-md|-lg|-xl}">
+                            <table class="table" id="umsTable">
+                                <thead>
+                                <tr class="text-primary text-center">
+                                    <th scope="col">#</th>
+                                    <th scope="col">Course Code</th>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Credit Hours</th>
+                                    <th scope="col">Type</th>
+                                    <th scope="col">Pre-requisite</th>
+                                    <th scope="col">Semester</th>
+                                    <th scope="col">Degree</th>
+                                    <th scope="col">Suspend</th>
+                                    <th scope="col">Action</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr class="text-center">
+                                    <th scope="row">1</th>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>
+                                        <button class="btn btn-primary">Suspend</button>
+                                    </td>
+                                    <td>
                                         <span class="text-primary" data-toggle="modal" data-target="#Updatecourse">
                                             <i class="far fa-edit"></i>
                                         </span>
-                                    <!-- Modal HTML Markup -->
-                                    <div id="Updatecourse" class="modal fade">
-                                        <div class="modal-dialog" role="document">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h3 class="modal-title">Update Degree</h3>
-                                                </div>
-                                                <div class="modal-body text-left">
-                                                    <form method="post" action="">
-                                                        <div class="form-group">
-                                                            <label class="control-label">Course Code</label>
-                                                            <input type="text" class="form-control" name="coursecode" id="coursecode" value="Course code">
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <label class="control-label">Course Name</label>
-                                                            <input type="text" class="form-control" name="coursename" id="coursename" value="Course Name">
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <label class="control-label">Credit Hours</label>
-                                                            <input type="text" name="credithours" id="credithours" class="form-control" value="Credit Hours">
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <label class="control-label">Course Type</label>
-                                                            <input name="coursetype" id="coursetype" class="form-control" value="Course Type">
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <label class="control-label">Course pre-requisite</label>
-                                                            <select name="coursetype" id="coursetype" class="form-control">
-                                                                <option value="Select Department">Select Course pre-requisite</option>
-                                                            </select>
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <label class="control-label">Course Semester</label>
-                                                            <input type="number" name="coursesemester" id="coursesemester" class="form-control" value="Course Semester">
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <label class="control-label">Degree Name</label>
-                                                            <select name="degreename" id="degreename" class="form-control">
-                                                                <option value="Select Department">Select Degree Name</option>
-                                                            </select>
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <div>
-                                                                <button type="submit" class="btn btn-primary">
-                                                                    Update
-                                                                </button>
-                                                                <button type="submit" class="btn btn-danger" data-dismiss="modal">
-                                                                    Cancel
-                                                                </button>
+                                        <!-- Modal HTML Markup -->
+                                        <div id="Updatecourse" class="modal fade">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h3 class="modal-title">Update Degree</h3>
+                                                    </div>
+                                                    <div class="modal-body text-left">
+                                                        <form method="post" action="">
+                                                            <div class="form-group">
+                                                                <label class="control-label">Course Code</label>
+                                                                <input type="text" class="form-control" name="coursecode" id="coursecode" value="Course code">
                                                             </div>
-                                                        </div>
-                                                    </form>
-                                                </div>
-                                            </div><!-- /.modal-content -->
-                                        </div><!-- /.modal-dialog -->
-                                    </div><!-- /.modal -->
-                                    <a href="" class="text-danger"><i class="far fa-trash-alt"></i></a>
-                                </td>
-                            </tr>
-                            </tbody>
-                        </table>
+                                                            <div class="form-group">
+                                                                <label class="control-label">Course Name</label>
+                                                                <input type="text" class="form-control" name="coursename" id="coursename" value="Course Name">
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label class="control-label">Credit Hours</label>
+                                                                <input type="text" name="credithours" id="credithours" class="form-control" value="Credit Hours">
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label class="control-label">Course Type</label>
+                                                                <input name="coursetype" id="coursetype" class="form-control" value="Course Type">
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label class="control-label">Course pre-requisite</label>
+                                                                <select name="coursetype" id="coursetype" class="form-control">
+                                                                    <option value="Select Department">Select Course pre-requisite</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label class="control-label">Course Semester</label>
+                                                                <input type="number" name="coursesemester" id="coursesemester" class="form-control" value="Course Semester">
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label class="control-label">Degree Name</label>
+                                                                <select name="degreename" id="degreename" class="form-control">
+                                                                    <option value="Select Department">Select Degree Name</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <div>
+                                                                    <button type="submit" class="btn btn-primary">
+                                                                        Update
+                                                                    </button>
+                                                                    <button type="submit" class="btn btn-danger" data-dismiss="modal">
+                                                                        Cancel
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div><!-- /.modal-content -->
+                                            </div><!-- /.modal-dialog -->
+                                        </div><!-- /.modal -->
+                                        <a href="" class="text-danger"><i class="far fa-trash-alt"></i></a>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>

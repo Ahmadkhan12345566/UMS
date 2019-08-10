@@ -52,6 +52,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
 $route['index'] = 'Department/index';
+$route['dashboard'] = 'Department/dashboard';
 $route['department'] = 'Department/department';
 $route['degree'] = 'Department/degree';
 $route['courses'] = 'Department/courses';

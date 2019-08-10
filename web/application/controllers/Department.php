@@ -33,6 +33,12 @@ class Department extends CI_Controller
         $this->load->view('index');
 
     }
+
+    public function dashboard()
+    {
+        $this->load->view('dashboard');
+
+    }
     public function department()
     {
         $this->load->view('departments');
