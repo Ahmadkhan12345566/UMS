@@ -32,7 +32,7 @@ class Migration_users extends CI_Migration {
             'status' => array(
                 'type' => 'TINYINT',
                 'constraint' => 1,
-                'default' => 1
+                'default' => 0
             ),
             'created_at' => array(
                 'type' => 'timestamp',
