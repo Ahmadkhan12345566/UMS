@@ -54,8 +54,11 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
 
+//todo: signup
+$route['index'] = 'Signup/index';
 
-$route['index'] = 'Instructions/signup';
+
+//todo: Student Dashboard
 $route['instructions'] = 'Instructions/index';
 $route['personalinformation'] = 'Instructions/personalinfo';
 $route['addressdetail'] = 'Instructions/adres';

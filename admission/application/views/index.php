@@ -54,16 +54,16 @@
                             <h5 class="title" style="color: #51CBCE;">Signup for Admission (Fall 2019)</h5>
                         </div>
                         <div class="card-body">
-                            <form action="#" method="post">
+                            <form action="<?php echo base_url('index')?>" method="post" >
                                     <div class="form-group">
                                         <label>University</label>
-                                        <select class="form-control" name="universities">
+                                        <select class="form-control">
                                             <option>Choose University</option>
                                         </select>
                                     </div>
                                     <div class="form-group">
                                         <label>Campus</label>
-                                        <select class="form-control" name="campuses">
+                                        <select class="form-control">
                                             <option>Choose Campus</option>
                                             <option>Karachi</option>
                                             <option>Islamabad</option>
@@ -73,11 +73,11 @@
                                     </div>
                                     <div class="form-group">
                                         <label>Name</label>
-                                        <input type="text" class="form-control" id="name"  name="name" aria-describedby="nameHelp" placeholder="Enter your name">
+                                        <input type="text" class="form-control" id="name"  name="username" aria-describedby="nameHelp" placeholder="Enter your full name">
                                     </div>
                                     <div class="form-group">
                                         <label>Email</label>
-                                        <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$" placeholder="Enter your email address">
+                                        <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Enter your email address">
                                     </div>
                                     <div class="form-group">
                                         <label>Password</label>
