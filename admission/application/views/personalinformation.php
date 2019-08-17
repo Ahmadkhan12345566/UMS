@@ -81,133 +81,33 @@
                             <h5 class="card-title">Personal Information</h5>
                         </div>
                         <div class="card-body">
-                            <form method="post" action="<?php echo base_url("Student/personal_information");?>">
+                            <form method="post" action="">
                                 <div class="row">
                                     <div class="col-md-6 col-sm-12 col-xs-12">
                                         <div class="form-group">
                                             <label>Full Name</label>
-                                            <input type="text" class="form-control" name="fullname" placeholder="Your full name" required>
+                                            <input type="text" class="form-control" name="fullname" placeholder="Your Full name" required>
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-sm-12 col-xs-12">
                                         <div class="form-group">
-                                            <label>Father Name</label>
-                                            <input type="text" class="form-control" name="fathername" placeholder="Your father full name" required>
-                                        </div>
-                                    </div>
-                                </div>
-                                <label>DOB</label>
-                                <div class="row">
-                                    <div class="col-md-2">
-                                        <div class="form-group">
-                                            <select name='day' id='dayddl' class="form-control" required>
-                                                <option value='Day'>Day</option>
-                                                <option value='1'>1</option>
-                                                <option value='2'>2</option>
-                                                <option value='3'>3</option>
-                                                <option value='4'>4</option>
-                                                <option value='5'>5</option>
-                                                <option value='6'>6</option>
-                                                <option value='7'>7</option>
-                                                <option value='8'>8</option>
-                                                <option value='9'>9</option>
-                                                <option value='10'>10</option>
-                                                <option value='11'>11</option>
-                                                <option value='12'>12</option>
-                                                <option value='13'>13</option>
-                                                <option value='14'>14</option>
-                                                <option value='15'>15</option>
-                                                <option value='16'>16</option>
-                                                <option value='17'>17</option>
-                                                <option value='18'>18</option>
-                                                <option value='19'>19</option>
-                                                <option value='20'>20</option>
-                                                <option value='21'>21</option>
-                                                <option value='22'>22</option>
-                                                <option value='23'>23</option>
-                                                <option value='24'>24</option>
-                                                <option value='25'>25</option>
-                                                <option value='26'>26</option>
-                                                <option value='27'>27</option>
-                                                <option value='28'>28</option>
-                                                <option value='29'>29</option>
-                                                <option value='30'>30</option>
-                                                <option value='31'>31</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <div class="form-group">
-                                            <select name='month' id='monthddl' class="form-control" required>
-                                                <option value="Month">Month</option>
-                                                <option value="January">January</option>
-                                                <option value="February">February</option>
-                                                <option value="March">March</option>
-                                                <option value="April">April</option>
-                                                <option value="May">May</option>
-                                                <option value="June">June</option>
-                                                <option value="July">July</option>
-                                                <option value="August">August</option>
-                                                <option value="Septembar">Septembar</option>
-                                                <option value="Octobar">Octobar</option>
-                                                <option value="November">November</option>
-                                                <option value="December">December</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <div class="form-group">
-                                            <select name='year' id='year' class="form-control" required>
-                                                <option value='Years'>Years</option>
-                                                <option value='1970'>1970</option>
-                                                <option value='1971'>1971</option>
-                                                <option value='1972'>1972</option>
-                                                <option value='1973'>1973</option>
-                                                <option value='1974'>1974</option>
-                                                <option value='1975'>1975</option>
-                                                <option value='1976'>1976</option>
-                                                <option value='1977'>1977</option>
-                                                <option value='1978'>1978</option>
-                                                <option value='1979'>1979</option>
-                                                <option value='1980'>1980</option>
-                                                <option value='1981'>1981</option>
-                                                <option value='1982'>1982</option>
-                                                <option value='1983'>1983</option>
-                                                <option value='1984'>1984</option>
-                                                <option value='1985'>1985</option>
-                                                <option value='1986'>1986</option>
-                                                <option value='1987'>1987</option>
-                                                <option value='1988'>1988</option>
-                                                <option value='1989'>1989</option>
-                                                <option value='1990'>1990</option>
-                                                <option value='1991'>1991</option>
-                                                <option value='1992'>1992</option>
-                                                <option value='1993'>1993</option>
-                                                <option value='1994'>1994</option>
-                                                <option value='1995'>1995</option>
-                                                <option value='1996'>1996</option>
-                                                <option value='1997'>1997</option>
-                                                <option value='1998'>1998</option>
-                                                <option value='1999'>1999</option>
-                                                <option value='2000'>2000</option>
-                                                <option value='2001'>2001</option>
-                                                <option value='2002'>2002</option>
-                                                <option value='2003'>2003</option>
-                                                <option value='2004'>2004</option>
-                                            </select>
+                                            <label>Date of Birth</label>
+                                            <input type="date" class="form-control" placeholder="DOB">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-md-12">
+                                    <div class="col-md-6">
                                         <div class="form-group">
-                                            <label>Gender</label>
-                                            <select name='gender' id='gender' class="form-control" required>
-                                                <option value="SelectGender">Select Gender</option>
-                                                <option value="Male">Male</option>
-                                                <option value="Female">Female</option>
-                                                <option value="Others">Others</option>
-                                            </select>
+                                            <label>CNIC</label>
+                                            <input type="text" class="form-control" data-inputmask="'mask': '99999-9999999-9'" name="cnic" id="cnic" maxlength="15" required>
+                                            <small>Format : 61101-1234567-8</small>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-sm-12 col-xs-12">
+                                        <div class="form-group">
+                                            <label>Mobile Number</label>
+                                            <input type="text" name="mobnumbers" class="form-control" id="mobnumbers" maxlength="11" required style="padding: 9px; font-size: 14px;">
                                         </div>
                                     </div>
                                 </div>
@@ -430,11 +330,23 @@
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-md-6">
+                                    <div class="col-md-6 col-sm-12 col-xs-12">
                                         <div class="form-group">
-                                            <label>CNIC</label>
-                                            <input type="text" class="form-control" name="cnic" id="cnic" placeholder="xxxxx-xxxxxxx-x" maxlength="15" required>
-                                            <small>Format : 61101-1234567-8</small>
+                                            <label>Gender</label>
+                                            <select name='gender' id='gender' class="form-control" required>
+                                                <option value="SelectGender">Select Gender</option>
+                                                <option value="Male">Male</option>
+                                                <option value="Female">Female</option>
+                                                <option value="Others">Others</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 col-sm-12 col-xs-12">
+                                        <div class="form-group">
+                                            <label>Father Name</label>
+                                            <input type="text" class="form-control" name="fathername" placeholder="Your father full name" required>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
@@ -445,13 +357,9 @@
                                         </div>
                                     </div>
                                 </div>
-                                <label>Mobile Number</label>
+
                                 <div class="row">
-                                    <div class="col-md-6 col-sm-4 col-xs-4">
-                                        <div class="form-group">
-                                            <input type="text" name="mobnumbers" class="form-control" id="mobnumbers" maxlength="7" required style="padding: 9px; font-size: 14px;">
-                                        </div>
-                                    </div>
+
                                 </div>
                                 <div class="row">
                                     <div class="update ml-auto mr-auto">

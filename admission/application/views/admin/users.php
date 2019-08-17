@@ -86,11 +86,14 @@
                                         <div class="update ml-auto mr-auto">
                                             <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#ModalLoginForm">Add User</button>
                                             <!-- Modal HTML Markup -->
-                                            <div id="ModalLoginForm" class="modal fade">
+                                            <div id="ModalLoginForm" data-backdrop="static" class="modal fade">
                                                 <div class="modal-dialog" role="document">
                                                     <div class="modal-content">
                                                         <div class="modal-header">
                                                             <h3 class="modal-title">New User</h3>
+                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
                                                         </div>
                                                         <div class="modal-body">
                                                             <form method="post" action="<?php echo base_url("");?>" onsubmit="CheckValidation()">

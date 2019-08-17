@@ -44,6 +44,10 @@ class Instructions extends CI_Controller {
     public function personalinfo()
     {
         $this->load->view('personalinformation');
+        if ($data=$this->input->post()){
+            var_dump($data);
+            die();
+        }
     }
 
     public function adres()

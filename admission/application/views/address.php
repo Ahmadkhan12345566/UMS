@@ -349,7 +349,6 @@
                                         </fieldset>
                                     </div>
                                 </div>
-                                <hr>
                                 <div class="row">
                                     <div class="col-md-12 col-sm-12 col-xs-12 pr-1">
                                         <fieldset class="scheduler-border">
@@ -385,7 +384,6 @@
                                         </fieldset>
                                     </div>
                                 </div>
-                                <hr>
                                 <div class="row">
                                     <div class="col-md-12 col-sm-12 col-xs-12">
                                         <fieldset class="scheduler-border">

@@ -27,6 +27,8 @@
 </footer>
 </div>
 </div>
+
+<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/jquery.inputmask.bundle.js"></script>
 <!--   Core JS Files   -->
 <script src="<?php echo base_url()?>application/assets/js/core/jquery.min.js"></script>
 <script src="<?php echo base_url()?>application/assets/js/core/popper.min.js"></script>
@@ -47,6 +49,8 @@
         // Javascript method's body can be found in assets/assets-for-demo/js/demo.js
         demo.initChartsPages();
     });
+
+    $("#cnic").inputmask({"mask":"(99999-9999999-9"});
 </script>
 </body>
 
