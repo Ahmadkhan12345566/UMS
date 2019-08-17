@@ -84,7 +84,7 @@
                                         <div class="form-group">
                                             <h5>Please Upload Photo</h5>
                                             <label class="btn btn-success" style="color: white;">
-                                                Upload Photo <input type="file" name="StudentPhoto" id="StudentPhoto" hidden required>
+                                                Upload Photo <input type="file" name="studentphoto" id="StudentPhoto" hidden required>
                                             </label>
                                         </div>
                                     </div>

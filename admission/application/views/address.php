@@ -85,17 +85,17 @@
                                             <legend class="scheduler-border" style="color: black;">Permanent Address</legend>
                                             <div class="form-group">
                                                 <label>Line 1</label>
-                                                <input type="text" class="form-control" name="Permanentline1" id="Permanentline1" aria-describedby="Permanentline1Help" placeholder="House # 12 Lane G, G-9/2" required>
+                                                <input type="text" class="form-control" name="permanentline1" id="Permanentline1" aria-describedby="Permanentline1Help" placeholder="House # 12 Lane G, G-9/2" required>
                                             </div>
                                             <div class="form-group">
                                                 <label>Line 2</label>
-                                                <input type="text" class="form-control" name="Permanentline2"  id="Permanentline2" aria-describedby="Permanentline2Help" placeholder="" required>
+                                                <input type="text" class="form-control" name="permanentline2"  id="Permanentline2" aria-describedby="Permanentline2Help" placeholder="" required>
                                             </div>
                                             <div class="row">
                                                 <div class="col-md-6 col-sm-12 col-xs-12">
                                                     <div class="form-group">
                                                         <label>City</label>
-                                                        <select name="PermanentLocation" id="PermanentLocation" required class="form-control" required>
+                                                        <select name="permanentLocation" id="PermanentLocation" required class="form-control" required>
                                                             <option value="" disabled selected>Select The City</option>
                                                             <option value="Islamabad">Islamabad</option>
                                                             <option value="" disabled>Punjab Cities</option>
@@ -342,7 +342,7 @@
                                                 <div class="col-md-6 col-sm-12 col-xs-12">
                                                     <div class="form-group">
                                                         <label>Phone</label>
-                                                        <input type="text" class="form-control" name="Permanentphone" id="Permanentphone" aria-describedby="PermanentphoneHelp" placeholder="051-1234567" style="padding: 9px;" required>
+                                                        <input type="text" class="form-control" name="permanentphone" id="Permanentphone" aria-describedby="PermanentphoneHelp" placeholder="051-1234567" style="padding: 9px;" required>
                                                     </div>
                                                 </div>
                                             </div>
@@ -355,17 +355,17 @@
                                             <legend class="scheduler-border" style="color: black;">Mailing Address</legend>
                                             <div class="form-group">
                                                 <label>Line 1</label>
-                                                <input type="text" class="form-control" name="MailingAddressline1" id="MailingAddressline1" aria-describedby="MailingAddressline1Help" placeholder="House # 12 Lane G, G-9/2" required>
+                                                <input type="text" class="form-control" name="mailingAddressline1" id="MailingAddressline1" aria-describedby="MailingAddressline1Help" placeholder="House # 12 Lane G, G-9/2" required>
                                             </div>
                                             <div class="form-group">
                                                 <label>Line 2</label>
-                                                <input type="text" class="form-control" name="MailingAddressline2" id="MailingAddressline2" aria-describedby="MailingAddressline2Help" placeholder="" required>
+                                                <input type="text" class="form-control" name="mailingAddressline2" id="MailingAddressline2" aria-describedby="MailingAddressline2Help" placeholder="" required>
                                             </div>
                                             <div class="row">
                                                 <div class="col-md-6 col-sm-12 col-xs-12">
                                                     <div class="form-group">
                                                         <label>City</label>
-                                                        <select name='Mailingcity' id='Mailingcity' class="form-control" required>
+                                                        <select name='mailingcity' id='Mailingcity' class="form-control" required>
                                                             <option>Islamabad</option>
                                                             <option>Karachi</option>
                                                             <option>Multan</option>
@@ -377,7 +377,7 @@
                                                 <div class="col-md-6 col-sm-12 col-xs-12">
                                                     <div class="form-group">
                                                         <label>Phone</label>
-                                                        <input type="text" class="form-control" name="Mailingphone" id="Mailingphone" aria-describedby="MailingphoneHelp" placeholder="051-1234567" style="padding: 9px;" required>
+                                                        <input type="text" class="form-control" name="mailingphone" id="Mailingphone" aria-describedby="MailingphoneHelp" placeholder="051-1234567" style="padding: 9px;" required>
                                                     </div>
                                                 </div>
                                             </div>
@@ -390,17 +390,17 @@
                                             <legend class="scheduler-border" style="color: black;">Father / Guardian Address</legend>
                                             <div class="form-group">
                                                 <label>Line 1</label>
-                                                <input type="text" class="form-control" name="GuardianAddressline1" id="GuardianAddressline1" aria-describedby="GuardianAddressline1Help" placeholder="House # 12 Lane G, G-9/2" required>
+                                                <input type="text" class="form-control" name="guardianAddressline1" id="GuardianAddressline1" aria-describedby="GuardianAddressline1Help" placeholder="House # 12 Lane G, G-9/2" required>
                                             </div>
                                             <div class="form-group">
                                                 <label>Line 2</label>
-                                                <input type="text" class="form-control" name="GuardianAddressline2" id="GuardianAddressline2" aria-describedby="GuardianAddressline2Help" placeholder="" required>
+                                                <input type="text" class="form-control" name="guardianAddressline2" id="GuardianAddressline2" aria-describedby="GuardianAddressline2Help" placeholder="" required>
                                             </div>
                                             <div class="row">
                                                 <div class="col-md-6 col-sm-12 col-xs-12">
                                                     <div class="form-group">
                                                         <label>City</label>
-                                                        <select name='Guardiancity' id='Guardiancity' class="form-control" required>
+                                                        <select name='guardiancity' id='Guardiancity' class="form-control" required>
                                                             <option>Islamabad</option>
                                                             <option>Karachi</option>
                                                             <option>Multan</option>
@@ -412,7 +412,7 @@
                                                 <div class="col-md-6 col-sm-12 col-xs-12">
                                                     <div class="form-group">
                                                         <label>Phone</label>
-                                                        <input type="text" class="form-control" name="Guardianphone" id="Guardianphone" aria-describedby="GuardianphoneHelp" placeholder="051-1234567" style="padding: 9px;" required>
+                                                        <input type="text" class="form-control" name="guardianphone" id="Guardianphone" aria-describedby="GuardianphoneHelp" placeholder="051-1234567" style="padding: 9px;" required>
                                                     </div>
                                                 </div>
                                             </div>
@@ -420,7 +420,7 @@
                                                 <div class="col-md-12 col-sm-12 col-xs-12">
                                                     <div class="form-group">
                                                         <label>Mobile</label>
-                                                        <input type="text" class="form-control" name="Guardianmobile" id="Guardianmobile" aria-describedby="GuardianmobileHelp" placeholder="0300-xxxxxxx" style="padding: 9px;" required>
+                                                        <input type="text" class="form-control" name="guardianmobile" id="Guardianmobile" aria-describedby="GuardianmobileHelp" placeholder="0300-xxxxxxx" style="padding: 9px;" required>
                                                         <small">Enter you <b>Father / Guardian</b> mobile number here</small>
                                                     </div>
                                                 </div>

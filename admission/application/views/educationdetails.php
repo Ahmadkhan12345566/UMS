@@ -78,7 +78,7 @@
                 <div class="col-md-8 col-sm-12 col-xs-12">
                     <div class="card card-user">
                         <div class="card-header">
-                            <h5 class="card-title">Personal Information</h5>
+                            <h5 class="card-title">Education Details</h5>
                         </div>
                         <div class="card-body">
                             <form method="post" action="<?php echo base_url("Student/education_detail")?>">
@@ -103,11 +103,14 @@
                                                             Matric / O - Level
                                                         </a>
                                                         <!-- Modal HTML Markup -->
-                                                        <div id="ModalLoginForm" class="modal fade">
+                                                        <div id="ModalLoginForm" data-backdrop="static" class="modal fade">
                                                             <div class="modal-dialog" role="document">
                                                                 <div class="modal-content">
                                                                     <div class="modal-header">
                                                                         <h3 class="modal-title">Matric / O - Level</h3>
+                                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                            <span aria-hidden="true">&times;</span>
+                                                                        </button>
                                                                     </div>
                                                                     <div class="modal-body">
                                                                         <form method="post" action="<?php echo base_url("Student/eduMatric_detail");?>">
@@ -231,7 +234,7 @@
                                                                                     <button type="submit" class="btn btn-success">
                                                                                         Save
                                                                                     </button>
-                                                                                    <button type="submit" class="btn btn-ignore">
+                                                                                    <button type="button" class="btn btn-ignore" data-dismiss="modal">
                                                                                         Cancel
                                                                                     </button>
                                                                                 </div>
@@ -254,11 +257,14 @@
                                                             Intermediate
                                                         </a>
                                                         <!-- Modal HTML Markup -->
-                                                        <div id="IntermediateForm" class="modal fade">
+                                                        <div id="IntermediateForm" data-backdrop="static" class="modal fade">
                                                             <div class="modal-dialog" role="document">
                                                                 <div class="modal-content">
                                                                     <div class="modal-header">
                                                                         <h3 class="modal-title">Intermediate</h3>
+                                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                            <span aria-hidden="true">&times;</span>
+                                                                        </button>
                                                                     </div>
                                                                     <div class="modal-body">
                                                                         <form role="form" method="POST" action="<?php echo base_url("Student/eduintermediate_detail")?>">
@@ -374,7 +380,7 @@
                                                                                 </select>
                                                                             </div>
                                                                             <div class="form-group">
-                                                                                <label class="control-label">Minimum Marks</label>
+                                                                                <label class="control-label">Total Marks</label>
                                                                                 <div>
                                                                                     <input type="text" class="form-control" name="interminimum_marks" id="Interminimum_marks" required>
                                                                                 </div>
@@ -390,7 +396,7 @@
                                                                                     <button type="submit" class="btn btn-success">
                                                                                         Save
                                                                                     </button>
-                                                                                    <button type="submit" class="btn btn-ignore">
+                                                                                    <button type="button" class="btn btn-ignore" data-dismiss="modal">
                                                                                         Cancel
                                                                                     </button>
                                                                                 </div>
@@ -414,11 +420,14 @@
                                                             14 Years (Optional)
                                                         </a>
                                                         <!-- Modal HTML Markup -->
-                                                        <div id="14yearForm" class="modal fade">
+                                                        <div id="14yearForm" data-backdrop="static" class="modal fade">
                                                             <div class="modal-dialog" role="document">
                                                                 <div class="modal-content">
                                                                     <div class="modal-header">
                                                                         <h3 class="modal-title">14 years (Optional)</h3>
+                                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                            <span aria-hidden="true">&times;</span>
+                                                                        </button>
                                                                     </div>
                                                                     <div class="modal-body">
                                                                         <form role="form" method="POST" action="<?php echo base_url("Student/fourteenyearsEdu_detail")?>">
@@ -582,7 +591,7 @@
                                                                                     <button type="submit" class="btn btn-success">
                                                                                         Save
                                                                                     </button>
-                                                                                    <button type="submit" class="btn btn-ignore">
+                                                                                    <button type="button" class="btn btn-ignore" data-dismiss="modal">
                                                                                         Cancel
                                                                                     </button>
                                                                                 </div>
@@ -606,7 +615,7 @@
                                                             16 Years
                                                         </a>
                                                         <!-- Modal HTML Markup -->
-                                                        <div id="16yearform" class="modal fade">
+                                                        <div id="16yearform" data-backdrop="static" class="modal fade">
                                                             <div class="modal-dialog" role="document">
                                                                 <div class="modal-content">
                                                                     <div class="modal-header">
@@ -729,7 +738,7 @@
                                                                                     <button type="submit" class="btn btn-success">
                                                                                         Save
                                                                                     </button>
-                                                                                    <button type="submit" class="btn btn-ignore">
+                                                                                    <button type="button" class="btn btn-ignore" data-dismiss="maodal">
                                                                                         Cancel
                                                                                     </button>
                                                                                 </div>
