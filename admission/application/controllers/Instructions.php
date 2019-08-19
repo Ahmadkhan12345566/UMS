@@ -31,14 +31,27 @@ class Instructions extends CI_Controller {
     {
         $this->load->view('index');
         if ($data=$this->input->post()){
-            var_dump($data);
-            die();
         }
     }
-
+    public  function  viewLoad($page){
+        $this->load->view('inc/header');
+        $this->load->view('inc/bssidebar');
+        $this->load->view('inc/navbar');
+        $this->load->view($page);
+        $this->load->view('inc/footer');
+    }
+    public  function  viewLoad2($page){
+        $this->load->view('inc/header');
+        $this->load->view('inc/mssidebar');
+        $this->load->view('inc/navbar');
+        $this->load->view($page);
+        $this->load->view('inc/footer');
+    }
     public function index()
     {
-        $this->load->view('instructions');
+        $this->viewLoad("instructions");
+        $this->viewLoad2("instructions");
+        //$this->load->view('instructions');
     }
 
     public function personalinfo()

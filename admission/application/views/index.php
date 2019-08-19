@@ -1,4 +1,4 @@
-<?php $this->load->view('inc/header.php'); ?>
+<?php $this->load->view('inc/header'); ?>
 
     <div class="main">
         <!-- Navbar -->
@@ -36,13 +36,6 @@
             </nav>
         </conatiner>
         <!-- End Navbar -->
-        <!-- <div class="panel-header panel-header-lg">
-
-    <canvas id="bigDashboardChart"></canvas>
-
-
-  </div> -->
-
         <div class="content">
             <div class="row">
                 <div class="col-md-8">
@@ -55,20 +48,28 @@
                         </div>
                         <div class="card-body">
                             <form action="<?php echo base_url('index')?>" method="post" >
+<!--                                    <div class="form-group">-->
+<!--                                        <label>University</label>-->
+<!--                                        <select class="form-control">-->
+<!--                                            <option>Choose University</option>-->
+<!--                                        </select>-->
+<!--                                    </div>-->
                                     <div class="form-group">
-                                        <label>University</label>
-                                        <select class="form-control">
-                                            <option>Choose University</option>
+                                        <label>Campus</label>
+                                        <select class="form-control" name="campus_id">
+                                            <option value="">Choose Campus</option>
+                                            <option value="1">Karachi</option>
+                                            <option value="2">Islamabad</option>
+                                            <option value="3">Peshawar</option>
+                                            <option value="4">Lahore</option>
                                         </select>
                                     </div>
                                     <div class="form-group">
-                                        <label>Campus</label>
-                                        <select class="form-control">
-                                            <option>Choose Campus</option>
-                                            <option>Karachi</option>
-                                            <option>Islamabad</option>
-                                            <option>Peshawar</option>
-                                            <option>Lahore</option>
+                                        <label>Apply For</label>
+                                        <select class="form-control" name="applyfor_id" value="apply">
+                                            <option value="1">Undergraduate</option>
+                                            <option value="2">Graduate</option>
+                                            <option value="3">Phd</option>
                                         </select>
                                     </div>
                                     <div class="form-group">
@@ -87,9 +88,6 @@
                                         <label>Renter Password</label>
                                         <input type="password" class="form-control" id="password" name="password" aria-describedby="nameHelp" placeholder="Enter your confirm password">
                                     </div>
-                                    <!--<input placeholder="Search Location" name="name" type="text" required="">
-                                    <input placeholder="Search Location" name="name" type="text" required="">
-                                    <input placeholder="Price Range" name="name" type="text" required=""> -->
                                 <button type="submit" Class="btn btn-success">Register</button>
                             </form>
                         </div>
@@ -110,4 +108,4 @@
             </div>
         </div>
 
-<?php include 'inc/footer.php';?>
+<?php $this->load->view('inc/footer');?>

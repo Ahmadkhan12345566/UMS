@@ -29,7 +29,7 @@ class Crud_model extends CI_Model
     }
 
     public function delete($table,$id){
-        $this->db->where('id',$id);
+        $this->db->where('id, studentphoto',$id);
         return $this->db->delete($table);
     }
 
@@ -37,6 +37,11 @@ class Crud_model extends CI_Model
     public function update($table,$id,$data){
         $this->db->where('id',$id);
         return  $this->db->update($table,$data);
+    }
+
+    public function update_photo($id,$data){
+        $this->db->where('id',$id);
+        $this->db->update('users',$data);
     }
 
 

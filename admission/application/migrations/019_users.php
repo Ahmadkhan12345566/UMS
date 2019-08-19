@@ -29,10 +29,21 @@ class Migration_users extends CI_Migration {
                 'type' => 'VARCHAR',
                 'constraint' => 255,
             ),
+            'studentphoto' => array(
+                'type' => 'VARCHAR',
+                'constraint' => '100',
+                'null' => TRUE,
+            ),
             'status' => array(
                 'type' => 'TINYINT',
                 'constraint' => 1,
                 'default' => 0
+            ),
+            'campus_id' => array(
+                'type' => 'BIGINT',
+            ),
+            'applyfor_id' => array(
+                'type' => 'BIGINT',
             ),
             'created_at' => array(
                 'type' => 'timestamp',

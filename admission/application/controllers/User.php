@@ -21,10 +21,17 @@ class User extends CI_Controller {
 
     public function __construct()
     {
-
         parent::__construct();
         $this->load->model('Crud_model');
         $this->load->helper(array('form', 'url'));
+    }
+
+    public  function  viewLoad($page){
+        $this->load->view('inc/header');
+        $this->load->view('inc/bssidebar');
+        $this->load->view('inc/navbar');
+        $this->load->view($page);
+        $this->load->view('inc/footer');
     }
 
     public function personal_information(){
@@ -33,7 +40,7 @@ class User extends CI_Controller {
             $this->Crud_model->insert('personal_information', $_POST);
         }
         else{
-            $this->load->view('personalinformation');
+            $this->viewLoad('personalinformation');
         }
     }
 
@@ -44,7 +51,7 @@ class User extends CI_Controller {
            $this->Crud_model->insert('address', $_POST);
         }
         else{
-            $this->load->view('address');
+            $this->viewLoad('address');
         }
     }
 
@@ -55,7 +62,7 @@ class User extends CI_Controller {
             $this->Crud_model->insert('photo_upload', $_POST);
         }
         else{
-            $this->load->view('photoupload');
+            $this->viewLoad('photoupload');
         }
     }
 
@@ -91,7 +98,7 @@ class User extends CI_Controller {
             $this->Crud_model->insert('education_details', $_POST);
         }
         else{
-            $this->load->view('educationdetails');
+            $this->viewLoad('educationdetails');
         }
     }
 
@@ -103,7 +110,7 @@ class User extends CI_Controller {
             $this->Crud_model->insert('education_details', $_POST);
         }
         else{
-            $this->load->view('educationdetails');
+            $this->viewLoad('educationdetails');
         }
     }
 
@@ -115,7 +122,7 @@ class User extends CI_Controller {
             $this->Crud_model->insert('education_details', $_POST);
         }
         else{
-            $this->load->view('educationdetails');
+            $this->viewLoad('educationdetails');
         }
     }
 
@@ -127,7 +134,7 @@ class User extends CI_Controller {
             $this->Crud_model->insert('education_details', $_POST);
         }
         else{
-            $this->load->view('educationdetails');
+            $this->viewLoad('educationdetails');
         }
     }
 
@@ -138,7 +145,7 @@ class User extends CI_Controller {
             $this->Crud_model->insert('nts_details', $_POST);
         }
         else{
-            $this->load->view('ntsdetails');
+            $this->viewLoad('ntsdetails');
         }
     }
 
@@ -153,7 +160,7 @@ class User extends CI_Controller {
             };
         }
         else{
-            $this->load->view('programchoices');
+            $this->viewLoad('programchoices');
         }
     }
 
@@ -164,7 +171,7 @@ class User extends CI_Controller {
             $this->Crud_model->insert('work_history', $_POST);
         }
         else{
-            $this->load->view('workhistory');
+            $this->viewLoad('workhistory');
         }
     }
 
@@ -183,7 +190,7 @@ class User extends CI_Controller {
             $this->Crud_model->insert('fund_details', $_POST);
         }
         else{
-            $this->load->view('funddetails');
+            $this->viewLoad('funddetails');
         }
     }
 
@@ -194,7 +201,7 @@ class User extends CI_Controller {
             $this->Crud_model->insert('publication_details', $_POST);
         }
         else{
-            $this->load->view('publicationdetails');
+            $this->viewLoad('publicationdetails');
         }
     }
 
@@ -217,7 +224,7 @@ class User extends CI_Controller {
             }
         }
         else{
-            $this->load->view('researchinterests');
+            $this->viewLoad('researchinterests');
         }
     }
 
@@ -228,7 +235,7 @@ class User extends CI_Controller {
             $this->Crud_model->insert('documents_upload', $_POST);
         }
         else{
-            $this->load->view('documentsupload');
+            $this->viewLoad('documentsupload');
         }
     }
 
@@ -239,7 +246,7 @@ class User extends CI_Controller {
             $this->Crud_model->insert('other_details', $_POST);
         }
         else{
-            $this->load->view('otherdetail');
+            $this->viewLoad('otherdetail');
         }
     }
 
@@ -250,7 +257,7 @@ class User extends CI_Controller {
             $this->Crud_model->insert('confirm_fee', $_POST);
         }
         else{
-            $this->load->view('confirmfee');
+            $this->viewLoad('confirmfee');
         }
     }
 
@@ -259,6 +266,36 @@ class User extends CI_Controller {
         if ($data=$this->input->post()){
             var_dump($data);
             die();
+        }
+    }
+
+    public function do_upload()
+    {
+//        var_dump("i am h?");
+//        die();
+        $config['upload_path']          = './uploads/';
+        $config['allowed_types']        = 'gif|jpg|png';
+        //$config['max_size']             = 2048;
+        //$config['max_width']            = 1920;
+       // $config['max_height']           = 1080;
+
+        $this->load->library('upload', $config);
+
+        if ( ! $this->upload->do_upload('studentphoto'))
+        {
+            $error = array('error' => $this->upload->display_errors());
+            var_dump($error);
+            die();
+            $this->viewLoad('photoupload', $error);
+        }
+        else
+        {
+            $data = array('upload_data' => $this->upload->data());
+            $image = array('studentphoto'=>$data['upload_data']['full_path']);
+            $this->Crud_model->update_photo(1, $image);
+            $this->session->set_flashdata('success', 'Photo loaded');
+
+            $this->viewLoad('photoupload', 'refresh');
         }
     }
 

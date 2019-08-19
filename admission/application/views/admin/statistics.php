@@ -151,4 +151,9 @@
           </div>
         </div>
       </div>
+<script>
+    $(document).ready( function () {
+    $('#umsTable').DataTable();
+    } );
+</script>
 <?php $this->load->view('admin/inc/footer');?>
