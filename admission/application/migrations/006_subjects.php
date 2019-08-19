@@ -15,7 +15,6 @@ class Migration_subjects extends CI_Migration {
         $this->dbforge->add_field(array(
             'id' => array(
                 'type' => 'BIGINT',
-                'constraint' => 5,
                 'unsigned' => TRUE,
                 'auto_increment' => TRUE
             ),

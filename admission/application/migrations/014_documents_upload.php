@@ -14,10 +14,12 @@ class Migration_documents_upload extends CI_Migration {
     {
         $this->dbforge->add_field(array(
             'id' => array(
-                'type' => 'INT',
-                'constraint' => 5,
+                'type' => 'BIGINT',
                 'unsigned' => TRUE,
                 'auto_increment' => TRUE
+            ),
+            'user_id' => array(
+                'type' => 'BIGINT',
             ),
             'sscfileupload' => array(
                 'type' => 'VARCHAR',
@@ -25,6 +27,11 @@ class Migration_documents_upload extends CI_Migration {
                 'null' => TRUE,
             ),
             'hsscfileupload' => array(
+                'type' => 'VARCHAR',
+                'constraint' => '100',
+                'null' => TRUE,
+            ),
+            'registrationoption' => array(
                 'type' => 'VARCHAR',
                 'constraint' => '100',
                 'null' => TRUE,

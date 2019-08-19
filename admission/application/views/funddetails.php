@@ -1,6 +1,6 @@
 <?php $this->load->view('inc/header.php'); ?>
     <div class="wrapper ">
-<?php $this->load->view('inc/sidebar.php'); ?>
+<?php $this->load->view('inc/mssidebar.php'); ?>
     <div class="main-panel">
         <!-- Navbar -->
         <nav class="navbar navbar-expand-lg navbar-absolute fixed-top navbar-transparent">
@@ -66,19 +66,15 @@
             </div>
         </nav>
         <!-- End Navbar -->
-        <!-- <div class="panel-header panel-header-lg">
-
-    <canvas id="bigDashboardChart"></canvas>
-
-
-  </div> -->
-
         <div class="content">
             <div class="row">
                 <div class="col-md-8">
                     <div class="card card-user">
+                        <div class="card-header">
+                            <h5 class="card-title">Fund Details</h5>
+                        </div>
                         <div class="card-body">
-                            <form method="post" action="<?php echo base_url("Student/fund_detail")?>">
+                            <form method="post" action="<?php echo base_url("funddetails")?>">
                                 <div class="row">
                                     <div class="col-md-12 col-sm-12 col-xs-12  pr-1">
                                         <div class="form-group">

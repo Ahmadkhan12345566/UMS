@@ -14,20 +14,14 @@ class Migration_research_interests extends CI_Migration {
     {
         $this->dbforge->add_field(array(
             'id' => array(
-                'type' => 'INT',
-                'constraint' => 5,
+                'type' => 'BIGINT',
                 'unsigned' => TRUE,
                 'auto_increment' => TRUE
             ),
-            'researchIn1' => array(
-                'type' => 'VARCHAR',
-                'constraint' => '100',
+            'user_id' => array(
+                'type' => 'BIGINT',
             ),
-            'researchIn2' => array(
-                'type' => 'VARCHAR',
-                'constraint' => '100',
-            ),
-            'researchIn3' => array(
+            'research' => array(
                 'type' => 'VARCHAR',
                 'constraint' => '100',
             ),

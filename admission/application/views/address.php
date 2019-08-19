@@ -1,6 +1,6 @@
 <?php $this->load->view('inc/header.php'); ?>
     <div class="wrapper ">
-<?php $this->load->view('inc/sidebar.php'); ?>
+<?php $this->load->view('inc/mssidebar.php'); ?>
     <div class="main-panel">
         <!-- Navbar -->
         <nav class="navbar navbar-expand-lg navbar-absolute fixed-top navbar-transparent">
@@ -78,14 +78,14 @@
                 <div class="col-md-8">
                     <div class="card card-user">
                         <div class="card-body">
-                            <form method="post" action="<?php echo base_url("Student/address_detail")?>">
+                            <form method="post" action="<?php echo base_url("addressdetail")?>">
                                 <div class="row">
                                     <div class="col-md-12 col-sm-12 col-xs-12  pr-1">
                                         <fieldset class="scheduler-border">
                                             <legend class="scheduler-border" style="color: black;">Permanent Address</legend>
                                             <div class="form-group">
                                                 <label>Line 1</label>
-                                                <input type="text" class="form-control" name="permanentline1" id="Permanentline1" aria-describedby="Permanentline1Help" placeholder="House # 12 Lane G, G-9/2" required>
+                                                <input type="text" class="form-control" name="permanentline1" id="Permanentline1" aria-describedby="Permanentline1Help" placeholder="House # 12 Lane G, G-9/2"  required>
                                             </div>
                                             <div class="form-group">
                                                 <label>Line 2</label>

@@ -1,6 +1,6 @@
 <?php $this->load->view('inc/header.php'); ?>
     <div class="wrapper ">
-<?php $this->load->view('inc/sidebar.php'); ?>
+<?php $this->load->view('inc/mssidebar.php'); ?>
     <div class="main-panel">
         <!-- Navbar -->
         <nav class="navbar navbar-expand-lg navbar-absolute fixed-top navbar-transparent">
@@ -66,30 +66,27 @@
             </div>
         </nav>
         <!-- End Navbar -->
-        <!-- <div class="panel-header panel-header-lg">
-
-    <canvas id="bigDashboardChart"></canvas>
-
-
-  </div> -->
-
         <div class="content">
             <div class="row">
                 <div class="col-md-8">
                     <div class="card card-user">
                         <div class="card-header">
+                            <h5 class="card-title">Work History</h5>
                             <a href="" class="btn btn-primary" data-toggle="modal" data-target="#AddNew">
                                 Add New
                             </a>
                             <!-- Modal HTML Markup -->
-                            <div id="AddNew" class="modal fade">
+                            <div id="AddNew" data-backdrop="static" data-spy="scroll" class="modal fade">
                                 <div class="modal-dialog" role="document" style="overflow-y: scroll; max-height:85%;  margin-top: 50px; margin-bottom:50px;">
                                     <div class="modal-content">
                                         <div class="modal-header">
                                             <h3 class="modal-title">Enter Work Detail</h3>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
                                         </div>
                                         <div class="modal-body">
-                                            <form role="form" method="POST" action="<?php echo base_url("Student/work_history")?>">
+                                            <form role="form" method="POST" action="<?php echo base_url("workhistory")?>">
                                                 <div class="form-group">
                                                     <label class="control-label">Self Employed?</label>
                                                     <div>
@@ -111,103 +108,9 @@
                                                 </div>
                                                 <label for="control-label">From</label>
                                                 <div class="row">
-                                                    <div class="col-md-3">
+                                                    <div class="col-md-6">
                                                         <div class="form-group">
-                                                            <select name='formdate' id='formdateddl' class="form-control" required>
-                                                                <option value='Day'>Date</option>
-                                                                <option value='1'>1</option>
-                                                                <option value='2'>2</option>
-                                                                <option value='3'>3</option>
-                                                                <option value='4'>4</option>
-                                                                <option value='5'>5</option>
-                                                                <option value='6'>6</option>
-                                                                <option value='7'>7</option>
-                                                                <option value='8'>8</option>
-                                                                <option value='9'>9</option>
-                                                                <option value='10'>10</option>
-                                                                <option value='11'>11</option>
-                                                                <option value='12'>12</option>
-                                                                <option value='13'>13</option>
-                                                                <option value='14'>14</option>
-                                                                <option value='15'>15</option>
-                                                                <option value='16'>16</option>
-                                                                <option value='17'>17</option>
-                                                                <option value='18'>18</option>
-                                                                <option value='19'>19</option>
-                                                                <option value='20'>20</option>
-                                                                <option value='21'>21</option>
-                                                                <option value='22'>22</option>
-                                                                <option value='23'>23</option>
-                                                                <option value='24'>24</option>
-                                                                <option value='25'>25</option>
-                                                                <option value='26'>26</option>
-                                                                <option value='27'>27</option>
-                                                                <option value='28'>28</option>
-                                                                <option value='29'>29</option>
-                                                                <option value='30'>30</option>
-                                                                <option value='31'>31</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-3">
-                                                        <div class="form-group">
-                                                            <select name='formmonth' id='formmonthddl' class="form-control" required>
-                                                                <option value="Month">Month</option>
-                                                                <option value="January">January</option>
-                                                                <option value="February">February</option>
-                                                                <option value="March">March</option>
-                                                                <option value="April">April</option>
-                                                                <option value="May">May</option>
-                                                                <option value="June">June</option>
-                                                                <option value="July">July</option>
-                                                                <option value="August">August</option>
-                                                                <option value="Septembar">Septembar</option>
-                                                                <option value="Octobar">Octobar</option>
-                                                                <option value="November">November</option>
-                                                                <option value="December">December</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-3">
-                                                        <div class="form-group">
-                                                            <select name='formyear' id='formyear' class="form-control" required>
-                                                                <option value='Years'>Years</option>
-                                                                <option value='1970'>1970</option>
-                                                                <option value='1971'>1971</option>
-                                                                <option value='1972'>1972</option>
-                                                                <option value='1973'>1973</option>
-                                                                <option value='1974'>1974</option>
-                                                                <option value='1975'>1975</option>
-                                                                <option value='1976'>1976</option>
-                                                                <option value='1977'>1977</option>
-                                                                <option value='1978'>1978</option>
-                                                                <option value='1979'>1979</option>
-                                                                <option value='1980'>1980</option>
-                                                                <option value='1981'>1981</option>
-                                                                <option value='1982'>1982</option>
-                                                                <option value='1983'>1983</option>
-                                                                <option value='1984'>1984</option>
-                                                                <option value='1985'>1985</option>
-                                                                <option value='1986'>1986</option>
-                                                                <option value='1987'>1987</option>
-                                                                <option value='1988'>1988</option>
-                                                                <option value='1989'>1989</option>
-                                                                <option value='1990'>1990</option>
-                                                                <option value='1991'>1991</option>
-                                                                <option value='1992'>1992</option>
-                                                                <option value='1993'>1993</option>
-                                                                <option value='1994'>1994</option>
-                                                                <option value='1995'>1995</option>
-                                                                <option value='1996'>1996</option>
-                                                                <option value='1997'>1997</option>
-                                                                <option value='1998'>1998</option>
-                                                                <option value='1999'>1999</option>
-                                                                <option value='2000'>2000</option>
-                                                                <option value='2001'>2001</option>
-                                                                <option value='2002'>2002</option>
-                                                                <option value='2003'>2003</option>
-                                                                <option value='2004'>2004</option>
-                                                            </select>
+                                                            <input type="date" name="formdate" class="form-control" required>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -220,105 +123,11 @@
                                                 </div>
                                                 <label for="control-label">To</label>
                                                 <div class="row">
-                                                    <div class="col-md-3">
+                                                    <div class="col-md-6">
                                                         <div class="form-group">
-                                                            <select name='todate' id='Todateddl' class="form-control" required>
-                                                                <option value='Day'>Date</option>
-                                                                <option value='1'>1</option>
-                                                                <option value='2'>2</option>
-                                                                <option value='3'>3</option>
-                                                                <option value='4'>4</option>
-                                                                <option value='5'>5</option>
-                                                                <option value='6'>6</option>
-                                                                <option value='7'>7</option>
-                                                                <option value='8'>8</option>
-                                                                <option value='9'>9</option>
-                                                                <option value='10'>10</option>
-                                                                <option value='11'>11</option>
-                                                                <option value='12'>12</option>
-                                                                <option value='13'>13</option>
-                                                                <option value='14'>14</option>
-                                                                <option value='15'>15</option>
-                                                                <option value='16'>16</option>
-                                                                <option value='17'>17</option>
-                                                                <option value='18'>18</option>
-                                                                <option value='19'>19</option>
-                                                                <option value='20'>20</option>
-                                                                <option value='21'>21</option>
-                                                                <option value='22'>22</option>
-                                                                <option value='23'>23</option>
-                                                                <option value='24'>24</option>
-                                                                <option value='25'>25</option>
-                                                                <option value='26'>26</option>
-                                                                <option value='27'>27</option>
-                                                                <option value='28'>28</option>
-                                                                <option value='29'>29</option>
-                                                                <option value='30'>30</option>
-                                                                <option value='31'>31</option>
-                                                            </select>
+                                                            <input type="date" name="todate" class="form-control" required>
                                                         </div>
-                                                    </div>
-                                                    <div class="col-md-3">
-                                                        <div class="form-group">
-                                                            <select name='Tomonth' id='Tomonthddl' class="form-control" required>
-                                                                <option value="Month">Month</option>
-                                                                <option value="January">January</option>
-                                                                <option value="February">February</option>
-                                                                <option value="March">March</option>
-                                                                <option value="April">April</option>
-                                                                <option value="May">May</option>
-                                                                <option value="June">June</option>
-                                                                <option value="July">July</option>
-                                                                <option value="August">August</option>
-                                                                <option value="Septembar">Septembar</option>
-                                                                <option value="Octobar">Octobar</option>
-                                                                <option value="November">November</option>
-                                                                <option value="December">December</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-3">
-                                                        <div class="form-group">
-                                                            <select name='Toyear' id='Toyear' class="form-control" required>
-                                                                <option value='Years'>Years</option>
-                                                                <option value='1970'>1970</option>
-                                                                <option value='1971'>1971</option>
-                                                                <option value='1972'>1972</option>
-                                                                <option value='1973'>1973</option>
-                                                                <option value='1974'>1974</option>
-                                                                <option value='1975'>1975</option>
-                                                                <option value='1976'>1976</option>
-                                                                <option value='1977'>1977</option>
-                                                                <option value='1978'>1978</option>
-                                                                <option value='1979'>1979</option>
-                                                                <option value='1980'>1980</option>
-                                                                <option value='1981'>1981</option>
-                                                                <option value='1982'>1982</option>
-                                                                <option value='1983'>1983</option>
-                                                                <option value='1984'>1984</option>
-                                                                <option value='1985'>1985</option>
-                                                                <option value='1986'>1986</option>
-                                                                <option value='1987'>1987</option>
-                                                                <option value='1988'>1988</option>
-                                                                <option value='1989'>1989</option>
-                                                                <option value='1990'>1990</option>
-                                                                <option value='1991'>1991</option>
-                                                                <option value='1992'>1992</option>
-                                                                <option value='1993'>1993</option>
-                                                                <option value='1994'>1994</option>
-                                                                <option value='1995'>1995</option>
-                                                                <option value='1996'>1996</option>
-                                                                <option value='1997'>1997</option>
-                                                                <option value='1998'>1998</option>
-                                                                <option value='1999'>1999</option>
-                                                                <option value='2000'>2000</option>
-                                                                <option value='2001'>2001</option>
-                                                                <option value='2002'>2002</option>
-                                                                <option value='2003'>2003</option>
-                                                                <option value='2004'>2004</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
+                                                    </div >
                                                 </div>
                                                 <div class="row">
                                                     <div class="col-md-9 col-sm-12 col-xs-12">
@@ -357,7 +166,7 @@
                                                         <button type="submit" class="btn btn-success">
                                                             Save
                                                         </button>
-                                                        <button type="submit" class="btn btn-ignore">
+                                                        <button type="button" class="btn btn-ignore" data-dismiss="modal">
                                                             Cancel
                                                         </button>
                                                     </div>

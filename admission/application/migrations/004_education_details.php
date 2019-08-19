@@ -19,6 +19,10 @@ class Migration_education_details extends CI_Migration {
                 'auto_increment' => TRUE
             ),
 
+            'education_level_id' => array(
+                'type' =>'BIGINT',
+            ),
+
             'degree_id' => array(
                 'type' =>'BIGINT',
             ),
@@ -28,7 +32,14 @@ class Migration_education_details extends CI_Migration {
             ),
 
             'passingyears' => array(
-                'type' => 'DATE',
+                'type' => 'YEAR',
+
+            ),
+            'totalmarks' => array(
+                'type' => 'FLOAT',
+            ),
+            'obtainmarks' => array(
+                'type' => 'FLOAT',
             ),
 
             'board_id' => array(

@@ -1,6 +1,6 @@
 <?php $this->load->view('inc/header.php'); ?>
     <div class="wrapper ">
-<?php $this->load->view('inc/sidebar.php'); ?>
+<?php $this->load->view('inc/mssidebar.php'); ?>
     <div class="main-panel">
         <!-- Navbar -->
         <nav class="navbar navbar-expand-lg navbar-absolute fixed-top navbar-transparent">

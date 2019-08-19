@@ -2,13 +2,13 @@
 /**
  * Created by PhpStorm.
  * User: Mussawar Ahamd
- * Date: 7/16/2019
- * Time: 4:18 PM
+ * Date: 17/8/2019
+ * Time: 12:40 pM
  */
 
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Migration_photo_upload extends CI_Migration {
+class Migration_education_levels extends CI_Migration {
 
     public function up()
     {
@@ -18,14 +18,17 @@ class Migration_photo_upload extends CI_Migration {
                 'unsigned' => TRUE,
                 'auto_increment' => TRUE
             ),
-            'user_id' => array(
-                'type' => 'BIGINT',
-            ),
-            'studentphoto' => array(
+
+            'name' => array(
                 'type' => 'VARCHAR',
                 'constraint' => '100',
-                'null' => TRUE,
             ),
+
+            'shortname' => array(
+                'type' => 'VARCHAR',
+                'constraint' => '100',
+            ),
+
             'created_at' => array(
                 'type' => 'timestamp',
                 'default' => NULL,
@@ -34,15 +37,18 @@ class Migration_photo_upload extends CI_Migration {
                 'type' => 'timestamp',
                 'default' => NULL,
             ),
-
+            'deleted_at' => array(
+                'type' => 'timestamp',
+                'default' => NULL,
+            ),
 
         ));
         $this->dbforge->add_key('id', TRUE);
-        $this->dbforge->create_table('photo_upload');
+        $this->dbforge->create_table('education_levels');
     }
 
     public function down()
     {
-        $this->dbforge->drop_table('photo_upload');
+        $this->dbforge->drop_table('education_levels');
     }
 }

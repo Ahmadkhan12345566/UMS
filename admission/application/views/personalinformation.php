@@ -1,6 +1,6 @@
 <?php $this->load->view('inc/header.php'); ?>
     <div class="wrapper ">
-<?php $this->load->view('inc/sidebar.php'); ?>
+<?php $this->load->view('inc/mssidebar.php'); ?>
     <div class="main-panel">
         <!-- Navbar -->
         <nav class="navbar navbar-expand-lg navbar-absolute fixed-top navbar-transparent">
@@ -81,7 +81,7 @@
                             <h5 class="card-title">Personal Information</h5>
                         </div>
                         <div class="card-body">
-                            <form method="post" action="">
+                            <form method="post" action="<?php echo base_url("personalinformation")?>">
                                 <div class="row">
                                     <div class="col-md-6 col-sm-12 col-xs-12">
                                         <div class="form-group">
@@ -92,7 +92,7 @@
                                     <div class="col-md-6 col-sm-12 col-xs-12">
                                         <div class="form-group">
                                             <label>Date of Birth</label>
-                                            <input type="date" class="form-control" placeholder="DOB">
+                                            <input type="date" class="form-control" name="dob" placeholder="DOB">
                                         </div>
                                     </div>
                                 </div>
@@ -115,8 +115,8 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label>Nationality</label>
-                                            <select name="nationality" class="form-control" id="nationality"required>
-                                                <option value="">Pakistan</option>
+                                            <select name="nationality" class="form-control" id="nationality" required>
+                                                <option value="Pakistan">Pakistan</option>
                                                 <option value="afghan">Afghan</option>
                                                 <option value="albanian">Albanian</option>
                                                 <option value="algerian">Algerian</option>

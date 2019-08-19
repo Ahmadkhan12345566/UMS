@@ -1,6 +1,6 @@
 <?php $this->load->view('inc/header.php'); ?>
     <div class="wrapper ">
-<?php $this->load->view('inc/sidebar.php'); ?>
+<?php $this->load->view('inc/mssidebar.php'); ?>
     <div class="main-panel">
         <!-- Navbar -->
         <nav class="navbar navbar-expand-lg navbar-absolute fixed-top navbar-transparent">
@@ -66,31 +66,27 @@
             </div>
         </nav>
         <!-- End Navbar -->
-        <!-- <div class="panel-header panel-header-lg">
-
-    <canvas id="bigDashboardChart"></canvas>
-
-
-  </div> -->
-
         <div class="content">
             <div class="row">
                 <div class="col-md-8">
                     <div class="card card-user">
+                        <div class="card-header">
+                            <h5 class="card-title">Research Interests</h5>
+                        </div>
                         <div class="card-body">
-                            <form method="post" action="<?php echo base_url("Student/research_details")?>">
+                            <form method="post" action="<?php echo base_url("researchinterests")?>">
                                 <div class="row">
                                     <div class="col-md-12 col-sm-12 col-xs-12">
                                         <div class="form-group">
-                                            <label>Research Interest 2</label>
-                                            <input type="text" class="form-control" name="researchIn1" id="ResearchIn1" aria-describedby="ResearchIn1" required>
+                                            <label>Research Interest 1</label>
+                                            <input type="text" class="form-control" name="research[]" id="ResearchIn1" aria-describedby="ResearchIn1" required>
                                         </div>
                                         <div class="form-group">
                                             <label>Research Interest 2</label>
-                                            <input type="text" class="form-control" name="researchIn2" id="ResearchIn2" aria-describedby="ResearchIn2" required>
+                                            <input type="text" class="form-control" name="research[]" id="ResearchIn2" aria-describedby="ResearchIn2" required>
                                         </div>
                                         <label>Research Interest 3</label>
-                                        <input type="text" class="form-control" name="researchIn3" id="ResearchIn3" aria-describedby="ResearchIn3" required>
+                                        <input type="text" class="form-control" name="research[]" id="ResearchIn3" aria-describedby="ResearchIn3" required>
                                     </div>
                                 </div>
                                 <div class="row">

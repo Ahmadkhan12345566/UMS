@@ -1,6 +1,6 @@
 <?php $this->load->view('inc/header.php'); ?>
     <div class="wrapper ">
-<?php $this->load->view('inc/sidebar.php'); ?>
+<?php $this->load->view('inc/mssidebar.php'); ?>
     <div class="main-panel">
         <!-- Navbar -->
         <nav class="navbar navbar-expand-lg navbar-absolute fixed-top navbar-transparent">
@@ -66,12 +66,12 @@
             </div>
         </nav>
         <!-- End Navbar -->
-
         <div class="content">
             <div class="row">
                 <div class="col-md-8">
                     <div class="card card-user">
                         <div class="card-header">
+                            <h5 class="card-title">Publication Details</h5>
                             <a href="" class="btn btn-primary" data-toggle="modal" data-target="#AddNew">
                                 Add New
                             </a>
@@ -83,7 +83,7 @@
                                             <h3 class="modal-title">Enter Publication Details</h3>
                                         </div>
                                         <div class="modal-body">
-                                            <form role="form" method="POST" action="<?php echo base_url("Student/publication_details")?>">
+                                            <form role="form" method="POST" action="<?php echo base_url("publicationdetails")?>">
                                                 <div class="form-group">
                                                     <label class="control-label">Title</label>
                                                     <div>

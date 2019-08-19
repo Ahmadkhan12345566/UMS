@@ -14,38 +14,15 @@ class Migration_program_choices extends CI_Migration {
     {
         $this->dbforge->add_field(array(
             'id' => array(
-                'type' => 'INT',
-                'constraint' => 5,
+                'type' => 'BIGINT',
                 'unsigned' => TRUE,
                 'auto_increment' => TRUE
             ),
-            'subject1' => array(
-                'type' => 'VARCHAR',
-                'constraint' => '100',
+            'user_id' => array(
+                'type' => 'BIGINT',
             ),
-            'subject2' => array(
-                'type' => 'VARCHAR',
-                'constraint' => '100',
-            ),
-            'subject3' => array(
-                'type' => 'VARCHAR',
-                'constraint' => '100',
-            ),
-            'subject4' => array(
-                'type' => 'VARCHAR',
-                'constraint' => '100',
-            ),
-            'subject5' => array(
-                'type' => 'VARCHAR',
-                'constraint' => '100',
-            ),
-            'subject6' => array(
-                'type' => 'VARCHAR',
-                'constraint' => '100',
-            ),
-            'subject7' => array(
-                'type' => 'VARCHAR',
-                'constraint' => '100',
+            'degree_id' => array(
+                'type' => 'BIGINT',
             ),
             'created_at' => array(
                 'type' => 'timestamp',

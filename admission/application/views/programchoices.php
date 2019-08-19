@@ -1,6 +1,6 @@
 <?php $this->load->view('inc/header.php'); ?>
     <div class="wrapper ">
-<?php $this->load->view('inc/sidebar.php'); ?>
+<?php $this->load->view('inc/mssidebar.php'); ?>
     <div class="main-panel">
         <!-- Navbar -->
         <nav class="navbar navbar-expand-lg navbar-absolute fixed-top navbar-transparent">
@@ -66,19 +66,12 @@
             </div>
         </nav>
         <!-- End Navbar -->
-        <!-- <div class="panel-header panel-header-lg">
-
-    <canvas id="bigDashboardChart"></canvas>
-
-
-  </div> -->
-
         <div class="content">
             <div class="row">
                 <div class="col-md-8 col-sm-12 col-xs-12">
                     <div class="card card-user">
                         <div class="card-body">
-                            <form method="post" action="<?php echo base_url("Student/program_choice")?>">
+                            <form method="post" action="<?php echo base_url("programchoices")?>">
                                 <div class="row">
                                     <div class="col-md-9 col-sm-12 col-xs-12 pr-1">
                                         <div class="form-group">
@@ -92,31 +85,31 @@
                                 <div class="row">
                                     <div class="col-md-8 col-sm-12 col-xs-12">
                                         <div class="form-group">
-                                            <select name='subject1' id='subject1' class="form-control" required>
+                                            <select name='program[]' id='subject1' class="form-control" required>
                                                 <option value="">Select 1st Choice</option>
-                                                <option value="MBA (1.5 years)">MBA (1.5 years)</option>
-                                                <option value="MS(Biochemistry and Molecular Biology)">MS(Biochemistry and Molecular Biology)</option>
-                                                <option value="MS(Bioinformatics)">MS(Bioinformatics)</option>
-                                                <option value="MS(BioSciences)">MS(BioSciences)</option>
-                                                <option value="MS(Chem)">MS(Chem)</option>
-                                                <option value="MS(Computer Engineering)">MS(Computer Engineering)</option>
-                                                <option value="MS(Computer Science)">MS(Computer Science)</option>
-                                                <option value="MS(Economics)">MS(Economics) </option>
-                                                <option value="MS(Electrical Engineering)">MS(Electrical Engineering)</option>
-                                                <option value="MS( Health Informatics)">MS( Health Informatics)</option>
-                                                <option value="MS(Information Security)">MS(Information Security)</option>
-                                                <option value="MS(Management Sciences)">MS(Management Sciences)</option>
-                                                <option value="MS(Mathematics)">MS(Mathematics)</option>
-                                                <option value="MS(Meteorology)">MS(Meteorology)</option>
-                                                <option value="MS(Microbiology and Immunology)">MS(Microbiology and Immunology)</option>
-                                                <option value="MS(Molecular Genetics)">MS(Molecular Genetics)</option>
-                                                <option value="MS(Molecular Virology)">MS(Molecular Virology)</option>
-                                                <option value="MS Physics">MS Physics</option>
-                                                <option value="MS(Project Management)">MS(Project Management)</option>
-                                                <option value="MS(Remote Sensing &amp; GIS)">MS(Remote Sensing &amp; GIS)</option>
-                                                <option value="MS(Software Engineering)">MS(Software Engineering)</option>
-                                                <option value="MS in English(Linguistics and Literature)">MS in English(Linguistics and Literature)</option>
-                                                <option value="MS in International Relations">MS in International Relations</option>
+                                                <option value="1">MBA (1.5 years)</option>
+                                                <option value="2)">MS(Biochemistry and Molecular Biology)</option>
+                                                <option value="3">MS(Bioinformatics)</option>
+                                                <option value="4">MS(BioSciences)</option>
+                                                <option value="5">MS(Chem)</option>
+<!--                                                <option value="MS(Computer Engineering)">MS(Computer Engineering)</option>-->
+<!--                                                <option value="MS(Computer Science)">MS(Computer Science)</option>-->
+<!--                                                <option value="MS(Economics)">MS(Economics) </option>-->
+<!--                                                <option value="MS(Electrical Engineering)">MS(Electrical Engineering)</option>-->
+<!--                                                <option value="MS( Health Informatics)">MS( Health Informatics)</option>-->
+<!--                                                <option value="MS(Information Security)">MS(Information Security)</option>-->
+<!--                                                <option value="MS(Management Sciences)">MS(Management Sciences)</option>-->
+<!--                                                <option value="MS(Mathematics)">MS(Mathematics)</option>-->
+<!--                                                <option value="MS(Meteorology)">MS(Meteorology)</option>-->
+<!--                                                <option value="MS(Microbiology and Immunology)">MS(Microbiology and Immunology)</option>-->
+<!--                                                <option value="MS(Molecular Genetics)">MS(Molecular Genetics)</option>-->
+<!--                                                <option value="MS(Molecular Virology)">MS(Molecular Virology)</option>-->
+<!--                                                <option value="MS Physics">MS Physics</option>-->
+<!--                                                <option value="MS(Project Management)">MS(Project Management)</option>-->
+<!--                                                <option value="MS(Remote Sensing &amp; GIS)">MS(Remote Sensing &amp; GIS)</option>-->
+<!--                                                <option value="MS(Software Engineering)">MS(Software Engineering)</option>-->
+<!--                                                <option value="MS in English(Linguistics and Literature)">MS in English(Linguistics and Literature)</option>-->
+<!--                                                <option value="MS in International Relations">MS in International Relations</option>-->
                                             </select>
                                         </div>
                                     </div>
@@ -125,31 +118,32 @@
                                 <div class="row">
                                     <div class="col-md-8 col-sm-12 col-xs-12">
                                         <div class="form-group">
-                                            <select name='subject2' id='subject2' class="form-control" required>
-                                                <option value="">Select 2nd Choice</option>
-                                                <option value="MBA (1.5 years)">MBA (1.5 years)</option>
-                                                <option value="MS(Biochemistry and Molecular Biology)">MS(Biochemistry and Molecular Biology)</option>
-                                                <option value="MS(Bioinformatics)">MS(Bioinformatics)</option>
-                                                <option value="MS(BioSciences)">MS(BioSciences)</option>
-                                                <option value="MS(Chem)">MS(Chem)</option>
-                                                <option value="MS(Computer Engineering)">MS(Computer Engineering)</option>
-                                                <option value="MS(Computer Science)">MS(Computer Science)</option>
-                                                <option value="MS(Economics)">MS(Economics) </option>
-                                                <option value="MS(Electrical Engineering)">MS(Electrical Engineering)</option>
-                                                <option value="MS( Health Informatics)">MS( Health Informatics)</option>
-                                                <option value="MS(Information Security)">MS(Information Security)</option>
-                                                <option value="MS(Management Sciences)">MS(Management Sciences)</option>
-                                                <option value="MS(Mathematics)">MS(Mathematics)</option>
-                                                <option value="MS(Meteorology)">MS(Meteorology)</option>
-                                                <option value="MS(Microbiology and Immunology)">MS(Microbiology and Immunology)</option>
-                                                <option value="MS(Molecular Genetics)">MS(Molecular Genetics)</option>
-                                                <option value="MS(Molecular Virology)">MS(Molecular Virology)</option>
-                                                <option value="MS Physics">MS Physics</option>
-                                                <option value="MS(Project Management)">MS(Project Management)</option>
-                                                <option value="MS(Remote Sensing &amp; GIS)">MS(Remote Sensing &amp; GIS)</option>
-                                                <option value="MS(Software Engineering)">MS(Software Engineering)</option>
-                                                <option value="MS in English(Linguistics and Literature)">MS in English(Linguistics and Literature)</option>
-                                                <option value="MS in International Relations">MS in International Relations</option>
+                                            <select name='program[]' id='subject2' class="form-control" required>
+                                                <option value="">Select 1st Choice</option>
+                                                <option value="1">MBA (1.5 years)</option>
+                                                <option value="2)">MS(Biochemistry and Molecular Biology)</option>
+                                                <option value="3">MS(Bioinformatics)</option>
+                                                <option value="4">MS(BioSciences)</option>
+<!--                                                <option value="5">MS(Chem)</option>-->
+<!--                                                <option value="MS(Chem)">MS(Chem)</option>-->
+<!--                                                <option value="MS(Computer Engineering)">MS(Computer Engineering)</option>-->
+<!--                                                <option value="MS(Computer Science)">MS(Computer Science)</option>-->
+<!--                                                <option value="MS(Economics)">MS(Economics) </option>-->
+<!--                                                <option value="MS(Electrical Engineering)">MS(Electrical Engineering)</option>-->
+<!--                                                <option value="MS( Health Informatics)">MS( Health Informatics)</option>-->
+<!--                                                <option value="MS(Information Security)">MS(Information Security)</option>-->
+<!--                                                <option value="MS(Management Sciences)">MS(Management Sciences)</option>-->
+<!--                                                <option value="MS(Mathematics)">MS(Mathematics)</option>-->
+<!--                                                <option value="MS(Meteorology)">MS(Meteorology)</option>-->
+<!--                                                <option value="MS(Microbiology and Immunology)">MS(Microbiology and Immunology)</option>-->
+<!--                                                <option value="MS(Molecular Genetics)">MS(Molecular Genetics)</option>-->
+<!--                                                <option value="MS(Molecular Virology)">MS(Molecular Virology)</option>-->
+<!--                                                <option value="MS Physics">MS Physics</option>-->
+<!--                                                <option value="MS(Project Management)">MS(Project Management)</option>-->
+<!--                                                <option value="MS(Remote Sensing &amp; GIS)">MS(Remote Sensing &amp; GIS)</option>-->
+<!--                                                <option value="MS(Software Engineering)">MS(Software Engineering)</option>-->
+<!--                                                <option value="MS in English(Linguistics and Literature)">MS in English(Linguistics and Literature)</option>-->
+<!--                                                <option value="MS in International Relations">MS in International Relations</option>-->
                                             </select>
                                         </div>
                                     </div>
@@ -158,31 +152,30 @@
                                 <div class="row">
                                     <div class="col-md-8 col-sm-12 col-xs-12">
                                         <div class="form-group">
-                                            <select name='subject3' id='subject3' class="form-control" required>
-                                                <option value="">Select 3rd Choice</option>
-                                                <option value="MBA (1.5 years)">MBA (1.5 years)</option>
-                                                <option value="MS(Biochemistry and Molecular Biology)">MS(Biochemistry and Molecular Biology)</option>
-                                                <option value="MS(Bioinformatics)">MS(Bioinformatics)</option>
-                                                <option value="MS(BioSciences)">MS(BioSciences)</option>
-                                                <option value="MS(Chem)">MS(Chem)</option>
-                                                <option value="MS(Computer Engineering)">MS(Computer Engineering)</option>
-                                                <option value="MS(Computer Science)">MS(Computer Science)</option>
-                                                <option value="MS(Economics)">MS(Economics) </option>
-                                                <option value="MS(Electrical Engineering)">MS(Electrical Engineering)</option>
-                                                <option value="MS( Health Informatics)">MS( Health Informatics)</option>
-                                                <option value="MS(Information Security)">MS(Information Security)</option>
-                                                <option value="MS(Management Sciences)">MS(Management Sciences)</option>
-                                                <option value="MS(Mathematics)">MS(Mathematics)</option>
-                                                <option value="MS(Meteorology)">MS(Meteorology)</option>
-                                                <option value="MS(Microbiology and Immunology)">MS(Microbiology and Immunology)</option>
-                                                <option value="MS(Molecular Genetics)">MS(Molecular Genetics)</option>
-                                                <option value="MS(Molecular Virology)">MS(Molecular Virology)</option>
-                                                <option value="MS Physics">MS Physics</option>
-                                                <option value="MS(Project Management)">MS(Project Management)</option>
-                                                <option value="MS(Remote Sensing &amp; GIS)">MS(Remote Sensing &amp; GIS)</option>
-                                                <option value="MS(Software Engineering)">MS(Software Engineering)</option>
-                                                <option value="MS in English(Linguistics and Literature)">MS in English(Linguistics and Literature)</option>
-                                                <option value="MS in International Relations">MS in International Relations</option>
+                                            <select name='program[]' id='subject3' class="form-control" required>
+                                                <option value="">Select 1st Choice</option>
+                                                <option value="1">MBA (1.5 years)</option>
+                                                <option value="2)">MS(Biochemistry and Molecular Biology)</option>
+                                                <option value="3">MS(Bioinformatics)</option>
+                                                <option value="4">MS(BioSciences)</option>
+                                                <option value="5">MS(Chem)</option>
+<!--                                                <option value="MS(Computer Science)">MS(Computer Science)</option>-->
+<!--                                                <option value="MS(Economics)">MS(Economics) </option>-->
+<!--                                                <option value="MS(Electrical Engineering)">MS(Electrical Engineering)</option>-->
+<!--                                                <option value="MS( Health Informatics)">MS( Health Informatics)</option>-->
+<!--                                                <option value="MS(Information Security)">MS(Information Security)</option>-->
+<!--                                                <option value="MS(Management Sciences)">MS(Management Sciences)</option>-->
+<!--                                                <option value="MS(Mathematics)">MS(Mathematics)</option>-->
+<!--                                                <option value="MS(Meteorology)">MS(Meteorology)</option>-->
+<!--                                                <option value="MS(Microbiology and Immunology)">MS(Microbiology and Immunology)</option>-->
+<!--                                                <option value="MS(Molecular Genetics)">MS(Molecular Genetics)</option>-->
+<!--                                                <option value="MS(Molecular Virology)">MS(Molecular Virology)</option>-->
+<!--                                                <option value="MS Physics">MS Physics</option>-->
+<!--                                                <option value="MS(Project Management)">MS(Project Management)</option>-->
+<!--                                                <option value="MS(Remote Sensing &amp; GIS)">MS(Remote Sensing &amp; GIS)</option>-->
+<!--                                                <option value="MS(Software Engineering)">MS(Software Engineering)</option>-->
+<!--                                                <option value="MS in English(Linguistics and Literature)">MS in English(Linguistics and Literature)</option>-->
+<!--                                                <option value="MS in International Relations">MS in International Relations</option>-->
                                             </select>
                                         </div>
                                     </div>
@@ -191,31 +184,30 @@
                                 <div class="row">
                                     <div class="col-md-8 col-sm-12 col-xs-12">
                                         <div class="form-group">
-                                            <select name=subject4' id='subject4' class="form-control" required>
-                                                <option value="">Select 4th Choice</option>
-                                                <option value="MBA (1.5 years)">MBA (1.5 years)</option>
-                                                <option value="MS(Biochemistry and Molecular Biology)">MS(Biochemistry and Molecular Biology)</option>
-                                                <option value="MS(Bioinformatics)">MS(Bioinformatics)</option>
-                                                <option value="MS(BioSciences)">MS(BioSciences)</option>
-                                                <option value="MS(Chem)">MS(Chem)</option>
-                                                <option value="MS(Computer Engineering)">MS(Computer Engineering)</option>
-                                                <option value="MS(Computer Science)">MS(Computer Science)</option>
-                                                <option value="MS(Economics)">MS(Economics) </option>
-                                                <option value="MS(Electrical Engineering)">MS(Electrical Engineering)</option>
-                                                <option value="MS( Health Informatics)">MS( Health Informatics)</option>
-                                                <option value="MS(Information Security)">MS(Information Security)</option>
-                                                <option value="MS(Management Sciences)">MS(Management Sciences)</option>
-                                                <option value="MS(Mathematics)">MS(Mathematics)</option>
-                                                <option value="MS(Meteorology)">MS(Meteorology)</option>
-                                                <option value="MS(Microbiology and Immunology)">MS(Microbiology and Immunology)</option>
-                                                <option value="MS(Molecular Genetics)">MS(Molecular Genetics)</option>
-                                                <option value="MS(Molecular Virology)">MS(Molecular Virology)</option>
-                                                <option value="MS Physics">MS Physics</option>
-                                                <option value="MS(Project Management)">MS(Project Management)</option>
-                                                <option value="MS(Remote Sensing &amp; GIS)">MS(Remote Sensing &amp; GIS)</option>
-                                                <option value="MS(Software Engineering)">MS(Software Engineering)</option>
-                                                <option value="MS in English(Linguistics and Literature)">MS in English(Linguistics and Literature)</option>
-                                                <option value="MS in International Relations">MS in International Relations</option>
+                                            <select name=program[]' id='subject4' class="form-control">
+                                                <option value="">Select 1st Choice</option>
+                                                <option value="1">MBA (1.5 years)</option>
+                                                <option value="2)">MS(Biochemistry and Molecular Biology)</option>
+                                                <option value="3">MS(Bioinformatics)</option>
+                                                <option value="4">MS(BioSciences)</option>
+                                                <option value="5">MS(Chem)</option>
+<!--                                                <option value="MS(Computer Science)">MS(Computer Science)</option>-->
+<!--                                                <option value="MS(Economics)">MS(Economics) </option>-->
+<!--                                                <option value="MS(Electrical Engineering)">MS(Electrical Engineering)</option>-->
+<!--                                                <option value="MS( Health Informatics)">MS( Health Informatics)</option>-->
+<!--                                                <option value="MS(Information Security)">MS(Information Security)</option>-->
+<!--                                                <option value="MS(Management Sciences)">MS(Management Sciences)</option>-->
+<!--                                                <option value="MS(Mathematics)">MS(Mathematics)</option>-->
+<!--                                                <option value="MS(Meteorology)">MS(Meteorology)</option>-->
+<!--                                                <option value="MS(Microbiology and Immunology)">MS(Microbiology and Immunology)</option>-->
+<!--                                                <option value="MS(Molecular Genetics)">MS(Molecular Genetics)</option>-->
+<!--                                                <option value="MS(Molecular Virology)">MS(Molecular Virology)</option>-->
+<!--                                                <option value="MS Physics">MS Physics</option>-->
+<!--                                                <option value="MS(Project Management)">MS(Project Management)</option>-->
+<!--                                                <option value="MS(Remote Sensing &amp; GIS)">MS(Remote Sensing &amp; GIS)</option>-->
+<!--                                                <option value="MS(Software Engineering)">MS(Software Engineering)</option>-->
+<!--                                                <option value="MS in English(Linguistics and Literature)">MS in English(Linguistics and Literature)</option>-->
+<!--                                                <option value="MS in International Relations">MS in International Relations</option>-->
                                             </select>
                                         </div>
                                     </div>
@@ -224,31 +216,31 @@
                                 <div class="row">
                                     <div class="col-md-8 col-sm-12 col-xs-12">
                                         <div class="form-group">
-                                            <select name='subject5' id='subject5' class="form-control" required>
-                                                <option value="">Select 5th Choice</option>
-                                                <option value="MBA (1.5 years)">MBA (1.5 years)</option>
-                                                <option value="MS(Biochemistry and Molecular Biology)">MS(Biochemistry and Molecular Biology)</option>
-                                                <option value="MS(Bioinformatics)">MS(Bioinformatics)</option>
-                                                <option value="MS(BioSciences)">MS(BioSciences)</option>
-                                                <option value="MS(Chem)">MS(Chem)</option>
-                                                <option value="MS(Computer Engineering)">MS(Computer Engineering)</option>
-                                                <option value="MS(Computer Science)">MS(Computer Science)</option>
-                                                <option value="MS(Economics)">MS(Economics) </option>
-                                                <option value="MS(Electrical Engineering)">MS(Electrical Engineering)</option>
-                                                <option value="MS( Health Informatics)">MS( Health Informatics)</option>
-                                                <option value="MS(Information Security)">MS(Information Security)</option>
-                                                <option value="MS(Management Sciences)">MS(Management Sciences)</option>
-                                                <option value="MS(Mathematics)">MS(Mathematics)</option>
-                                                <option value="MS(Meteorology)">MS(Meteorology)</option>
-                                                <option value="MS(Microbiology and Immunology)">MS(Microbiology and Immunology)</option>
-                                                <option value="MS(Molecular Genetics)">MS(Molecular Genetics)</option>
-                                                <option value="MS(Molecular Virology)">MS(Molecular Virology)</option>
-                                                <option value="MS Physics">MS Physics</option>
-                                                <option value="MS(Project Management)">MS(Project Management)</option>
-                                                <option value="MS(Remote Sensing &amp; GIS)">MS(Remote Sensing &amp; GIS)</option>
-                                                <option value="MS(Software Engineering)">MS(Software Engineering)</option>
-                                                <option value="MS in English(Linguistics and Literature)">MS in English(Linguistics and Literature)</option>
-                                                <option value="MS in International Relations">MS in International Relations</option>
+                                            <select name='program[]' id='subject5' class="form-control">
+                                                <option value="">Select 1st Choice</option>
+                                                <option value="1">MBA (1.5 years)</option>
+                                                <option value="2)">MS(Biochemistry and Molecular Biology)</option>
+                                                <option value="3">MS(Bioinformatics)</option>
+                                                <option value="4">MS(BioSciences)</option>
+                                                <option value="5">MS(Chem)</option>
+<!--                                                <option value="MS(Computer Engineering)">MS(Computer Engineering)</option>-->
+<!--                                                <option value="MS(Computer Science)">MS(Computer Science)</option>-->
+<!--                                                <option value="MS(Economics)">MS(Economics) </option>-->
+<!--                                                <option value="MS(Electrical Engineering)">MS(Electrical Engineering)</option>-->
+<!--                                                <option value="MS( Health Informatics)">MS( Health Informatics)</option>-->
+<!--                                                <option value="MS(Information Security)">MS(Information Security)</option>-->
+<!--                                                <option value="MS(Management Sciences)">MS(Management Sciences)</option>-->
+<!--                                                <option value="MS(Mathematics)">MS(Mathematics)</option>-->
+<!--                                                <option value="MS(Meteorology)">MS(Meteorology)</option>-->
+<!--                                                <option value="MS(Microbiology and Immunology)">MS(Microbiology and Immunology)</option>-->
+<!--                                                <option value="MS(Molecular Genetics)">MS(Molecular Genetics)</option>-->
+<!--                                                <option value="MS(Molecular Virology)">MS(Molecular Virology)</option>-->
+<!--                                                <option value="MS Physics">MS Physics</option>-->
+<!--                                                <option value="MS(Project Management)">MS(Project Management)</option>-->
+<!--                                                <option value="MS(Remote Sensing &amp; GIS)">MS(Remote Sensing &amp; GIS)</option>-->
+<!--                                                <option value="MS(Software Engineering)">MS(Software Engineering)</option>-->
+<!--                                                <option value="MS in English(Linguistics and Literature)">MS in English(Linguistics and Literature)</option>-->
+<!--                                                <option value="MS in International Relations">MS in International Relations</option>-->
                                             </select>
                                         </div>
                                     </div>
@@ -257,31 +249,31 @@
                                 <div class="row">
                                     <div class="col-md-8 col-sm-12 col-xs-12">
                                         <div class="form-group">
-                                            <select name='subject6' id='subject6' class="form-control" required>
-                                                <option value="">Select 6th Choice</option>
-                                                <option value="MBA (1.5 years)">MBA (1.5 years)</option>
-                                                <option value="MS(Biochemistry and Molecular Biology)">MS(Biochemistry and Molecular Biology)</option>
-                                                <option value="MS(Bioinformatics)">MS(Bioinformatics)</option>
-                                                <option value="MS(BioSciences)">MS(BioSciences)</option>
-                                                <option value="MS(Chem)">MS(Chem)</option>
-                                                <option value="MS(Computer Engineering)">MS(Computer Engineering)</option>
-                                                <option value="MS(Computer Science)">MS(Computer Science)</option>
-                                                <option value="MS(Economics)">MS(Economics) </option>
-                                                <option value="MS(Electrical Engineering)">MS(Electrical Engineering)</option>
-                                                <option value="MS( Health Informatics)">MS( Health Informatics)</option>
-                                                <option value="MS(Information Security)">MS(Information Security)</option>
-                                                <option value="MS(Management Sciences)">MS(Management Sciences)</option>
-                                                <option value="MS(Mathematics)">MS(Mathematics)</option>
-                                                <option value="MS(Meteorology)">MS(Meteorology)</option>
-                                                <option value="MS(Microbiology and Immunology)">MS(Microbiology and Immunology)</option>
-                                                <option value="MS(Molecular Genetics)">MS(Molecular Genetics)</option>
-                                                <option value="MS(Molecular Virology)">MS(Molecular Virology)</option>
-                                                <option value="MS Physics">MS Physics</option>
-                                                <option value="MS(Project Management)">MS(Project Management)</option>
-                                                <option value="MS(Remote Sensing &amp; GIS)">MS(Remote Sensing &amp; GIS)</option>
-                                                <option value="MS(Software Engineering)">MS(Software Engineering)</option>
-                                                <option value="MS in English(Linguistics and Literature)">MS in English(Linguistics and Literature)</option>
-                                                <option value="MS in International Relations">MS in International Relations</option>
+                                            <select name='program[]' id='subject6' class="form-control">
+                                                <option value="">Select 1st Choice</option>
+                                                <option value="1">MBA (1.5 years)</option>
+                                                <option value="2)">MS(Biochemistry and Molecular Biology)</option>
+                                                <option value="3">MS(Bioinformatics)</option>
+                                                <option value="4">MS(BioSciences)</option>
+                                                <option value="5">MS(Chem)</option>
+<!--                                                <option value="MS(Computer Engineering)">MS(Computer Engineering)</option>-->
+<!--                                                <option value="MS(Computer Science)">MS(Computer Science)</option>-->
+<!--                                                <option value="MS(Economics)">MS(Economics) </option>-->
+<!--                                                <option value="MS(Electrical Engineering)">MS(Electrical Engineering)</option>-->
+<!--                                                <option value="MS( Health Informatics)">MS( Health Informatics)</option>-->
+<!--                                                <option value="MS(Information Security)">MS(Information Security)</option>-->
+<!--                                                <option value="MS(Management Sciences)">MS(Management Sciences)</option>-->
+<!--                                                <option value="MS(Mathematics)">MS(Mathematics)</option>-->
+<!--                                                <option value="MS(Meteorology)">MS(Meteorology)</option>-->
+<!--                                                <option value="MS(Microbiology and Immunology)">MS(Microbiology and Immunology)</option>-->
+<!--                                                <option value="MS(Molecular Genetics)">MS(Molecular Genetics)</option>-->
+<!--                                                <option value="MS(Molecular Virology)">MS(Molecular Virology)</option>-->
+<!--                                                <option value="MS Physics">MS Physics</option>-->
+<!--                                                <option value="MS(Project Management)">MS(Project Management)</option>-->
+<!--                                                <option value="MS(Remote Sensing &amp; GIS)">MS(Remote Sensing &amp; GIS)</option>-->
+<!--                                                <option value="MS(Software Engineering)">MS(Software Engineering)</option>-->
+<!--                                                <option value="MS in English(Linguistics and Literature)">MS in English(Linguistics and Literature)</option>-->
+<!--                                                <option value="MS in International Relations">MS in International Relations</option>-->
                                             </select>
                                         </div>
                                     </div>
@@ -290,31 +282,14 @@
                                 <div class="row">
                                     <div class="col-md-8 col-sm-12 col-xs-12">
                                         <div class="form-group">
-                                            <select name='subject7' id='subject7' class="form-control" required>
-                                                <option value="">Select 7th Choice</option>
-                                                <option value="2">MBA (1.5 years)</option>
-                                                <option value="5">MS(Biochemistry and Molecular Biology)</option>
-                                                <option value="6">MS(Bioinformatics)</option>
-                                                <option value="7">MS(BioSciences)</option>
-                                                <option value="10">MS(Chem)</option>
-                                                <option value="11">MS(Computer Engineering)</option>
-                                                <option value="12">MS(Computer Science)</option>
-                                                <option value="14">MS(Economics) </option>
-                                                <option value="15">MS(Electrical Engineering)</option>
-                                                <option value="20">MS( Health Informatics)</option>
-                                                <option value="21">MS(Information Security)</option>
-                                                <option value="22">MS(Management Sciences)</option>
-                                                <option value="23">MS(Mathematics)</option>
-                                                <option value="24">MS(Meteorology)</option>
-                                                <option value="25">MS(Microbiology and Immunology)</option>
-                                                <option value="26">MS(Molecular Genetics)</option>
-                                                <option value="27">MS(Molecular Virology)</option>
-                                                <option value="31">MS Physics</option>
-                                                <option value="32">MS(Project Management)</option>
-                                                <option value="33">MS(Remote Sensing &amp; GIS)</option>
-                                                <option value="34">MS(Software Engineering)</option>
-                                                <option value="96">MS in English(Linguistics and Literature)</option>
-                                                <option value="107">MS in International Relations</option>
+                                            <select name='program[]' id='subject7' class="form-control">
+                                                <option value="">Select 1st Choice</option>
+                                                <option value="1">MBA (1.5 years)</option>
+                                                <option value="2)">MS(Biochemistry and Molecular Biology)</option>
+                                                <option value="3">MS(Bioinformatics)</option>
+                                                <option value="4">MS(BioSciences)</option>
+                                                <option value="5">MS(Chem)</option>
+
                                             </select>
                                         </div>
                                     </div>

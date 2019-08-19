@@ -27,8 +27,6 @@ class Signup extends CI_Controller {
     public function index(){
         if ($this->input->post()){
             $this->Crud_model->insert('users', $_POST);
-//            var_dump($this->input->post());
-            die();
         }
         else{
             $this->load->view('index');

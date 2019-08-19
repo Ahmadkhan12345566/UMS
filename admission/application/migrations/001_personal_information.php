@@ -14,10 +14,12 @@ class Migration_personal_information extends CI_Migration {
     {
         $this->dbforge->add_field(array(
             'id' => array(
-                'type' => 'INT',
-                'constraint' => 5,
+                'type' => 'BIGINT',
                 'unsigned' => TRUE,
                 'auto_increment' => TRUE
+            ),
+            'user_id' => array(
+                'type' => 'BIGINT',
             ),
             'fullname' => array(
                 'type' => 'VARCHAR',
