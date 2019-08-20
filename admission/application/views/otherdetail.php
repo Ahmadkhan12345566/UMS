@@ -11,7 +11,7 @@
                                     <div class="col-md-7 col-sm-12 col-xs-12  pr-1">
                                         <div class="form-group">
                                             <label>Hostel Facility: (limited seats available)</label> &nbsp;&nbsp;&nbsp;
-                                            <input type="radio" name="seats" id="seats" value="Yes"> Yes &nbsp;
+                                            <input type="radio" name="seats" id="seats" value="Yes" > Yes &nbsp;
                                             <input type="radio" name="seats" id="seats" value="No" checked> No
                                         </div>
                                         <div class="form-group">
@@ -21,11 +21,13 @@
                                         </div>
                                         <div class="form-group">
                                             <label>How you Know</label>&nbsp;&nbsp;
-                                            <select name="aboutums" id="aboutums" class="form-control" required>
+                                            <select name="advertisement_id" id="aboutus" class="form-control" required>
                                                 <option value="How you come to know about us">How you come to know about us </option>
-                                                <option value="Facebook">Facebook</option>
-                                                <option value="Referred By a person">Referred By a person</option>
-                                                <option value="Other">Other</option>
+                                                <?php foreach ($advertisements as $advertisement) { ?>
+                                                    <option value="<?php echo $advertisement->id;?>"><?php echo $advertisement->name;?></option>
+                                                <?php }?>
+<!--                                                <option value="Referred By a person">Referred By a person</option>-->
+<!--                                                <option value="Other">Other</option>-->
                                             </select>
                                         </div>
                                     </div>
@@ -33,7 +35,7 @@
                                 <div class="row">
                                     <div class="update ml-auto mr-auto">
                                         <button type="submit" class="btn btn-primary btn-round">Save and Move Next</button>
-                                        <button type="submit" class="btn btn-ignore btn-round">Skip this</button>
+                                        <button type="button" class="btn btn-ignore btn-round">Skip this</button>
                                     </div>
                                 </div>
                             </form>

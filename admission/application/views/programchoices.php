@@ -19,11 +19,13 @@
                                         <div class="form-group">
                                             <select name='program[]' id='subject1' class="form-control" required>
                                                 <option value="">Select 1st Choice</option>
-                                                <option value="1">MBA (1.5 years)</option>
-                                                <option value="2)">MS(Biochemistry and Molecular Biology)</option>
-                                                <option value="3">MS(Bioinformatics)</option>
-                                                <option value="4">MS(BioSciences)</option>
-                                                <option value="5">MS(Chem)</option>
+                                                <?php foreach ($degrees as $degree){?>
+                                                    <option value="<?php echo $degree->id;?>"><?php echo $degree->name;?></option>
+                                                <?php }?>
+<!--                                                <option value="2)">MS(Biochemistry and Molecular Biology)</option>-->
+<!--                                                <option value="3">MS(Bioinformatics)</option>-->
+<!--                                                <option value="4">MS(BioSciences)</option>-->
+<!--                                                <option value="5">MS(Chem)</option>-->
 <!--                                                <option value="MS(Computer Engineering)">MS(Computer Engineering)</option>-->
 <!--                                                <option value="MS(Computer Science)">MS(Computer Science)</option>-->
 <!--                                                <option value="MS(Economics)">MS(Economics) </option>-->
@@ -51,11 +53,13 @@
                                     <div class="col-md-8 col-sm-12 col-xs-12">
                                         <div class="form-group">
                                             <select name='program[]' id='subject2' class="form-control" required>
-                                                <option value="">Select 1st Choice</option>
-                                                <option value="1">MBA (1.5 years)</option>
-                                                <option value="2)">MS(Biochemistry and Molecular Biology)</option>
-                                                <option value="3">MS(Bioinformatics)</option>
-                                                <option value="4">MS(BioSciences)</option>
+                                                <option value="">Select 2nd Choice</option>
+                                                <?php foreach ($degrees as $degree){?>
+                                                    <option value="<?php echo $degree->id;?>"><?php echo $degree->name;?></option>
+                                                <?php }?>
+<!--                                                <option value="2)">MS(Biochemistry and Molecular Biology)</option>-->
+<!--                                                <option value="3">MS(Bioinformatics)</option>-->
+<!--                                                <option value="4">MS(BioSciences)</option>-->
 <!--                                                <option value="5">MS(Chem)</option>-->
 <!--                                                <option value="MS(Chem)">MS(Chem)</option>-->
 <!--                                                <option value="MS(Computer Engineering)">MS(Computer Engineering)</option>-->
@@ -85,12 +89,14 @@
                                     <div class="col-md-8 col-sm-12 col-xs-12">
                                         <div class="form-group">
                                             <select name='program[]' id='subject3' class="form-control" required>
-                                                <option value="">Select 1st Choice</option>
-                                                <option value="1">MBA (1.5 years)</option>
-                                                <option value="2)">MS(Biochemistry and Molecular Biology)</option>
-                                                <option value="3">MS(Bioinformatics)</option>
-                                                <option value="4">MS(BioSciences)</option>
-                                                <option value="5">MS(Chem)</option>
+                                                <option value="">Select 3rd Choice</option>
+                                                <?php foreach ($degrees as $degree){?>
+                                                    <option value="<?php echo $degree->id;?>"><?php echo $degree->name;?></option>
+                                                <?php }?>
+<!--                                                <option value="2)">MS(Biochemistry and Molecular Biology)</option>-->
+<!--                                                <option value="3">MS(Bioinformatics)</option>-->
+<!--                                                <option value="4">MS(BioSciences)</option>-->
+<!--                                                <option value="5">MS(Chem)</option>-->
 <!--                                                <option value="MS(Computer Science)">MS(Computer Science)</option>-->
 <!--                                                <option value="MS(Economics)">MS(Economics) </option>-->
 <!--                                                <option value="MS(Electrical Engineering)">MS(Electrical Engineering)</option>-->
@@ -117,12 +123,10 @@
                                     <div class="col-md-8 col-sm-12 col-xs-12">
                                         <div class="form-group">
                                             <select name=program[]' id='subject4' class="form-control">
-                                                <option value="">Select 1st Choice</option>
-                                                <option value="1">MBA (1.5 years)</option>
-                                                <option value="2)">MS(Biochemistry and Molecular Biology)</option>
-                                                <option value="3">MS(Bioinformatics)</option>
-                                                <option value="4">MS(BioSciences)</option>
-                                                <option value="5">MS(Chem)</option>
+                                                <option value="">Select 4th Choice</option>
+                                                <?php foreach ($degrees as $degree){?>
+                                                    <option value="<?php echo $degree->id;?>"><?php echo $degree->name;?></option>
+                                                <?php }?>
 <!--                                                <option value="MS(Computer Science)">MS(Computer Science)</option>-->
 <!--                                                <option value="MS(Economics)">MS(Economics) </option>-->
 <!--                                                <option value="MS(Electrical Engineering)">MS(Electrical Engineering)</option>-->
@@ -149,12 +153,14 @@
                                     <div class="col-md-8 col-sm-12 col-xs-12">
                                         <div class="form-group">
                                             <select name='program[]' id='subject5' class="form-control">
-                                                <option value="">Select 1st Choice</option>
-                                                <option value="1">MBA (1.5 years)</option>
-                                                <option value="2)">MS(Biochemistry and Molecular Biology)</option>
-                                                <option value="3">MS(Bioinformatics)</option>
-                                                <option value="4">MS(BioSciences)</option>
-                                                <option value="5">MS(Chem)</option>
+                                                <option value="">Select 5th Choice</option>
+                                                <?php foreach ($degrees as $degree){?>
+                                                    <option value="<?php echo $degree->id;?>"><?php echo $degree->name;?></option>
+                                                <?php }?>
+<!--                                                <option value="2)">MS(Biochemistry and Molecular Biology)</option>-->
+<!--                                                <option value="3">MS(Bioinformatics)</option>-->
+<!--                                                <option value="4">MS(BioSciences)</option>-->
+<!--                                                <option value="5">MS(Chem)</option>-->
 <!--                                                <option value="MS(Computer Engineering)">MS(Computer Engineering)</option>-->
 <!--                                                <option value="MS(Computer Science)">MS(Computer Science)</option>-->
 <!--                                                <option value="MS(Economics)">MS(Economics) </option>-->
@@ -182,12 +188,14 @@
                                     <div class="col-md-8 col-sm-12 col-xs-12">
                                         <div class="form-group">
                                             <select name='program[]' id='subject6' class="form-control">
-                                                <option value="">Select 1st Choice</option>
-                                                <option value="1">MBA (1.5 years)</option>
-                                                <option value="2)">MS(Biochemistry and Molecular Biology)</option>
-                                                <option value="3">MS(Bioinformatics)</option>
-                                                <option value="4">MS(BioSciences)</option>
-                                                <option value="5">MS(Chem)</option>
+                                                <option value="">Select 6th Choice</option>
+                                                <?php foreach ($degrees as $degree){?>
+                                                    <option value="<?php echo $degree->id;?>"><?php echo $degree->name;?></option>
+                                                <?php }?>
+<!--                                                <option value="2)">MS(Biochemistry and Molecular Biology)</option>-->
+<!--                                                <option value="3">MS(Bioinformatics)</option>-->
+<!--                                                <option value="4">MS(BioSciences)</option>-->
+<!--                                                <option value="5">MS(Chem)</option>-->
 <!--                                                <option value="MS(Computer Engineering)">MS(Computer Engineering)</option>-->
 <!--                                                <option value="MS(Computer Science)">MS(Computer Science)</option>-->
 <!--                                                <option value="MS(Economics)">MS(Economics) </option>-->
@@ -215,12 +223,14 @@
                                     <div class="col-md-8 col-sm-12 col-xs-12">
                                         <div class="form-group">
                                             <select name='program[]' id='subject7' class="form-control">
-                                                <option value="">Select 1st Choice</option>
-                                                <option value="1">MBA (1.5 years)</option>
-                                                <option value="2)">MS(Biochemistry and Molecular Biology)</option>
-                                                <option value="3">MS(Bioinformatics)</option>
-                                                <option value="4">MS(BioSciences)</option>
-                                                <option value="5">MS(Chem)</option>
+                                                <option value="">Select 7th Choice</option>
+                                                <?php foreach ($degrees as $degree){?>
+                                                    <option value="<?php echo $degree->id;?>"><?php echo $degree->name;?></option>
+                                                <?php }?>
+<!--                                                <option value="2)">MS(Biochemistry and Molecular Biology)</option>-->
+<!--                                                <option value="3">MS(Bioinformatics)</option>-->
+<!--                                                <option value="4">MS(BioSciences)</option>-->
+<!--                                                <option value="5">MS(Chem)</option>-->
 
                                             </select>
                                         </div>

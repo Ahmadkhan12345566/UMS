@@ -36,13 +36,11 @@ class Migration_personal_information extends CI_Migration {
                 'type' => 'VARCHAR',
                 'constraint' => '100',
             ),
-            'nationality' => array(
-                'type' => 'VARCHAR',
-                'constraint' => '100',
+            'country_id' => array(
+                'type' => 'BIGINT',
             ),
-            'domicile' => array(
-                'type' => 'VARCHAR',
-                'constraint' => '100',
+            'domicile_id' => array(
+                'type' => 'BIGINT',
             ),
             'cnic' => array(
                 'type' => 'VARCHAR',

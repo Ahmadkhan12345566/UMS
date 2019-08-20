@@ -20,7 +20,7 @@ class Crud_model extends CI_Model
     }
 
     public  function get_all($table){
-        return $this->db->get($table)->result_array();
+        return $this->db->get($table)->result();
     }
 
     public function get($table,$id){

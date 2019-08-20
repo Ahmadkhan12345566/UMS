@@ -42,9 +42,11 @@
                                                                             <div class="form-group">
                                                                                 <label class="control-label">Degree</label>
                                                                                 <select name="education_level_id" id="matricdegree" required class="form-control">
-                                                                                    <option value="Select">Select Degree</option>
-                                                                                    <option value="1">Matric</option>
-                                                                                    <option value="2">O Level</option>
+                                                                                    <?php foreach ($education_levels as $education_level){?>
+                                                                                    <option value="<?php echo $education_level->id;?>"><?php echo $education_level->name;?></option>
+                                                                                    <?php }?>
+<!--                                                                                    <option value="1">Matric</option>-->
+<!--                                                                                    <option value="2">O Level</option>-->
                                                                                 </select>
                                                                             </div>
                                                                             <div class="form-group">
@@ -97,10 +99,12 @@
                                                                                 <label for="board">Board</label>
                                                                                 <select name="board_id" id="Matricboard" class="form-control" required>
                                                                                     <option value="">Select Board / University</option>
-                                                                                    <option value="1">Agha Khan University Board, Karachi</option>
-                                                                                    <option value="2">BISE, Abbotabad</option>
-                                                                                    <option value="3">BISE, AJK</option>
-                                                                                    <option value="4">BISE, Bahawalpur</option>
+                                                                                    <?php foreach ($boards as $board){?>
+                                                                                    <option value="<?php echo $board->id;?>"><?php echo $board->boardname;?></option>
+                                                                                    <?php }?>
+<!--                                                                                    <option value="2">BISE, Abbotabad</option>-->
+<!--                                                                                    <option value="3">BISE, AJK</option>-->
+<!--                                                                                    <option value="4">BISE, Bahawalpur</option>-->
 <!--                                                                                    <option value="BISE, Balochistan">BISE, Balochistan</option>-->
 <!--                                                                                    <option value="BISE, Bannu">BISE, Bannu</option>-->
 <!--                                                                                    <option value="BISE, DG Khan">BISE, DG Khan</option>-->
@@ -137,9 +141,11 @@
                                                                                 <label class="control-label">Subjects</label>
                                                                                 <select name="degree_id" id="matricSubject" required class="form-control">
                                                                                     <option value="Select">Select Subject</option>
-                                                                                    <option value="1">Science</option>
-                                                                                    <option value="2">Arts</option>
-                                                                                    <option value="3">Other</option>
+                                                                                    <?php foreach ($degrees as $degree){?>
+                                                                                    <option value="<?php echo $degree->id;?>"><?php echo $degree->name;?></option>
+                                                                                    <?php }?>
+<!--                                                                                    <option value="2">Arts</option>-->
+<!--                                                                                    <option value="3">Other</option>-->
                                                                                 </select>
                                                                             </div>
                                                                             <div class="form-group">
@@ -151,7 +157,7 @@
                                                                             <div class="form-group">
                                                                                 <label class="control-label">Obtained Marks</label>
                                                                                 <div>
-                                                                                    <input type="text" class="form-control" name="obtaindmarks" id="MatricObtainedmarks" required>
+                                                                                    <input type="text" class="form-control" name="obtainmarks" id="MatricObtainedmarks" required>
                                                                                 </div>
                                                                             </div>
                                                                             <div class="form-group">
@@ -196,13 +202,16 @@
                                                                             <div class="form-group">
                                                                                 <label class="control-label">Degree</label>
                                                                                 <select name="education_level_id" id="Interdegree" required class="form-control">
-                                                                                    <option value="Select">Select Degree</option>
-                                                                                    <option value="1">FSC</option>
-                                                                                    <option value="2">ICS</option>
-                                                                                    <option value="3">I.COM</option>
-                                                                                    <option value="4">D.COM</option>
-                                                                                    <option value="5">A-Level</option>
-                                                                                    <option value="6">DAE</option>
+                                                                                    <option value="">Select Degree</option>
+                                                                                    <?php foreach ($education_levels as $education_level){?>
+                                                                                        <option value="<?php echo $education_level->id; ?>"><?php echo $education_level->name; ?></option>
+                                                                                    <?php }?>
+
+<!--                                                                                    <option value="2">ICS</option>-->
+<!--                                                                                    <option value="3">I.COM</option>-->
+<!--                                                                                    <option value="4">D.COM</option>-->
+<!--                                                                                    <option value="5">A-Level</option>-->
+<!--                                                                                    <option value="6">DAE</option>-->
                                                                                 </select>
                                                                             </div>
                                                                             <div class="form-group">
@@ -255,9 +264,11 @@
                                                                                 <label for="board">Board</label>
                                                                                 <select name="board_id" id="Interboard" class="form-control" required>
                                                                                     <option value="">Select Board / University</option>
-                                                                                    <option value="1">Agha Khan University Board, Karachi</option>
-                                                                                    <option value="2">BISE, Abbotabad</option>
-                                                                                    <option value="3">BISE, AJK</option>
+                                                                                    <?php foreach ($boards as $board){?>
+                                                                                        <option value="<?php echo $board->id; ?>"><?php echo $board->boardname; ?></option>
+                                                                                    <?php }?>
+<!--                                                                                    <option value="2">BISE, Abbotabad</option>-->
+<!--                                                                                    <option value="3">BISE, AJK</option>-->
 <!--                                                                                    <option value="BISE, Bahawalpur">BISE, Bahawalpur</option>-->
 <!--                                                                                    <option value="BISE, Balochistan">BISE, Balochistan</option>-->
 <!--                                                                                    <option value="BISE, Bannu">BISE, Bannu</option>-->
@@ -295,13 +306,15 @@
                                                                                 <label class="control-label">Subjects</label>
                                                                                 <select name="degree_id" id="Intersubject" required class="form-control">
                                                                                     <option value="Select">Select Subject</option>
-                                                                                    <option value="1">Pre Engreeing</option>
-                                                                                    <option value="2">Computer Science</option>
-                                                                                    <option value="3">Pre Medical</option>
-                                                                                    <option value="4">Arts & Humanities</option>
-                                                                                    <option value="5">Commerce</option>
-                                                                                    <option value="6">General Science</option>
-                                                                                    <option value="7">Other</option>
+                                                                                    <?php foreach ($degrees as $degree){?>
+                                                                                        <option value="<?php echo $degree->id;?>"><?php echo $degree->name;?></option>
+                                                                                    <?php }?>
+<!--                                                                                    <option value="2">Computer Science</option>-->
+<!--                                                                                    <option value="3">Pre Medical</option>-->
+<!--                                                                                    <option value="4">Arts & Humanities</option>-->
+<!--                                                                                    <option value="5">Commerce</option>-->
+<!--                                                                                    <option value="6">General Science</option>-->
+<!--                                                                                    <option value="7">Other</option>-->
                                                                                 </select>
                                                                             </div>
                                                                             <div class="form-group">
@@ -360,10 +373,12 @@
                                                                                 <label class="control-label">Degree</label>
                                                                                 <select name="education_level_id" id="fourteenyeardegree" class="form-control" required>
                                                                                     <option value="Select">Select Degree</option>
-                                                                                    <option value="1">BA</option>
-                                                                                    <option value="2">BSC</option>
-                                                                                    <option value="3">B.Com</option>
-                                                                                    <option value="4">BBA (2 years)</option>
+                                                                                    <?php foreach ($education_levels as $education_level){?>
+                                                                                    <option value="<?php echo $education_level->id?>"><?php echo $education_level->name?></option>
+                                                                                    <?php }?>
+<!--                                                                                    <option value="2">BSC</option>-->
+<!--                                                                                    <option value="3">B.Com</option>-->
+<!--                                                                                    <option value="4">BBA (2 years)</option>-->
                                                                                 </select>
                                                                             </div>
                                                                             <div class="form-group">
@@ -416,8 +431,10 @@
                                                                                 <label for="board">Board</label>
                                                                                 <select name="board_id" id="fourteenyearboard_uni" class="form-control" required>
                                                                                     <option value="">Select Board / University</option>
-                                                                                    <option value="1">Abdul Wali Khan University Mardan</option>
-                                                                                    <option value="2">Aga Khan University</option>
+                                                                                    <?php foreach ($boards as $board) {?>
+                                                                                        <option value="<?php echo $board->id;?>"><?php echo $board->boardname;?></option>
+                                                                                    <?php }?>
+<!--                                                                                    <option value="2">Aga Khan University</option>-->
 <!--                                                                                    <option value="AIOU Islamabad">AIOU Islamabad</option>-->
 <!--                                                                                    <option value="Air University Islamabad">Air University Islamabad</option>-->
 <!--                                                                                    <option value="Bahauddin Zakariya University,&nbsp;Multan">Bahauddin Zakariya University,&nbsp;Multan</option>-->
@@ -489,7 +506,9 @@
                                                                                 <label class="control-label">Subjects</label>
                                                                                 <select name="degree_id" id="fourteenyearsubject" class="form-control" required>
                                                                                     <option value="Select">Select Subject</option>
-                                                                                    <option value="1">Arts</option>
+                                                                                     <?php foreach ($degrees as $degree){?>
+                                                                                        <option value="<?php echo $degree->id;?>"><?php echo $degree->name;?></option>
+                                                                                    <?php }?>
                                                                                     <option value="2">Biological Science</option>
 <!--                                                                                    <option value="Commerce">Commerce</option>-->
 <!--                                                                                    <option value="Social Science">Social Science</option>-->
@@ -607,10 +626,10 @@
                                                                                 <label for="board">Board/University</label>
                                                                                 <select name="board_id" id="sixteenyearsboard_uni" class="form-control">
                                                                                     <option value="Select Board / University">Select Board / University</option>
-                                                                                    <option value="1">Agha Khan University Board, Karachi</option>
-                                                                                    <option value="2">BISE, Abbotabad</option>
-                                                                                    <option value="3">BISE, AJK</option>
-                                                                                    <option value="4">BISE, Bahawalpur</option>
+                                                                                    <?php foreach ($boards as $board) {?>
+                                                                                    <option value="<?php echo $board->id;?>"><?php echo $board->boardname;?></option>
+                                                                                    <?php }?>
+
 <!--                                                                                    <option value="BISE, Balochistan">BISE, Balochistan</option>-->
 <!--                                                                                    <option value="BISE, Bannu">BISE, Bannu</option>-->
 <!--                                                                                    <option value="BISE, DG Khan">BISE, DG Khan</option>-->

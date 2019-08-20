@@ -2,13 +2,13 @@
 /**
  * Created by PhpStorm.
  * User: Mussawar Ahamd
- * Date: 8/8/2019
- * Time: 11:58 AM
+ * Date: 20/8/2019
+ * Time: 06:04 PM
  */
 
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Migration_other_details extends CI_Migration {
+class Migration_advertisements extends CI_Migration {
 
     public function up()
     {
@@ -18,14 +18,9 @@ class Migration_other_details extends CI_Migration {
                 'unsigned' => TRUE,
                 'auto_increment' => TRUE
             ),
-            'user_id' => array(
-                'type' => 'BIGINT',
-            ),
-            'seats' => array(
-                'type' => 'BOOLEAN',
-            ),
-            'transport' => array(
-                'type' => 'BOOLEAN',
+            'name' => array(
+                'type' => 'VARCHAR',
+                'constraint' => '500',
             ),
             'created_at' => array(
                 'type' => 'timestamp',
@@ -37,11 +32,11 @@ class Migration_other_details extends CI_Migration {
             ),
         ));
         $this->dbforge->add_key('id', TRUE);
-        $this->dbforge->create_table('other_details');
+        $this->dbforge->create_table('advertisements');
     }
 
     public function down()
     {
-        $this->dbforge->drop_table('other_details');
+        $this->dbforge->drop_table('advertisements');
     }
 }

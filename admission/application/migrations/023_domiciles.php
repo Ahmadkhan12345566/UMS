@@ -1,11 +1,11 @@
 <?php
 /**
- * Migration_users Class
- *
- * @author       Firoz Ahmad Likhon <likh.deshi@gmail.com>
- * @purpose      Migration.
+ * Created by PhpStorm.
+ * User: Mussawar Ahamd
+ * Date: 20/8/2019
+ * Time: 10:58 AM
  */
-class Migration_users extends CI_Migration {
+class Migration_domiciles extends CI_Migration {
 
     /**
      * Create table.
@@ -17,32 +17,15 @@ class Migration_users extends CI_Migration {
                 'unsigned' => TRUE,
                 'auto_increment' => TRUE
             ),
-            'email' => array(
+            'name' => array(
                 'type' => 'VARCHAR',
                 'constraint' => 150,
             ),
-            'username' =>array (
+            'shortname' =>array (
                 'type' => 'VARCHAR',
                 'constraint' => 128,
             ),
-            'password' => array(
-                'type' => 'VARCHAR',
-                'constraint' => 255,
-            ),
-            'studentphoto' => array(
-                'type' => 'VARCHAR',
-                'constraint' => '100',
-                'null' => TRUE,
-            ),
-            'status' => array(
-                'type' => 'TINYINT',
-                'constraint' => 1,
-                'default' => 0
-            ),
-            'campus_id' => array(
-                'type' => 'BIGINT',
-            ),
-            'degree_id' => array(
+            'country_id' =>array (
                 'type' => 'BIGINT',
             ),
             'created_at' => array(
@@ -60,14 +43,14 @@ class Migration_users extends CI_Migration {
         ));
 
         $this->dbforge->add_key('id', true);
-        $this->dbforge->create_table('users');
+        $this->dbforge->create_table('domiciles');
     }
 
     /**
      * Drop table.
      */
     public function down() {
-        $this->dbforge->drop_table('users');
+        $this->dbforge->drop_table('domiciles');
     }
 
 }

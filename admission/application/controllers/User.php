@@ -26,11 +26,11 @@ class User extends CI_Controller {
         $this->load->helper(array('form', 'url'));
     }
 
-    public  function  viewLoad($page){
+    public  function  viewLoad($page ,$data=null){
         $this->load->view('inc/header');
         $this->load->view('inc/bssidebar');
         $this->load->view('inc/navbar');
-        $this->load->view($page);
+        $this->load->view($page,$data);
         $this->load->view('inc/footer');
     }
 
@@ -40,19 +40,62 @@ class User extends CI_Controller {
             $this->Crud_model->insert('personal_information', $_POST);
         }
         else{
-            $this->viewLoad('personalinformation');
+            $data['countries']= $this->Crud_model->get_all("countries");
+            $data['domiciles']= $this->Crud_model->get_all("domiciles");
+//            var_dump($data);
+//            die();
+            $this->viewLoad('personalinformation',$data);
         }
     }
 
     public function address_detail(){
 
         if ($data=$this->input->post()){
-           $_POST['user_id']="2";
-           $this->Crud_model->insert('address', $_POST);
+
+            // Permanent Address
+
+            $permanentaddress=array();
+            $permanentaddress["address1"]= $_POST['pline1'];
+            $permanentaddress["address2"]= $_POST['pline2'];
+            $permanentaddress["city_id"]= $_POST['pcity_id'];
+            $permanentaddress["phone"]= $_POST['pphone'];
+            $permanentaddress["address_type_id"]= 1;
+            $permanentaddress['user_id']="1";
+
+            $this->Crud_model->insert('address', $permanentaddress);
+
+           // Mailing Addresses
+
+            $mailingaddress=array();
+            $mailingaddress["address1"]= $_POST['mline1'];
+            $mailingaddress["address2"]= $_POST['mline2'];
+            $mailingaddress["city_id"]= $_POST['mcity_id'];
+            $mailingaddress["phone"]= $_POST['mphone'];
+            $mailingaddress["address_type_id"]= 1;
+            $mailingaddress['user_id']="1";
+
+            $this->Crud_model->insert('address', $mailingaddress);
+
+           // Guardian Addresses
+
+            $guardianaddress=array();
+            $guardianaddress["address1"]= $_POST['mline1'];
+            $guardianaddress["address2"]= $_POST['mline2'];
+            $guardianaddress["city_id"]= $_POST['gcity_id'];
+            $guardianaddress["phone"]= $_POST['mphone'];
+            $guardianaddress["address_type_id"]= 1;
+            $guardianaddress['user_id']="1";
+
+            $this->Crud_model->insert('address', $guardianaddress);
         }
         else{
-            $this->viewLoad('address');
+            $data["cities"]= $this->Crud_model->get_all("cities");
+            $this->viewLoad('address', $data);
         }
+
+        // permanent address
+
+
     }
 
     public function photo_upload(){
@@ -86,7 +129,12 @@ class User extends CI_Controller {
          }
         }
         else{
-            $this->load->view('educationdetails');
+            $data["education_levels"]= $this->Crud_model->get_all('education_levels');
+            $data["degrees"]= $this->Crud_model->get_all('degrees');
+            $data["boards"]= $this->Crud_model->get_all('boards');
+//            var_dump($data);
+//            die();
+            $this->viewLoad('educationdetails',$data);
         }
     }
 
@@ -98,7 +146,10 @@ class User extends CI_Controller {
             $this->Crud_model->insert('education_details', $_POST);
         }
         else{
-            $this->viewLoad('educationdetails');
+            $data["education_levels"]= $this->Crud_model->get_all('education_levels');
+            $data["degrees"]= $this->Crud_model->get_all('degrees');
+            $data["boards"]= $this->Crud_model->get_all('boards');
+            $this->viewLoad('educationdetails', $data);
         }
     }
 
@@ -110,7 +161,11 @@ class User extends CI_Controller {
             $this->Crud_model->insert('education_details', $_POST);
         }
         else{
-            $this->viewLoad('educationdetails');
+
+            $data["education_levels"]= $this->Crud_model->get_all('education_levels');
+            $data["degrees"]= $this->Crud_model->get_all('degrees');
+            $data["boards"]= $this->Crud_model->get_all('boards');
+            $this->viewLoad('educationdetails', $data);
         }
     }
 
@@ -122,7 +177,11 @@ class User extends CI_Controller {
             $this->Crud_model->insert('education_details', $_POST);
         }
         else{
-            $this->viewLoad('educationdetails');
+
+            $data["education_levels"]= $this->Crud_model->get_all('education_levels');
+            $data["degrees"]= $this->Crud_model->get_all('degrees');
+            $data["boards"]= $this->Crud_model->get_all('boards');
+            $this->viewLoad('educationdetails', $data);
         }
     }
 
@@ -160,7 +219,9 @@ class User extends CI_Controller {
             };
         }
         else{
-            $this->viewLoad('programchoices');
+
+            $data['degrees']=$this->Crud_model->get_all("degrees");
+            $this->viewLoad('programchoices', $data);
         }
     }
 
@@ -242,11 +303,25 @@ class User extends CI_Controller {
     public function other_detail(){
 
         if ($data=$this->input->post()){
-            $_POST['user_id']="4";
-            $this->Crud_model->insert('other_details', $_POST);
+            //other details
+             $otherdetails=array();
+             $otherdetails['seats']=$_POST['seats'];
+             $otherdetails['transport']=$_POST['transport'];
+             $otherdetails['user_id']="1";
+             $this->Crud_model->insert('other_details', $otherdetails);
+
+            // Advertisement out
+             $advertisementout=array();
+             $advertisementout['advertisement_id']=$_POST['advertisement_id'];
+             $advertisementout['user_id']="1";
+
+             $this->Crud_model->insert('advertisement_out', $advertisementout);
+
+
         }
         else{
-            $this->viewLoad('otherdetail');
+            $data['advertisements']= $this->Crud_model->get_all('advertisements');
+            $this->viewLoad('otherdetail', $data);
         }
     }
 
