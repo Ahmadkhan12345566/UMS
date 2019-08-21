@@ -1,66 +1,73 @@
 <div class="content">
-            <div class="row">
-                <div class="col-md-8 col-sm-12 col-xs-12">
-                    <div class="card card-user">
-                        <div class="card-header">
-                            <h5 class="card-title">Education Details</h5>
-                        </div>
-                        <div class="card-body">
-                            <form method="post" action="<?php echo base_url("educationdetails")?>">
-                                <div class="row">
-                                    <div class="col-md-12 col-sm-8 col-xs-8">
-                                        <div class="form-group">
-                                            <table class="table table-bordered">
-                                                <thead>
-                                                <tr>
-                                                    <th scope="col">#</th>
-                                                    <th scope="col">Degree</th>
-                                                    <th scope="col">Edit</th>
-                                                    <th scope="col">Status</th>
-                                                    <th scope="col">View</th>
-                                                </tr>
-                                                </thead>
-                                                <tbody>
-                                                <tr>
-                                                    <th scope="row">1</th>
-                                                    <td>
-                                                        <a href="" data-toggle="modal" data-target="#ModalLoginForm">
-                                                            Matric / O - Level
-                                                        </a>
-                                                        <!-- Modal HTML Markup -->
-                                                        <div id="ModalLoginForm" data-backdrop="static" class="modal fade">
-                                                            <div class="modal-dialog" role="document">
-                                                                <div class="modal-content">
-                                                                    <div class="modal-header">
-                                                                        <h3 class="modal-title">Matric / O - Level</h3>
-                                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                                            <span aria-hidden="true">&times;</span>
-                                                                        </button>
-                                                                    </div>
-                                                                    <div class="modal-body">
-                                                                        <form method="post" action="<?php echo base_url("educationdetails");?>">
-                                                                            <div class="form-group">
-                                                                                <label class="control-label">Degree</label>
-                                                                                <select name="education_level_id" id="matricdegree" required class="form-control">
-                                                                                    <option value="">Select Degree</option>
-                                                                                    <?php foreach ($education_levels as $education_level){?>
-                                                                                    <option value="<?php echo $education_level->id;?>"><?php echo $education_level->name;?></option>
-                                                                                    <?php }?>
+    <div class="row">
+        <div class="col-md-8 col-sm-12 col-xs-12">
+            <div class="progress mb-1">
+                <div class="progress-bar  progress-bar-striped bg-success" style="width:10%">10%</div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-8 col-sm-12 col-xs-12">
+            <div class="card card-user">
+                <div class="card-header">
+                    <h5 class="card-title">Education Details</h5>
+                </div>
+                <div class="card-body">
+                    <form method="post" action="<?php echo base_url("educationdetails")?>">
+                        <div class="row">
+                            <div class="col-md-12 col-sm-8 col-xs-8">
+                                <div class="form-group">
+                                    <table class="table table-bordered">
+                                        <thead>
+                                        <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">Degree</th>
+                                            <th scope="col">Edit</th>
+                                            <th scope="col">Status</th>
+                                            <th scope="col">View</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <th scope="row">1</th>
+                                            <td>
+                                                <a href="" data-toggle="modal" data-target="#ModalLoginForm">
+                                                    Matric / O - Level
+                                                </a>
+                                                <!-- Modal HTML Markup -->
+                                                <div id="ModalLoginForm" data-backdrop="static" class="modal fade">
+                                                    <div class="modal-dialog" role="document">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h3 class="modal-title">Matric / O - Level</h3>
+                                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                    <span aria-hidden="true">&times;</span>
+                                                                </button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                <form method="post" action="<?php echo base_url("educationdetails");?>">
+                                                                    <div class="form-group">
+                                                                        <label class="control-label">Degree</label>
+                                                                        <select name="education_level_id" id="matricdegree" required class="form-control">
+                                                                            <option value="">Select Degree</option>
+                                                                            <?php foreach ($education_levels as $education_level){?>
+                                                                            <option value="<?php echo $education_level->id;?>"><?php echo $education_level->name;?></option>
+                                                                            <?php }?>
 <!--                                                                                    <option value="1">Matric</option>-->
 <!--                                                                                    <option value="2">O Level</option>-->
-                                                                                </select>
-                                                                            </div>
-                                                                            <div class="form-group">
-                                                                                <label class="control-label">Year of Passing</label>
-                                                                                <select name='passingyears' id='matricpassingyear' class="form-control" required>
-                                                                                    <option value='Years'>Years</option>
-                                                                                    <option value=2019'>2019</option>
-                                                                                    <option value='2018'>2018</option>
-                                                                                    <option value='2017'>2017</option>
-                                                                                    <option value='2016'>2016</option>
-                                                                                    <option value='2015'>2015</option>
-                                                                                    <option value='2014'>2014</option>
-                                                                                    <option value='2013'>2013</option>
+                                                                        </select>
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <label class="control-label">Year of Passing</label>
+                                                                        <select name='passingyears' id='matricpassingyear' class="form-control" required>
+                                                                            <option value='Years'>Years</option>
+                                                                            <option value=2019'>2019</option>
+                                                                            <option value='2018'>2018</option>
+                                                                            <option value='2017'>2017</option>
+                                                                            <option value='2016'>2016</option>
+                                                                            <option value='2015'>2015</option>
+                                                                            <option value='2014'>2014</option>
+                                                                            <option value='2013'>2013</option>
 <!--                                                                                    <option value='2012'>2012</option>-->
 <!--                                                                                    <option value='2011'>2011</option>-->
 <!--                                                                                    <option value='2010'>2010</option>-->
@@ -94,15 +101,15 @@
 <!--                                                                                    <option value='1997'>1982</option>-->
 <!--                                                                                    <option value='1996'>1981</option>-->
 <!--                                                                                    <option value='1995'>1970</option>-->
-                                                                                </select>
-                                                                            </div>
-                                                                            <div class="form-group">
-                                                                                <label for="board">Board</label>
-                                                                                <select name="board_id" id="Matricboard" class="form-control" required>
-                                                                                    <option value="">Select Board / University</option>
-                                                                                    <?php foreach ($boards as $board){?>
-                                                                                    <option value="<?php echo $board->id;?>"><?php echo $board->boardname;?></option>
-                                                                                    <?php }?>
+                                                                        </select>
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <label for="board">Board</label>
+                                                                        <select name="board_id" id="Matricboard" class="form-control" required>
+                                                                            <option value="">Select Board / University</option>
+                                                                            <?php foreach ($boards as $board){?>
+                                                                            <option value="<?php echo $board->id;?>"><?php echo $board->boardname;?></option>
+                                                                            <?php }?>
 <!--                                                                                    <option value="2">BISE, Abbotabad</option>-->
 <!--                                                                                    <option value="3">BISE, AJK</option>-->
 <!--                                                                                    <option value="4">BISE, Bahawalpur</option>-->
@@ -136,96 +143,96 @@
 <!--                                                                                    <option value="Punjab Board of Technical Education, Lahore">Punjab Board of Technical Education, Lahore</option>-->
 <!--                                                                                    <option value="TEVTA, Lahore">TEVTA, Lahore</option>-->
 <!--                                                                                    <option value="Other">Other</option>-->
-                                                                                </select>
-                                                                            </div>
-                                                                            <div class="form-group">
-                                                                                <label class="control-label">Subjects</label>
-                                                                                <select name="degree_id" id="matricSubject" required class="form-control">
-                                                                                    <option value="Select">Select Subject</option>
-                                                                                    <?php foreach ($degrees as $degree){?>
-                                                                                    <option value="<?php echo $degree->id;?>"><?php echo $degree->name;?></option>
-                                                                                    <?php }?>
+                                                                        </select>
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <label class="control-label">Subjects</label>
+                                                                        <select name="degree_id" id="matricSubject" required class="form-control">
+                                                                            <option value="Select">Select Subject</option>
+                                                                            <?php foreach ($degrees as $degree){?>
+                                                                            <option value="<?php echo $degree->id;?>"><?php echo $degree->name;?></option>
+                                                                            <?php }?>
 <!--                                                                                    <option value="2">Arts</option>-->
 <!--                                                                                    <option value="3">Other</option>-->
-                                                                                </select>
-                                                                            </div>
-                                                                            <div class="form-group">
-                                                                                <label class="control-label">Total Marks</label>
-                                                                                <div>
-                                                                                    <input type="text" class="form-control" name="totalmarks" id="Matricminimum_marks" required>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="form-group">
-                                                                                <label class="control-label">Obtained Marks</label>
-                                                                                <div>
-                                                                                    <input type="text" class="form-control" name="obtainmarks" id="MatricObtainedmarks" required>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="form-group">
-                                                                                <div>
-                                                                                    <button type="submit" name="submit" class="btn btn-success" value="matric">
-                                                                                        Save
-                                                                                    </button>
-                                                                                    <button type="button" class="btn btn-ignore" data-dismiss="modal">
-                                                                                        Cancel
-                                                                                    </button>
-                                                                                </div>
-                                                                            </div>
-                                                                        </form>
+                                                                        </select>
                                                                     </div>
-                                                                </div><!-- /.modal-content -->
-                                                            </div><!-- /.modal-dialog -->
-                                                        </div><!-- /.modal -->
-                                                    </td>
-                                                    <td><a href="" data-toggle="modal" data-target="#ModalLoginForm"><i class="far fa-edit" style="font-size: 22px;">
-                                                            </i></a></td>
-                                                    <td>Incomplete</td>
-                                                    <td>Incomplete</td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">2</th>
-                                                    <td>
-                                                        <a href="" data-toggle="modal" data-target="#IntermediateForm">
-                                                            Intermediate
-                                                        </a>
-                                                        <!-- Modal HTML Markup -->
-                                                        <div id="IntermediateForm" data-backdrop="static" class="modal fade">
-                                                            <div class="modal-dialog" role="document">
-                                                                <div class="modal-content">
-                                                                    <div class="modal-header">
-                                                                        <h3 class="modal-title">Intermediate</h3>
-                                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                                            <span aria-hidden="true">&times;</span>
-                                                                        </button>
+                                                                    <div class="form-group">
+                                                                        <label class="control-label">Total Marks</label>
+                                                                        <div>
+                                                                            <input type="text" class="form-control" name="totalmarks" id="Matricminimum_marks" required>
+                                                                        </div>
                                                                     </div>
-                                                                    <div class="modal-body">
-                                                                        <form role="form" method="POST" action="<?php echo base_url("educationdetails")?>">
-                                                                            <div class="form-group">
-                                                                                <label class="control-label">Degree</label>
-                                                                                <select name="education_level_id" id="Interdegree" required class="form-control">
-                                                                                    <option value="">Select Degree</option>
-                                                                                    <?php foreach ($education_levels as $education_level){?>
-                                                                                        <option value="<?php echo $education_level->id; ?>"><?php echo $education_level->name; ?></option>
-                                                                                    <?php }?>
+                                                                    <div class="form-group">
+                                                                        <label class="control-label">Obtained Marks</label>
+                                                                        <div>
+                                                                            <input type="text" class="form-control" name="obtainmarks" id="MatricObtainedmarks" required>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <div>
+                                                                            <button type="submit" name="submit" class="btn btn-success" value="matric">
+                                                                                Save
+                                                                            </button>
+                                                                            <button type="button" class="btn btn-ignore" data-dismiss="modal">
+                                                                                Cancel
+                                                                            </button>
+                                                                        </div>
+                                                                    </div>
+                                                                </form>
+                                                            </div>
+                                                        </div><!-- /.modal-content -->
+                                                    </div><!-- /.modal-dialog -->
+                                                </div><!-- /.modal -->
+                                            </td>
+                                            <td><a href="" data-toggle="modal" data-target="#ModalLoginForm"><i class="far fa-edit" style="font-size: 22px;">
+                                                    </i></a></td>
+                                            <td>Incomplete</td>
+                                            <td>Incomplete</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">2</th>
+                                            <td>
+                                                <a href="" data-toggle="modal" data-target="#IntermediateForm">
+                                                    Intermediate
+                                                </a>
+                                                <!-- Modal HTML Markup -->
+                                                <div id="IntermediateForm" data-backdrop="static" class="modal fade">
+                                                    <div class="modal-dialog" role="document">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h3 class="modal-title">Intermediate</h3>
+                                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                    <span aria-hidden="true">&times;</span>
+                                                                </button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                <form role="form" method="POST" action="<?php echo base_url("educationdetails")?>">
+                                                                    <div class="form-group">
+                                                                        <label class="control-label">Degree</label>
+                                                                        <select name="education_level_id" id="Interdegree" required class="form-control">
+                                                                            <option value="">Select Degree</option>
+                                                                            <?php foreach ($education_levels as $education_level){?>
+                                                                                <option value="<?php echo $education_level->id; ?>"><?php echo $education_level->name; ?></option>
+                                                                            <?php }?>
 
 <!--                                                                                    <option value="2">ICS</option>-->
 <!--                                                                                    <option value="3">I.COM</option>-->
 <!--                                                                                    <option value="4">D.COM</option>-->
 <!--                                                                                    <option value="5">A-Level</option>-->
 <!--                                                                                    <option value="6">DAE</option>-->
-                                                                                </select>
-                                                                            </div>
-                                                                            <div class="form-group">
-                                                                                <label class="control-label">Year of Passing</label>
-                                                                                <select name="passingyears" id="Interpassyear" class="form-control" required>
-                                                                                    <option value='Years'>Years</option>
-                                                                                    <option value=2019'>2019</option>
-                                                                                    <option value='2018'>2018</option>
-                                                                                    <option value='2017'>2017</option>
-                                                                                    <option value='2016'>2016</option>
-                                                                                    <option value='2015'>2015</option>
-                                                                                    <option value='2014'>2014</option>
-                                                                                    <option value='2013'>2013</option>
+                                                                        </select>
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <label class="control-label">Year of Passing</label>
+                                                                        <select name="passingyears" id="Interpassyear" class="form-control" required>
+                                                                            <option value='Years'>Years</option>
+                                                                            <option value=2019'>2019</option>
+                                                                            <option value='2018'>2018</option>
+                                                                            <option value='2017'>2017</option>
+                                                                            <option value='2016'>2016</option>
+                                                                            <option value='2015'>2015</option>
+                                                                            <option value='2014'>2014</option>
+                                                                            <option value='2013'>2013</option>
 <!--                                                                                    <option value='2012'>2012</option>-->
 <!--                                                                                    <option value='2011'>2011</option>-->
 <!--                                                                                    <option value='2010'>2010</option>-->
@@ -259,15 +266,15 @@
 <!--                                                                                    <option value='1997'>1982</option>-->
 <!--                                                                                    <option value='1996'>1981</option>-->
 <!--                                                                                    <option value='1995'>1970</option>-->
-                                                                                </select>
-                                                                            </div>
-                                                                            <div class="form-group">
-                                                                                <label for="board">Board</label>
-                                                                                <select name="board_id" id="Interboard" class="form-control" required>
-                                                                                    <option value="">Select Board / University</option>
-                                                                                    <?php foreach ($boards as $board){?>
-                                                                                        <option value="<?php echo $board->id; ?>"><?php echo $board->boardname; ?></option>
-                                                                                    <?php }?>
+                                                                        </select>
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <label for="board">Board</label>
+                                                                        <select name="board_id" id="Interboard" class="form-control" required>
+                                                                            <option value="">Select Board / University</option>
+                                                                            <?php foreach ($boards as $board){?>
+                                                                                <option value="<?php echo $board->id; ?>"><?php echo $board->boardname; ?></option>
+                                                                            <?php }?>
 <!--                                                                                    <option value="2">BISE, Abbotabad</option>-->
 <!--                                                                                    <option value="3">BISE, AJK</option>-->
 <!--                                                                                    <option value="BISE, Bahawalpur">BISE, Bahawalpur</option>-->
@@ -301,98 +308,98 @@
 <!--                                                                                    <option value="Punjab Board of Technical Education, Lahore">Punjab Board of Technical Education, Lahore</option>-->
 <!--                                                                                    <option value="TEVTA, Lahore">TEVTA, Lahore</option>-->
 <!--                                                                                    <option value="Other">Other</option>-->
-                                                                                </select>
-                                                                            </div>
-                                                                            <div class="form-group">
-                                                                                <label class="control-label">Subjects</label>
-                                                                                <select name="degree_id" id="Intersubject" required class="form-control">
-                                                                                    <option value="Select">Select Subject</option>
-                                                                                    <?php foreach ($degrees as $degree){?>
-                                                                                        <option value="<?php echo $degree->id;?>"><?php echo $degree->name;?></option>
-                                                                                    <?php }?>
+                                                                        </select>
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <label class="control-label">Subjects</label>
+                                                                        <select name="degree_id" id="Intersubject" required class="form-control">
+                                                                            <option value="Select">Select Subject</option>
+                                                                            <?php foreach ($degrees as $degree){?>
+                                                                                <option value="<?php echo $degree->id;?>"><?php echo $degree->name;?></option>
+                                                                            <?php }?>
 <!--                                                                                    <option value="2">Computer Science</option>-->
 <!--                                                                                    <option value="3">Pre Medical</option>-->
 <!--                                                                                    <option value="4">Arts & Humanities</option>-->
 <!--                                                                                    <option value="5">Commerce</option>-->
 <!--                                                                                    <option value="6">General Science</option>-->
 <!--                                                                                    <option value="7">Other</option>-->
-                                                                                </select>
-                                                                            </div>
-                                                                            <div class="form-group">
-                                                                                <label class="control-label">Total Marks</label>
-                                                                                <div>
-                                                                                    <input type="text" class="form-control" name="totalmarks" id="Interminimum_marks" required>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="form-group">
-                                                                                <label class="control-label">Obtained Marks</label>
-                                                                                <div>
-                                                                                    <input type="text" class="form-control" name="obtainmarks" id="Interobtainedmarks" required>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="form-group">
-                                                                                <div>
-                                                                                    <button type="submit" name="submit" class="btn btn-success" value="intermediate">
-                                                                                        Save
-                                                                                    </button>
-                                                                                    <button type="button" class="btn btn-ignore" data-dismiss="modal">
-                                                                                        Cancel
-                                                                                    </button>
-                                                                                </div>
-                                                                            </div>
-                                                                        </form>
+                                                                        </select>
                                                                     </div>
-                                                                </div><!-- /.modal-content -->
-                                                            </div><!-- /.modal-dialog -->
-                                                        </div><!-- /.modal -->
-                                                    </td>
-                                                    <td><a href="" data-toggle="modal" data-target="#IntermediateForm">
-                                                            <i class="far fa-edit" style="font-size: 22px;"></i>
-                                                        </a></td>
-                                                    <td>Incomplete</td>
-                                                    <td>Incomplete</td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">3</th>
-                                                    <td>
-                                                        <a href="" data-toggle="modal" data-target="#14yearForm">
-                                                            14 Years (Optional)
-                                                        </a>
-                                                        <!-- Modal HTML Markup -->
-                                                        <div id="14yearForm" data-backdrop="static" class="modal fade">
-                                                            <div class="modal-dialog" role="document">
-                                                                <div class="modal-content">
-                                                                    <div class="modal-header">
-                                                                        <h3 class="modal-title">14 years (Optional)</h3>
-                                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                                            <span aria-hidden="true">&times;</span>
-                                                                        </button>
+                                                                    <div class="form-group">
+                                                                        <label class="control-label">Total Marks</label>
+                                                                        <div>
+                                                                            <input type="text" class="form-control" name="totalmarks" id="Interminimum_marks" required>
+                                                                        </div>
                                                                     </div>
-                                                                    <div class="modal-body">
-                                                                        <form role="form" method="POST" action="<?php echo base_url("educationdetails")?>">
-                                                                            <div class="form-group">
-                                                                                <label class="control-label">Degree</label>
-                                                                                <select name="education_level_id" id="fourteenyeardegree" class="form-control" required>
-                                                                                    <option value="Select">Select Degree</option>
-                                                                                    <?php foreach ($education_levels as $education_level){?>
-                                                                                    <option value="<?php echo $education_level->id?>"><?php echo $education_level->name?></option>
-                                                                                    <?php }?>
+                                                                    <div class="form-group">
+                                                                        <label class="control-label">Obtained Marks</label>
+                                                                        <div>
+                                                                            <input type="text" class="form-control" name="obtainmarks" id="Interobtainedmarks" required>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <div>
+                                                                            <button type="submit" name="submit" class="btn btn-success" value="intermediate">
+                                                                                Save
+                                                                            </button>
+                                                                            <button type="button" class="btn btn-ignore" data-dismiss="modal">
+                                                                                Cancel
+                                                                            </button>
+                                                                        </div>
+                                                                    </div>
+                                                                </form>
+                                                            </div>
+                                                        </div><!-- /.modal-content -->
+                                                    </div><!-- /.modal-dialog -->
+                                                </div><!-- /.modal -->
+                                            </td>
+                                            <td><a href="" data-toggle="modal" data-target="#IntermediateForm">
+                                                    <i class="far fa-edit" style="font-size: 22px;"></i>
+                                                </a></td>
+                                            <td>Incomplete</td>
+                                            <td>Incomplete</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">3</th>
+                                            <td>
+                                                <a href="" data-toggle="modal" data-target="#14yearForm">
+                                                    14 Years (Optional)
+                                                </a>
+                                                <!-- Modal HTML Markup -->
+                                                <div id="14yearForm" data-backdrop="static" class="modal fade">
+                                                    <div class="modal-dialog" role="document">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h3 class="modal-title">14 years (Optional)</h3>
+                                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                    <span aria-hidden="true">&times;</span>
+                                                                </button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                <form role="form" method="POST" action="<?php echo base_url("educationdetails")?>">
+                                                                    <div class="form-group">
+                                                                        <label class="control-label">Degree</label>
+                                                                        <select name="education_level_id" id="fourteenyeardegree" class="form-control" required>
+                                                                            <option value="Select">Select Degree</option>
+                                                                            <?php foreach ($education_levels as $education_level){?>
+                                                                            <option value="<?php echo $education_level->id?>"><?php echo $education_level->name?></option>
+                                                                            <?php }?>
 <!--                                                                                    <option value="2">BSC</option>-->
 <!--                                                                                    <option value="3">B.Com</option>-->
 <!--                                                                                    <option value="4">BBA (2 years)</option>-->
-                                                                                </select>
-                                                                            </div>
-                                                                            <div class="form-group">
-                                                                                <label class="control-label">Year of Passing</label>
-                                                                                <select name='passingyears' id='fourteenyearpassing' class="form-control" required>
-                                                                                    <option value='Years'>Years</option>
-                                                                                    <option value=2019'>2019</option>
-                                                                                    <option value='2018'>2018</option>
-                                                                                    <option value='2017'>2017</option>
-                                                                                    <option value='2016'>2016</option>
-                                                                                    <option value='2015'>2015</option>
-                                                                                    <option value='2014'>2014</option>
-                                                                                    <option value='2013'>2013</option>
+                                                                        </select>
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <label class="control-label">Year of Passing</label>
+                                                                        <select name='passingyears' id='fourteenyearpassing' class="form-control" required>
+                                                                            <option value='Years'>Years</option>
+                                                                            <option value=2019'>2019</option>
+                                                                            <option value='2018'>2018</option>
+                                                                            <option value='2017'>2017</option>
+                                                                            <option value='2016'>2016</option>
+                                                                            <option value='2015'>2015</option>
+                                                                            <option value='2014'>2014</option>
+                                                                            <option value='2013'>2013</option>
 <!--                                                                                    <option value='2012'>2012</option>-->
 <!--                                                                                    <option value='2011'>2011</option>-->
 <!--                                                                                    <option value='2010'>2010</option>-->
@@ -426,15 +433,15 @@
 <!--                                                                                    <option value='1997'>1982</option>-->
 <!--                                                                                    <option value='1996'>1981</option>-->
 <!--                                                                                    <option value='1995'>1970</option>-->
-                                                                                </select>
-                                                                            </div>
-                                                                            <div class="form-group">
-                                                                                <label for="board">Board</label>
-                                                                                <select name="board_id" id="fourteenyearboard_uni" class="form-control" required>
-                                                                                    <option value="">Select Board / University</option>
-                                                                                    <?php foreach ($boards as $board) {?>
-                                                                                        <option value="<?php echo $board->id;?>"><?php echo $board->boardname;?></option>
-                                                                                    <?php }?>
+                                                                        </select>
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <label for="board">Board</label>
+                                                                        <select name="board_id" id="fourteenyearboard_uni" class="form-control" required>
+                                                                            <option value="">Select Board / University</option>
+                                                                            <?php foreach ($boards as $board) {?>
+                                                                                <option value="<?php echo $board->id;?>"><?php echo $board->boardname;?></option>
+                                                                            <?php }?>
 <!--                                                                                    <option value="2">Aga Khan University</option>-->
 <!--                                                                                    <option value="AIOU Islamabad">AIOU Islamabad</option>-->
 <!--                                                                                    <option value="Air University Islamabad">Air University Islamabad</option>-->
@@ -501,135 +508,135 @@
 <!--                                                                                    <option value="University&nbsp;of&nbsp;Sindh">University&nbsp;of&nbsp;Sindh</option>-->
 <!--                                                                                    <option value="Virtual University of Pakistan">Virtual University of Pakistan</option>-->
 <!--                                                                                    <option value="Other">Other</option>-->
-                                                                                </select>
-                                                                            </div>
-                                                                            <div class="form-group">
-                                                                                <label class="control-label">Subjects</label>
-                                                                                <select name="degree_id" id="fourteenyearsubject" class="form-control" required>
-                                                                                    <option value="Select">Select Subject</option>
-                                                                                     <?php foreach ($degrees as $degree){?>
-                                                                                        <option value="<?php echo $degree->id;?>"><?php echo $degree->name;?></option>
-                                                                                    <?php }?>
-                                                                                    <option value="2">Biological Science</option>
+                                                                        </select>
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <label class="control-label">Subjects</label>
+                                                                        <select name="degree_id" id="fourteenyearsubject" class="form-control" required>
+                                                                            <option value="Select">Select Subject</option>
+                                                                             <?php foreach ($degrees as $degree){?>
+                                                                                <option value="<?php echo $degree->id;?>"><?php echo $degree->name;?></option>
+                                                                            <?php }?>
+                                                                            <option value="2">Biological Science</option>
 <!--                                                                                    <option value="Commerce">Commerce</option>-->
 <!--                                                                                    <option value="Social Science">Social Science</option>-->
 <!--                                                                                    <option value="Management Science">Management Science</option>-->
 <!--                                                                                    <option value="Physicaly Science">Physicaly Science</option>-->
 <!--                                                                                    <option value="Oriental & Islamic Studies">Oriental & Islamic Studies</option>-->
 <!--                                                                                    <option value="Other">Other</option>-->
-                                                                                </select>
-                                                                            </div>
-                                                                            <div class="form-group">
-                                                                                <label class="control-label">Total Marks</label>
-                                                                                <div>
-                                                                                    <input type="text" class="form-control" name="totalmarks" id="Fourteenyearminimum-marks" required>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="form-group">
-                                                                                <label class="control-label">Obtained Marks</label>
-                                                                                <div>
-                                                                                    <input type="text" class="form-control" name="obtainmarks" id="Fourteenyearobtainedmarks" required>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="form-group">
-                                                                                <div>
-                                                                                    <button type="submit" name="submit" class="btn btn-success" value="fourteenyears">
-                                                                                        Save
-                                                                                    </button>
-                                                                                    <button type="button" class="btn btn-ignore" data-dismiss="modal">
-                                                                                        Cancel
-                                                                                    </button>
-                                                                                </div>
-                                                                            </div>
-                                                                        </form>
+                                                                        </select>
                                                                     </div>
-                                                                </div><!-- /.modal-content -->
-                                                            </div><!-- /.modal-dialog -->
-                                                        </div><!-- /.modal -->
-                                                    </td>
-                                                    <td><a href="" data-toggle="modal" data-target="#14yearForm">
-                                                            <i class="far fa-edit" style="font-size: 22px;"></i>
-                                                        </a></td>
-                                                    <td>Incomplete</td>
-                                                    <td>Incomplete</td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">4</th>
-                                                    <td>
-                                                        <a href="" data-toggle="modal" data-target="#16yearform">
-                                                            16 Years
-                                                        </a>
-                                                        <!-- Modal HTML Markup -->
-                                                        <div id="16yearform" data-backdrop="static" class="modal fade">
-                                                            <div class="modal-dialog" role="document">
-                                                                <div class="modal-content">
-                                                                    <div class="modal-header">
-                                                                        <h3 class="modal-title">16 Years Education</h3>
-                                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                                            <span aria-hidden="true">&times;</span>
-                                                                        </button>
+                                                                    <div class="form-group">
+                                                                        <label class="control-label">Total Marks</label>
+                                                                        <div>
+                                                                            <input type="text" class="form-control" name="totalmarks" id="Fourteenyearminimum-marks" required>
+                                                                        </div>
                                                                     </div>
-                                                                    <div class="modal-body">
-                                                                        <form role="form" method="POST" action="<?php echo base_url("educationdetails")?>">
-                                                                            <div class="form-group">
-                                                                                <label class="control-label">Degree</label>
-                                                                                <div>
-                                                                                    <input type="text" class="form-control" name="education_level_id" id="sixteendegreename" required>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="form-group">
-                                                                                <label class="control-label">Year of Passing</label>
-                                                                                <select name="passingyears" id="sixteenpassyear" class="form-control">
-                                                                                    <option value='Years'>Years</option>
-                                                                                    <option value='2019'>2019</option>
-                                                                                    <option value='2018'>2018</option>
-                                                                                    <option value='2017'>2017</option>
-                                                                                    <option value='2016'>2016</option>
-                                                                                    <option value='2015'>2015</option>
-                                                                                    <option value='2014'>2014</option>
-                                                                                    <option value='2013'>2013</option>
-                                                                                    <option value='2012'>2012</option>
-                                                                                    <option value='2011'>2011</option>
-                                                                                    <option value='2010'>2010</option>
-                                                                                    <option value='2009'>2009</option>
-                                                                                    <option value='2008'>2008</option>
-                                                                                    <option value='2007'>2007</option>
-                                                                                    <option value='2006'>2006</option>
-                                                                                    <option value='2005'>2005</option>
-                                                                                    <option value='2004'>2004</option>
-                                                                                    <option value='2003'>2003</option>
-                                                                                    <option value='2002'>2002</option>
-                                                                                    <option value='2001'>2001</option>
-                                                                                    <option value='2000'>2000</option>
-                                                                                    <option value='1999'>1999</option>
-                                                                                    <option value='1998'>1998</option>
-                                                                                    <option value='1997'>1997</option>
-                                                                                    <option value='1996'>1996</option>
-                                                                                    <option value='1995'>1995</option>
-                                                                                    <option value='1994'>1994</option>
-                                                                                    <option value='1993'>1993</option>
-                                                                                    <option value='1992'>1992</option>
-                                                                                    <option value='1991'>1991</option>
-                                                                                    <option value='1990'>1990</option>
-                                                                                    <option value='1989'>1989</option>
-                                                                                    <option value='1988'>1988</option>
-                                                                                    <option value='1987'>1987</option>
-                                                                                    <option value='1986'>1986</option>
-                                                                                    <option value='1985'>1985</option>
-                                                                                    <option value='1999'>1984</option>
-                                                                                    <option value='1998'>1983</option>
-                                                                                    <option value='1997'>1982</option>
-                                                                                    <option value='1996'>1981</option>
-                                                                                    <option value='1995'>1970</option>
-                                                                                </select>
-                                                                            </div>
-                                                                            <div class="form-group">
-                                                                                <label for="board">Board/University</label>
-                                                                                <select name="board_id" id="sixteenyearsboard_uni" class="form-control">
-                                                                                    <option value="Select Board / University">Select Board / University</option>
-                                                                                    <?php foreach ($boards as $board) {?>
-                                                                                    <option value="<?php echo $board->id;?>"><?php echo $board->boardname;?></option>
-                                                                                    <?php }?>
+                                                                    <div class="form-group">
+                                                                        <label class="control-label">Obtained Marks</label>
+                                                                        <div>
+                                                                            <input type="text" class="form-control" name="obtainmarks" id="Fourteenyearobtainedmarks" required>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <div>
+                                                                            <button type="submit" name="submit" class="btn btn-success" value="fourteenyears">
+                                                                                Save
+                                                                            </button>
+                                                                            <button type="button" class="btn btn-ignore" data-dismiss="modal">
+                                                                                Cancel
+                                                                            </button>
+                                                                        </div>
+                                                                    </div>
+                                                                </form>
+                                                            </div>
+                                                        </div><!-- /.modal-content -->
+                                                    </div><!-- /.modal-dialog -->
+                                                </div><!-- /.modal -->
+                                            </td>
+                                            <td><a href="" data-toggle="modal" data-target="#14yearForm">
+                                                    <i class="far fa-edit" style="font-size: 22px;"></i>
+                                                </a></td>
+                                            <td>Incomplete</td>
+                                            <td>Incomplete</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">4</th>
+                                            <td>
+                                                <a href="" data-toggle="modal" data-target="#16yearform">
+                                                    16 Years
+                                                </a>
+                                                <!-- Modal HTML Markup -->
+                                                <div id="16yearform" data-backdrop="static" class="modal fade">
+                                                    <div class="modal-dialog" role="document">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h3 class="modal-title">16 Years Education</h3>
+                                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                    <span aria-hidden="true">&times;</span>
+                                                                </button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                <form role="form" method="POST" action="<?php echo base_url("educationdetails")?>">
+                                                                    <div class="form-group">
+                                                                        <label class="control-label">Degree</label>
+                                                                        <div>
+                                                                            <input type="text" class="form-control" name="education_level_id" id="sixteendegreename" required>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <label class="control-label">Year of Passing</label>
+                                                                        <select name="passingyears" id="sixteenpassyear" class="form-control">
+                                                                            <option value='Years'>Years</option>
+                                                                            <option value='2019'>2019</option>
+                                                                            <option value='2018'>2018</option>
+                                                                            <option value='2017'>2017</option>
+                                                                            <option value='2016'>2016</option>
+                                                                            <option value='2015'>2015</option>
+                                                                            <option value='2014'>2014</option>
+                                                                            <option value='2013'>2013</option>
+                                                                            <option value='2012'>2012</option>
+                                                                            <option value='2011'>2011</option>
+                                                                            <option value='2010'>2010</option>
+                                                                            <option value='2009'>2009</option>
+                                                                            <option value='2008'>2008</option>
+                                                                            <option value='2007'>2007</option>
+                                                                            <option value='2006'>2006</option>
+                                                                            <option value='2005'>2005</option>
+                                                                            <option value='2004'>2004</option>
+                                                                            <option value='2003'>2003</option>
+                                                                            <option value='2002'>2002</option>
+                                                                            <option value='2001'>2001</option>
+                                                                            <option value='2000'>2000</option>
+                                                                            <option value='1999'>1999</option>
+                                                                            <option value='1998'>1998</option>
+                                                                            <option value='1997'>1997</option>
+                                                                            <option value='1996'>1996</option>
+                                                                            <option value='1995'>1995</option>
+                                                                            <option value='1994'>1994</option>
+                                                                            <option value='1993'>1993</option>
+                                                                            <option value='1992'>1992</option>
+                                                                            <option value='1991'>1991</option>
+                                                                            <option value='1990'>1990</option>
+                                                                            <option value='1989'>1989</option>
+                                                                            <option value='1988'>1988</option>
+                                                                            <option value='1987'>1987</option>
+                                                                            <option value='1986'>1986</option>
+                                                                            <option value='1985'>1985</option>
+                                                                            <option value='1999'>1984</option>
+                                                                            <option value='1998'>1983</option>
+                                                                            <option value='1997'>1982</option>
+                                                                            <option value='1996'>1981</option>
+                                                                            <option value='1995'>1970</option>
+                                                                        </select>
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <label for="board">Board/University</label>
+                                                                        <select name="board_id" id="sixteenyearsboard_uni" class="form-control">
+                                                                            <option value="Select Board / University">Select Board / University</option>
+                                                                            <?php foreach ($boards as $board) {?>
+                                                                            <option value="<?php echo $board->id;?>"><?php echo $board->boardname;?></option>
+                                                                            <?php }?>
 
 <!--                                                                                    <option value="BISE, Balochistan">BISE, Balochistan</option>-->
 <!--                                                                                    <option value="BISE, Bannu">BISE, Bannu</option>-->
@@ -661,95 +668,96 @@
 <!--                                                                                    <option value="Punjab Board of Technical Education, Lahore">Punjab Board of Technical Education, Lahore</option>-->
 <!--                                                                                    <option value="TEVTA, Lahore">TEVTA, Lahore</option>-->
 <!--                                                                                    <option value="Other">Other</option>-->
-                                                                                </select>
-                                                                            </div>
-                                                                            <div class="form-group">
-                                                                                <label class="control-label">Subjects</label>
-                                                                                <div>
-                                                                                    <input type="text" class="form-control" name="degree_id" id="sixteenyearssubjectname" required>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="form-group">
-                                                                                <label class="control-label">CGPA Max / Max Marks</label>
-                                                                                <div>
-                                                                                    <input type="text" class="form-control" name="totalmarks" id="cgpa" required>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="form-group">
-                                                                                <label class="control-label">CGPA Obtained / Obtained Marks</label>
-                                                                                <div>
-                                                                                    <input type="text" class="form-control" name="obtainmarks" id="cgpaobtained" required>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="form-group">
-                                                                                <div>
-                                                                                    <button type="submit" name="submit" class="btn btn-success" value="16 Years">
-                                                                                        Save
-                                                                                    </button>
-                                                                                    <button type="button" class="btn btn-ignore" data-dismiss="modal">
-                                                                                        Cancel
-                                                                                    </button>
-                                                                                </div>
-                                                                            </div>
-                                                                        </form>
+                                                                        </select>
                                                                     </div>
-                                                                </div><!-- /.modal-content -->
-                                                            </div><!-- /.modal-dialog -->
-                                                        </div><!-- /.modal -->
-                                                    </td>
-                                                    <td><a href="" data-toggle="modal" data-target="#16yearform">
-                                                            <i class="far fa-edit" style="font-size: 22px;"></i>
-                                                        </a></td>
-                                                    <td>Incomplete</td>
-                                                    <td>Incomplete</td>
-                                                </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </div>
+                                                                    <div class="form-group">
+                                                                        <label class="control-label">Subjects</label>
+                                                                        <div>
+                                                                            <input type="text" class="form-control" name="degree_id" id="sixteenyearssubjectname" required>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <label class="control-label">CGPA Max / Max Marks</label>
+                                                                        <div>
+                                                                            <input type="text" class="form-control" name="totalmarks" id="cgpa" required>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <label class="control-label">CGPA Obtained / Obtained Marks</label>
+                                                                        <div>
+                                                                            <input type="text" class="form-control" name="obtainmarks" id="cgpaobtained" required>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <div>
+                                                                            <button type="submit" name="submit" class="btn btn-success" value="16 Years">
+                                                                                Save
+                                                                            </button>
+                                                                            <button type="button" class="btn btn-ignore" data-dismiss="modal">
+                                                                                Cancel
+                                                                            </button>
+                                                                        </div>
+                                                                    </div>
+                                                                </form>
+                                                            </div>
+                                                        </div><!-- /.modal-content -->
+                                                    </div><!-- /.modal-dialog -->
+                                                </div><!-- /.modal -->
+                                            </td>
+                                            <td><a href="" data-toggle="modal" data-target="#16yearform">
+                                                    <i class="far fa-edit" style="font-size: 22px;"></i>
+                                                </a></td>
+                                            <td>Incomplete</td>
+                                            <td>Incomplete</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
-                                <div class="row">
-                                    <div class="update ml-auto mr-auto">
-                                        <button type="submit" class="btn btn-primary btn-round">Save and Move Next</button>
-                                    </div>
-                                </div>
-                            </form>
+                            </div>
                         </div>
-                    </div>
+                        <div class="row">
+                            <div class="update ml-auto mr-auto">
+                                <button type="submit" class="btn btn-primary btn-round">Save and Move Next</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
-                <div class="col-md-4">
-                    <div class="card card-body">
-                        <div class="author">
-                            <h5 class="title" style="color: #51CBCE;">Help Center</h5>
-                        </div>
-                        <div class="card-body">
-                            <ul>
-                                <li>
-                                    Enter your education details in this form.
-                                </li>
-                                <li>
-                                    If you are applying in <b>undergraduate</b> proggram and your intermediate result is not arrived yet, click the <b>Result Awaiting</b> checkbox.
-                                </li>
-                                <li>
-                                    Select the Board / University from the dropdown list and if your Board / University are not mentioned in the dropdownlist, select <b>Other</b> option and enter your Board / University name manually.
-                                </li>
-                                <li>
-                                    Select the subjects of your degree from the dropdown list and if they are not appearing our dropdown then select <b>Other</b> option and enter your subject name manually.
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="card-footer">
-                            <hr>
-                            <div class="button-container">
-                                <div class="row">
-                                    <div class="col-md-12 col-sm-12 col-xs-12 ml-auto mr-auto">
-                                        <small><b>Any misuse or false attempt will result in cancellation of your application.
-                                                You are liable to provide the information that is true to the best of your knowledge.
-                                                Administration is not responsible for any misuse or false attempt.</b></small>
-                                    </div>
-                                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card card-body">
+                <div class="author">
+                    <h5 class="title" style="color: #51CBCE;">Help Center</h5>
+                </div>
+                <div class="card-body">
+                    <ul>
+                        <li>
+                            Enter your education details in this form.
+                        </li>
+                        <li>
+                            If you are applying in <b>undergraduate</b> proggram and your intermediate result is not arrived yet, click the <b>Result Awaiting</b> checkbox.
+                        </li>
+                        <li>
+                            Select the Board / University from the dropdown list and if your Board / University are not mentioned in the dropdownlist, select <b>Other</b> option and enter your Board / University name manually.
+                        </li>
+                        <li>
+                            Select the subjects of your degree from the dropdown list and if they are not appearing our dropdown then select <b>Other</b> option and enter your subject name manually.
+                        </li>
+                    </ul>
+                </div>
+                <div class="card-footer">
+                    <hr>
+                    <div class="button-container">
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12 col-xs-12 ml-auto mr-auto">
+                                <small><b>Any misuse or false attempt will result in cancellation of your application.
+                                        You are liable to provide the information that is true to the best of your knowledge.
+                                        Administration is not responsible for any misuse or false attempt.</b></small>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+</div>

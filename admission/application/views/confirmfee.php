@@ -1,5 +1,12 @@
  <div class="content">
-    <div class="row">
+     <div class="row">
+         <div class="col-md-8 col-sm-12 col-xs-12">
+             <div class="progress mb-1">
+                 <div class="progress-bar  progress-bar-striped bg-success" style="width:10%">10%</div>
+             </div>
+         </div>
+     </div>
+     <div class="row">
         <div class="col-md-8">
             <div class="card card-user">
                 <div class="card-body">
@@ -225,4 +232,5 @@
                 </div>
             </div>
         </div>
-    </div>
+     </div>
+ </div>
