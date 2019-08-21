@@ -66,7 +66,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label>Apply For</label>
-                                        <select class="form-control" name="applyfor_id" value="apply">
+                                        <select class="form-control" name="degree_id" value="apply">
                                             <option value="1">Undergraduate</option>
                                             <option value="2">Graduate</option>
                                             <option value="3">Phd</option>

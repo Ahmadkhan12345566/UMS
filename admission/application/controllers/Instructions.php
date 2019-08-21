@@ -47,12 +47,21 @@ class Instructions extends CI_Controller {
         $this->load->view($page);
         $this->load->view('inc/footer');
     }
+
+    public function login(){
+
+        $this->load->view('login');
+
+    }
+
     public function index()
     {
         $this->viewLoad("instructions");
         $this->viewLoad2("instructions");
         //$this->load->view('instructions');
     }
+
+
 
     public function personalinfo()
     {
@@ -125,7 +134,7 @@ class Instructions extends CI_Controller {
 
     public function application()
     {
-        $this->load->view('submitapplication');
+        $this->viewLoad('submitapplication');
     }
 
 
