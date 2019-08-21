@@ -42,6 +42,7 @@
                                                                             <div class="form-group">
                                                                                 <label class="control-label">Degree</label>
                                                                                 <select name="education_level_id" id="matricdegree" required class="form-control">
+                                                                                    <option value="">Select Degree</option>
                                                                                     <?php foreach ($education_levels as $education_level){?>
                                                                                     <option value="<?php echo $education_level->id;?>"><?php echo $education_level->name;?></option>
                                                                                     <?php }?>

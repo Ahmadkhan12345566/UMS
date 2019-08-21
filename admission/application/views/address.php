@@ -21,6 +21,7 @@
                                                     <div class="form-group">
                                                         <label>City</label>
                                                         <select name="pcity_id" id="PermanentLocation" required class="form-control" required>
+                                                            <option value="">Select City</option>
                                                             <?php foreach ($cities as $city){?>
                                                                 <option value="<?php echo $city->id?>"><?php echo $city->name;?></option>
                                                             <?php }?>
@@ -293,6 +294,7 @@
                                                     <div class="form-group">
                                                         <label>City</label>
                                                         <select name="mcity_id" id='Mailingcity' class="form-control" required>
+                                                            <option value="">Select City</option>
                                                             <?php foreach ($cities as $city){?>
                                                             <option value="<?php echo $city->id?>"><?php echo $city->name?></option>
                                                             <?php }?>
@@ -330,6 +332,7 @@
                                                     <div class="form-group">
                                                         <label>City</label>
                                                         <select name='gcity_id' id='Guardiancity' class="form-control" required>
+                                                            <option value="">Select City</option>
                                                             <?php foreach($cities as $city){?>
                                                                 <option value="<?php echo $city->id?>"><?php echo $city->name?></option>
                                                             <?php }?>
@@ -344,7 +347,7 @@
                                                     <div class="form-group">
                                                         <label>Mobile</label>
                                                         <input type="text" class="form-control" name="gmobile" id="Guardianmobile" aria-describedby="GuardianmobileHelp" placeholder="0300-xxxxxxx" style="padding: 9px;" required>
-                                                        <small">Enter you <b>Father / Guardian</b> mobile number here</small>
+                                                        <small>Enter you <b>Father / Guardian</b> mobile number here</small>
                                                     </div>
                                                 </div>
                                             </div>

@@ -11,7 +11,7 @@
                                     <div class="col-md-6 col-sm-12 col-xs-12">
                                         <div class="form-group">
                                             <label>Full Name</label>
-                                            <input type="text" class="form-control" name="fullname" placeholder="Your Full name" required>
+                                            <input type="text" class="form-control" name="fullname" placeholder="Your full name" required>
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-sm-12 col-xs-12">
@@ -41,6 +41,7 @@
                                         <div class="form-group">
                                             <label>Country</label>
                                             <select name="country_id" class="form-control" id="country" required>
+                                                <option value="">Select Country</option>
                                                 <?php  foreach ($countries as $country){ ?>
                                                 <option value="<?php  echo  $country->id;?>"><?php echo $country->name;?></option>
                                                 <?php }?>
@@ -243,7 +244,7 @@
                                         <div class="form-group">
                                             <label>Domicile</label>
                                             <select name='domicile_id' id='Domicile' class="form-control" required>
-<!--                                                <option value="SelectGender">Select</option>-->
+                                                <option value="">Select Domicile</option>
                                                 <?php foreach ($domiciles as $domicile){?>
                                                     <option value="<?php echo $domicile->id;?>"><?php echo $domicile->name;?></option>
                                                 <?php }?>
