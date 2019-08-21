@@ -8,20 +8,20 @@
 
 class Migrate extends CI_Controller
 {
-
-    public function index()
-    {
-        $this->load->library('migration');
-
-        if ($this->migration->current() === FALSE)
-        {
-            show_error($this->migration->error_string());
-        }
-        else{
-            // success
-            show_error("<p style='color: red;'>Now you have to re-enter or re-create the all accounts...</p>",
-                200, "<h1 style='color: green;'>Data migrated Successfully!</h1>");
-        }
-    }
+//
+//    public function index()
+//    {
+//        $this->load->library('migration');
+//
+//        if ($this->migration->current() === FALSE)
+//        {
+//            show_error($this->migration->error_string());
+//        }
+//        else{
+//            // success
+//            show_error("<p style='color: red;'>Now you have to re-enter or re-create the all accounts...</p>",
+//                200, "<h1 style='color: green;'>Data migrated Successfully!</h1>");
+//        }
+//    }
 
 }
