@@ -28,6 +28,10 @@ class Signup extends CI_Controller {
         if ($data=$this->input->post()){
 
             $this->Crud_model->insert('users', $_POST);
+            //todo: inset status data ;
+            $data= array();
+            $this->Crud_model->insert('admission_process_status', $data);
+
 //            if ($data["applyfor_id"]  == "1"){
 //                redirect(base_url("instructions"));
 //            }
