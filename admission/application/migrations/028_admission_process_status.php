@@ -21,46 +21,46 @@ class Migration_admission_process_status extends CI_Migration {
             'instruction' => array(
                 'type' => 'BOOLEAN',
             ),
-            'personalinformation' => array(
+            'pinformation' => array(
                 'type' => 'BOOLEAN',
             ),
             'address' => array(
                 'type' => 'BOOLEAN',
             ),
-            'photoupload' => array(
+            'pupload' => array(
                 'type' => 'BOOLEAN',
             ),
-            'educationdetails' => array(
+            'edetails' => array(
                 'type' => 'BOOLEAN',
             ),
             'ntsdetails' => array(
                 'type' => 'BOOLEAN',
             ),
-            'programchoices' => array(
+            'prochoices' => array(
                 'type' => 'BOOLEAN',
             ),
-            'publicationdetails' => array(
+            'pubdetails' => array(
                 'type' => 'BOOLEAN',
             ),
-            'researchinterests' => array(
+            'rinterests' => array(
                 'type' => 'BOOLEAN',
             ),
             'workhistory' => array(
                 'type' => 'BOOLEAN',
             ),
-            'otherdetails' => array(
+            'othdetails' => array(
                 'type' => 'BOOLEAN',
             ),
-            'funddetails' => array(
+            'fdetails' => array(
                 'type' => 'BOOLEAN',
             ),
-            'documentsupload' => array(
+            'docupload' => array(
                 'type' => 'BOOLEAN',
             ),
             'confirmfee' => array(
                 'type' => 'BOOLEAN',
             ),
-            'submitapplication' => array(
+            'subapplication' => array(
                 'type' => 'BOOLEAN',
             ),
             'status' => array(
