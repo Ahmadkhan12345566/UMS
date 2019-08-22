@@ -15,10 +15,10 @@
                     <div class="p-4">
                         <form action="" method="post">
                             <div class="form-group">
-                                <input type="email" class="form-control" name="loginemail" placeholder="Email Address">
+                                <input type="email" class="form-control" name="email" placeholder="Enter email address">
                             </div>
                             <div class="form-group">
-                                <input type="password" class="form-control" name="loginpassword" placeholder="Password">
+                                <input type="password" class="form-control" name="Enter password" placeholder="Password">
                             </div>
                             <div class="form-group">
                                 <a href="#">Forget password?</a>
@@ -33,4 +33,3 @@
         </div>
     </div>
 </div>
-<?php $this->load->view('inc/header');?>

@@ -1,30 +1,37 @@
  <div class="content">
-            <div class="row">
-                <div class="col-md-8">
-                    <div class="card card-user">
-                        <div class="card-body">
-                            <form method="post" action="<?php echo base_url("addressdetail")?>">
-                                <div class="row">
-                                    <div class="col-md-12 col-sm-12 col-xs-12  pr-1">
-                                        <fieldset class="scheduler-border">
-                                            <legend class="scheduler-border" style="color: black;">Permanent Address</legend>
+     <div class="row">
+         <div class="col-md-8 col-sm-12 col-xs-12">
+             <div class="progress mb-1">
+                 <div class="progress-bar  progress-bar-striped bg-success" style="width:10%">10%</div>
+             </div>
+         </div>
+    </div>
+    <div class="row">
+        <div class="col-md-8">
+            <div class="card card-user">
+                <div class="card-body">
+                    <form method="post" action="<?php echo base_url("addressdetail")?>">
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12 col-xs-12  pr-1">
+                                <fieldset class="scheduler-border">
+                                    <legend class="scheduler-border" style="color: black;">Permanent Address</legend>
+                                    <div class="form-group">
+                                        <label>Line 1</label>
+                                        <input type="text" class="form-control" name="pline1" id="Permanentline1" aria-describedby="Permanentline1Help" placeholder="House # 12 Lane G, G-9/2"  required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Line 2</label>
+                                        <input type="text" class="form-control" name="pline2"  id="Permanentline2" aria-describedby="Permanentline2Help" placeholder="" required>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6 col-sm-12 col-xs-12">
                                             <div class="form-group">
-                                                <label>Line 1</label>
-                                                <input type="text" class="form-control" name="pline1" id="Permanentline1" aria-describedby="Permanentline1Help" placeholder="House # 12 Lane G, G-9/2"  required>
-                                            </div>
-                                            <div class="form-group">
-                                                <label>Line 2</label>
-                                                <input type="text" class="form-control" name="pline2"  id="Permanentline2" aria-describedby="Permanentline2Help" placeholder="" required>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-md-6 col-sm-12 col-xs-12">
-                                                    <div class="form-group">
-                                                        <label>City</label>
-                                                        <select name="pcity_id" id="PermanentLocation" required class="form-control" required>
-                                                            <option value="">Select City</option>
-                                                            <?php foreach ($cities as $city){?>
-                                                                <option value="<?php echo $city->id?>"><?php echo $city->name;?></option>
-                                                            <?php }?>
+                                                <label>City</label>
+                                                <select name="pcity_id" id="PermanentLocation" required class="form-control" required>
+                                                    <option value="">Select City</option>
+                                                    <?php foreach ($cities as $city){?>
+                                                        <option value="<?php echo $city->id?>"><?php echo $city->name;?></option>
+                                                    <?php }?>
 <!--                                                            <option value="Islamabad">Islamabad</option>-->
 <!--                                                            <option value="" disabled>Punjab Cities</option>-->
 <!--                                                            <option value="Ahmed Nager Chatha">Ahmed Nager Chatha</option>-->
@@ -264,136 +271,137 @@
 <!--                                                            <option value="Washuk">Washuk</option>-->
 <!--                                                            <option value="Zhob">Zhob</option>-->
 <!--                                                            <option value="Ziarat">Ziarat</option>-->
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-6 col-sm-12 col-xs-12">
-                                                    <div class="form-group">
-                                                        <label>Phone</label>
-                                                        <input type="text" class="form-control" name="pphone" id="Permanentphone" aria-describedby="PermanentphoneHelp" placeholder="051-1234567" style="padding: 9px;" required>
-                                                    </div>
-                                                </div>
+                                                </select>
                                             </div>
-                                        </fieldset>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12 col-sm-12 col-xs-12 pr-1">
-                                        <fieldset class="scheduler-border">
-                                            <legend class="scheduler-border" style="color: black;">Mailing Address</legend>
+                                        </div>
+                                        <div class="col-md-6 col-sm-12 col-xs-12">
                                             <div class="form-group">
-                                                <label>Line 1</label>
-                                                <input type="text" class="form-control" name="mline1" id="MailingAddressline1" aria-describedby="MailingAddressline1Help" placeholder="House # 12 Lane G, G-9/2" required>
+                                                <label>Phone</label>
+                                                <input type="text" class="form-control" name="pphone" id="Permanentphone" aria-describedby="PermanentphoneHelp" placeholder="051-1234567" style="padding: 9px;" required>
                                             </div>
-                                            <div class="form-group">
-                                                <label>Line 2</label>
-                                                <input type="text" class="form-control" name="mline2" id="MailingAddressline2" aria-describedby="MailingAddressline2Help" placeholder="" required>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-md-6 col-sm-12 col-xs-12">
-                                                    <div class="form-group">
-                                                        <label>City</label>
-                                                        <select name="mcity_id" id='Mailingcity' class="form-control" required>
-                                                            <option value="">Select City</option>
-                                                            <?php foreach ($cities as $city){?>
-                                                            <option value="<?php echo $city->id?>"><?php echo $city->name?></option>
-                                                            <?php }?>
-<!--                                                            <option>Karachi</option>-->
-<!--                                                            <option>Multan</option>-->
-<!--                                                            <option>Peshawar</option>-->
-<!--                                                            <option>Lahore</option>-->
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-6 col-sm-12 col-xs-12">
-                                                    <div class="form-group">
-                                                        <label>Phone</label>
-                                                        <input type="text" class="form-control" name="mphone" id="Mailingphone" aria-describedby="MailingphoneHelp" placeholder="051-1234567" style="padding: 9px;" required>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </fieldset>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12 col-sm-12 col-xs-12">
-                                        <fieldset class="scheduler-border">
-                                            <legend class="scheduler-border" style="color: black;">Father / Guardian Address</legend>
-                                            <div class="form-group">
-                                                <label>Line 1</label>
-                                                <input type="text" class="form-control" name="gline1" id="GuardianAddressline1" aria-describedby="GuardianAddressline1Help" placeholder="House # 12 Lane G, G-9/2" required>
-                                            </div>
-                                            <div class="form-group">
-                                                <label>Line 2</label>
-                                                <input type="text" class="form-control" name="gline2" id="GuardianAddressline2" aria-describedby="GuardianAddressline2Help" placeholder="" required>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-md-6 col-sm-12 col-xs-12">
-                                                    <div class="form-group">
-                                                        <label>City</label>
-                                                        <select name='gcity_id' id='Guardiancity' class="form-control" required>
-                                                            <option value="">Select City</option>
-                                                            <?php foreach($cities as $city){?>
-                                                                <option value="<?php echo $city->id?>"><?php echo $city->name?></option>
-                                                            <?php }?>
-<!--                                                            <option>Karachi</option>-->
-<!--                                                            <option>Multan</option>-->
-<!--                                                            <option>Peshawar</option>-->
-<!--                                                            <option>Lahore</option>-->
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-6 col-sm-12 col-xs-12">
-                                                    <div class="form-group">
-                                                        <label>Mobile</label>
-                                                        <input type="text" class="form-control" name="gmobile" id="Guardianmobile" aria-describedby="GuardianmobileHelp" placeholder="0300-xxxxxxx" style="padding: 9px;" required>
-                                                        <small>Enter you <b>Father / Guardian</b> mobile number here</small>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </fieldset>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="update ml-auto mr-auto">
-                                        <button type="submit" class="btn btn-primary btn-round">Save and Move Next</button>
-                                    </div>
-                                </div>
-                            </form>
+                                </fieldset>
+                            </div>
                         </div>
-                    </div>
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12 col-xs-12 pr-1">
+                                <fieldset class="scheduler-border">
+                                    <legend class="scheduler-border" style="color: black;">Mailing Address</legend>
+                                    <div class="form-group">
+                                        <label>Line 1</label>
+                                        <input type="text" class="form-control" name="mline1" id="MailingAddressline1" aria-describedby="MailingAddressline1Help" placeholder="House # 12 Lane G, G-9/2" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Line 2</label>
+                                        <input type="text" class="form-control" name="mline2" id="MailingAddressline2" aria-describedby="MailingAddressline2Help" placeholder="" required>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6 col-sm-12 col-xs-12">
+                                            <div class="form-group">
+                                                <label>City</label>
+                                                <select name="mcity_id" id='Mailingcity' class="form-control" required>
+                                                    <option value="">Select City</option>
+                                                    <?php foreach ($cities as $city){?>
+                                                    <option value="<?php echo $city->id?>"><?php echo $city->name?></option>
+                                                    <?php }?>
+<!--                                                            <option>Karachi</option>-->
+<!--                                                            <option>Multan</option>-->
+<!--                                                            <option>Peshawar</option>-->
+<!--                                                            <option>Lahore</option>-->
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-sm-12 col-xs-12">
+                                            <div class="form-group">
+                                                <label>Phone</label>
+                                                <input type="text" class="form-control" name="mphone" id="Mailingphone" aria-describedby="MailingphoneHelp" placeholder="051-1234567" style="padding: 9px;" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <fieldset class="scheduler-border">
+                                    <legend class="scheduler-border" style="color: black;">Father / Guardian Address</legend>
+                                    <div class="form-group">
+                                        <label>Line 1</label>
+                                        <input type="text" class="form-control" name="gline1" id="GuardianAddressline1" aria-describedby="GuardianAddressline1Help" placeholder="House # 12 Lane G, G-9/2" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Line 2</label>
+                                        <input type="text" class="form-control" name="gline2" id="GuardianAddressline2" aria-describedby="GuardianAddressline2Help" placeholder="" required>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6 col-sm-12 col-xs-12">
+                                            <div class="form-group">
+                                                <label>City</label>
+                                                <select name='gcity_id' id='Guardiancity' class="form-control" required>
+                                                    <option value="">Select City</option>
+                                                    <?php foreach($cities as $city){?>
+                                                        <option value="<?php echo $city->id?>"><?php echo $city->name?></option>
+                                                    <?php }?>
+<!--                                                            <option>Karachi</option>-->
+<!--                                                            <option>Multan</option>-->
+<!--                                                            <option>Peshawar</option>-->
+<!--                                                            <option>Lahore</option>-->
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-sm-12 col-xs-12">
+                                            <div class="form-group">
+                                                <label>Mobile</label>
+                                                <input type="text" class="form-control" name="gmobile" id="Guardianmobile" aria-describedby="GuardianmobileHelp" placeholder="0300-xxxxxxx" style="padding: 9px;" required>
+                                                <small>Enter you <b>Father / Guardian</b> mobile number here</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="update ml-auto mr-auto">
+                                <button type="submit" class="btn btn-primary btn-round">Save and Move Next</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
-                <div class="col-md-4 col-sm-12 col-xs-12">
-                    <div class="card card-body">
-                        <div class="author">
-                            <h5 class="title" style="color: #51CBCE;">Help Center</h5>
-                        </div>
-                        <div class="card-body">
-                            <ul>
-                                <li>
-                                    Enter your home, street, and city address. The Adress will be used for future correspondence.
-                                </li>
-                                <li>
-                                    In case of Mailing Address and Permanent Adress are same check the box same as mailing address.
-                                </li>
-                                <li>
-                                    Enter your father / guardian mobile no.
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="card-footer">
-                            <hr>
-                            <div class="button-container">
-                                <div class="row">
-                                    <div class="col-md-12 col-sm-12 col-xs-12 ml-auto mr-auto">
-                                        <small><b>Any misuse or false attempt will result in cancellation of your application.
-                                                You are liable to provide the information that is true to the best of your knowledge.
-                                                Administration is not responsible for any misuse or false attempt.</b></small>
-                                    </div>
-                                </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-12 col-xs-12">
+            <div class="card card-body">
+                <div class="author">
+                    <h5 class="title" style="color: #51CBCE;">Help Center</h5>
+                </div>
+                <div class="card-body">
+                    <ul>
+                        <li>
+                            Enter your home, street, and city address. The Adress will be used for future correspondence.
+                        </li>
+                        <li>
+                            In case of Mailing Address and Permanent Adress are same check the box same as mailing address.
+                        </li>
+                        <li>
+                            Enter your father / guardian mobile no.
+                        </li>
+                    </ul>
+                </div>
+                <div class="card-footer">
+                    <hr>
+                    <div class="button-container">
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12 col-xs-12 ml-auto mr-auto">
+                                <small><b>Any misuse or false attempt will result in cancellation of your application.
+                                        You are liable to provide the information that is true to the best of your knowledge.
+                                        Administration is not responsible for any misuse or false attempt.</b></small>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+ </div>
 

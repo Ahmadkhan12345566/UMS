@@ -1,50 +1,57 @@
  <div class="content">
      <div class="row">
-                <div class="col-md-8">
-                    <div class="card card-user">
-                        <div class="card-header">
-                            <h5 class="card-title">Personal Information</h5>
+         <div class="col-md-8 col-sm-12 col-xs-12">
+             <div class="progress mb-1">
+                 <div class="progress-bar  progress-bar-striped bg-success" style="width:10%">10%</div>
+             </div>
+         </div>
+     </div>
+     <div class="row">
+        <div class="col-md-8">
+            <div class="card card-user">
+                <div class="card-header">
+                    <h5 class="card-title">Personal Information</h5>
+                </div>
+                <div class="card-body">
+                    <form method="post" action="<?php echo base_url("personalinformation")?>">
+                        <div class="row">
+                            <div class="col-md-6 col-sm-12 col-xs-12">
+                                <div class="form-group">
+                                    <label>Full Name</label>
+                                    <input type="text" class="form-control" name="fullname" placeholder="Your full name" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-12 col-xs-12">
+                                <div class="form-group">
+                                    <label>Date of Birth</label>
+                                    <input type="date" class="form-control" name="dob" placeholder="DOB">
+                                </div>
+                            </div>
                         </div>
-                        <div class="card-body">
-                            <form method="post" action="<?php echo base_url("personalinformation")?>">
-                                <div class="row">
-                                    <div class="col-md-6 col-sm-12 col-xs-12">
-                                        <div class="form-group">
-                                            <label>Full Name</label>
-                                            <input type="text" class="form-control" name="fullname" placeholder="Your full name" required>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 col-sm-12 col-xs-12">
-                                        <div class="form-group">
-                                            <label>Date of Birth</label>
-                                            <input type="date" class="form-control" name="dob" placeholder="DOB">
-                                        </div>
-                                    </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>CNIC</label>
+                                    <input type="text" class="form-control" data-inputmask="'mask': '99999-9999999-9'" name="cnic" id="cnic" maxlength="15" required>
+                                    <small>Format : 61101-1234567-8</small>
                                 </div>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label>CNIC</label>
-                                            <input type="text" class="form-control" data-inputmask="'mask': '99999-9999999-9'" name="cnic" id="cnic" maxlength="15" required>
-                                            <small>Format : 61101-1234567-8</small>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 col-sm-12 col-xs-12">
-                                        <div class="form-group">
-                                            <label>Mobile Number</label>
-                                            <input type="text" name="mobnumbers" class="form-control" id="mobnumbers" maxlength="11" required style="padding: 9px; font-size: 14px;">
-                                        </div>
-                                    </div>
+                            </div>
+                            <div class="col-md-6 col-sm-12 col-xs-12">
+                                <div class="form-group">
+                                    <label>Mobile Number</label>
+                                    <input type="text" name="mobnumbers" class="form-control" id="mobnumbers" maxlength="11" required style="padding: 9px; font-size: 14px;">
                                 </div>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label>Country</label>
-                                            <select name="country_id" class="form-control" id="country" required>
-                                                <option value="">Select Country</option>
-                                                <?php  foreach ($countries as $country){ ?>
-                                                <option value="<?php  echo  $country->id;?>"><?php echo $country->name;?></option>
-                                                <?php }?>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Country</label>
+                                    <select name="country_id" class="form-control" id="country" required>
+                                        <option value="">Select Country</option>
+                                        <?php  foreach ($countries as $country){ ?>
+                                        <option value="<?php  echo  $country->id;?>"><?php echo $country->name;?></option>
+                                        <?php }?>
 <!--                                                <option value="2">Afghan</option>-->
 <!--                                                <option value="3">Albanian</option>-->
 <!--                                                <option value="4">Algerian</option>-->
@@ -237,17 +244,17 @@
 <!--                                                <option value="yemenite">Yemenite</option>-->
 <!--                                                <option value="zambian">Zambian</option>-->
 <!--                                                <option value="zimbabwean">Zimbabwean</option>-->
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label>Domicile</label>
-                                            <select name='domicile_id' id='Domicile' class="form-control" required>
-                                                <option value="">Select Domicile</option>
-                                                <?php foreach ($domiciles as $domicile){?>
-                                                    <option value="<?php echo $domicile->id;?>"><?php echo $domicile->name;?></option>
-                                                <?php }?>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Domicile</label>
+                                    <select name='domicile_id' id='Domicile' class="form-control" required>
+                                        <option value="">Select Domicile</option>
+                                        <?php foreach ($domiciles as $domicile){?>
+                                            <option value="<?php echo $domicile->id;?>"><?php echo $domicile->name;?></option>
+                                        <?php }?>
 
 <!--                                                <option value="Balochistan">Balochistan</option>-->
 <!--                                                <option value="Fata">Fata</option>-->
@@ -256,90 +263,91 @@
 <!--                                                <option value="Khyber Pakhtoonkhawa">Khyber Pakhtoonkhawa</option>-->
 <!--                                                <option value="Punjab">Punjab</option>-->
 <!--                                                <option value="Sindh">Sindh</option>-->
-                                            </select>
-                                        </div>
-                                    </div>
+                                    </select>
                                 </div>
-                                <div class="row">
-                                    <div class="col-md-6 col-sm-12 col-xs-12">
-                                        <div class="form-group">
-                                            <label>Gender</label>
-                                            <select name='gender' id='gender' class="form-control" required>
-                                                <option value="SelectGender">Select Gender</option>
-                                                <option value="Male">Male</option>
-                                                <option value="Female">Female</option>
-                                                <option value="Others">Others</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6 col-sm-12 col-xs-12">
-                                        <div class="form-group">
-                                            <label>Father Name</label>
-                                            <input type="text" class="form-control" name="fathername" placeholder="Your father full name" required>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label>Father / Guardian CNIC</label>
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" name="fcnic" id="cnic" placeholder="xxxxx-xxxxxxx-x" maxlength="15" required>
-
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="row">
-
-                                </div>
-                                <div class="row">
-                                    <div class="update ml-auto mr-auto">
-                                        <button type="submit" class="btn btn-primary btn-round">Save and Move Next</button>
-                                    </div>
-                                </div>
-                            </form>
+                            </div>
                         </div>
-                    </div>
+                        <div class="row">
+                            <div class="col-md-6 col-sm-12 col-xs-12">
+                                <div class="form-group">
+                                    <label>Gender</label>
+                                    <select name='gender' id='gender' class="form-control" required>
+                                        <option value="SelectGender">Select Gender</option>
+                                        <option value="Male">Male</option>
+                                        <option value="Female">Female</option>
+                                        <option value="Others">Others</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 col-sm-12 col-xs-12">
+                                <div class="form-group">
+                                    <label>Father Name</label>
+                                    <input type="text" class="form-control" name="fathername" placeholder="Your father full name" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <label>Father / Guardian CNIC</label>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" name="fcnic" id="cnic" placeholder="xxxxx-xxxxxxx-x" maxlength="15" required>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+
+                        </div>
+                        <div class="row">
+                            <div class="update ml-auto mr-auto">
+                                <button type="submit" class="btn btn-primary btn-round">Save and Move Next</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
-                <div class="col-md-4">
-                    <div class="card card-body">
-                        <div class="author">
-                            <h5 class="title" style="color: #51CBCE;">Help Center</h5>
-                        </div>
-                        <div class="card-body">
-                            <ul>
-                                <li>
-                                    Enter Your full name consisting of First Name, Middle Name & Last Name as Per CNIC.
-                                </li>
-                                <li>
-                                    Enter Full Name of Father/ Gurdian as per CNIC consisting of First Name, Middle Name & Last Name.
-                                </li>
-                                <li>
-                                    Enter the date of birth as on your Matriculation Certificate/ O Level Certificate.
-                                </li>
-                                <li>
-                                    Enter Nationality as displayed on your CNIC card or Domicile Certificate.
-                                </li>
-                                <li>
-                                    Enter exactly the same CNIC no as displayed on your CNIC card without dashes.
-                                </li>
-                                <li>
-                                    Enter the mobile number where to contact you.
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="card-footer">
-                            <hr>
-                            <div class="button-container">
-                                <div class="row">
-                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ml-auto mr-auto">
-                                            <small><b>Any misuse or false attempt will result in cancellation of your application.
-                                                    You are liable to provide the information that is true to the best of your knowledge.
-                                                    Administration is not responsible for any misuse or false attempt.</b></small>
-                                    </div>
-                                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card card-body">
+                <div class="author">
+                    <h5 class="title" style="color: #51CBCE;">Help Center</h5>
+                </div>
+                <div class="card-body">
+                    <ul>
+                        <li>
+                            Enter Your full name consisting of First Name, Middle Name & Last Name as Per CNIC.
+                        </li>
+                        <li>
+                            Enter Full Name of Father/ Gurdian as per CNIC consisting of First Name, Middle Name & Last Name.
+                        </li>
+                        <li>
+                            Enter the date of birth as on your Matriculation Certificate/ O Level Certificate.
+                        </li>
+                        <li>
+                            Enter Nationality as displayed on your CNIC card or Domicile Certificate.
+                        </li>
+                        <li>
+                            Enter exactly the same CNIC no as displayed on your CNIC card without dashes.
+                        </li>
+                        <li>
+                            Enter the mobile number where to contact you.
+                        </li>
+                    </ul>
+                </div>
+                <div class="card-footer">
+                    <hr>
+                    <div class="button-container">
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ml-auto mr-auto">
+                                    <small><b>Any misuse or false attempt will result in cancellation of your application.
+                                            You are liable to provide the information that is true to the best of your knowledge.
+                                            Administration is not responsible for any misuse or false attempt.</b></small>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+     </div>
+ </div>

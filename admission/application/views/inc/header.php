@@ -21,4 +21,4 @@
     <link href="<?php echo base_url()?>application/assets/demo/demo.css" rel="stylesheet" />
 </head>
 
-<body class="">
+<body class="body-background">
