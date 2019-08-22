@@ -31,6 +31,7 @@ class Auth
     public $user = null;
     public $userID = null;
     public $userName = null;
+    public $email = null;
     public $password = null;
     public $roles = 0;  // [ public $roles = null ] codeIgniter where_in() omitted for null.
     public $permissions = null;
@@ -40,7 +41,9 @@ class Auth
     public function __construct()
     {
         $this->CI =& get_instance();
-
+       // parent::__construct($config);
+       $this->CI->load->library('form_validation');
+        //$this->load->library('form_validation');
         $this->init();
     }
 
@@ -79,8 +82,11 @@ class Auth
     public function login($request)
     {
         if ($this->validate($request)) {
-            $this->user = $this->credentials($this->userName, $this->password);
+            $this->user = $this->credentials($this->email, $this->password);
+
             if ($this->user) {
+             //   var_dump($this->user);
+            //    die();
                 return $this->setUser();
             } else {
                 return $this->failedLogin($request);
@@ -98,14 +104,19 @@ class Auth
      */
     protected function validate($request)
     {
-        $this->CI->form_validation->set_rules('username', 'User Name', 'required');
+       // var_dump($request);
+        //die();
+        //$this->CI->form_validation->set_rules('username', 'User Username', 'required');
+        $this->CI->form_validation->set_rules('email', 'User Email', 'required');
         $this->CI->form_validation->set_rules('password', 'Password', 'required');
 
         if ($this->CI->form_validation->run() == TRUE) {
-            /*$this->userName = $request["username"];
-            $this->password = $request["password"];*/
-            $this->userName = $this->CI->input->post("username", TRUE);
-            $this->password = $this->CI->input->post("password", TRUE);
+            //$this->userName = $request["username"];
+            //$this->userName = $request["email"];
+            $this->email = $request["email"];
+            $this->password = $request["password"];
+            //$this->userName = $this->CI->input->post("email", TRUE);
+            //$this->password = $this->CI->input->post("password", TRUE);
             return true;
         }
 
@@ -119,13 +130,13 @@ class Auth
      * @param $password
      * @return mixed
      */
-    protected function credentials($username, $password)
+    protected function credentials($email, $password)
     {
-        $user = $this->CI->db->get_where("users", array("username" => $username, "status" => 1, "deleted_at" => null))->row(0);
+        //$user = $this->CI->db->get_where("users", array("email" => $username, "status" => 1, "deleted_at" => null))->row(0);
+        $user = $this->CI->db->get_where("users", array("email" => $email, "status" => 1, "deleted_at" => null))->row(0);
         if($user && password_verify($password, $user->password)) {
             return $user;
         }
-
         return false;
     }
 
@@ -135,15 +146,17 @@ class Auth
     protected function setUser()
     {
         $this->userID = $this->user->id;
-
+      // var_dump($this->userID);
+        //die();
         $this->CI->session->set_userdata(array(
             "userID" => $this->user->id,
             "username" => $this->user->username,
+            "email" => $this->user->email,
             "roles" => $this->userWiseRoles(),
             "loginStatus" => true
         ));
 
-        return redirect("home");
+        return redirect("personalinformation");
     }
 
     /**
@@ -154,7 +167,7 @@ class Auth
      */
     protected function failedLogin($request)
     {
-        $this->error["failed"] = "Username or Password Incorrect.";
+        $this->error["failed"] = "Email or Password Incorrect.";
 
         return $this->error;
     }
@@ -228,6 +241,16 @@ class Auth
     public function userName()
     {
         return $this->userName;
+    }
+    /**
+     * Read authenticated user email
+     *
+     * @return string
+     */
+
+    public function email()
+    {
+        return $this->email;
     }
 
     /**

@@ -24,9 +24,14 @@ class Login extends CI_Controller {
 
         if($_POST) {
             $data = $this->auth->login($_POST);
+           // var_dump($data);
+            //die();
+            //if ($data["failed"] != "Email or Password Incorrect.") {
+                //redirect("personalinformation");
+            //}
         }
 
-        return $this->auth->showLoginForm($data);
+       return $this->auth->showLoginForm($data);
     }
 
     /**

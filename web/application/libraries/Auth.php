@@ -80,6 +80,7 @@ class Auth
     {
         if ($this->validate($request)) {
             $this->user = $this->credentials($this->userName, $this->password);
+            var_dump($this->user);
             if ($this->user) {
                 return $this->setUser();
             } else {

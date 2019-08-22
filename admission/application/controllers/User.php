@@ -24,6 +24,7 @@ class User extends CI_Controller {
         parent::__construct();
         $this->load->model('Crud_model');
         $this->load->helper(array('form', 'url'));
+        $this->load->library('auth', 'form_validation');
     }
 
     public  function  viewLoad($page ,$data=null){
@@ -35,8 +36,12 @@ class User extends CI_Controller {
     }
 
     public function personal_information(){
+
+       // var_dump($this->auth->userID());
+
+
         if ($this->input->post()){
-            $_POST['user_id']="1";
+            $_POST['user_id']=$this->auth->userID();
             $this->Crud_model->insert('personal_information', $_POST);
             //todo: update pifo status
             $data["pinformation"]=true;
