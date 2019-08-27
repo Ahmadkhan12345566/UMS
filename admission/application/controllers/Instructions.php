@@ -36,7 +36,6 @@ class Instructions extends CI_Controller {
     public  function  viewLoad($page){
         $this->load->view('inc/header');
         $this->load->view('inc/bssidebar');
-        $this->load->view('inc/navbar');
         $this->load->view($page);
         $this->load->view('inc/footer');
     }
@@ -136,6 +135,7 @@ class Instructions extends CI_Controller {
     {
         $this->viewLoad('submitapplication');
     }
+
 
 
 }

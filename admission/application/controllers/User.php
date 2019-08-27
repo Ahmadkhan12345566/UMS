@@ -30,7 +30,7 @@ class User extends CI_Controller {
     public  function  viewLoad($page ,$data=null){
         $this->load->view('inc/header');
         $this->load->view('inc/bssidebar');
-        $this->load->view('inc/navbar');
+        //$this->load->view('inc/navbar');
         $this->load->view($page,$data);
         $this->load->view('inc/footer');
     }
@@ -413,6 +413,9 @@ class User extends CI_Controller {
             $data["subapplication"]= true;
             $this->Crud_model->update("admission_process_status","1", $data);
         }
+        else {
+            $this->viewLoad('submitapplication');
+        }
     }
 
     public function do_upload()
@@ -430,8 +433,8 @@ class User extends CI_Controller {
         if ( ! $this->upload->do_upload('studentphoto'))
         {
             $error = array('error' => $this->upload->display_errors());
-            var_dump($error);
-            die();
+//            var_dump($error);
+//            die();
             $this->viewLoad('photoupload', $error);
         }
         else
