@@ -3,7 +3,7 @@
     <div class="kt-container  kt-container--fluid ">
         <div class="kt-subheader__main" >
             <h3 class="kt-subheader__title">
-                Other Details </h3>
+                Fund Details </h3>
             <span class="kt-subheader__separator kt-hidden"></span>
             <div class="kt-subheader__breadcrumbs">
                 <a href="<?php echo base_url()?>instructions" class="kt-subheader__breadcrumbs-home"><i class="flaticon2-shelter"></i></a>
@@ -16,69 +16,59 @@
 <!-- begin:: Content -->
 <div class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid">
     <!-- Form -->
-    <!--begin:: other detail -->
+    <!--begin:: fund detail -->
     <div class="row">
         <div class="col-md-8 col-sm-12 col-xs-12">
             <div class="kt-portlet">
                 <div class="kt-portlet__head">
                     <div class="kt-portlet__head-label">
                         <h3 class="kt-portlet__head-title">
-                            Other Details
+                            Fund Details
                         </h3>
                     </div>
                 </div>
 
                 <!--begin::Form-->
-                <form method="post" action="<?php echo base_url('otherdetail')?>" class="kt-form" id="kt_form_2">
+                <form method="post" action="<?php echo base_url('otherdetail')?>" class="kt-form">
                     <div class="kt-portlet__body">
                         <div class="row">
-                            <div class="col-md-5 col-sm-6 col-xs-6">
-                                    <div class="form-group">
-                                        <label class="control-label">Hostel Facility: (limited seats available)</label>
-                                    </div>
+                            <div class="col-md-3 col-sm-6 col-xs-6">
+                                <div class="form-group">
+                                    <label class="control-label">Funding Agence?</label>
                                 </div>
-                            <div class="col-md-3 col-sm-12 col-xs-12">
+                            </div>
+                            <div class="col-md-2 col-sm-12 col-xs-12">
                                 <div class="form-group">
                                     <label class="kt-radio kt-radio--success">
-                                        Yes <input type="radio" name="seats">
+                                        Yes <input type="radio" name="funding">
                                         <span></span>
                                     </label>
                                     <label class="kt-radio kt-radio--danger">
-                                        No <input type="radio" name="seats" checked>
+                                        No <input type="radio" name="funding" checked>
                                         <span></span>
                                     </label>
                                 </div>
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-md-3 col-sm-6 col-xs-6">
-                                    <div class="form-group">
-                                        <label class="control-label">Transport Facility</label>
-                                    </div>
-                                </div>
-                            <div class="col-md-3 col-sm-12 col-xs-12">
+                            <div class="col-md-12 col-sm-12 col-xs-12">
                                 <div class="form-group">
-                                    <label class="kt-radio kt-radio--success">
-                                        Yes <input type="radio" name="transport">
-                                        <span></span>
-                                    </label>
-                                    <label class="kt-radio kt-radio--danger">
-                                        No <input type="radio" name="transport" checked>
-                                        <span></span>
-                                    </label>
+                                    <label>Source</label>
+                                    <input type="text" class="form-control" name="source" required>
                                 </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-6 col-sm-12 col-xs-12">
                                 <div class="form-group">
-                                    <label class="form-control-label">How you Know</label>
-                                    <select name="advertisement_id" class="form-control" required>
-                                        <option value="">How you come to know about us </option>
-                                        <?php foreach ($advertisements as $advertisement) { ?>
-                                            <option value="<?php echo $advertisement->id;?>"><?php echo $advertisement->name;?></option>
-                                        <?php }?>
-                                    </select>
+                                    <label>Amount</label>
+                                    <input type="text" class="form-control" name="amount" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-12 col-xs-12">
+                                <div class="form-group">
+                                    <label>Duration (Month)</label>
+                                    <input type="text" class="form-control" name="duration" required>
                                 </div>
                             </div>
                         </div>
@@ -105,10 +95,17 @@
                     </div>
                 </div>
                 <div class="kt-portlet__body">
-                    <b>
-                        University is also offering Hostel and Pick & Drop Facility.
-                        Choose the option if you want to avail the service. If Not Skip this step and move next.
-                    </b>
+                    <ul>
+                        <li>
+                            Enter your <b>Funding Details</b> i.e., from where you get the money for studying.
+                        </li>
+                        <li>
+                            If you have a <b>Funding Agency</b> that is sponsoring you then give its name, otherwise mention your source through which you'll meet your study expenses.
+                        </li>
+                        <li>
+                            Enter the amount and duration for which it is available.
+                        </li>
+                    </ul>
                 </div>
                 <div class="kt-portlet__foot">
                     <div class="row">
@@ -123,7 +120,7 @@
         </div>
         <!--end:Help Center-->
     </div>
-    <!--end::other detail-->
+    <!--end::fund detail-->
     <!-- End Form -->
 </div>
 

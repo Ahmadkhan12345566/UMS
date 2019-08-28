@@ -130,6 +130,21 @@
 <script src="./assets/js/demo1/pages/login/login-general.js" type="text/javascript"></script>
 
 <!--end::Page Scripts -->
+
+<!--begin::Page Vendors(used for datatable) -->
+<script src="./assets/vendors/custom/datatables/datatables.bundle.js" type="text/javascript"></script>
+
+<!--end::Page Vendors -->
+
+<!--begin::Page Scripts(used for datatable header) -->
+<script src="./assets/js/demo1/pages/crud/datatables/basic/headers.js" type="text/javascript"></script>
+
+<!--end::Page Scripts -->
+
+<!--begin::Page Scripts(used all form validation) -->
+<script src="./assets/js/demo1/pages/crud/forms/validation/form-controls.js" type="text/javascript"></script>
+
+<!--end::Page Scripts -->
 </body>
 
 <!-- end::Body -->

@@ -103,8 +103,8 @@
                                                         <div class="row">
                                                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
                                                                 <div class="form-group">
-                                                                    <label>Degree</label>
-                                                                    <select name="education_level_id" id="matricdegree" class="form-control">
+                                                                    <label class="form-control-label">Degree</label>
+                                                                    <select name="education_level_id" class="form-control" required>
                                                                         <option value="">Select Degree</option>
                                                                         <?php foreach ($education_levels as $education_level){?>
                                                                             <option value="<?php echo $education_level->id;?>"><?php echo $education_level->name;?></option>
@@ -115,9 +115,9 @@
                                                             </div>
                                                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
                                                                 <div class="form-group">
-                                                                    <label>Years</label>
-                                                                    <select name='passingyears' id='matricpassingyear' class="form-control">
-                                                                        <option value='Years'>Years</option>
+                                                                    <label class="form-control-label">Years</label>
+                                                                    <select name='passingyears' class="form-control" required>
+                                                                        <option value=''>Years</option>
                                                                         <option value=2019'>2019</option>
                                                                         <option value='2018'>2018</option>
                                                                         <option value='2017'>2017</option>
@@ -134,7 +134,7 @@
                                                             <div class="col-xl-6">
                                                                 <div class="form-group">
                                                                     <label>Board</label>
-                                                                    <select name="board_id" id="Matricboard" class="form-control">
+                                                                    <select name="board_id" class="form-control" required>
                                                                         <option value="">Select Board / University</option>
                                                                         <?php foreach ($boards as $board){?>
                                                                             <option value="<?php echo $board->id;?>"><?php echo $board->boardname;?></option>
@@ -146,8 +146,8 @@
                                                             <div class="col-xl-6">
                                                                 <div class="form-group">
                                                                     <label>Subject</label>
-                                                                    <select name="degree_id" id="matricSubject" class="form-control">
-                                                                        <option value="Select">Select Subject</option>
+                                                                    <select name="degree_id" class="form-control" required>
+                                                                        <option value="">Select Subject</option>
                                                                         <?php foreach ($degrees as $degree){?>
                                                                             <option value="<?php echo $degree->id;?>"><?php echo $degree->name;?></option>
                                                                         <?php }?>
@@ -160,14 +160,14 @@
                                                             <div class="col-xl-6">
                                                                 <div class="form-group">
                                                                     <label>Total Marks</label>
-                                                                    <input type="text" class="form-control" name="totalmarks" id="Matricminimum_marks">
+                                                                    <input type="text" class="form-control" name="totalmarks" id="Matricminimum_marks" required>
                                                                     <span class="form-text text-muted">Please enter your Total Marks.</span>
                                                                 </div>
                                                             </div>
                                                             <div class="col-xl-6">
                                                                 <div class="form-group">
                                                                     <label>Obtained Marks</label>
-                                                                    <input type="text" class="form-control" name="obtainmarks" id="MatricObtainedmarks">
+                                                                    <input type="text" class="form-control" name="obtainmarks" id="MatricObtainedmarks" required>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -186,7 +186,7 @@
                                                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
                                                                 <div class="form-group">
                                                                     <label>Degree</label>
-                                                                    <select name="education_level_id" id="Interdegree" class="form-control">
+                                                                    <select name="education_level_id" class="form-control" required>
                                                                         <option value="">Select Degree</option>
                                                                         <?php foreach ($education_levels as $education_level){?>
                                                                             <option value="<?php echo $education_level->id; ?>"><?php echo $education_level->name; ?></option>
@@ -198,8 +198,8 @@
                                                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
                                                                 <div class="form-group">
                                                                     <label>Years</label>
-                                                                    <select name="passingyears" id="Interpassyear" class="form-control">
-                                                                        <option value='Years'>Years</option>
+                                                                    <select name="passingyears" class="form-control" required>
+                                                                        <option value=''>Years</option>
                                                                         <option value=2019'>2019</option>
                                                                         <option value='2018'>2018</option>
                                                                         <option value='2017'>2017</option>
@@ -216,7 +216,7 @@
                                                             <div class="col-xl-6">
                                                                 <div class="form-group">
                                                                     <label>Board</label>
-                                                                    <select name="board_id" id="Interboard" class="form-control">
+                                                                    <select name="board_id" class="form-control" required>
                                                                         <option value="">Select Board / University</option>
                                                                         <?php foreach ($boards as $board){?>
                                                                             <option value="<?php echo $board->id; ?>"><?php echo $board->boardname; ?></option>
@@ -228,8 +228,8 @@
                                                             <div class="col-xl-6">
                                                                 <div class="form-group">
                                                                     <label>Subject</label>
-                                                                    <select name="degree_id" id="Intersubject" class="form-control">
-                                                                        <option value="Select">Select Subject</option>
+                                                                    <select name="degree_id" class="form-control" required>
+                                                                        <option value="">Select Subject</option>
                                                                         <?php foreach ($degrees as $degree){?>
                                                                             <option value="<?php echo $degree->id;?>"><?php echo $degree->name;?></option>
                                                                         <?php }?>
@@ -242,14 +242,14 @@
                                                             <div class="col-xl-6">
                                                                 <div class="form-group">
                                                                     <label>Total Marks</label>
-                                                                    <input type="text" class="form-control" name="totalmarks" id="Interminimum_marks">
+                                                                    <input type="text" class="form-control" name="totalmarks" required>
                                                                     <span class="form-text text-muted">Please enter your Total Marks.</span>
                                                                 </div>
                                                             </div>
                                                             <div class="col-xl-6">
                                                                 <div class="form-group">
                                                                     <label>Obtained Marks</label>
-                                                                    <input type="text" class="form-control" name="obtainmarks" id="Interobtainedmarks">
+                                                                    <input type="text" class="form-control" name="obtainmarks" required>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -268,7 +268,7 @@
                                                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
                                                                 <div class="form-group">
                                                                     <label>Degree</label>
-                                                                    <select name="education_level_id" class="form-control">
+                                                                    <select name="education_level_id" class="form-control" required>
                                                                         <option value="">Select Degree</option>
                                                                         <?php foreach ($education_levels as $education_level){?>
                                                                             <option value="<?php echo $education_level->id; ?>"><?php echo $education_level->name; ?></option>
@@ -280,8 +280,8 @@
                                                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
                                                                 <div class="form-group">
                                                                     <label>Years</label>
-                                                                    <select name="passingyears" class="form-control">
-                                                                        <option value='Years'>Years</option>
+                                                                    <select name="passingyears" class="form-control" required>
+                                                                        <option value=''>Years</option>
                                                                         <option value=2019'>2019</option>
                                                                         <option value='2018'>2018</option>
                                                                         <option value='2017'>2017</option>
@@ -298,7 +298,7 @@
                                                             <div class="col-xl-6">
                                                                 <div class="form-group">
                                                                     <label>Board</label>
-                                                                    <select name="board_id" class="form-control">
+                                                                    <select name="board_id" class="form-control" required>
                                                                         <option value="">Select Board / University</option>
                                                                         <?php foreach ($boards as $board){?>
                                                                             <option value="<?php echo $board->id; ?>"><?php echo $board->boardname; ?></option>
@@ -310,8 +310,8 @@
                                                             <div class="col-xl-6">
                                                                 <div class="form-group">
                                                                     <label>Subject</label>
-                                                                    <select name="degree_id" class="form-control">
-                                                                        <option value="Select">Select Subject</option>
+                                                                    <select name="degree_id" class="form-control" required>
+                                                                        <option value="">Select Subject</option>
                                                                         <?php foreach ($degrees as $degree){?>
                                                                             <option value="<?php echo $degree->id;?>"><?php echo $degree->name;?></option>
                                                                         <?php }?>
@@ -324,14 +324,14 @@
                                                             <div class="col-xl-6">
                                                                 <div class="form-group">
                                                                     <label>Total Marks</label>
-                                                                    <input type="text" class="form-control" name="totalmarks">
+                                                                    <input type="text" class="form-control" name="totalmarks" required>
                                                                     <span class="form-text text-muted">Please enter your Total Marks.</span>
                                                                 </div>
                                                             </div>
                                                             <div class="col-xl-6">
                                                                 <div class="form-group">
                                                                     <label>Obtained Marks</label>
-                                                                    <input type="text" class="form-control" name="obtainmarks">
+                                                                    <input type="text" class="form-control" name="obtainmarks" required>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -350,15 +350,15 @@
                                                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
                                                                 <div class="form-group">
                                                                     <label>Degree</label>
-                                                                    <input type="text" class="form-control" name="education_level_id">
+                                                                    <input type="text" class="form-control" name="education_level_id" required>
                                                                     <span class="form-text text-muted">Please write your Degree.</span>
                                                                 </div>
                                                             </div>
                                                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
                                                                 <div class="form-group">
                                                                     <label class="control-label">Years</label>
-                                                                    <select name="passingyears" class="form-control">
-                                                                        <option value='Years'>Years</option>
+                                                                    <select name="passingyears" class="form-control" required>
+                                                                        <option value=''>Years</option>
                                                                         <option value='2019'>2019</option>
                                                                         <option value='2018'>2018</option>
                                                                         <option value='2017'>2017</option>
@@ -408,8 +408,8 @@
                                                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
                                                                 <div class="form-group">
                                                                     <label for="board">University</label>
-                                                                    <select name="board_id" class="form-control">
-                                                                        <option value="Select Board / University">Select University</option>
+                                                                    <select name="board_id" class="form-control" required>
+                                                                        <option value="">Select University</option>
                                                                         <?php foreach ($boards as $board) {?>
                                                                             <option value="<?php echo $board->id;?>"><?php echo $board->boardname;?></option>
                                                                         <?php }?>
@@ -420,7 +420,7 @@
                                                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
                                                                 <div class="form-group">
                                                                     <label>Subject</label>
-                                                                    <input type="text" class="form-control" name="degree_id">
+                                                                    <input type="text" class="form-control" name="degree_id" required>
                                                                     <span class="form-text text-muted">Please write your subject.</span>
                                                                 </div>
                                                             </div>
@@ -429,14 +429,14 @@
                                                             <div class="col-xl-6">
                                                                 <div class="form-group">
                                                                     <label>CGPA Max / Max Marks</label>
-                                                                    <input type="text" class="form-control" name="totalmarks">
+                                                                    <input type="text" class="form-control" name="totalmarks" required>
                                                                     <span class="form-text text-muted">Please write your Maximum CGPA.</span>
                                                                 </div>
                                                             </div>
                                                             <div class="col-xl-6">
                                                                 <div class="form-group">
                                                                     <label>CGPA Obtained / Obtained Marks</label>
-                                                                    <input type="text" class="form-control" name="obtainmarks">
+                                                                    <input type="text" class="form-control" name="obtainmarks" required>
                                                                 </div>
                                                             </div>
                                                         </div>

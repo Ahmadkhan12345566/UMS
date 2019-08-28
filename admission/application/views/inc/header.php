@@ -56,6 +56,11 @@ License: You must have a valid license purchased only from themeforest(the above
 
     <!--end::Page Custom Styles -->
 
+    <!--begin::Page Vendors Styles(used for datatable) -->
+    <link href="./assets/vendors/custom/datatables/datatables.bundle.css" rel="stylesheet" type="text/css" />
+
+    <!--end::Page Vendors Styles -->
+
     <!--begin:: Global Mandatory Vendors -->
     <link href="./assets/vendors/general/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet" type="text/css" />
 

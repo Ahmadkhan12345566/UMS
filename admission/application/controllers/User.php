@@ -412,8 +412,7 @@ class User extends CI_Controller {
             // Todo: Submit Application Status
             $data["subapplication"]= true;
             $this->Crud_model->update("admission_process_status","1", $data);
-        }
-        else {
+
             $this->viewLoad('submitapplication');
         }
     }

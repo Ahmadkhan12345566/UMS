@@ -29,7 +29,7 @@
                                 </div>
 
                                 <!--begin::Form-->
-                                <form method="post" action="<?php echo base_url("personalinformation")?>" class="kt-form">
+                                <form method="post" action="<?php echo base_url("personalinformation")?>" class="kt-form" id="kt_form_2">
                                     <div class="kt-portlet__body">
                                         <div class="row">
                                             <div class="col-md-6 col-sm-12 col-xs-12">
@@ -102,7 +102,7 @@
                                                 <div class="form-group">
                                                     <label>Gender</label>
                                                     <select name='gender' id='gender' class="form-control" required>
-                                                        <option value="SelectGender">Select Gender</option>
+                                                        <option value="">Select Gender</option>
                                                         <option value="Male">Male</option>
                                                         <option value="Female">Female</option>
                                                         <option value="Others">Others</option>

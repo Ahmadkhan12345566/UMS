@@ -16,7 +16,7 @@
 <!-- begin:: Content -->
 <div class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid">
     <!-- Form -->
-    <!--begin:: Personal Information -->
+    <!--begin:: Program Choices -->
     <div class="row">
         <div class="col-md-8 col-sm-12 col-xs-12">
             <div class="kt-portlet">
@@ -29,7 +29,7 @@
                 </div>
 
                 <!--begin::Form-->
-                <form method="post" action="<?php echo base_url('programchoices')?>" class="kt-form">
+                <form method="post" action="<?php echo base_url('programchoices')?>" class="kt-form" id="kt_form_2">
                     <div class="kt-portlet__body">
                         <div class="row">
                             <div class="col-md-9 col-sm-12 col-xs-12 pr-1">
@@ -44,7 +44,7 @@
                             <div class="col-md-6 col-sm-12 col-xs-12">
                                 <div class="form-group">
                                     <label>Program Choice 1</label>
-                                    <select name='program[]' id='subject1' class="form-control" required>
+                                    <select name='program 1' id='subject1' class="form-control" required>
                                         <option value="">Select 1st Choice</option>
                                         <?php foreach ($degrees as $degree){?>
                                             <option value="<?php echo $degree->id;?>"><?php echo $degree->name;?></option>
@@ -55,7 +55,7 @@
                             <div class="col-md-6 col-sm-12 col-xs-12">
                                 <div class="form-group">
                                     <label>Program Choice 2</label>
-                                    <select name='program[]' id='subject2' class="form-control" required>
+                                    <select name='program 2' id='subject2' class="form-control" required>
                                         <option value="">Select 2nd Choice</option>
                                         <?php foreach ($degrees as $degree){?>
                                             <option value="<?php echo $degree->id;?>"><?php echo $degree->name;?></option>
@@ -68,7 +68,7 @@
                             <div class="col-md-6 col-sm-12 col-xs-12">
                                 <div class="form-group">
                                     <label>Program Choice 3</label>
-                                    <select name='program[]' id='subject3' class="form-control" required>
+                                    <select name='program 3' id='subject3' class="form-control" required>
                                         <option value="">Select 3rd Choice</option>
                                         <?php foreach ($degrees as $degree){?>
                                             <option value="<?php echo $degree->id;?>"><?php echo $degree->name;?></option>
@@ -79,7 +79,7 @@
                             <div class="col-md-6 col-sm-12 col-xs-12">
                                 <div class="form-group">
                                     <label>Program Choice 4</label>
-                                    <select name=program[]' id='subject4' class="form-control">
+                                    <select name='program 4' id='subject4' class="form-control" required>
                                         <option value="">Select 4th Choice</option>
                                         <?php foreach ($degrees as $degree){?>
                                             <option value="<?php echo $degree->id;?>"><?php echo $degree->name;?></option>
@@ -91,7 +91,7 @@
                         <div class="row">
                             <div class="col-md-6 col-sm-12 col-xs-12">
                                 <label for="exampleSelect2">Program Choice 5</label>
-                                <select name='program[]' id='subject5' class="form-control">
+                                <select name='program 5' id='subject5' class="form-control" required>
                                     <option value="">Select 5th Choice</option>
                                     <?php foreach ($degrees as $degree){?>
                                         <option value="<?php echo $degree->id;?>"><?php echo $degree->name;?></option>
@@ -101,7 +101,7 @@
                             <div class="col-md-6 col-sm-12 col-xs-12">
                                 <div class="form-group">
                                     <label>Program Choice 6</label>
-                                    <select name='program[]' id='subject6' class="form-control">
+                                    <select name='program 6' id='subject6' class="form-control" required>
                                         <option value="">Select 6th Choice</option>
                                         <?php foreach ($degrees as $degree){?>
                                             <option value="<?php echo $degree->id;?>"><?php echo $degree->name;?></option>
@@ -114,7 +114,7 @@
                             <div class="col-md-6 col-sm-12 col-xs-12">
                                 <div class="form-group">
                                     <label>Program Choice 7</label>
-                                    <select name='program[]' id='subject7' class="form-control">
+                                    <select name='program 7' id='subject7' class="form-control" required>
                                         <option value="">Select 7th Choice</option>
                                         <?php foreach ($degrees as $degree){?>
                                             <option value="<?php echo $degree->id;?>"><?php echo $degree->name;?></option>
@@ -168,7 +168,7 @@
         </div>
         <!--end:Help Center-->
     </div>
-    <!--end::Personal Information-->
+    <!--end::Program Choices-->
     <!-- End Form -->
 </div>
 

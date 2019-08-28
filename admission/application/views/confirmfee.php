@@ -16,7 +16,7 @@
 <!-- begin:: Content -->
 <div class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid">
     <!-- Form -->
-    <!--begin:: Personal Information -->
+    <!--begin:: Confirm fee -->
     <div class="row">
         <div class="col-md-8 col-sm-12 col-xs-12">
             <div class="kt-portlet">
@@ -29,7 +29,7 @@
                 </div>
 
                 <!--begin::Form-->
-                <form method="post" action="" class="kt-form">
+                <form method="post" action="<?php echo base_url("confirmfee")?>" class="kt-form" id="kt_form_2">
                     <div class="kt-portlet__body">
                         <div class="kt-section">
                             <div class="kt-section__content">
@@ -78,13 +78,13 @@
                             <div class="row mt-2">
                                 <div class="col-md-6 col-sm-12 col-xs-12">
                                     <div class="form-group">
-                                        <label for="control-label">Bank Name</label>
+                                        <label for="form-control-label">Bank Name</label>
                                         <input type="text" name="bankname" class="form-control" required>
                                     </div>
                                 </div>
                                 <div class="col-md-6 col-sm-12 col-xs-12">
                                     <div class="form-group">
-                                        <label for="control-label">Branch Code</label>
+                                        <label for="form-control-label">Branch Code</label>
                                         <input type="text" name="branchcode" class="form-control" required>
                                         </label>
                                     </div>
@@ -92,12 +92,12 @@
                             </div>
                             <div class="row">
                                 <div class="col-md-6 col-sm-12 col-sx-12">
-                                    <label for="control-label">Bank Address</label>
-                                    <input type="text" name="bankaddress" id="bankaddress" class="form-control" required>
+                                    <label for="form-control-label">Bank Address</label>
+                                    <input type="text" name="bankaddress" class="form-control" required>
                                 </div>
                                 <div class="col-md-6 col-sm-12 col-xs-12">
                                     <div class="form-group">
-                                        <label for="control-label">Deposit Date</label>
+                                        <label for="form-control-label">Deposit Date</label>
                                         <input type="date" name="depositdate" class="form-control" required>
                                     </div>
                                 </div>
@@ -139,13 +139,13 @@
                             <div class="row">
                                 <div class="col-md-6 col-sm-12 col-xs-12">
                                     <div class="form-group">
-                                        <label for="control-label">Bank Name</label>
+                                        <label for="form-control-label">Bank Name</label>
                                         <input type="text" name="ntsbankname" class="form-control" required>
                                     </div>
                                 </div>
                                 <div class="col-md-6 col-sm-12 col-xs-12">
                                     <div class="form-group">
-                                        <label for="control-label">Branch Code</label>
+                                        <label for="form-control-label">Branch Code</label>
                                         <input type="text" name="ntsbranchcode" id="NTSbranchcode" class="form-control" required>
                                     </div>
                                 </div>
@@ -153,13 +153,13 @@
                             <div class="row">
                                 <div class="col-md-6 col-sm-12 col-xs-12">
                                     <div class="form-group">
-                                        <label for="control-label">Bank Address</label>
+                                        <label for="form-control-label">Bank Address</label>
                                         <input type="text" name="ntsbankaddress" class="form-control" required>
                                     </div>
                                 </div>
                                 <div class="col-md-6 col-sm-12 col-xs-12">
                                     <div class="form-group">
-                                        <label for="control-label">Deposit Date</label>
+                                        <label for="form-control-label">Deposit Date</label>
                                         <div class="input-group date">
                                             <input type="date" name="ntsdepositdate" class="form-control" readonly="" placeholder="Select Deposit Date" id="kt_datepicker_2" required>
                                             <div class="input-group-append">
@@ -200,7 +200,7 @@
                     </div>
                     <div class="kt-portlet__foot">
                         <div class="kt-form__actions">
-                            <button type="reset" class="btn btn-primary">Submit</button>
+                            <button type="submit" class="btn btn-primary">Submit</button>
                             <button type="reset" class="btn btn-secondary">Cancel</button>
                         </div>
                     </div>
@@ -255,7 +255,7 @@
         </div>
         <!--end:Help Center-->
     </div>
-    <!--end::Personal Information-->
+    <!--end::Confirm fee-->
     <!-- End Form -->
 </div>
 

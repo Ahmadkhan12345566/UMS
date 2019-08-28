@@ -16,7 +16,7 @@
 <!-- begin:: Content -->
 <div class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid">
     <!-- Form -->
-    <!--begin:: Personal Information -->
+    <!--begin:: Submit Application -->
     <div class="row">
         <div class="col-md-8 col-sm-12 col-xs-12">
             <div class="kt-portlet">
@@ -114,7 +114,7 @@
         </div>
         <!--end:Help Center-->
     </div>
-    <!--end::Personal Information-->
+    <!--end::Submit Application-->
     <!-- End Form -->
 </div>
 

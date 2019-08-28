@@ -3,7 +3,7 @@
     <div class="kt-container  kt-container--fluid ">
         <div class="kt-subheader__main" >
             <h3 class="kt-subheader__title">
-                Other Details </h3>
+                Research Interest </h3>
             <span class="kt-subheader__separator kt-hidden"></span>
             <div class="kt-subheader__breadcrumbs">
                 <a href="<?php echo base_url()?>instructions" class="kt-subheader__breadcrumbs-home"><i class="flaticon2-shelter"></i></a>
@@ -16,69 +16,38 @@
 <!-- begin:: Content -->
 <div class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid">
     <!-- Form -->
-    <!--begin:: other detail -->
+    <!--begin:: Research Interest  -->
     <div class="row">
         <div class="col-md-8 col-sm-12 col-xs-12">
             <div class="kt-portlet">
                 <div class="kt-portlet__head">
                     <div class="kt-portlet__head-label">
                         <h3 class="kt-portlet__head-title">
-                            Other Details
+                            Write Your Research Interest
                         </h3>
                     </div>
                 </div>
 
                 <!--begin::Form-->
-                <form method="post" action="<?php echo base_url('otherdetail')?>" class="kt-form" id="kt_form_2">
+                <form method="post" action="<?php echo base_url('programchoices')?>" class="kt-form">
                     <div class="kt-portlet__body">
                         <div class="row">
-                            <div class="col-md-5 col-sm-6 col-xs-6">
-                                    <div class="form-group">
-                                        <label class="control-label">Hostel Facility: (limited seats available)</label>
-                                    </div>
-                                </div>
-                            <div class="col-md-3 col-sm-12 col-xs-12">
+                            <div class="col-md-4 col-sm-12 col-xs-12">
                                 <div class="form-group">
-                                    <label class="kt-radio kt-radio--success">
-                                        Yes <input type="radio" name="seats">
-                                        <span></span>
-                                    </label>
-                                    <label class="kt-radio kt-radio--danger">
-                                        No <input type="radio" name="seats" checked>
-                                        <span></span>
-                                    </label>
+                                    <label class="form-control-label">Research Interest 1</label>
+                                    <input type="text" class="form-control" name="research 1" required>
                                 </div>
                             </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-3 col-sm-6 col-xs-6">
-                                    <div class="form-group">
-                                        <label class="control-label">Transport Facility</label>
-                                    </div>
-                                </div>
-                            <div class="col-md-3 col-sm-12 col-xs-12">
+                            <div class="col-md-4 col-sm-12 col-xs-12">
                                 <div class="form-group">
-                                    <label class="kt-radio kt-radio--success">
-                                        Yes <input type="radio" name="transport">
-                                        <span></span>
-                                    </label>
-                                    <label class="kt-radio kt-radio--danger">
-                                        No <input type="radio" name="transport" checked>
-                                        <span></span>
-                                    </label>
+                                    <label class="form-control-label">Research Interest 2</label>
+                                    <input type="text" class="form-control" name="research 2" required>
                                 </div>
                             </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6 col-sm-12 col-xs-12">
+                            <div class="col-md-4 col-sm-12 col-xs-12">
                                 <div class="form-group">
-                                    <label class="form-control-label">How you Know</label>
-                                    <select name="advertisement_id" class="form-control" required>
-                                        <option value="">How you come to know about us </option>
-                                        <?php foreach ($advertisements as $advertisement) { ?>
-                                            <option value="<?php echo $advertisement->id;?>"><?php echo $advertisement->name;?></option>
-                                        <?php }?>
-                                    </select>
+                                    <label class="form-control-label">Research Interest 3</label>
+                                    <input type="text" class="form-control" name="research 3" required>
                                 </div>
                             </div>
                         </div>
@@ -105,10 +74,17 @@
                     </div>
                 </div>
                 <div class="kt-portlet__body">
-                    <b>
-                        University is also offering Hostel and Pick & Drop Facility.
-                        Choose the option if you want to avail the service. If Not Skip this step and move next.
-                    </b>
+                    <ul>
+                        <li>
+                            You can mention your research field interests in this form.
+                        </li>
+                        <li>
+                            Prioritize your fields of interest in which you want to do research.
+                        </li>
+                        <li>
+                            Skip this step if you are not sure.
+                        </li>
+                    </ul>
                 </div>
                 <div class="kt-portlet__foot">
                     <div class="row">
@@ -123,7 +99,7 @@
         </div>
         <!--end:Help Center-->
     </div>
-    <!--end::other detail-->
+    <!--end::Research Interest -->
     <!-- End Form -->
 </div>
 
@@ -150,3 +126,4 @@
 </div>
 
 <!-- end:: Page -->
+ 
