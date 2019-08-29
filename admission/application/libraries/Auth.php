@@ -89,7 +89,8 @@ class Auth
             //    die();
                 return $this->setUser();
             } else {
-                return $this->failedLogin($request);
+               // return $this->failedLogin($request);
+                return false;
             }
         }
 
@@ -104,8 +105,7 @@ class Auth
      */
     protected function validate($request)
     {
-       // var_dump($request);
-        //die();
+
         //$this->CI->form_validation->set_rules('username', 'User Username', 'required');
         $this->CI->form_validation->set_rules('email', 'User Email', 'required');
         $this->CI->form_validation->set_rules('password', 'Password', 'required');
@@ -156,7 +156,8 @@ class Auth
             "loginStatus" => true
         ));
 
-        return redirect("personalinformation");
+      //  return redirect("personalinformation");
+        return true;
     }
 
     /**

@@ -1,189 +1,294 @@
- <div class="content">
-     <div class="row">
-         <div class="col-md-8 col-sm-12 col-xs-12">
-             <div class="progress mb-1">
-                 <div class="progress-bar  progress-bar-striped bg-success" style="width:10%">10%</div>
-             </div>
-         </div>
-     </div>
-     <div class="row">
-        <div class="col-md-8">
-            <div class="card card-user">
-                <div class="card-header">
-                    <h5 class="card-title">Work History</h5>
-                    <a href="" class="btn btn-primary" data-toggle="modal" data-target="#AddNew">
-                        Add New
-                    </a>
-                    <!-- Modal HTML Markup -->
-                    <div id="AddNew" data-backdrop="static" data-spy="scroll" class="modal fade">
-                        <div class="modal-dialog" role="document" style="overflow-y: scroll; max-height:85%;  margin-top: 50px; margin-bottom:50px;">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h3 class="modal-title">Enter Work Detail</h3>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                </div>
-                                <div class="modal-body">
-                                    <form role="form" method="POST" action="<?php echo base_url("workhistory")?>">
-                                        <div class="form-group">
-                                            <label class="control-label">Self Employed?</label>
-                                            <div>
-                                                Yes <input type="radio" name="selfemployed">
-                                                No <input type="radio" name="selfemployed" checked>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="control-label">Job Title</label>
-                                            <div>
-                                                <input type="text" class="form-control" name="jobtitle" id="jobtitle" required>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="control-label">Employer</label>
-                                            <div>
-                                                <input type="text" class="form-control" name="employer" id="employer" required>
-                                            </div>
-                                        </div>
-                                        <label for="control-label">From</label>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <div class="form-group">
-                                                    <input type="date" name="formdate" class="form-control" required>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="board">Currently Working?</label>
-                                            <div>
-                                                Yes <input type="radio" name="currentlyworking">
-                                                No <input type="radio" name="currentlyworking">
-                                            </div>
-                                        </div>
-                                        <label for="control-label">To</label>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <div class="form-group">
-                                                    <input type="date" name="todate" class="form-control" required>
-                                                </div>
-                                            </div >
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-9 col-sm-12 col-xs-12">
-                                                <div class="form-group">
-                                                    <label class="control-label">Address</label>
-                                                    <div>
-                                                        <textarea name="addressOrg" id="addressOrg" cols="45" rows="3" required></textarea>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="control-label">Phone</label>
-                                            <div>
-                                                <input type="text" class="form-control" name="phone" id="phone" required>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="control-label">Email</label>
-                                            <div>
-                                                <input type="email" class="form-control" name="email" id="email" required>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-9 col-sm-12 col-xs-12">
-                                                <div class="form-group">
-                                                    <label class="control-label">Job Description</label>
-                                                    <div>
-                                                        <textarea name="description" id="description" cols="45" rows="3" required></textarea>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <div>
-                                                <button type="submit" class="btn btn-success">
-                                                    Save
-                                                </button>
-                                                <button type="button" class="btn btn-ignore" data-dismiss="modal">
-                                                    Cancel
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div><!-- /.modal-content -->
-                        </div><!-- /.modal-dialog -->
-                    </div><!-- /.modal -->
-                </div>
-                <div class="card-body">
-                    <form method="post" action="<?php echo base_url("Student/work_history_submit")?>">
-                        <div class="row">
-                            <div class="col-md-12 col-sm-12 col-xs-12">
-                                <div class="form-group">
-                                    <table class="table">
-                                        <thead class="thead-light">
-                                        <tr>
-                                            <th scope="col">Title</th>
-                                            <th scope="col">organization</th>
-                                            <th scope="col">Action</th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                        <tr>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                        </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="update ml-auto mr-auto">
-                                <button type="submit" class="btn btn-primary btn-round">Skip and Move Next</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
+<!-- begin:: Subheader -->
+<div class="kt-subheader   kt-grid__item" id="kt_subheader">
+    <div class="kt-container  kt-container--fluid ">
+        <div class="kt-subheader__main">
+            <h3 class="kt-subheader__title">
+                Work History Details </h3>
+            <span class="kt-subheader__separator kt-hidden"></span>
+            <div class="kt-subheader__breadcrumbs">
+                <a href="#" class="kt-subheader__breadcrumbs-home"><i class="flaticon2-shelter"></i></a>
             </div>
         </div>
-        <div class="col-md-4">
-            <div class="card card-body">
-                <div class="author">
-                    <h5 class="title" style="color: #51CBCE;">Help Center</h5>
+    </div>
+</div>
+
+<!-- end:: Subheader -->
+
+                <!-- begin:: Content -->
+                        <div class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid">
+                            <div class="row">
+                                <div class="col-md-8 col-sm-12 col-xs-12">
+                                    <div class="kt-portlet kt-portlet--mobile">
+                                <div class="kt-portlet__head kt-portlet__head--lg">
+                                    <div class="kt-portlet__head-label">
+										<span class="kt-portlet__head-icon">
+											<i class="kt-font-brand fas fa-history"></i>
+										</span>
+                                        <h3 class="kt-portlet__head-title">
+                                            Work History
+                                        </h3>
+                                    </div>
+                                    <div class="kt-portlet__head-toolbar">
+                                        <div class="kt-portlet__head-wrapper">
+                                            <div class="kt-portlet__head-actions">
+                                                &nbsp;
+                                                <button type="button" class="btn btn-brand btn-elevate btn-icon-sm" data-toggle="modal" data-target="#kt_modal_2">
+                                                    <i class="la la-plus"></i>
+                                                    Work History
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="kt-portlet__body">
+
+                                    <!--begin::Table-->
+                                    <div class="kt-portlet">
+                                        <div class="kt-portlet__body">
+
+                                            <!--begin::Section-->
+                                            <div class="kt-section">
+                                                <div class="kt-section__content">
+                                                    <table class="table table-bordered">
+                                                        <thead>
+                                                        <tr class="text-center">
+                                                            <th>#</th>
+                                                            <th>Title</th>
+                                                            <th>Organization</th>
+                                                            <th>Action</th>
+                                                        </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                        <tr class="text-center">
+                                                            <th scope="row">1</th>
+                                                            <td>Jhon</td>
+                                                            <td>Stone</td>
+                                                            <td>
+                                                                <i class="kt-font-brand fas fa-eye pr-1"></i>
+                                                                <i class="kt-font-brand fas fa-trash-alt pr-1"></i>
+                                                                <i class="kt-font-brand fas fa-edit pl-1"></i>
+                                                            </td>
+                                                        </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+
+                                            <!--end::Section-->
+                                        </div>
+
+                                        <!--end::Form-->
+                                    </div>
+
+                                    <!--end::Table-->
+
+                                </div>
+                            </div>
+                                </div>
+
+                                <!-- Help Center-->
+                                <div class="col-md-4 col-sm-12 col-xs-12">
+                                    <div class="kt-portlet">
+                                        <div class="kt-portlet__head">
+                                            <div class="kt-portlet__head-label">
+                                                <h3 class="kt-portlet__head-title text-success">
+                                                    Help Center
+                                                </h3>
+                                            </div>
+                                        </div>
+                                        <div class="kt-portlet__body">
+                                            <ul>
+                                                <li>
+                                                    If you have job experience, enter details in this form.
+                                                </li>
+                                                <li>
+                                                    Click <b>Add New</b> to enter a new record.
+                                                </li>
+                                                <li>
+                                                    If you are still in job, then mention if your employer would allow you leave for studies or not?
+                                                </li>
+                                                <li>
+                                                    Skip this step if you are not sure.
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="kt-portlet__foot">
+                                            <div class="row">
+                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ml-auto mr-auto">
+                                                    <small><b class="text-danger">Any misuse or false attempt will result in cancellation of your application.
+                                                            You are liable to provide the information that is true to the best of your knowledge.
+                                                            Administration is not responsible for any misuse or false attempt.</b></small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--end:Help Center-->
+                            </div>
+                        </div>
+                <!-- end:: Content -->
+
+            </div>
+
+            <!-- begin:: Footer -->
+            <div class="kt-footer  kt-grid__item kt-grid kt-grid--desktop kt-grid--ver-desktop" id="kt_footer">
+                <div class="kt-container  kt-container--fluid ">
+                    <div class="kt-footer__copyright">
+                        2019&nbsp;&copy;&nbsp;<a href="http://keenthemes.com/metronic" target="_blank" class="kt-link">Keenthemes</a>
+                    </div>
+                    <div class="kt-footer__menu">
+                        <a href="http://keenthemes.com/metronic" target="_blank" class="kt-footer__menu-link kt-link">About</a>
+                        <a href="http://keenthemes.com/metronic" target="_blank" class="kt-footer__menu-link kt-link">Team</a>
+                        <a href="http://keenthemes.com/metronic" target="_blank" class="kt-footer__menu-link kt-link">Contact</a>
+                    </div>
                 </div>
-                <div class="card-body">
-                    <ul>
-                        <li>
-                            If you have job experience, enter details in this form.
-                        </li>
-                        <li>
-                            Click <b>Add New</b> to enter a new record.
-                        </li>
-                        <li>
-                            If you are still in job, then mention if your employer would allow you leave for studies or not?
-                        </li>
-                        <li>
-                            Skip this step if you are not sure.
-                        </li>
-                    </ul>
-                </div>
-                <div class="card-footer">
-                    <hr>
-                    <div class="button-container">
-                        <div class="row">
-                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ml-auto mr-auto">
-                                <small><b>Any misuse or false attempt will result in cancellation of your application.
-                                        You are liable to provide the information that is true to the best of your knowledge.
-                                        Administration is not responsible for any misuse or false attempt.</b></small>
+            </div>
+
+            <!-- end:: Footer -->
+        </div>
+    </div>
+</div>
+
+<!--begin::Modal-->
+<div class="modal fade" id="kt_modal_2" tabindex="-1" role="dialog" data-backdrop="static" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Add Work Details</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="kt-scroll" data-scroll="true" data-height="500">
+                    <form class="kt-form" role="form" method="POST" action="<?php echo base_url("workhistory")?>">
+                        <div class="kt-portlet__body">
+                            <div class="form-group">
+                                <label class="control-label">Self Employed?</label>
+                                <div class="form-group">
+                                    <label class="kt-radio kt-radio--success">
+                                        Yes <input type="radio" name="selfemployed">
+                                        <span></span>
+                                    </label>
+                                    <label class="kt-radio kt-radio--danger">
+                                        No <input type="radio" name="selfemployed" checked>
+                                        <span></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-9 col-sm-12 col-xs-12">
+                                    <div class="form-group">
+                                        <label class="control-label">Job Title</label>
+                                        <div>
+                                            <input type="text" class="form-control" name="jobtitle" required>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-9 col-sm-12 col-xs-12">
+                                    <div class="form-group">
+                                <label class="control-label">Employer</label>
+                                <div>
+                                    <input type="text" class="form-control" name="employer" id="employer" required>
+                                </div>
+                            </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-9 col-sm-12 col-xs-12">
+                                    <div class="form-group">
+                                        <label for="control-label">From</label>
+                                        <div class="input-group date">
+                                            <input type="text" class="form-control" name="formdate" placeholder="Select Job Start Date" id="kt_datepicker_2" required>
+                                            <div class="input-group-append">
+                                                <span class="input-group-text">
+                                                    <i class="la la-calendar-check-o"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="board">Currently Working?</label>
+                                <div class="form-group">
+                                    <label class="kt-radio kt-radio--success">
+                                        Yes <input type="radio" name="currentlyworking">
+                                        <span></span>
+                                    </label>
+                                    <label class="kt-radio kt-radio--danger">
+                                        No <input type="radio" name="currentlyworking" checked>
+                                        <span></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-9 col-sm-12 col-xs-12">
+                                    <div class="form-group">
+                                        <label for="control-label">To</label>
+                                        <div class="input-group date">
+                                            <input type="text" class="form-control" name="todate" placeholder="Select Job End Date" id="kt_datepicker_2" required>
+                                            <div class="input-group-append">
+                                                <span class="input-group-text">
+                                                    <i class="la la-calendar-check-o"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div >
+                            </div>
+                            <div class="row">
+                                <div class="col-md-9 col-sm-12 col-xs-12">
+                                    <div class="form-group">
+                                        <label class="exampleTextarea">Address</label>
+                                        <textarea class="form-control" name="addressOrg" id="exampleTextarea" rows="3" required></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-9 col-sm-12 col-xs-12">
+                                    <div class="form-group">
+                                        <label class="control-label">Phone</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text">
+                                                    <i class="fas fa-phone"></i>
+                                                </span>
+                                            </div>
+                                            <input type="text" class="form-control" name="phone" required>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-9 col-sm-12 col-xs-12">
+                                    <div class="form-group">
+                                        <label class="control-label">Email</label>
+                                        <input type="email" class="form-control" name="email" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-9 col-sm-12 col-xs-12">
+                                    <div class="form-group">
+                                        <label class="control-label">Job Description</label>
+                                        <div>
+                                            <textarea class="form-control" name="description" rows="3" required></textarea>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Save changes</button>
+                    </div>
+                </form>
         </div>
-     </div>
- </div>
+    </div>
+</div>
+
+<!--end::Modal-->

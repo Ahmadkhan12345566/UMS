@@ -30,7 +30,7 @@ class User extends CI_Controller {
     public  function  viewLoad($page ,$data=null){
         $this->load->view('inc/header');
         $this->load->view('inc/bssidebar');
-        $this->load->view('inc/navbar');
+        //$this->load->view('inc/navbar');
         $this->load->view($page,$data);
         $this->load->view('inc/footer');
     }
@@ -41,7 +41,8 @@ class User extends CI_Controller {
 
 
         if ($this->input->post()){
-            $_POST['user_id']=$this->auth->userID();
+            $_POST['user_id']='1';
+//                $this->auth->userID();
             $this->Crud_model->insert('personal_information', $_POST);
             //todo: update pifo status
             $data["pinformation"]=true;
@@ -68,7 +69,7 @@ class User extends CI_Controller {
             $permanentaddress["city_id"]= $_POST['pcity_id'];
             $permanentaddress["phone"]= $_POST['pphone'];
             $permanentaddress["address_type_id"]= 1;
-            $permanentaddress['user_id']="1";
+            $permanentaddress['user_id']=$this->auth->userID();
 
             $this->Crud_model->insert('address', $permanentaddress);
 
@@ -80,7 +81,7 @@ class User extends CI_Controller {
             $mailingaddress["city_id"]= $_POST['mcity_id'];
             $mailingaddress["phone"]= $_POST['mphone'];
             $mailingaddress["address_type_id"]= 1;
-            $mailingaddress['user_id']="1";
+            $mailingaddress['user_id']=$this->auth->userID();
 
             $this->Crud_model->insert('address', $mailingaddress);
 
@@ -92,7 +93,7 @@ class User extends CI_Controller {
             $guardianaddress["city_id"]= $_POST['gcity_id'];
             $guardianaddress["phone"]= $_POST['mphone'];
             $guardianaddress["address_type_id"]= 1;
-            $guardianaddress['user_id']="1";
+            $guardianaddress['user_id']=$this->auth->userID();
 
             $this->Crud_model->insert('address', $guardianaddress);
 
@@ -113,7 +114,7 @@ class User extends CI_Controller {
     public function photo_upload(){
 
         if ($this->input->post()){
-            $_POST['user_id']="1";
+            $_POST['user_id']=$this->auth->userID();
             $this->Crud_model->insert('photo_upload', $_POST);
 
             // Todo: Photo status
@@ -128,21 +129,26 @@ class User extends CI_Controller {
     public function education_detail(){
 
         if ($data=$this->input->post()){
+            $_POST['user_id']='1';
+//                $this->auth->userID();
+            $this->Crud_model->insert('education_details', $_POST);
+            var_dump($data);
+            die();
+//            var_dump("I'm Here!");
+//            die();
 
-         //var_dump($data["submit"]);
-         //die();
-         if($data["submit"] == "matric"){
-             $this->eduMatric_detail($_POST);
-         }
-         if ($data["submit"] == "intermediate"){
-            $this->eduintermediate_detail($_POST);
-         }
-         if ($data["submit"] == "fourteenyears" ){
-             $this->fourteenyearsEdu_detail($_POST);
-         }
-         if ($data["submit"] == "16 Years"){
-             $this->SixteenYearEdu_Detail($_POST);
-         }
+//         if($data["submit"] == "matric"){
+//             $this->eduMatric_detail($_POST);
+//         }
+//         if ($data["submit"] == "intermediate"){
+//            $this->eduintermediate_detail($_POST);
+//         }
+//         if ($data["submit"] == "fourteenyears" ){
+//             $this->fourteenyearsEdu_detail($_POST);
+//         }
+//         if ($data["submit"] == "16 Years"){
+//             $this->SixteenYearEdu_Detail($_POST);
+//         }
         }
         else{
             $data["education_levels"]= $this->Crud_model->get_all('education_levels');
@@ -158,7 +164,7 @@ class User extends CI_Controller {
 
         if ($this->input->post()){
             unset($_POST["submit"]);
-            $_POST['user_id']=4;
+            $_POST['user_id']=$this->auth->userID();
             $this->Crud_model->insert('education_details', $_POST);
 
             // Todo: Education Details Status
@@ -179,7 +185,7 @@ class User extends CI_Controller {
 
         if ($this->input->post()){
             unset($_POST["submit"]);
-            $_POST['user_id']=4;
+            $_POST['user_id']=$this->auth->userID();
             $this->Crud_model->insert('education_details', $_POST);
 
             // Todo: Education Details Status
@@ -199,7 +205,7 @@ class User extends CI_Controller {
 
         if ($this->input->post()){
             unset($_POST["submit"]);
-            $_POST['user_id']=4;
+            $_POST['user_id']=$this->auth->userID();
             $this->Crud_model->insert('education_details', $_POST);
 
             // Todo: Education Details Status
@@ -219,7 +225,7 @@ class User extends CI_Controller {
 
         if ($this->input->post()){
             unset($_POST["submit"]);
-            $_POST['user_id']=4;
+            $_POST['user_id']=$this->auth->userID();
             $this->Crud_model->insert('education_details', $_POST);
 
             // Todo: Education Details Status
@@ -234,7 +240,7 @@ class User extends CI_Controller {
     public function nts_detail(){
 
         if ($this->input->post()){
-            $_POST['user_id']="1";
+            $_POST['user_id']=$this->auth->userID();
             $this->Crud_model->insert('nts_details', $_POST);
 
             // Todo: NTS Status
@@ -251,7 +257,7 @@ class User extends CI_Controller {
         if ($this->input->post()){
             foreach ($_POST['program'] as $item){
                 $program=array();
-                $program["user_id"]=1;
+                $program["user_id"]=$this->auth->userID();
                 $program["degree_id"]=$item;
                 $this->Crud_model->insert('program_choices', $program);
             };
@@ -270,7 +276,7 @@ class User extends CI_Controller {
     public function work_history(){
 
         if ($this->input->post()){
-            $_POST['user_id']="1";
+            $_POST['user_id']=$this->auth->userID();
             $this->Crud_model->insert('work_history', $_POST);
 
             // Todo: Work History Status
@@ -285,7 +291,7 @@ class User extends CI_Controller {
     public function work_history_submit(){
 
         if ($data=$this->input->post()){
-            $_POST['user_id']="4";
+            $_POST['user_id']=$this->auth->userID();
             $this->Crud_model->insert('work_history', $_POST);
         }
     }
@@ -293,7 +299,7 @@ class User extends CI_Controller {
     public function fund_detail(){
 
         if ($this->input->post()){
-            $_POST['user_id']="1";
+            $_POST['user_id']=$this->auth->userID();
             $this->Crud_model->insert('fund_details', $_POST);
 
             // Todo: Fund Details Status
@@ -308,7 +314,7 @@ class User extends CI_Controller {
     public function publication_details(){
 
         if ($this->input->post()){
-            $_POST['user_id']="1";
+            $_POST['user_id']=$this->auth->userID();
             $this->Crud_model->insert('publication_details', $_POST);
 
             // Todo: Publication Details Status
@@ -334,7 +340,7 @@ class User extends CI_Controller {
             foreach ($_POST['research'] as $item){
                 $research=array();
                 $research["research"]=$item;
-                $research['user_id']="1";
+                $research['user_id']=$this->auth->userID();
                 $this->Crud_model->insert('research_interests', $research);
             }
 
@@ -350,7 +356,7 @@ class User extends CI_Controller {
     public function documents_upload(){
 
         if ($this->input->post()){
-            $_POST['user_id']="1";
+            $_POST['user_id']=$this->auth->userID();
             $this->Crud_model->insert('documents_upload', $_POST);
 
             // Todo: Documents Upload Status
@@ -369,13 +375,13 @@ class User extends CI_Controller {
              $otherdetails=array();
              $otherdetails['seats']=$_POST['seats'];
              $otherdetails['transport']=$_POST['transport'];
-             $otherdetails['user_id']="1";
+             $otherdetails['user_id']=$this->auth->userID();
              $this->Crud_model->insert('other_details', $otherdetails);
 
             // Advertisement out
              $advertisementout=array();
              $advertisementout['advertisement_id']=$_POST['advertisement_id'];
-             $advertisementout['user_id']="1";
+             $advertisementout['user_id']=$this->auth->userID();
 
              $this->Crud_model->insert('advertisement_out', $advertisementout);
 
@@ -393,7 +399,7 @@ class User extends CI_Controller {
     public function confirm_fee(){
 
         if ($this->input->post()){
-            $_POST['user_id']="1";
+            $_POST['user_id']=$this->auth->userID();
             $this->Crud_model->insert('confirm_fee', $_POST);
 
             // Todo: Confirm Fee Status
@@ -412,6 +418,8 @@ class User extends CI_Controller {
             // Todo: Submit Application Status
             $data["subapplication"]= true;
             $this->Crud_model->update("admission_process_status","1", $data);
+
+            $this->viewLoad('submitapplication');
         }
     }
 
@@ -430,8 +438,8 @@ class User extends CI_Controller {
         if ( ! $this->upload->do_upload('studentphoto'))
         {
             $error = array('error' => $this->upload->display_errors());
-            var_dump($error);
-            die();
+//            var_dump($error);
+//            die();
             $this->viewLoad('photoupload', $error);
         }
         else
