@@ -42,35 +42,46 @@
                 </div>
                 <div class="kt-portlet__body">
 
-                    <!--begin: Datatable -->
-                    <table class="table table-striped- table-bordered table-hover table-checkable" id="kt_table_1">
-                        <thead>
-                        <!--                                <tr>-->
-                        <!--                                    <th colspan="2">Order Information</th>-->
-                        <!--                                    <th colspan="3">Shipping Information</th>-->
-                        <!--                                    <th colspan="3">Agent Information</th>-->
-                        <!--                                    <th colspan="3">Stats</th>-->
-                        <!--                                </tr>-->
-                        <tr>
-                            <th>Title</th>
-                            <th>Organization</th>
-                            <th>Status</th>
-                            <th>Type</th>
-                            <th>Actions</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>61715-075</td>
-                            <td>3</td>
-                            <td>2</td>
-                            <td nowrap></td>
-                        </tr>
-                        </tbody>
-                    </table>
+                    <!--begin::Portlet-->
+                    <div class="kt-portlet">
+                        <div class="kt-portlet__body">
 
-                    <!--end: Datatable -->
+                            <!--begin::Section-->
+                            <div class="kt-section">
+                                <div class="kt-section__content">
+                                    <table class="table table-bordered">
+                                        <thead>
+                                        <tr class="text-center">
+                                            <th>#</th>
+                                            <th>Title</th>
+                                            <th>Organization</th>
+                                            <th>Action</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr class="text-center">
+                                            <th scope="row">1</th>
+                                            <td>Jhon</td>
+                                            <td>Stone</td>
+                                            <td>
+                                                <i class="kt-font-brand fas fa-eye pr-1"></i>
+                                                <i class="kt-font-brand fas fa-trash-alt pr-1"></i>
+                                                <i class="kt-font-brand fas fa-edit pl-1"></i>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <!--end::Section-->
+                        </div>
+
+                        <!--end::Form-->
+                    </div>
+
+                    <!--end::Portlet-->
+
                 </div>
             </div>
         </div>
@@ -160,7 +171,7 @@
                                 <div class="col-md-9 col-sm-12 col-xs-12">
                                     <div class="form-group">
                                         <label class="control-label">Type</label>
-                                        <select name="jobtype" class="form-control" required>
+                                        <select name="jobtype" class="form-control kt-selectpicker" required>
                                             <option value="Conference">Conference</option>
                                             <option value="Journal">Journal</option>
                                         </select>
@@ -171,7 +182,7 @@
                                 <div class="col-md-9 col-sm-12 col-xs-12">
                                     <div class="form-group">
                                         <label class="control-label">Level</label>
-                                        <select name="level" class="form-control" required>
+                                        <select name="level" class="form-control kt-selectpicker" required>
                                             <option value="National">National</option>
                                             <option value="International">International</option>
                                         </select>
@@ -206,7 +217,7 @@
                                 <div class="col-md-9 col-sm-12 col-xs-12">
                                     <div class="form-group">
                                         <label for="board">Publishing Years</label>
-                                        <select name='year' class="form-control" required>
+                                        <select name='year' class="form-control kt-selectpicker" required>
                                             <option value='Years'>Years</option>
                                             <option value='1970'>1970</option>
                                             <option value='1971'>1971</option>

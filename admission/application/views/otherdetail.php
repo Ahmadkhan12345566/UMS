@@ -73,7 +73,7 @@
                             <div class="col-md-6 col-sm-12 col-xs-12">
                                 <div class="form-group">
                                     <label class="form-control-label">How you Know</label>
-                                    <select name="advertisement_id" class="form-control" required>
+                                    <select name="advertisement_id" class="form-control kt-selectpicker" required>
                                         <option value="">How you come to know about us </option>
                                         <?php foreach ($advertisements as $advertisement) { ?>
                                             <option value="<?php echo $advertisement->id;?>"><?php echo $advertisement->name;?></option>

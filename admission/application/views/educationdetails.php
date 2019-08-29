@@ -104,7 +104,7 @@
                                                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
                                                                 <div class="form-group">
                                                                     <label class="form-control-label">Degree</label>
-                                                                    <select name="education_level_id" class="form-control" required>
+                                                                    <select name="education_level_id" class="form-control kt-selectpicker" required>
                                                                         <option value="">Select Degree</option>
                                                                         <?php foreach ($education_levels as $education_level){?>
                                                                             <option value="<?php echo $education_level->id;?>"><?php echo $education_level->name;?></option>
@@ -116,7 +116,7 @@
                                                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
                                                                 <div class="form-group">
                                                                     <label class="form-control-label">Years</label>
-                                                                    <select name='passingyears' class="form-control" required>
+                                                                    <select name='passingyears' class="form-control kt-selectpicker" required>
                                                                         <option value=''>Years</option>
                                                                         <option value=2019'>2019</option>
                                                                         <option value='2018'>2018</option>
@@ -134,7 +134,7 @@
                                                             <div class="col-xl-6">
                                                                 <div class="form-group">
                                                                     <label>Board</label>
-                                                                    <select name="board_id" class="form-control" required>
+                                                                    <select name="board_id" class="form-control kt-selectpicker" required>
                                                                         <option value="">Select Board / University</option>
                                                                         <?php foreach ($boards as $board){?>
                                                                             <option value="<?php echo $board->id;?>"><?php echo $board->boardname;?></option>
@@ -146,7 +146,7 @@
                                                             <div class="col-xl-6">
                                                                 <div class="form-group">
                                                                     <label>Subject</label>
-                                                                    <select name="degree_id" class="form-control" required>
+                                                                    <select name="degree_id" class="form-control kt-selectpicker" required>
                                                                         <option value="">Select Subject</option>
                                                                         <?php foreach ($degrees as $degree){?>
                                                                             <option value="<?php echo $degree->id;?>"><?php echo $degree->name;?></option>
@@ -186,7 +186,7 @@
                                                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
                                                                 <div class="form-group">
                                                                     <label>Degree</label>
-                                                                    <select name="education_level_id" class="form-control" required>
+                                                                    <select name="education_level_id" class="form-control kt-selectpicker" required>
                                                                         <option value="">Select Degree</option>
                                                                         <?php foreach ($education_levels as $education_level){?>
                                                                             <option value="<?php echo $education_level->id; ?>"><?php echo $education_level->name; ?></option>
@@ -198,7 +198,7 @@
                                                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
                                                                 <div class="form-group">
                                                                     <label>Years</label>
-                                                                    <select name="passingyears" class="form-control" required>
+                                                                    <select name="passingyears" class="form-control kt-selectpicker" required>
                                                                         <option value=''>Years</option>
                                                                         <option value=2019'>2019</option>
                                                                         <option value='2018'>2018</option>
@@ -216,7 +216,7 @@
                                                             <div class="col-xl-6">
                                                                 <div class="form-group">
                                                                     <label>Board</label>
-                                                                    <select name="board_id" class="form-control" required>
+                                                                    <select name="board_id" class="form-control kt-selectpicker" required>
                                                                         <option value="">Select Board / University</option>
                                                                         <?php foreach ($boards as $board){?>
                                                                             <option value="<?php echo $board->id; ?>"><?php echo $board->boardname; ?></option>
@@ -228,7 +228,7 @@
                                                             <div class="col-xl-6">
                                                                 <div class="form-group">
                                                                     <label>Subject</label>
-                                                                    <select name="degree_id" class="form-control" required>
+                                                                    <select name="degree_id" class="form-control kt-selectpicker" required>
                                                                         <option value="">Select Subject</option>
                                                                         <?php foreach ($degrees as $degree){?>
                                                                             <option value="<?php echo $degree->id;?>"><?php echo $degree->name;?></option>
@@ -268,7 +268,7 @@
                                                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
                                                                 <div class="form-group">
                                                                     <label>Degree</label>
-                                                                    <select name="education_level_id" class="form-control" required>
+                                                                    <select name="education_level_id" class="form-control kt-selectpicker" required>
                                                                         <option value="">Select Degree</option>
                                                                         <?php foreach ($education_levels as $education_level){?>
                                                                             <option value="<?php echo $education_level->id; ?>"><?php echo $education_level->name; ?></option>
@@ -280,7 +280,7 @@
                                                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
                                                                 <div class="form-group">
                                                                     <label>Years</label>
-                                                                    <select name="passingyears" class="form-control" required>
+                                                                    <select name="passingyears" class="form-control kt-selectpicker" required>
                                                                         <option value=''>Years</option>
                                                                         <option value=2019'>2019</option>
                                                                         <option value='2018'>2018</option>
@@ -298,7 +298,7 @@
                                                             <div class="col-xl-6">
                                                                 <div class="form-group">
                                                                     <label>Board</label>
-                                                                    <select name="board_id" class="form-control" required>
+                                                                    <select name="board_id" class="form-control kt-selectpicker" required>
                                                                         <option value="">Select Board / University</option>
                                                                         <?php foreach ($boards as $board){?>
                                                                             <option value="<?php echo $board->id; ?>"><?php echo $board->boardname; ?></option>
@@ -310,7 +310,7 @@
                                                             <div class="col-xl-6">
                                                                 <div class="form-group">
                                                                     <label>Subject</label>
-                                                                    <select name="degree_id" class="form-control" required>
+                                                                    <select name="degree_id" class="form-control kt-selectpicker" required>
                                                                         <option value="">Select Subject</option>
                                                                         <?php foreach ($degrees as $degree){?>
                                                                             <option value="<?php echo $degree->id;?>"><?php echo $degree->name;?></option>
@@ -357,7 +357,7 @@
                                                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
                                                                 <div class="form-group">
                                                                     <label class="control-label">Years</label>
-                                                                    <select name="passingyears" class="form-control" required>
+                                                                    <select name="passingyears" class="form-control kt-selectpicker" required>
                                                                         <option value=''>Years</option>
                                                                         <option value='2019'>2019</option>
                                                                         <option value='2018'>2018</option>
@@ -408,7 +408,7 @@
                                                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
                                                                 <div class="form-group">
                                                                     <label for="board">University</label>
-                                                                    <select name="board_id" class="form-control" required>
+                                                                    <select name="board_id" class="form-control kt-selectpicker" required>
                                                                         <option value="">Select University</option>
                                                                         <?php foreach ($boards as $board) {?>
                                                                             <option value="<?php echo $board->id;?>"><?php echo $board->boardname;?></option>
@@ -514,11 +514,11 @@
                                                     <div class="btn btn-secondary btn-md btn-tall btn-wide kt-font-bold kt-font-transform-u" data-ktwizard-type="action-prev">
                                                         Previous
                                                     </div>
+                                                    <button type="submit" class="btn btn-success btn-md btn-tall btn-wide kt-font-bold kt-font-transform-u" data-ktwizard-type="action-submit">
+                                                        Submit
+                                                    </button>
                                                     <div class="btn btn-brand btn-md btn-tall btn-wide kt-font-bold kt-font-transform-u" data-ktwizard-type="action-next">
                                                         Next Step
-                                                    </div>
-                                                    <div class="btn btn-success btn-md btn-tall btn-wide kt-font-bold kt-font-transform-u" data-ktwizard-type="action-submit">
-                                                        Submit
                                                     </div>
                                                 </div>
 

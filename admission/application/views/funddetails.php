@@ -29,7 +29,7 @@
                 </div>
 
                 <!--begin::Form-->
-                <form method="post" action="<?php echo base_url('otherdetail')?>" class="kt-form">
+                <form method="post" action="<?php echo base_url('funddetails')?>" class="kt-form">
                     <div class="kt-portlet__body">
                         <div class="row">
                             <div class="col-md-3 col-sm-6 col-xs-6">

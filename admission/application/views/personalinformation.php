@@ -29,7 +29,7 @@
                                 </div>
 
                                 <!--begin::Form-->
-                                <form method="post" action="<?php echo base_url("personalinformation")?>" class="kt-form" id="kt_form_2">
+                                <form method="post" action="<?php echo base_url("personalinformation")?>" class="kt-form" >
                                     <div class="kt-portlet__body">
                                         <div class="row">
                                             <div class="col-md-6 col-sm-12 col-xs-12">
@@ -78,7 +78,7 @@
                                         <div class="row">
                                             <div class="col-md-6 col-sm-12 col-xs-12">
                                                 <label for="exampleSelect2">Country</label>
-                                                <select name="country_id" class="form-control" id="country" required>
+                                                <select name="country_id" class="form-control kt-selectpicker" id="country" required>
                                                     <option value="">Select Country</option>
                                                     <?php  foreach ($countries as $country){ ?>
                                                         <option value="<?php  echo  $country->id;?>"><?php echo $country->name;?></option>
@@ -88,7 +88,7 @@
                                             <div class="col-md-6 col-sm-12 col-xs-12">
                                                 <div class="form-group">
                                                     <label>Domicile</label>
-                                                    <select name='domicile_id' id='Domicile' class="form-control" required>
+                                                    <select name='domicile_id' class="form-control kt-selectpicker" required>
                                                         <option value="">Select Domicile</option>
                                                         <?php foreach ($domiciles as $domicile){?>
                                                             <option value="<?php echo $domicile->id;?>"><?php echo $domicile->name;?></option>
@@ -101,7 +101,7 @@
                                             <div class="col-md-6 col-sm-12 col-xs-12">
                                                 <div class="form-group">
                                                     <label>Gender</label>
-                                                    <select name='gender' id='gender' class="form-control" required>
+                                                    <select name='gender' class="form-control kt-selectpicker" required>
                                                         <option value="">Select Gender</option>
                                                         <option value="Male">Male</option>
                                                         <option value="Female">Female</option>

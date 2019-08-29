@@ -42,35 +42,46 @@
                                 </div>
                                 <div class="kt-portlet__body">
 
-                                    <!--begin: Datatable -->
-                                    <table class="table table-striped- table-bordered table-hover table-checkable" id="kt_table_1">
-                                        <thead>
-                                        <!--                                <tr>-->
-                                        <!--                                    <th colspan="2">Order Information</th>-->
-                                        <!--                                    <th colspan="3">Shipping Information</th>-->
-                                        <!--                                    <th colspan="3">Agent Information</th>-->
-                                        <!--                                    <th colspan="3">Stats</th>-->
-                                        <!--                                </tr>-->
-                                        <tr>
-                                            <th>Title</th>
-                                            <th>Organization</th>
-                                            <th>Status</th>
-                                            <th>Type</th>
-                                            <th>Actions</th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>61715-075</td>
-                                            <td>3</td>
-                                            <td>2</td>
-                                            <td nowrap></td>
-                                        </tr>
-                                        </tbody>
-                                    </table>
+                                    <!--begin::Table-->
+                                    <div class="kt-portlet">
+                                        <div class="kt-portlet__body">
 
-                                    <!--end: Datatable -->
+                                            <!--begin::Section-->
+                                            <div class="kt-section">
+                                                <div class="kt-section__content">
+                                                    <table class="table table-bordered">
+                                                        <thead>
+                                                        <tr class="text-center">
+                                                            <th>#</th>
+                                                            <th>Title</th>
+                                                            <th>Organization</th>
+                                                            <th>Action</th>
+                                                        </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                        <tr class="text-center">
+                                                            <th scope="row">1</th>
+                                                            <td>Jhon</td>
+                                                            <td>Stone</td>
+                                                            <td>
+                                                                <i class="kt-font-brand fas fa-eye pr-1"></i>
+                                                                <i class="kt-font-brand fas fa-trash-alt pr-1"></i>
+                                                                <i class="kt-font-brand fas fa-edit pl-1"></i>
+                                                            </td>
+                                                        </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+
+                                            <!--end::Section-->
+                                        </div>
+
+                                        <!--end::Form-->
+                                    </div>
+
+                                    <!--end::Table-->
+
                                 </div>
                             </div>
                                 </div>

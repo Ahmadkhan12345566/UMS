@@ -115,7 +115,7 @@
                                                 <div class="col-xl-6">
                                                     <div class="form-group">
                                                         <label>City:</label>
-                                                        <select name="pcity_id"  class="form-control" required>
+                                                        <select name="pcity_id"  class="form-control kt-selectpicker" required>
                                                         <option value="">Select City</option>
                                                         <?php foreach($cities as $city){?>
                                                             <option value="<?php echo $city->id?>"><?php echo $city->name?></option>
@@ -156,7 +156,7 @@
                                                 <div class="col-xl-6">
                                                     <div class="form-group">
                                                         <label>City:</label>
-                                                        <select name="mcity_id" class="form-control" required>
+                                                        <select name="mcity_id" class="form-control kt-selectpicker" required>
                                                             <option value="">Select City</option>
                                                             <?php foreach($cities as $city){?>
                                                                 <option value="<?php echo $city->id?>"><?php echo $city->name?></option>
@@ -197,7 +197,7 @@
                                                 <div class="col-xl-6">
                                                     <div class="form-group">
                                                         <label>City:</label>
-                                                        <select name='gcity_id' id='Guardiancity' class="form-control" required>
+                                                        <select name='gcity_id' class="form-control kt-selectpicker" required>
                                                             <option value="">Select City</option>
                                                             <?php foreach($cities as $city){?>
                                                                 <option value="<?php echo $city->id?>"><?php echo $city->name?></option>
@@ -268,11 +268,11 @@
                                     <div class="btn btn-secondary btn-md btn-tall btn-wide kt-font-bold kt-font-transform-u" data-ktwizard-type="action-prev">
                                         Previous
                                     </div>
+                                    <button type="submit" class="btn btn-success btn-md btn-tall btn-wide kt-font-bold kt-font-transform-u" data-ktwizard-type="action-submit">
+                                        Submit
+                                    </button>
                                     <div class="btn btn-brand btn-md btn-tall btn-wide kt-font-bold kt-font-transform-u" data-ktwizard-type="action-next">
                                         Next Step
-                                    </div>
-                                    <div class="btn btn-success btn-md btn-tall btn-wide kt-font-bold kt-font-transform-u" data-ktwizard-type="action-submit">
-                                        Submit
                                     </div>
                                 </div>
 

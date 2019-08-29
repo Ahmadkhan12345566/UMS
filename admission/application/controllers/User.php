@@ -41,7 +41,8 @@ class User extends CI_Controller {
 
 
         if ($this->input->post()){
-            $_POST['user_id']=$this->auth->userID();
+            $_POST['user_id']='1';
+//                $this->auth->userID();
             $this->Crud_model->insert('personal_information', $_POST);
             //todo: update pifo status
             $data["pinformation"]=true;
@@ -128,21 +129,26 @@ class User extends CI_Controller {
     public function education_detail(){
 
         if ($data=$this->input->post()){
+            $_POST['user_id']='1';
+//                $this->auth->userID();
+            $this->Crud_model->insert('education_details', $_POST);
+            var_dump($data);
+            die();
+//            var_dump("I'm Here!");
+//            die();
 
-         //var_dump($data["submit"]);
-         //die();
-         if($data["submit"] == "matric"){
-             $this->eduMatric_detail($_POST);
-         }
-         if ($data["submit"] == "intermediate"){
-            $this->eduintermediate_detail($_POST);
-         }
-         if ($data["submit"] == "fourteenyears" ){
-             $this->fourteenyearsEdu_detail($_POST);
-         }
-         if ($data["submit"] == "16 Years"){
-             $this->SixteenYearEdu_Detail($_POST);
-         }
+//         if($data["submit"] == "matric"){
+//             $this->eduMatric_detail($_POST);
+//         }
+//         if ($data["submit"] == "intermediate"){
+//            $this->eduintermediate_detail($_POST);
+//         }
+//         if ($data["submit"] == "fourteenyears" ){
+//             $this->fourteenyearsEdu_detail($_POST);
+//         }
+//         if ($data["submit"] == "16 Years"){
+//             $this->SixteenYearEdu_Detail($_POST);
+//         }
         }
         else{
             $data["education_levels"]= $this->Crud_model->get_all('education_levels');

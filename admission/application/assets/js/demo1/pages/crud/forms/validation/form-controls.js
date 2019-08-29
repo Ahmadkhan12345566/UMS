@@ -131,7 +131,7 @@ var KTFormControls = function () {
             },
 
             submitHandler: function (form) {
-                //form[0].submit(); // submit the form
+                form[0].submit(); // submit the form
                 swal.fire({
                     "title": "", 
                     "text": "Form validation passed. All good!", 
