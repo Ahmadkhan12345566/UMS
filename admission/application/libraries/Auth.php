@@ -89,8 +89,8 @@ class Auth
             //    die();
                 return $this->setUser();
             } else {
-               // return $this->failedLogin($request);
-                return false;
+                return $this->failedLogin($request);
+               // return false;
             }
         }
 
@@ -156,8 +156,8 @@ class Auth
             "loginStatus" => true
         ));
 
-      //  return redirect("personalinformation");
-        return true;
+      return redirect("personalinformation");
+       // return true;
     }
 
     /**

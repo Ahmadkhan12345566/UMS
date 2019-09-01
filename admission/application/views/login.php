@@ -10,11 +10,11 @@
                             <img src="./assets/media/logos/logo-5.png">
                         </a>
                     </div>
-                    <div class="kt-login__signin">
+                    <div class="">
                         <div class="kt-login__head">
                             <h3 class="kt-login__title">Sign In To User</h3>
                         </div>
-                        <form class="kt-form" method="post">
+                        <form class="kt-form" method="post" action="<?php echo base_url("Login")?>">
                             <div class="input-group">
                                 <input class="form-control" type="email" placeholder="Email" name="email" required>
                             </div>
@@ -33,7 +33,7 @@
                                 </div>
                             </div>
                             <div class="kt-login__actions">
-                                <button id="kt_login_signin_submit" type="submit" class="btn btn-brand btn-elevate kt-login__btn-primary">Log In</button>
+                                <button id="" type="submit" class="btn btn-brand btn-elevate kt-login__btn-primary">Log In</button>
                             </div>
                         </form>
                     </div>

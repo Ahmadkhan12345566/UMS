@@ -24,7 +24,7 @@ class Login extends CI_Controller {
 
         if($_POST) {
             $data = $this->auth->login($_POST);
-          echo $data;
+
         }
 
        return $this->auth->showLoginForm($data);
