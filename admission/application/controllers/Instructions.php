@@ -29,9 +29,7 @@ class Instructions extends CI_Controller {
 
     public function signup()
     {
-        $this->load->view('index');
-        if ($data=$this->input->post()){
-        }
+        $this->load->view('signup');
     }
     public  function  viewLoad($page){
         $this->load->view('inc/header');
