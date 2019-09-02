@@ -44,26 +44,9 @@ class Signup extends CI_Controller {
 //            }
         }
         else{
-            $this->load->view('index');
+            $this->load->view('signup');
         }
     }
-
-//    public function reg_ms(){
-//
-//        if($this->input->post()){
-//            unset($_POST['submit']);
-//            $this->Crud_Model->insert('users', $_POST);
-//        }
-//        else{
-//
-//            $this->load->view('inc/header');
-//            $this->load->view('inc/mssidebar');
-//            $this->load->view('inc/navbar');
-//            $this->load->view('instruction');
-//            $this->load->view('inc/footer');
-//
-//        }
-//    }
 
 
 

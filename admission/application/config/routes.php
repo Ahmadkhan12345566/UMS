@@ -55,7 +55,7 @@ $route['translate_uri_dashes'] = FALSE;
 
 
 //todo: signup
-$route['signup'] = 'Instructions/signup';
+$route['signup'] = 'Signup/index';
 
 // todo: login
 $route['login'] = 'Instructions/login';

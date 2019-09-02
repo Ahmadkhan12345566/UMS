@@ -107,7 +107,7 @@
 									Don't have an account yet ?
 								</span>
                         &nbsp;&nbsp;
-                        <a href="javascript:;" id="kt_login_signup" class="kt-login__account-link">Sign Up!</a>
+                        <a href="<?php echo base_url()?>signup" class="kt-login__account-link">Sign Up!</a>
                     </div>
                 </div>
             </div>

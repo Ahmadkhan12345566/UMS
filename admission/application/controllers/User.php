@@ -37,16 +37,17 @@ class User extends CI_Controller {
 
     public function personal_information(){
 
-       // var_dump($this->auth->userID());
-
+        var_dump($this->auth->userID());
+    die();
 
         if ($this->input->post()){
-            $_POST['user_id']='1';
-//                $this->auth->userID();
+            $_POST['user_id']=$this->auth->userID();
             $this->Crud_model->insert('personal_information', $_POST);
-            //todo: update pifo status
+            //todo: update personal information status
             $data["pinformation"]=true;
-            $this->Crud_model->update("admission_process_status","1",$data);
+            $this->Crud_model->update("admission_process_status",$this->auth->userID(),$data);
+            var_dump($data);
+            die();
         }
         else{
             $data['countries']= $this->Crud_model->get_all("countries");
@@ -129,7 +130,7 @@ class User extends CI_Controller {
     public function education_detail(){
 
         if ($data=$this->input->post()){
-            $_POST['user_id']='1';
+            $_POST['user_id']=$this->auth->userID();
 //                $this->auth->userID();
             $this->Crud_model->insert('education_details', $_POST);
             var_dump($data);
