@@ -37,8 +37,8 @@ class User extends CI_Controller {
 
     public function personal_information(){
 
-        var_dump($this->auth->userID());
-    die();
+//        var_dump($this->auth->userID());
+//    die();
 
         if ($this->input->post()){
             $_POST['user_id']=$this->auth->userID();
@@ -100,7 +100,7 @@ class User extends CI_Controller {
 
             //Todo: Address Status
             $data["address"]= true;
-            $this->Crud_model->update("admission_process_status", "1", $data);
+            $this->Crud_model->update("admission_process_status", $this->auth->userID(), $data);
         }
         else{
             $data["cities"]= $this->Crud_model->get_all("cities");
@@ -120,7 +120,7 @@ class User extends CI_Controller {
 
             // Todo: Photo status
             $data["pupload"] = true;
-            $this->Crud_model->update("admission_process_status", "1", $data);
+            $this->Crud_model->update("admission_process_status", $this->auth->userID(), $data);
         }
         else{
             $this->viewLoad('photoupload');
@@ -155,6 +155,9 @@ class User extends CI_Controller {
             $data["education_levels"]= $this->Crud_model->get_all('education_levels');
             $data["degrees"]= $this->Crud_model->get_all('degrees');
             $data["boards"]= $this->Crud_model->get_all('boards');
+            // Todo: Education Details Status
+            $data["edetails"] = true;
+            $this->Crud_model->update("admission_process_status", $this->auth->userID(), $data);
 //            var_dump($data);
 //            die();
             $this->viewLoad('educationdetails',$data);
@@ -170,7 +173,7 @@ class User extends CI_Controller {
 
             // Todo: Education Details Status
             $data["edetails"] = true;
-            $this->Crud_model->update("admission_process_status", "1", $data);
+            $this->Crud_model->update("admission_process_status", $this->auth->userID(), $data);
 
         }
         else{
@@ -246,7 +249,7 @@ class User extends CI_Controller {
 
             // Todo: NTS Status
             $data["ntsdetails"] = true;
-            $this->Crud_model->update("admission_process_status", "1", $data);
+            $this->Crud_model->update("admission_process_status", $this->auth->userID(), $data);
         }
         else{
             $this->viewLoad('ntsdetails');
@@ -265,7 +268,7 @@ class User extends CI_Controller {
 
             // Todo: Program Choices Status
             $data["prochoices"]= true;
-            $this->Crud_model->update("admission_process_status","1", $data);
+            $this->Crud_model->update("admission_process_status",$this->auth->userID(), $data);
         }
         else{
 
@@ -282,7 +285,7 @@ class User extends CI_Controller {
 
             // Todo: Work History Status
             $data["workhistory"]= true;
-            $this->Crud_model->update("admission_process_status","1", $data);
+            $this->Crud_model->update("admission_process_status",$this->auth->userID(), $data);
         }
         else{
             $this->viewLoad('workhistory');
@@ -305,7 +308,7 @@ class User extends CI_Controller {
 
             // Todo: Fund Details Status
             $data["fdetails"]= true;
-            $this->Crud_model->update("admission_process_status","1", $data);
+            $this->Crud_model->update("admission_process_status",$this->auth->userID(), $data);
         }
         else{
             $this->viewLoad('funddetails');
@@ -320,7 +323,7 @@ class User extends CI_Controller {
 
             // Todo: Publication Details Status
             $data["pubdetails"]= true;
-            $this->Crud_model->update("admission_process_status","1", $data);
+            $this->Crud_model->update("admission_process_status",$this->auth->userID(), $data);
         }
         else{
             $this->viewLoad('publicationdetails');
@@ -347,7 +350,7 @@ class User extends CI_Controller {
 
             // Todo: Research Interest Status
             $data["rinterests"]= true;
-            $this->Crud_model->update("admission_process_status","1", $data);
+            $this->Crud_model->update("admission_process_status",$this->auth->userID(), $data);
         }
         else{
             $this->viewLoad('researchinterests');
@@ -362,7 +365,7 @@ class User extends CI_Controller {
 
             // Todo: Documents Upload Status
             $data["docupload"]= true;
-            $this->Crud_model->update("admission_process_status","1", $data);
+            $this->Crud_model->update("admission_process_status",$this->auth->userID(), $data);
         }
         else{
             $this->viewLoad('documentsupload');
@@ -388,7 +391,7 @@ class User extends CI_Controller {
 
             // Todo: Other Details Status
             $data["othdetails"]= true;
-            $this->Crud_model->update("admission_process_status","1", $data);
+            $this->Crud_model->update("admission_process_status",$this->auth->userID(), $data);
 
         }
         else{
@@ -405,7 +408,7 @@ class User extends CI_Controller {
 
             // Todo: Confirm Fee Status
             $data["confirmfee"]= true;
-            $this->Crud_model->update("admission_process_status","1", $data);
+            $this->Crud_model->update("admission_process_status",$this->auth->userID(), $data);
         }
         else{
             $this->viewLoad('confirmfee');
@@ -418,7 +421,7 @@ class User extends CI_Controller {
 
             // Todo: Submit Application Status
             $data["subapplication"]= true;
-            $this->Crud_model->update("admission_process_status","1", $data);
+            $this->Crud_model->update("admission_process_status",$this->auth->userID(), $data);
 
             $this->viewLoad('submitapplication');
         }
