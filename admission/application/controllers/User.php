@@ -131,115 +131,97 @@ class User extends CI_Controller {
 
         if ($data=$this->input->post()){
             $_POST['user_id']=$this->auth->userID();
-//                $this->auth->userID();
             $this->Crud_model->insert('education_details', $_POST);
-            var_dump($data);
-            die();
-//            var_dump("I'm Here!");
-//            die();
-
-//         if($data["submit"] == "matric"){
-//             $this->eduMatric_detail($_POST);
-//         }
-//         if ($data["submit"] == "intermediate"){
-//            $this->eduintermediate_detail($_POST);
-//         }
-//         if ($data["submit"] == "fourteenyears" ){
-//             $this->fourteenyearsEdu_detail($_POST);
-//         }
-//         if ($data["submit"] == "16 Years"){
-//             $this->SixteenYearEdu_Detail($_POST);
-//         }
         }
         else{
-            $data["education_levels"]= $this->Crud_model->get_all('education_levels');
-            $data["degrees"]= $this->Crud_model->get_all('degrees');
-            $data["boards"]= $this->Crud_model->get_all('boards');
-            // Todo: Education Details Status
-            $data["edetails"] = true;
-            $this->Crud_model->update("admission_process_status", $this->auth->userID(), $data);
+//            $data["education_levels"]= $this->Crud_model->get_all('education_levels');
+//            $data["degrees"]= $this->Crud_model->get_all('degrees');
+//            $data["boards"]= $this->Crud_model->get_all('boards');
+//            // Todo: Education Details Status
+//            $data["edetails"] = true;
+//            $this->Crud_model->update("admission_process_status", $this->auth->userID(), $data);
 //            var_dump($data);
 //            die();
-            $this->viewLoad('educationdetails',$data);
-        }
-    }
-
-    public function eduMatric_detail(){
-
-        if ($this->input->post()){
-            unset($_POST["submit"]);
-            $_POST['user_id']=$this->auth->userID();
-            $this->Crud_model->insert('education_details', $_POST);
-
-            // Todo: Education Details Status
-            $data["edetails"] = true;
-            $this->Crud_model->update("admission_process_status", $this->auth->userID(), $data);
-
-        }
-        else{
-            $data["education_levels"]= $this->Crud_model->get_all('education_levels');
-            $data["degrees"]= $this->Crud_model->get_all('degrees');
-            $data["boards"]= $this->Crud_model->get_all('boards');
-            $this->viewLoad('educationdetails', $data);
-        }
-
-    }
-
-    public function eduintermediate_detail(){
-
-        if ($this->input->post()){
-            unset($_POST["submit"]);
-            $_POST['user_id']=$this->auth->userID();
-            $this->Crud_model->insert('education_details', $_POST);
-
-            // Todo: Education Details Status
-            $data["edetails"] = true;
-            $this->Crud_model->update("admission_process_status", "1", $data);
-        }
-        else{
-
-            $data["education_levels"]= $this->Crud_model->get_all('education_levels');
-            $data["degrees"]= $this->Crud_model->get_all('degrees');
-            $data["boards"]= $this->Crud_model->get_all('boards');
-            $this->viewLoad('educationdetails', $data);
-        }
-    }
-
-    public function fourteenyearsEdu_detail(){
-
-        if ($this->input->post()){
-            unset($_POST["submit"]);
-            $_POST['user_id']=$this->auth->userID();
-            $this->Crud_model->insert('education_details', $_POST);
-
-            // Todo: Education Details Status
-            $data["edetails"] = true;
-            $this->Crud_model->update("admission_process_status", "1", $data);
-        }
-        else{
-
-            $data["education_levels"]= $this->Crud_model->get_all('education_levels');
-            $data["degrees"]= $this->Crud_model->get_all('degrees');
-            $data["boards"]= $this->Crud_model->get_all('boards');
-            $this->viewLoad('educationdetails', $data);
-        }
-    }
-
-    public function SixteenYearEdu_Detail(){
-
-        if ($this->input->post()){
-            unset($_POST["submit"]);
-            $_POST['user_id']=$this->auth->userID();
-            $this->Crud_model->insert('education_details', $_POST);
-
-            // Todo: Education Details Status
-            $data["edetails"] = true;
-            $this->Crud_model->update("admission_process_status", "1", $data);
-        }
-        else{
             $this->viewLoad('educationdetails');
         }
     }
+
+//    public function eduMatric_detail(){
+//
+//        if ($this->input->post()){
+//            unset($_POST["submit"]);
+//            $_POST['user_id']=$this->auth->userID();
+//            $this->Crud_model->insert('education_details', $_POST);
+//
+//            // Todo: Education Details Status
+//            $data["edetails"] = true;
+//            $this->Crud_model->update("admission_process_status", $this->auth->userID(), $data);
+//
+//        }
+//        else{
+//            $data["education_levels"]= $this->Crud_model->get_all('education_levels');
+//            $data["degrees"]= $this->Crud_model->get_all('degrees');
+//            $data["boards"]= $this->Crud_model->get_all('boards');
+//            $this->viewLoad('educationdetails', $data);
+//        }
+//
+//    }
+//
+//    public function eduintermediate_detail(){
+//
+//        if ($this->input->post()){
+//            unset($_POST["submit"]);
+//            $_POST['user_id']=$this->auth->userID();
+//            $this->Crud_model->insert('education_details', $_POST);
+//
+//            // Todo: Education Details Status
+//            $data["edetails"] = true;
+//            $this->Crud_model->update("admission_process_status", "1", $data);
+//        }
+//        else{
+//
+//            $data["education_levels"]= $this->Crud_model->get_all('education_levels');
+//            $data["degrees"]= $this->Crud_model->get_all('degrees');
+//            $data["boards"]= $this->Crud_model->get_all('boards');
+//            $this->viewLoad('educationdetails', $data);
+//        }
+//    }
+//
+//    public function fourteenyearsEdu_detail(){
+//
+//        if ($this->input->post()){
+//            unset($_POST["submit"]);
+//            $_POST['user_id']=$this->auth->userID();
+//            $this->Crud_model->insert('education_details', $_POST);
+//
+//            // Todo: Education Details Status
+//            $data["edetails"] = true;
+//            $this->Crud_model->update("admission_process_status", "1", $data);
+//        }
+//        else{
+//
+//            $data["education_levels"]= $this->Crud_model->get_all('education_levels');
+//            $data["degrees"]= $this->Crud_model->get_all('degrees');
+//            $data["boards"]= $this->Crud_model->get_all('boards');
+//            $this->viewLoad('educationdetails', $data);
+//        }
+//    }
+//
+//    public function SixteenYearEdu_Detail(){
+//
+//        if ($this->input->post()){
+//            unset($_POST["submit"]);
+//            $_POST['user_id']=$this->auth->userID();
+//            $this->Crud_model->insert('education_details', $_POST);
+//
+//            // Todo: Education Details Status
+//            $data["edetails"] = true;
+//            $this->Crud_model->update("admission_process_status", "1", $data);
+//        }
+//        else{
+//            $this->viewLoad('educationdetails');
+//        }
+//    }
 
     public function nts_detail(){
 
