@@ -107,20 +107,26 @@ class User extends CI_Controller {
         }
 
     }
-
+//todo:profile photo upload
     public function photo_upload(){
 
-        if ($this->input->post()){
-            $_POST['user_id']=$this->auth->userID();
-            $this->Crud_model->insert('photo_upload', $_POST);
 
-            // Todo: Photo status
-            $data["pupload"] = true;
-            $this->Crud_model->update("admission_process_status", $this->auth->userID(), $data);
-        }
-        else{
-            $this->viewLoad('photoupload');
-        }
+        if ($_FILES){
+
+            $_POST['user_id']=$this->auth->userID();
+            //$this->Crud_model->insert('photo_upload', $_POST);
+            $image = $this->do_upload('studentphoto');
+            if($image) {
+                $this->Crud_model->update_photo($this->auth->userID(), $image);
+                $this->session->set_flashdata('success', 'Photo loaded');
+                // Todo: Photo status
+                $data["pupload"] = true;
+                $this->Crud_model->update("admission_process_status", $this->auth->userID(), $data);
+            }
+            }
+
+        $this->viewLoad('photoupload');
+
     }
 
     public function education_detail(){
@@ -302,6 +308,9 @@ class User extends CI_Controller {
 
         if ($this->input->post()){
             $_POST['user_id']=$this->auth->userID();
+
+
+            //todo: upload documnets
             $this->Crud_model->insert('documents_upload', $_POST);
 
             // Todo: Documents Upload Status
@@ -368,10 +377,14 @@ class User extends CI_Controller {
         }
     }
 
-    public function do_upload()
+    public function do_upload($input_name)
     {
-//        var_dump("i am h?");
-//        die();
+        //todo:set unique name to file
+        $date = new DateTime();
+        $startdata = $date->format('YmdHis');
+        $newName = str_replace('/', '', $startdata) . $this->auth->userID();
+        $file_ext = pathinfo($_FILES[$input_name]["name"], PATHINFO_EXTENSION);
+        $config['file_name'] = $newName;
         $config['upload_path']          = './uploads/';
         $config['allowed_types']        = 'gif|jpg|png';
         //$config['max_size']             = 2048;
@@ -380,23 +393,18 @@ class User extends CI_Controller {
 
         $this->load->library('upload', $config);
 
-        if ( ! $this->upload->do_upload('studentphoto'))
+        if ( ! $this->upload->do_upload($input_name))
         {
             $error = array('error' => $this->upload->display_errors());
-//            var_dump($error);
-//            die();
-            $this->viewLoad('photoupload', $error);
+
+            return false;
+
         }
         else
         {
             $data = array('upload_data' => $this->upload->data());
-            $image = array('studentphoto'=>$data['upload_data']['full_path']);
-//            var_dump($image);
-//            die();
-            $this->Crud_model->update_photo($this->auth->userID(), $image);
-            $this->session->set_flashdata('success', 'Photo loaded');
-
-            $this->viewLoad('photoupload', 'refresh');
+            $image = array($input_name=>$data['upload_data']['full_path']);
+             return $image;
         }
     }
 
