@@ -35,7 +35,7 @@
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
                                 <div class="form-group">
                                     <label class="form-control-label">Degree</label>
-                                    <select name="education_level_id" class="form-control kt-selectpicker" required>
+                                    <select name="meducation_level_id" class="form-control kt-selectpicker" required>
                                         <option value="">Select Degree</option>
                                         <?php foreach ($education_levels as $education_level){?>
                                             <option value="<?php echo $education_level->id;?>"><?php echo $education_level->name;?></option>
@@ -47,7 +47,7 @@
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
                                 <div class="form-group">
                                     <label class="form-control-label">Years</label>
-                                    <select name='passingyears' class="form-control kt-selectpicker" required>
+                                    <select name='mpassingyears' class="form-control kt-selectpicker" required>
                                         <option value=''>Years</option>
                                         <option value=2019'>2019</option>
                                         <option value='2018'>2018</option>
@@ -65,7 +65,7 @@
                             <div class="col-xl-6">
                                 <div class="form-group">
                                     <label>Board</label>
-                                    <select name="board_id" class="form-control kt-selectpicker" required>
+                                    <select name="mboard_id" class="form-control kt-selectpicker" required>
                                         <option value="">Select Board / University</option>
                                         <?php foreach ($boards as $board){?>
                                             <option value="<?php echo $board->id;?>"><?php echo $board->boardname;?></option>
@@ -77,7 +77,7 @@
                             <div class="col-xl-6">
                                 <div class="form-group">
                                     <label>Subject</label>
-                                    <select name="degree_id" class="form-control kt-selectpicker" required>
+                                    <select name="mdegree_id" class="form-control kt-selectpicker" required>
                                         <option value="">Select Subject</option>
                                         <?php foreach ($degrees as $degree){?>
                                             <option value="<?php echo $degree->id;?>"><?php echo $degree->name;?></option>
@@ -91,14 +91,14 @@
                             <div class="col-xl-6">
                                 <div class="form-group">
                                     <label>Total Marks</label>
-                                    <input type="text" class="form-control" name="totalmarks" id="Matricminimum_marks" required>
+                                    <input type="text" class="form-control" name="mtotalmarks" id="Matricminimum_marks" required>
                                     <span class="form-text text-muted">Please enter your Total Marks.</span>
                                 </div>
                             </div>
                             <div class="col-xl-6">
                                 <div class="form-group">
                                     <label>Obtained Marks</label>
-                                    <input type="text" class="form-control" name="obtainmarks" id="MatricObtainedmarks" required>
+                                    <input type="text" class="form-control" name="mobtainmarks" id="MatricObtainedmarks" required>
                                 </div>
                             </div>
                         </div>
@@ -113,7 +113,7 @@
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
                                 <div class="form-group">
                                     <label>Degree</label>
-                                    <select name="education_level_id" class="form-control kt-selectpicker" required>
+                                    <select name="ineducation_level_id" class="form-control kt-selectpicker" required>
                                         <option value="">Select Degree</option>
                                         <?php foreach ($education_levels as $education_level){?>
                                             <option value="<?php echo $education_level->id; ?>"><?php echo $education_level->name; ?></option>
@@ -125,7 +125,7 @@
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
                                 <div class="form-group">
                                     <label>Years</label>
-                                    <select name="passingyears" class="form-control kt-selectpicker" required>
+                                    <select name="inpassingyears" class="form-control kt-selectpicker" required>
                                         <option value=''>Years</option>
                                         <option value=2019'>2019</option>
                                         <option value='2018'>2018</option>
@@ -143,7 +143,7 @@
                             <div class="col-xl-6">
                                 <div class="form-group">
                                     <label>Board</label>
-                                    <select name="board_id" class="form-control kt-selectpicker" required>
+                                    <select name="inboard_id" class="form-control kt-selectpicker" required>
                                         <option value="">Select Board / University</option>
                                         <?php foreach ($boards as $board){?>
                                             <option value="<?php echo $board->id; ?>"><?php echo $board->boardname; ?></option>
@@ -155,7 +155,7 @@
                             <div class="col-xl-6">
                                 <div class="form-group">
                                     <label>Subject</label>
-                                    <select name="degree_id" class="form-control kt-selectpicker" required>
+                                    <select name="indegree_id" class="form-control kt-selectpicker" required>
                                         <option value="">Select Subject</option>
                                         <?php foreach ($degrees as $degree){?>
                                             <option value="<?php echo $degree->id;?>"><?php echo $degree->name;?></option>
@@ -169,14 +169,14 @@
                             <div class="col-xl-6">
                                 <div class="form-group">
                                     <label>Total Marks</label>
-                                    <input type="text" class="form-control" name="totalmarks" required>
+                                    <input type="text" class="form-control" name="intotalmarks" required>
                                     <span class="form-text text-muted">Please enter your Total Marks.</span>
                                 </div>
                             </div>
                             <div class="col-xl-6">
                                 <div class="form-group">
                                     <label>Obtained Marks</label>
-                                    <input type="text" class="form-control" name="obtainmarks" required>
+                                    <input type="text" class="form-control" name="inobtainmarks" required>
                                 </div>
                             </div>
                         </div>
@@ -191,7 +191,7 @@
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
                                 <div class="form-group">
                                     <label>Degree</label>
-                                    <select name="education_level_id" class="form-control kt-selectpicker" required>
+                                    <select name="freducation_level_id" class="form-control kt-selectpicker" required>
                                         <option value="">Select Degree</option>
                                         <?php foreach ($education_levels as $education_level){?>
                                             <option value="<?php echo $education_level->id; ?>"><?php echo $education_level->name; ?></option>
@@ -203,7 +203,7 @@
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
                                 <div class="form-group">
                                     <label>Years</label>
-                                    <select name="passingyears" class="form-control kt-selectpicker" required>
+                                    <select name="frpassingyears" class="form-control kt-selectpicker" required>
                                         <option value=''>Years</option>
                                         <option value=2019'>2019</option>
                                         <option value='2018'>2018</option>
@@ -221,7 +221,7 @@
                             <div class="col-xl-6">
                                 <div class="form-group">
                                     <label>Board</label>
-                                    <select name="board_id" class="form-control kt-selectpicker" required>
+                                    <select name="frboard_id" class="form-control kt-selectpicker" required>
                                         <option value="">Select Board / University</option>
                                         <?php foreach ($boards as $board){?>
                                             <option value="<?php echo $board->id; ?>"><?php echo $board->boardname; ?></option>
@@ -233,7 +233,7 @@
                             <div class="col-xl-6">
                                 <div class="form-group">
                                     <label>Subject</label>
-                                    <select name="degree_id" class="form-control kt-selectpicker" required>
+                                    <select name="frdegree_id" class="form-control kt-selectpicker" required>
                                         <option value="">Select Subject</option>
                                         <?php foreach ($degrees as $degree){?>
                                             <option value="<?php echo $degree->id;?>"><?php echo $degree->name;?></option>
@@ -247,14 +247,14 @@
                             <div class="col-xl-6">
                                 <div class="form-group">
                                     <label>Total Marks</label>
-                                    <input type="text" class="form-control" name="totalmarks" required>
+                                    <input type="text" class="form-control" name="frtotalmarks" required>
                                     <span class="form-text text-muted">Please enter your Total Marks.</span>
                                 </div>
                             </div>
                             <div class="col-xl-6">
                                 <div class="form-group">
                                     <label>Obtained Marks</label>
-                                    <input type="text" class="form-control" name="obtainmarks" required>
+                                    <input type="text" class="form-control" name="frobtainmarks" required>
                                 </div>
                             </div>
                         </div>
