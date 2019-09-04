@@ -51,7 +51,7 @@
                 </div>
 
                 <!--begin::Form-->
-                <form method="post" action="<?php echo base_url("documentsupload")?>" class="kt-form">
+                <form method="post" action="<?php echo base_url("documentsupload")?>" class="kt-form" enctype="multipart/form-data">
                     <div class="kt-portlet">
                         <div class="kt-portlet__body">
                             <div class="kt-portlet">
@@ -68,10 +68,16 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="kt-dropzone dropzone" action="inc/api/dropzone/upload.php" id="m-dropzone-one">
-                                            <div class="kt-dropzone__msg dz-message needsclick">
-                                                <h5 class="kt-dropzone__msg-title">Drop files here or click to upload.</h5>
-                                                <span class="kt-dropzone__msg-desc">Upload only <b>SSC</b> documents file</span>
+                                        <div class="row">
+                                            <div class="col-lg-10 col-md-10 offset-1 col-sm-12 col-xs-12">
+                                                <div class="form-group">
+                                                    <label>File Browser</label>
+                                                    <div></div>
+                                                    <div class="custom-file">
+                                                        <input type="file" name="sscfile" class="custom-file-input" id="customFile" required>
+                                                        <label class="custom-file-label" for="customFile">Choose file</label>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -80,31 +86,82 @@
                             </div>
                             <div class="kt-portlet">
                                 <div class="row">
-                                <div class="col-md-12 col-sm-12 col-xs-12">
-                                    <div class="form-group">
-                                        <h4 class="form-label">HSSC / A-Level / DAE / Equivalent Document</h4>
-                                        <div class="kt-dropzone dropzone" action="inc/api/dropzone/upload.php" id="m-dropzone-one">
-                                            <div class="kt-dropzone__msg dz-message needsclick">
-                                                <h5 class="kt-dropzone__msg-title">Drop files here or click to upload.</h5>
-                                                <span class="kt-dropzone__msg-desc">Upload only <b>HSSC / A-Level / DAE</b> documents file</span>
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <div class="form-group mt-2">
+                                            <h4 class="form-label">HSSC / A-Level / DAE / Equivalent Document</h4>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-10 col-md-10 offset-1 col-sm-12 col-xs-12">
+                                                <div class="form-group">
+                                                    <label>File Browser</label>
+                                                    <div></div>
+                                                    <div class="custom-file">
+                                                        <input type="file" name="hsscfile" class="custom-file-input" id="customFile" required>
+                                                        <label class="custom-file-label" for="customFile">Choose file</label>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            </div>
                             <div class="kt-portlet">
                                 <div class="row">
                                 <div class="col-md-12 col-sm-12 col-xs-12">
-                                    <div class="form-group">
+                                    <div class="form-group mt-2">
                                         <h4 class="form-label">Upload CNIC or B-form</h4>
-                                        <div class="kt-dropzone dropzone m-dropzone--primary" action="inc/api/dropzone/upload.php" id="m-dropzone-two">
-                                            <div class="kt-dropzone__msg dz-message needsclick">
-                                                <h5 class="kt-dropzone__msg-title">Drop files here or click to upload.</h5>
-                                                <span class="kt-dropzone__msg-desc">Upload up to <b>both</b> sides scan copy of CNIC.</span>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-10 col-md-10 offset-1 col-sm-12 col-xs-12">
+                                            <label class="kt-radio kt-radio--success" name="radio5">
+                                                <input type="radio" name="yesno" onclick="javascript:yesnoCheck();" id="yesCheck" checked> CNIC
+                                                <span></span>
+                                            </label>&nbsp;
+                                            <label class="kt-radio kt-radio--brand" name="radio5">
+                                                <input type="radio" name="yesno" onclick="javascript:yesnoCheck();" id="noCheck"> B-Form
+                                                <span></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div id="ifYes" style="display:none">
+                                        <div class="row">
+                                        <div class="col-lg-10 col-md-10 offset-1 col-sm-12 col-xs-12">
+                                            <div class="form-group">
+                                                <label>File Browser</label>
+                                                <div></div>
+                                                <div class="custom-file">
+                                                    <input type="file" name="cnicfront" class="custom-file-input" id="customFile" required>
+                                                    <label class="custom-file-label" for="customFile">Choose file for front side of CNIC</label>
+                                                </div>
                                             </div>
                                         </div>
-
+                                    </div>
+                                        <div class="row">
+                                        <div class="col-lg-10 col-md-10 offset-1 col-sm-12 col-xs-12">
+                                            <div class="form-group">
+                                                <label>File Browser</label>
+                                                <div></div>
+                                                <div class="custom-file">
+                                                    <input type="file" name="cnicback" class="custom-file-input" id="customFile" required>
+                                                    <label class="custom-file-label" for="customFile">Choose file for back side of CNIC</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    </div>
+                                    <div id="ifNo" style="display:none">
+                                        <div class="row">
+                                        <div class="col-lg-10 col-md-10 offset-1 col-sm-12 col-xs-12">
+                                            <div class="form-group">
+                                                <label>File Browser</label>
+                                                <div></div>
+                                                <div class="custom-file">
+                                                    <input type="file" name="bfoam" class="custom-file-input" id="customFile" required>
+                                                    <label class="custom-file-label" for="customFile">Choose file for B-form</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                     </div>
                                 </div>
                             </div>
@@ -112,7 +169,7 @@
                             <div class="kt-portlet">
                                 <div class="row">
                                     <div class="col-md-12 col-sm-12 col-xs-12">
-                                    <div class="form-group">
+                                    <div class="form-group mt-2">
                                         <h4 class="form-label">BS / MSc / MA Transcript</h4>
                                         <div class="row">
                                             <div class="col-md-10 col-sm-10 col-xs-10 offset-1">
@@ -123,10 +180,16 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="kt-dropzone dropzone" action="inc/api/dropzone/upload.php" id="m-dropzone-one">
-                                            <div class="kt-dropzone__msg dz-message needsclick">
-                                                <h5 class="kt-dropzone__msg-title">Drop files here or click to upload.</h5>
-                                                <span class="kt-dropzone__msg-desc">Upload only <b>BS / MSc / MA Transcript</b> documents file</span>
+                                        <div class="row">
+                                            <div class="col-lg-10 col-md-10 offset-1 col-sm-12 col-xs-12">
+                                                <div class="form-group">
+                                                    <label>File Browser</label>
+                                                    <div></div>
+                                                    <div class="custom-file">
+                                                        <input type="file" name="transcript"  class="custom-file-input" id="customFile" required>
+                                                        <label class="custom-file-label" for="customFile">Choose file</label>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -136,12 +199,18 @@
                             <div class="kt-portlet">
                                 <div class="row">
                                 <div class="col-md-12 col-sm-12 col-xs-12">
-                                    <div class="form-group">
+                                    <div class="form-group mt-2">
                                         <h4 class="form-label">NTS Result (if any)</h4>
-                                        <div class="kt-dropzone dropzone" action="inc/api/dropzone/upload.php" id="m-dropzone-one">
-                                            <div class="kt-dropzone__msg dz-message needsclick">
-                                                <h5 class="kt-dropzone__msg-title">Drop files here or click to upload.</h5>
-                                                <span class="kt-dropzone__msg-desc">Upload only <b>NTS Result (if any)</b> documents file</span>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-10 col-md-10 offset-1 col-sm-12 col-xs-12">
+                                            <div class="form-group">
+                                                <label>File Browser</label>
+                                                <div></div>
+                                                <div class="custom-file">
+                                                    <input type="file" name="nts" class="custom-file-input" id="customFile" required>
+                                                    <label class="custom-file-label" for="customFile">Choose file</label>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -152,7 +221,7 @@
                     </div>
                     <div class="kt-portlet__foot">
                         <div class="kt-form__actions">
-                            <button type="reset" class="btn btn-primary">Submit</button>
+                            <button type="submit" class="btn btn-primary">Submit</button>
                             <button type="reset" class="btn btn-secondary">Cancel</button>
                         </div>
                     </div>

@@ -21,17 +21,12 @@ class Migration_documents_upload extends CI_Migration {
             'user_id' => array(
                 'type' => 'BIGINT',
             ),
-            'sscfileupload' => array(
+            'sscfile' => array(
                 'type' => 'VARCHAR',
                 'constraint' => '100',
                 'null' => TRUE,
             ),
-            'hsscfileupload' => array(
-                'type' => 'VARCHAR',
-                'constraint' => '100',
-                'null' => TRUE,
-            ),
-            'registrationoption' => array(
+            'hsscfile' => array(
                 'type' => 'VARCHAR',
                 'constraint' => '100',
                 'null' => TRUE,

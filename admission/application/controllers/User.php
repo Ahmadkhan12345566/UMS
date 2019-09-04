@@ -107,7 +107,8 @@ class User extends CI_Controller {
         }
 
     }
-//todo:profile photo upload
+
+    //Todo:profile photo upload
     public function photo_upload(){
 
 
@@ -123,7 +124,7 @@ class User extends CI_Controller {
                 $data["pupload"] = true;
                 $this->Crud_model->update("admission_process_status", $this->auth->userID(), $data);
             }
-            }
+        }
 
         $this->viewLoad('photoupload');
 
@@ -304,22 +305,34 @@ class User extends CI_Controller {
         }
     }
 
+//Todo:ducoments photo upload
     public function documents_upload(){
 
-        if ($this->input->post()){
-            $_POST['user_id']=$this->auth->userID();
+        if ($_FILES){
 
 
-            //todo: upload documnets
-            $this->Crud_model->insert('documents_upload', $_POST);
+            $image_paths=array();
+            $image_paths['user_id']=$this->auth->userID();
+            foreach ($_FILES as $key => $file){
+                if ($file != null) {
+                    $image = $this->do_upload($key);
+                }
+                if($image) {
+                    $image_paths[$key] = $image;
+                }else {
+                    $image_paths[$key]=null;
+                }
 
+            }
+            var_dump($image_paths);
+            die();
+            $this->Crud_model->insert('documents_upload',$image_paths );
             // Todo: Documents Upload Status
             $data["docupload"]= true;
             $this->Crud_model->update("admission_process_status",$this->auth->userID(), $data);
         }
-        else{
             $this->viewLoad('documentsupload');
-        }
+
     }
 
     public function other_detail(){
@@ -403,7 +416,7 @@ class User extends CI_Controller {
         else
         {
             $data = array('upload_data' => $this->upload->data());
-            $image = array($input_name=>$data['upload_data']['full_path']);
+            $image = $data['upload_data']['file_name'];
              return $image;
         }
     }
