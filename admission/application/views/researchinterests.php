@@ -35,19 +35,19 @@
                             <div class="col-md-4 col-sm-12 col-xs-12">
                                 <div class="form-group">
                                     <label class="form-control-label">Research Interest 1</label>
-                                    <input type="text" class="form-control" name="research 1" required>
+                                    <input type="text" class="form-control" name="research[]" required>
                                 </div>
                             </div>
                             <div class="col-md-4 col-sm-12 col-xs-12">
                                 <div class="form-group">
                                     <label class="form-control-label">Research Interest 2</label>
-                                    <input type="text" class="form-control" name="research 2" required>
+                                    <input type="text" class="form-control" name="research[]" required>
                                 </div>
                             </div>
                             <div class="col-md-4 col-sm-12 col-xs-12">
                                 <div class="form-group">
                                     <label class="form-control-label">Research Interest 3</label>
-                                    <input type="text" class="form-control" name="research 3" required>
+                                    <input type="text" class="form-control" name="research[]" required>
                                 </div>
                             </div>
                         </div>

@@ -37,8 +37,7 @@ class User extends CI_Controller {
 
     public function personal_information(){
 
-       // var_dump($this->auth->userID());
-    //die();
+
 
         if ($this->input->post()){
             $_POST['user_id']=$this->auth->userID();
@@ -89,10 +88,10 @@ class User extends CI_Controller {
            // Guardian Addresses
 
             $guardianaddress=array();
-            $guardianaddress["address1"]= $_POST['mline1'];
-            $guardianaddress["address2"]= $_POST['mline2'];
+            $guardianaddress["address1"]= $_POST['gline1'];
+            $guardianaddress["address2"]= $_POST['gline2'];
             $guardianaddress["city_id"]= $_POST['gcity_id'];
-            $guardianaddress["phone"]= $_POST['mphone'];
+            $guardianaddress["phone"]= $_POST['gmobile'];
             $guardianaddress["address_type_id"]= 1;
             $guardianaddress['user_id']=$this->auth->userID();
 
@@ -100,15 +99,12 @@ class User extends CI_Controller {
 
             //Todo: Address Status
             $data["address"]= true;
-            $this->Crud_model->update("admission_process_status", "1", $data);
+            $this->Crud_model->update("admission_process_status", $this->auth->userID(), $data);
         }
         else{
             $data["cities"]= $this->Crud_model->get_all("cities");
             $this->viewLoad('address', $data);
         }
-
-        // permanent address
-
 
     }
 
@@ -120,7 +116,7 @@ class User extends CI_Controller {
 
             // Todo: Photo status
             $data["pupload"] = true;
-            $this->Crud_model->update("admission_process_status", "1", $data);
+            $this->Crud_model->update("admission_process_status", $this->auth->userID(), $data);
         }
         else{
             $this->viewLoad('photoupload');
@@ -129,114 +125,62 @@ class User extends CI_Controller {
 
     public function education_detail(){
 
-        if ($data=$this->input->post()){
-            $_POST['user_id']=$this->auth->userID();
-//                $this->auth->userID();
-            $this->Crud_model->insert('education_details', $_POST);
-            var_dump($data);
-            die();
-//            var_dump("I'm Here!");
-//            die();
+        if ($this->input->post()){
 
-//         if($data["submit"] == "matric"){
-//             $this->eduMatric_detail($_POST);
-//         }
-//         if ($data["submit"] == "intermediate"){
-//            $this->eduintermediate_detail($_POST);
-//         }
-//         if ($data["submit"] == "fourteenyears" ){
-//             $this->fourteenyearsEdu_detail($_POST);
-//         }
-//         if ($data["submit"] == "16 Years"){
-//             $this->SixteenYearEdu_Detail($_POST);
-//         }
+            // Matric/o levels
+            $matric=array();
+            $matric["education_level_id"]= $_POST['meducation_level_id'];
+            $matric["passingyears"]= $_POST['mpassingyears'];
+            $matric["board_id"]= $_POST['mboard_id'];
+            $matric["degree_id"]= $_POST['mdegree_id'];
+            $matric["totalmarks"]= $_POST['mtotalmarks'];
+            $matric["obtainmarks"]= $_POST['mobtainmarks'];
+            //$matric["address_type_id"]= 1;
+            $matric['user_id']=$this->auth->userID();
+
+            $this->Crud_model->insert('education_details', $matric);
+
+            // Mailing Addresses
+
+            $intermediate=array();
+            $intermediate["education_level_id"]= $_POST['ineducation_level_id'];
+            $intermediate["passingyears"]= $_POST['inpassingyears'];
+            $intermediate["board_id"]= $_POST['inboard_id'];
+            $intermediate["degree_id"]= $_POST['indegree_id'];
+            $intermediate["totalmarks"]= $_POST['intotalmarks'];
+            $intermediate["obtainmarks"]= $_POST['inobtainmarks'];
+            //$matric["address_type_id"]= 1;
+            $intermediate['user_id']=$this->auth->userID();
+
+            $this->Crud_model->insert('education_details', $intermediate);
+
+            // Guardian Addresses
+
+            $fourteen=array();
+            $fourteen["education_level_id"]= $_POST['freducation_level_id'];
+            $fourteen["passingyears"]= $_POST['frpassingyears'];
+            $fourteen["board_id"]= $_POST['frboard_id'];
+            $fourteen["degree_id"]= $_POST['frdegree_id'];
+            $fourteen["totalmarks"]= $_POST['frtotalmarks'];
+            $fourteen["obtainmarks"]= $_POST['frobtainmarks'];
+            //$matric["address_type_id"]= 1;
+            $fourteen['user_id']=$this->auth->userID();
+
+            $this->Crud_model->insert('education_details', $fourteen);
+
+            // Todo: Education Details Status
+            $data["edetails"] = true;
+            $this->Crud_model->update("admission_process_status", $this->auth->userID(), $data);
         }
         else{
             $data["education_levels"]= $this->Crud_model->get_all('education_levels');
             $data["degrees"]= $this->Crud_model->get_all('degrees');
             $data["boards"]= $this->Crud_model->get_all('boards');
-//            var_dump($data);
-//            die();
+
             $this->viewLoad('educationdetails',$data);
         }
     }
 
-    public function eduMatric_detail(){
-
-        if ($this->input->post()){
-            unset($_POST["submit"]);
-            $_POST['user_id']=$this->auth->userID();
-            $this->Crud_model->insert('education_details', $_POST);
-
-            // Todo: Education Details Status
-            $data["edetails"] = true;
-            $this->Crud_model->update("admission_process_status", "1", $data);
-
-        }
-        else{
-            $data["education_levels"]= $this->Crud_model->get_all('education_levels');
-            $data["degrees"]= $this->Crud_model->get_all('degrees');
-            $data["boards"]= $this->Crud_model->get_all('boards');
-            $this->viewLoad('educationdetails', $data);
-        }
-
-    }
-
-    public function eduintermediate_detail(){
-
-        if ($this->input->post()){
-            unset($_POST["submit"]);
-            $_POST['user_id']=$this->auth->userID();
-            $this->Crud_model->insert('education_details', $_POST);
-
-            // Todo: Education Details Status
-            $data["edetails"] = true;
-            $this->Crud_model->update("admission_process_status", "1", $data);
-        }
-        else{
-
-            $data["education_levels"]= $this->Crud_model->get_all('education_levels');
-            $data["degrees"]= $this->Crud_model->get_all('degrees');
-            $data["boards"]= $this->Crud_model->get_all('boards');
-            $this->viewLoad('educationdetails', $data);
-        }
-    }
-
-    public function fourteenyearsEdu_detail(){
-
-        if ($this->input->post()){
-            unset($_POST["submit"]);
-            $_POST['user_id']=$this->auth->userID();
-            $this->Crud_model->insert('education_details', $_POST);
-
-            // Todo: Education Details Status
-            $data["edetails"] = true;
-            $this->Crud_model->update("admission_process_status", "1", $data);
-        }
-        else{
-
-            $data["education_levels"]= $this->Crud_model->get_all('education_levels');
-            $data["degrees"]= $this->Crud_model->get_all('degrees');
-            $data["boards"]= $this->Crud_model->get_all('boards');
-            $this->viewLoad('educationdetails', $data);
-        }
-    }
-
-    public function SixteenYearEdu_Detail(){
-
-        if ($this->input->post()){
-            unset($_POST["submit"]);
-            $_POST['user_id']=$this->auth->userID();
-            $this->Crud_model->insert('education_details', $_POST);
-
-            // Todo: Education Details Status
-            $data["edetails"] = true;
-            $this->Crud_model->update("admission_process_status", "1", $data);
-        }
-        else{
-            $this->viewLoad('educationdetails');
-        }
-    }
 
     public function nts_detail(){
 
@@ -246,7 +190,7 @@ class User extends CI_Controller {
 
             // Todo: NTS Status
             $data["ntsdetails"] = true;
-            $this->Crud_model->update("admission_process_status", "1", $data);
+            $this->Crud_model->update("admission_process_status", $this->auth->userID(), $data);
         }
         else{
             $this->viewLoad('ntsdetails');
@@ -265,7 +209,7 @@ class User extends CI_Controller {
 
             // Todo: Program Choices Status
             $data["prochoices"]= true;
-            $this->Crud_model->update("admission_process_status","1", $data);
+            $this->Crud_model->update("admission_process_status",$this->auth->userID(), $data);
         }
         else{
 
@@ -282,7 +226,7 @@ class User extends CI_Controller {
 
             // Todo: Work History Status
             $data["workhistory"]= true;
-            $this->Crud_model->update("admission_process_status","1", $data);
+            $this->Crud_model->update("admission_process_status",$this->auth->userID(), $data);
         }
         else{
             $this->viewLoad('workhistory');
@@ -305,7 +249,7 @@ class User extends CI_Controller {
 
             // Todo: Fund Details Status
             $data["fdetails"]= true;
-            $this->Crud_model->update("admission_process_status","1", $data);
+            $this->Crud_model->update("admission_process_status",$this->auth->userID(), $data);
         }
         else{
             $this->viewLoad('funddetails');
@@ -320,7 +264,7 @@ class User extends CI_Controller {
 
             // Todo: Publication Details Status
             $data["pubdetails"]= true;
-            $this->Crud_model->update("admission_process_status","1", $data);
+            $this->Crud_model->update("admission_process_status",$this->auth->userID(), $data);
         }
         else{
             $this->viewLoad('publicationdetails');
@@ -347,7 +291,7 @@ class User extends CI_Controller {
 
             // Todo: Research Interest Status
             $data["rinterests"]= true;
-            $this->Crud_model->update("admission_process_status","1", $data);
+            $this->Crud_model->update("admission_process_status",$this->auth->userID(), $data);
         }
         else{
             $this->viewLoad('researchinterests');
@@ -362,7 +306,7 @@ class User extends CI_Controller {
 
             // Todo: Documents Upload Status
             $data["docupload"]= true;
-            $this->Crud_model->update("admission_process_status","1", $data);
+            $this->Crud_model->update("admission_process_status",$this->auth->userID(), $data);
         }
         else{
             $this->viewLoad('documentsupload');
@@ -388,7 +332,7 @@ class User extends CI_Controller {
 
             // Todo: Other Details Status
             $data["othdetails"]= true;
-            $this->Crud_model->update("admission_process_status","1", $data);
+            $this->Crud_model->update("admission_process_status",$this->auth->userID(), $data);
 
         }
         else{
@@ -405,7 +349,7 @@ class User extends CI_Controller {
 
             // Todo: Confirm Fee Status
             $data["confirmfee"]= true;
-            $this->Crud_model->update("admission_process_status","1", $data);
+            $this->Crud_model->update("admission_process_status",$this->auth->userID(), $data);
         }
         else{
             $this->viewLoad('confirmfee');
@@ -418,7 +362,7 @@ class User extends CI_Controller {
 
             // Todo: Submit Application Status
             $data["subapplication"]= true;
-            $this->Crud_model->update("admission_process_status","1", $data);
+            $this->Crud_model->update("admission_process_status",$this->auth->userID(), $data);
 
             $this->viewLoad('submitapplication');
         }
@@ -447,7 +391,9 @@ class User extends CI_Controller {
         {
             $data = array('upload_data' => $this->upload->data());
             $image = array('studentphoto'=>$data['upload_data']['full_path']);
-            $this->Crud_model->update_photo(1, $image);
+//            var_dump($image);
+//            die();
+            $this->Crud_model->update_photo($this->auth->userID(), $image);
             $this->session->set_flashdata('success', 'Photo loaded');
 
             $this->viewLoad('photoupload', 'refresh');

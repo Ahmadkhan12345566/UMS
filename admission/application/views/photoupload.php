@@ -33,7 +33,7 @@
             </div>
 
             <!--begin::Form-->
-            <form class="kt-form kt-form--label-right" method="post" action="<?php echo base_url("User/do_upload")?>">
+            <form class="kt-form" method="post" action="<?php echo base_url("User/do_upload")?>" enctype="multipart/form-data">
                 <div class="kt-portlet__body">
                     <div class="form-group row">
                         <label class="col-form-label col-lg-3 col-sm-12"></label>
@@ -42,10 +42,18 @@
 <!--                                <img src="--><?php //echo $this->session->userdate('studentphoto');?><!--"></img>-->
 <!--                            --><?php //else: ?>
 <!--                            --><?php //endif;?>
-                            <div class="kt-dropzone dropzone" action="inc/api/dropzone/upload.php" id="m-dropzone-one">
-                                <div class="kt-dropzone__msg dz-message needsclick">
-                                    <h3 class="kt-dropzone__msg-title">Drop files here or click to upload.</h3>
-                                    <span class="kt-dropzone__msg-desc">Only one photo upload. Selected files are <strong>not</strong> actually uploaded.</span>
+<!--                            <div class="kt-dropzone dropzone" action="inc/api/dropzone/upload.php" id="m-dropzone-one">-->
+<!--                                <div class="kt-dropzone__msg dz-message needsclick">-->
+<!--                                    <h3 class="kt-dropzone__msg-title">Drop files here or click to upload.</h3>-->
+<!--                                    <span class="kt-dropzone__msg-desc">Only one photo upload. Selected files are <strong>not</strong> actually uploaded.</span>-->
+<!--                                </div>-->
+<!--                            </div>-->
+                            <div class="form-group">
+                                <label>File Browser</label>
+                                <div></div>
+                                <div class="custom-file">
+                                    <input type="file" name="studentphoto" id="studentphoto" class="custom-file-input" id="customFile">
+                                    <label class="custom-file-label" for="customFile">Choose file</label>
                                 </div>
                             </div>
                         </div>
@@ -55,7 +63,7 @@
                     <div class="kt-form__actions">
                         <div class="row">
                             <div class="col-lg-9 ml-lg-auto">
-                                <button type="submit" class="btn btn-brand">Submit</button>
+                                <button type="submit" class="btn btn-brand" value="Upload Image">Submit</button>
                                 <button type="reset" class="btn btn-secondary">Cancel</button>
                             </div>
                         </div>
