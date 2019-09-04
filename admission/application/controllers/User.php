@@ -37,8 +37,8 @@ class User extends CI_Controller {
 
     public function personal_information(){
 
-        var_dump($this->auth->userID());
-    die();
+       // var_dump($this->auth->userID());
+    //die();
 
         if ($this->input->post()){
             $_POST['user_id']=$this->auth->userID();
@@ -46,8 +46,8 @@ class User extends CI_Controller {
             //todo: update personal information status
             $data["pinformation"]=true;
             $this->Crud_model->update("admission_process_status",$this->auth->userID(),$data);
-            var_dump($data);
-            die();
+            //var_dump($data);
+            //die();
         }
         else{
             $data['countries']= $this->Crud_model->get_all("countries");

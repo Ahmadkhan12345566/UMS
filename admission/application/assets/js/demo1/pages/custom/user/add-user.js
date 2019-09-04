@@ -69,37 +69,44 @@ var KTAppUserAdd = function () {
 			},
 
 			// Submit valid form
-			// submitHandler: function (form) {
-			//
-			// }
+			submitHandler: function (form) {
+
+			}
 		});   
 	}
 
 	var initSubmit = function() {
-		//var btn = formEl.find('[data-ktwizard-type="action-submit"]');
+		var btn = formEl.find('[data-ktwizard-type="action-submit"]');
+		var values = $('#kt_apps_user_add_user_form').serialize();
 
 		btn.on('click', function(e) {
+			alert("i ma hear");
+			console.log(values);
 			e.preventDefault();
 
 			if (validator.form()) {
 				// See: src\js\framework\base\app.js
+				alert("i ma hear");
 				KTApp.progress(btn);
-				//KTApp.block(formEl);
+				KTApp.block(formEl);
+				KTApp.unprogress(btn);
+				$("#clicksubmit").click();
+
 
 				// See: http://malsup.com/jquery/form/#ajaxSubmit
-				formEl.ajaxSubmit({
-					success: function() {
-						KTApp.unprogress(btn);
-						//KTApp.unblock(formEl);
-
-						swal.fire({
-							"title": "",
-							"text": "The application has been successfully submitted!",
-							"type": "success",
-							"confirmButtonClass": "btn btn-secondary"
-						});
-					}
-				});
+				// formEl.ajaxSubmit({
+				// 	success: function() {
+				// 		KTApp.unprogress(btn);
+				// 		//KTApp.unblock(formEl);
+				//
+				// 		swal.fire({
+				// 			"title": "",
+				// 			"text": "The application has been successfully submitted!",
+				// 			"type": "success",
+				// 			"confirmButtonClass": "btn btn-secondary"
+				// 		});
+				// 	}
+				// });
 			}
 		});
 	}
@@ -113,10 +120,10 @@ var KTAppUserAdd = function () {
 		init: function() {
 			formEl = $('#kt_apps_user_add_user_form');
 
-			initWizard(); 
+			initWizard();
 			initValidation();
-			// initSubmit();
-			initKTAppsUserAdd(); 
+			 initSubmit();
+			initKTAppsUserAdd();
 		}
 	};
 }();

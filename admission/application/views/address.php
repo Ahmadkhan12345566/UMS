@@ -268,9 +268,10 @@
                                     <div class="btn btn-secondary btn-md btn-tall btn-wide kt-font-bold kt-font-transform-u" data-ktwizard-type="action-prev">
                                         Previous
                                     </div>
-                                    <button type="submit" class="btn btn-success btn-md btn-tall btn-wide kt-font-bold kt-font-transform-u" >
+                                    <div  class="btn btn-success btn-md btn-tall btn-wide kt-font-bold kt-font-transform-u"  data-ktwizard-type="action-submit">
                                         Submit
-                                    </button>
+                                    </div>
+                                    <button type="submit" id="clicksubmit" style="display: none"></button>
                                     <div class="btn btn-brand btn-md btn-tall btn-wide kt-font-bold kt-font-transform-u" data-ktwizard-type="action-next">
                                         Next Step
                                     </div>
