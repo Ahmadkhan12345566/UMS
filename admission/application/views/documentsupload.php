@@ -125,7 +125,7 @@
                                     </div>
                                     <div id="ifYes" style="display:none">
                                         <div class="row">
-                                        <div class="col-lg-10 col-md-10 offset-1 col-sm-12 col-xs-12">
+                                            <div class="col-lg-10 col-md-10 offset-1 col-sm-12 col-xs-12">
                                             <div class="form-group">
                                                 <label>File Browser</label>
                                                 <div></div>
@@ -135,9 +135,9 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
+                                        </div>
                                         <div class="row">
-                                        <div class="col-lg-10 col-md-10 offset-1 col-sm-12 col-xs-12">
+                                            <div class="col-lg-10 col-md-10 offset-1 col-sm-12 col-xs-12">
                                             <div class="form-group">
                                                 <label>File Browser</label>
                                                 <div></div>
@@ -147,7 +147,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
+                                        </div>
                                     </div>
                                     <div id="ifNo" style="display:none">
                                         <div class="row">

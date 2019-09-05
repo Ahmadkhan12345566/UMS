@@ -8,7 +8,7 @@
 
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Migration_nts_details extends CI_Migration {
+class Migration_test_types extends CI_Migration {
 
     public function up()
     {
@@ -18,28 +18,7 @@ class Migration_nts_details extends CI_Migration {
                 'unsigned' => TRUE,
                 'auto_increment' => TRUE
             ),
-            'user_id' => array(
-                'type' => 'BIGINT',
-            ),
-            'test_type_id' => array(
-                'type' => 'INT',
-            ),
-            'ntsrollnumber' => array(
-                'type' => 'VARCHAR',
-                'constraint' => '100',
-            ),
-            'testlevel' => array(
-                'type' => 'VARCHAR',
-                'constraint' => '100',
-            ),
-            'obtainedmarks' => array(
-                'type' => 'VARCHAR',
-                'constraint' => '100',
-            ),
-            'testdate' => array(
-                'type' => 'date',
-            ),
-            'centername' => array(
+            'name' => array(
                 'type' => 'VARCHAR',
                 'constraint' => '100',
             ),
@@ -54,11 +33,11 @@ class Migration_nts_details extends CI_Migration {
 
         ));
         $this->dbforge->add_key('id', TRUE);
-        $this->dbforge->create_table('nts_details');
+        $this->dbforge->create_table('test_types');
     }
 
     public function down()
     {
-        $this->dbforge->drop_table('nts_details');
+        $this->dbforge->drop_table('test_types');
     }
 }

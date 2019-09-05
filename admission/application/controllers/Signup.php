@@ -130,4 +130,31 @@ class Signup extends CI_Controller {
 
         echo "<h2 style='color: blue;'>Welcome<h2><hr><p style='color: green;'>Your data inserted in your database</p>";
     }
+    public function  insert_nts()
+    {
+        // NTS Tests Type 1
+        $nts1=array();
+        $nts1["name"]="University Test";
+
+        // NTS Tests Type 2
+        $nts2=array();
+        $nts2["name"]="Other Test";
+
+        // NTS Tests Type 3
+        $nts3=array();
+        $nts3["name"]="Already Taken NTS";
+
+        // NTS Tests Type 4
+        $nts4=array();
+        $nts4["name"]="Already Registered in NTS";
+
+
+        $this->Crud_model->insert('test_types', $nts1);
+        $this->Crud_model->insert('test_types', $nts2);
+        $this->Crud_model->insert('test_types', $nts3);
+        $this->Crud_model->insert('test_types', $nts4);
+
+
+        echo "<h2 style='color: blue;'>Welcome<h2><hr><p style='color: green;'>Your Nts data inserted in your database</p>";
+    }
 }

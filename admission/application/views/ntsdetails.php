@@ -32,103 +32,130 @@
                         </div>
 
                         <!--begin::Form-->
-                        <form class="kt-form" method="post" action="<?php echo base_url("ntsdetails")?>" id="kt_form_2">
+                        <form class="kt-form" method="post" action="<?php echo base_url("ntsdetails")?>" novalidate>
                             <div class="kt-portlet__body">
-                                <div class="form-group row form-group-marginless">
-                                    <label class="col-lg-12 col-form-label"><h3>NTS Test Registration Through University:</h3></label>
+                                <div id="ifYes" style="display:none">
+                                    <div class="form-group row form-group-marginless">
+                                    <label class="col-lg-12 col-form-label"><h3>Test Registration Through University:</h3></label>
                                 </div>
-                                <div class="row">
+                                    <div class="row">
                                     <div class="col-lg-12">
                                         <div class="form-group">
-                                            <label for="control-label"><i class="flaticon2-information text-danger"></i> Click yes to print NTS application form alongwith your admission application.</label>
+                                            <label for="control-label"><i class="flaticon2-information text-danger"></i> Click yes to test application form along with your admission application.</label>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="row">
-                                    <div class="col-md-6 col-sm-12 col-xs-12">
+                                    <div class="row">
+                                        <div class="col-md-6 col-sm-12 col-xs-12">
                                         <div class="form-group">
-                                            <label class="control-label"><b>Print NTS Challan?</b></label>
+                                            <label class="control-label"><b>University Test Challan?</b></label>
                                         </div>
                                         <div class="form-group">
                                             <label class="kt-radio kt-radio--success">
-                                                Yes <input type="radio" name="nts">
+                                                Yes <input type="radio" value="University Test" name="test_type_id" onclick="javascript:yesnoCheck();" id="yesCheck">
                                                 <span></span>
                                             </label>
                                             <label class="kt-radio kt-radio--danger">
-                                                No <input type="radio" name="nts" checked>
+                                                No <input type="radio" value="Other Test" name="test_type_id" onclick="javascript:yesnoCheck();" id="noCheck">
                                                 <span></span>
                                             </label>
                                         </div>
                                     </div>
+                                    </div>
                                 </div>
 <!--                                <div class="kt-separator kt-separator--border-dashed kt-separator--space-lg mb-2"></div>-->
-                                <div class="form-group row form-group-marginless">
-                                    <label class="col-lg-12 col-form-label"><h3>NTS Test already taken?</h3></label>
+                                <div id="ifNo" style="display:none">
+                                    <div class="form-group row form-group-marginless">
+                                    <label class="col-lg-12 col-form-label"><h3>NTS Test Registration:</h3></label>
                                 </div>
-                                <div class="row">
-                                    <div class="col-lg-12">
-                                        <div class="form-group">
-                                            <label for="control-label"><i class="flaticon2-information text-danger"></i>  If you have <b>successfully passed NTS test</b>, and your result is valid, fill in this section.</label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-3">
-                                        <div class="form-group">
-                                            <label class="form-control-label">Roll Number</label>
-                                            <input type="text" class="form-control" name="ntsrollnumber" required>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <div class="form-group">
-                                            <label class="form-control-label">Test Type</label>
-                                            <select name='testtype' class="form-control" required>
-                                                <option value="">Choose Test Type</option>
-                                                <option value="GAT General">GAT (General)</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <div class="form-group">
-                                            <label class="form-control-label">Obtained Marks</label>
-                                            <input type="text" class="form-control" name="obtainedmarks" required>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <div class="form-group">
-                                            <label class="form-control-label">Test Date</label>
-                                            <div class="input-group date">
-                                                <input type="text" class="form-control" name="testdate" placeholder="Test Date" readonly="" id="kt_datepicker_2" required>
-                                                <div class="input-group-append">
-                                                <span class="input-group-text">
-                                                    <i class="la la-calendar-check-o"></i>
-                                                </span>
+                                    <div class="row">
+                                        <div class="col-md-6 col-sm-12 col-xs-12">
+                                            <div class="form-group">
+                                                <div class="kt-radio-list">
+                                                    <label class="kt-radio kt-radio--success">
+                                                        <input type="radio" value="already taken NTS" name="test_type_id" onclick="javascript:ynCheck();" id="checkYes"> NTS Test already taken?
+                                                        <span></span>
+                                                    </label>
+                                                    <label class="kt-radio kt-radio--brand">
+                                                        <input type="radio" value="already registered in NTS" name="test_type_id" onclick="javascript:ynCheck();" id="checkNo"> If already registered in a NTS Test Centre?
+                                                        <span></span>
+                                                    </label>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="form-group row form-group-marginless">
-                                    <label class="col-lg-12 col-form-label"><h3>If already registered in a NTS Test Centre?</h3></label>
-                                </div>
-                                <div class="row">
-                                    <div class="col-lg-12">
-                                        <div class="form-group">
-                                            <label for="control-label"><i class="flaticon2-information text-danger"></i>  If already <b>registered or taken an NTS test</b> but the result has not yet arrived fill in this section.</label>
+                                <div id="yesIf" style="display:none">
+                                    <div class="form-group row form-group-marginless">
+                                        <label class="col-lg-12 col-form-label"><h3>NTS Test already taken?</h3></label>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="form-group">
+                                                <label for="control-label"><i class="flaticon2-information text-danger"></i>  If you have <b>successfully passed NTS test</b>, and your result is valid, fill in this section.</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label class="form-control-label">Roll Number</label>
+                                                <input type="text" class="form-control" name="ntsrollnumber" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label class="form-control-label">Test Type</label>
+                                                <select name='testlevel' class="form-control" required>
+                                                    <option value="">Choose Test Type</option>
+                                                    <option value="GAT General">GAT (General)</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label class="form-control-label">Obtained Marks</label>
+                                                <input type="text" class="form-control" name="obtainedmarks" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label class="form-control-label">Test Date</label>
+                                                <div class="input-group date">
+                                                    <input type="text" class="form-control" name="testdate" placeholder="Test Date" readonly="" id="kt_datepicker_2" required>
+                                                    <div class="input-group-append">
+                                            <span class="input-group-text">
+                                                <i class="la la-calendar-check-o"></i>
+                                            </span>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label class="form-control-label">NTS Test Centre Name</label>
-                                            <input type="text" class="form-control" name="ntscenter" required>
+                                <div id="noIf" style="display:none">
+                                    <div class="form-group row form-group-marginless">
+                                        <label class="col-lg-12 col-form-label"><h3>If already registered in a NTS Test Centre?</h3></label>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="form-group">
+                                                <label for="control-label"><i class="flaticon2-information text-danger"></i>  If already <b>registered or taken an NTS test</b> but the result has not yet arrived fill in this section.</label>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label class="form-control-label">Roll Number</label>
-                                            <input type="text" class="form-control" name="allntsrollnumber" required>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label class="form-control-label">NTS Test Centre Name</label>
+                                                <input type="text" class="form-control" name="centername" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label class="form-control-label">Roll Number</label>
+                                                <input type="text" class="form-control" name="ntsrollnumber" required>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -219,4 +246,21 @@
 </div>
 
 <!-- end:: Page -->
+
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('yesIf').style.display = 'block';
+            document.getElementById('noIf').style.display = 'none';
+        }
+        function ynCheck() {
+            if (document.getElementById('checkYes').checked) {
+                document.getElementById('yesIf').style.display = 'block';
+                document.getElementById('noIf').style.display = 'none';
+            }
+            else if(document.getElementById('checkNo').checked) {
+                document.getElementById('noIf').style.display = 'block';
+                document.getElementById('yesIf').style.display = 'none';
+            }
+        }
+    </script>
 
