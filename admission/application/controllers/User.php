@@ -324,8 +324,6 @@ class User extends CI_Controller {
                 }
 
             }
-            var_dump($image_paths);
-            die();
             $this->Crud_model->insert('documents_upload',$image_paths );
             // Todo: Documents Upload Status
             $data["docupload"]= true;

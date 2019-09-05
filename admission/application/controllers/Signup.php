@@ -35,13 +35,6 @@ class Signup extends CI_Controller {
             $data= array();
             $this->Crud_model->insert('admission_process_status', $data);
             redirect("Login");
-
-//            if ($data["applyfor_id"]  == "1"){
-//                redirect(base_url("instructions"));
-//            }
-//            elseif ($data["applyfor_id"]  == "2"){
-//                redirect(base_url("instructions"));
-//            }
         }
         else{
             $this->load->view('signup');

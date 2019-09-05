@@ -51,7 +51,7 @@
                 </div>
 
                 <!--begin::Form-->
-                <form method="post" action="<?php echo base_url("documentsupload")?>" class="kt-form" enctype="multipart/form-data">
+                <form method="post" action="<?php echo base_url("documentsupload")?>" class="kt-form" enctype="multipart/form-data" novalidate>
                     <div class="kt-portlet">
                         <div class="kt-portlet__body">
                             <div class="kt-portlet">
