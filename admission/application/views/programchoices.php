@@ -45,22 +45,28 @@
                                 <div class="form-group">
                                     <label>Program Choice 1</label>
                                     <select name='program[]' id='subject1' class="form-control kt-selectpicker" required>
-                                        <option value="">Select 1st Choice</option>
+                                        <option value="Program Choice 1">Select 1st Choice</option>
                                         <?php foreach ($degrees as $degree){?>
                                             <option value="<?php echo $degree->id;?>"><?php echo $degree->name;?></option>
                                         <?php }?>
                                     </select>
+                                    <div class="text-danger">
+                                        <?php echo form_error('program[]')?>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-md-6 col-sm-12 col-xs-12">
                                 <div class="form-group">
                                     <label>Program Choice 2</label>
                                     <select name='program[]' id='subject2' class="form-control kt-selectpicker" required>
-                                        <option value="">Select 2nd Choice</option>
+                                        <option value="Program Choice 2">Select 2nd Choice</option>
                                         <?php foreach ($degrees as $degree){?>
                                             <option value="<?php echo $degree->id;?>"><?php echo $degree->name;?></option>
                                         <?php }?>
                                     </select>
+                                    <div class="text-danger">
+                                        <?php echo form_error('program[]')?>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -69,22 +75,28 @@
                                 <div class="form-group">
                                     <label>Program Choice 3</label>
                                     <select name='program[]' id='subject3' class="form-control kt-selectpicker" required>
-                                        <option value="">Select 3rd Choice</option>
+                                        <option value="Program Choice 3">Select 3rd Choice</option>
                                         <?php foreach ($degrees as $degree){?>
                                             <option value="<?php echo $degree->id;?>"><?php echo $degree->name;?></option>
                                         <?php }?>
                                     </select>
+                                    <div class="text-danger">
+                                        <?php echo form_error('program[]')?>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-md-6 col-sm-12 col-xs-12">
                                 <div class="form-group">
                                     <label>Program Choice 4</label>
                                     <select name='program[]' id='subject4' class="form-control kt-selectpicker" required>
-                                        <option value="">Select 4th Choice</option>
+                                        <option value="Program Choice 4">Select 4th Choice</option>
                                         <?php foreach ($degrees as $degree){?>
                                             <option value="<?php echo $degree->id;?>"><?php echo $degree->name;?></option>
                                         <?php }?>
                                     </select>
+                                    <div class="text-danger">
+                                        <?php echo form_error('program[]')?>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -92,21 +104,27 @@
                             <div class="col-md-6 col-sm-12 col-xs-12">
                                 <label for="exampleSelect2">Program Choice 5</label>
                                 <select name='program[]' id='subject5' class="form-control kt-selectpicker" required>
-                                    <option value="">Select 5th Choice</option>
+                                    <option value="Program Choice 5">Select 5th Choice</option>
                                     <?php foreach ($degrees as $degree){?>
                                         <option value="<?php echo $degree->id;?>"><?php echo $degree->name;?></option>
                                     <?php }?>
                                 </select>
+                                <div class="text-danger">
+                                    <?php echo form_error('program[]')?>
+                                </div>
                             </div>
                             <div class="col-md-6 col-sm-12 col-xs-12">
                                 <div class="form-group">
                                     <label>Program Choice 6</label>
                                     <select name='program[]' id='subject6' class="form-control kt-selectpicker" required>
-                                        <option value="">Select 6th Choice</option>
+                                        <option value="Program Choice 6">Select 6th Choice</option>
                                         <?php foreach ($degrees as $degree){?>
                                             <option value="<?php echo $degree->id;?>"><?php echo $degree->name;?></option>
                                         <?php }?>
                                     </select>
+                                    <div class="text-danger">
+                                        <?php echo form_error('program[]')?>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -115,11 +133,14 @@
                                 <div class="form-group">
                                     <label>Program Choice 7</label>
                                     <select name='program[]' id='subject7' class="form-control kt-selectpicker" required>
-                                        <option value="">Select 7th Choice</option>
+                                        <option value="Program Choice 7">Select 7th Choice</option>
                                         <?php foreach ($degrees as $degree){?>
                                             <option value="<?php echo $degree->id;?>"><?php echo $degree->name;?></option>
                                         <?php }?>
                                     </select>
+                                    <div class="text-danger">
+                                        <?php echo form_error('program[]')?>
+                                    </div>
                                 </div>
                             </div>
                         </div>

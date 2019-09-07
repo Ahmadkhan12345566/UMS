@@ -37,74 +37,77 @@ class User extends CI_Controller {
 
     public function personal_information(){
 
-
-
         if ($this->input->post()){
-            $_POST['user_id']=$this->auth->userID();
-            $this->Crud_model->insert('personal_information', $_POST);
-            //todo: update personal information status
-            $data["pinformation"]=true;
-            $this->Crud_model->update("admission_process_status",$this->auth->userID(),$data);
-            //var_dump($data);
-            //die();
+
+            if ($this->_validate_personal() == True){
+                $_POST['user_id']=$this->auth->userID();
+                if($_POST['dob']) {
+                    $_POST['dob'] = date('Y-m-d', strtotime($_POST['dob']));
+                }
+                $this->Crud_model->insert('personal_information', $_POST);
+                //todo: update personal information status
+                $data["pinformation"]=true;
+                $this->Crud_model->update("admission_process_status",$this->auth->userID(),$data);
+            }
         }
-        else{
+
             $data['countries']= $this->Crud_model->get_all("countries");
             $data['domiciles']= $this->Crud_model->get_all("domiciles");
-//            var_dump($data);
-//            die();
+
             $this->viewLoad('personalinformation',$data);
-        }
+
     }
 
     public function address_detail(){
 
         if ($this->input->post()){
 
-            // Permanent Address
+            if ($this->_validate_address() == True) {
+                //Todo: Permanent Address
 
-            $permanentaddress=array();
-            $permanentaddress["address1"]= $_POST['pline1'];
-            $permanentaddress["address2"]= $_POST['pline2'];
-            $permanentaddress["city_id"]= $_POST['pcity_id'];
-            $permanentaddress["phone"]= $_POST['pphone'];
-            $permanentaddress["address_type_id"]= 1;
-            $permanentaddress['user_id']=$this->auth->userID();
+                $permanentaddress = array();
+                $permanentaddress["address1"] = $_POST['pline1'];
+                $permanentaddress["address2"] = $_POST['pline2'];
+                $permanentaddress["city_id"] = $_POST['pcity_id'];
+                $permanentaddress["phone"] = $_POST['pphone'];
+                $permanentaddress["address_type_id"] = 1;
+                $permanentaddress['user_id'] = $this->auth->userID();
 
-            $this->Crud_model->insert('address', $permanentaddress);
+                $this->Crud_model->insert('address', $permanentaddress);
 
-           // Mailing Addresses
+                //Todo: Mailing Addresses
 
-            $mailingaddress=array();
-            $mailingaddress["address1"]= $_POST['mline1'];
-            $mailingaddress["address2"]= $_POST['mline2'];
-            $mailingaddress["city_id"]= $_POST['mcity_id'];
-            $mailingaddress["phone"]= $_POST['mphone'];
-            $mailingaddress["address_type_id"]= 1;
-            $mailingaddress['user_id']=$this->auth->userID();
+                $mailingaddress = array();
+                $mailingaddress["address1"] = $_POST['mline1'];
+                $mailingaddress["address2"] = $_POST['mline2'];
+                $mailingaddress["city_id"] = $_POST['mcity_id'];
+                $mailingaddress["phone"] = $_POST['mphone'];
+                $mailingaddress["address_type_id"] = 1;
+                $mailingaddress['user_id'] = $this->auth->userID();
 
-            $this->Crud_model->insert('address', $mailingaddress);
+                $this->Crud_model->insert('address', $mailingaddress);
 
-           // Guardian Addresses
+                //Todo: Guardian Addresses
 
-            $guardianaddress=array();
-            $guardianaddress["address1"]= $_POST['gline1'];
-            $guardianaddress["address2"]= $_POST['gline2'];
-            $guardianaddress["city_id"]= $_POST['gcity_id'];
-            $guardianaddress["phone"]= $_POST['gmobile'];
-            $guardianaddress["address_type_id"]= 1;
-            $guardianaddress['user_id']=$this->auth->userID();
+                $guardianaddress = array();
+                $guardianaddress["address1"] = $_POST['gline1'];
+                $guardianaddress["address2"] = $_POST['gline2'];
+                $guardianaddress["city_id"] = $_POST['gcity_id'];
+                $guardianaddress["phone"] = $_POST['gmobile'];
+                $guardianaddress["address_type_id"] = 1;
+                $guardianaddress['user_id'] = $this->auth->userID();
 
-            $this->Crud_model->insert('address', $guardianaddress);
+                $this->Crud_model->insert('address', $guardianaddress);
 
-            //Todo: Address Status
-            $data["address"]= true;
-            $this->Crud_model->update("admission_process_status", $this->auth->userID(), $data);
+                //Todo: Address Status
+                $data["address"] = true;
+                $this->Crud_model->update("admission_process_status", $this->auth->userID(), $data);
+            }
         }
-        else{
+
             $data["cities"]= $this->Crud_model->get_all("cities");
             $this->viewLoad('address', $data);
-        }
+
 
     }
 
@@ -133,71 +136,79 @@ class User extends CI_Controller {
     public function education_detail(){
 
         if ($this->input->post()){
+            if ($this->_validate_edu() == True) {
 
-            // Matric/o levels
-            $matric=array();
-            $matric["education_level_id"]= $_POST['meducation_level_id'];
-            $matric["passingyears"]= $_POST['mpassingyears'];
-            $matric["board_id"]= $_POST['mboard_id'];
-            $matric["degree_id"]= $_POST['mdegree_id'];
-            $matric["totalmarks"]= $_POST['mtotalmarks'];
-            $matric["obtainmarks"]= $_POST['mobtainmarks'];
-            //$matric["address_type_id"]= 1;
-            $matric['user_id']=$this->auth->userID();
+                //Todo: Matric/o levels details
+                $matric = array();
+                $matric["education_level_id"] = $_POST['meducation_level_id'];
+                $matric["passingyears"] = $_POST['mpassingyears'];
+                $matric["board_id"] = $_POST['mboard_id'];
+                $matric["degree_id"] = $_POST['mdegree_id'];
+                $matric["totalmarks"] = $_POST['mtotalmarks'];
+                $matric["obtainmarks"] = $_POST['mobtainmarks'];
+                //$matric["address_type_id"]= 1;
+                $matric['user_id'] = $this->auth->userID();
 
-            $this->Crud_model->insert('education_details', $matric);
+                $this->Crud_model->insert('education_details', $matric);
 
-            // Mailing Addresses
+                //Todo: Indermediate details
 
-            $intermediate=array();
-            $intermediate["education_level_id"]= $_POST['ineducation_level_id'];
-            $intermediate["passingyears"]= $_POST['inpassingyears'];
-            $intermediate["board_id"]= $_POST['inboard_id'];
-            $intermediate["degree_id"]= $_POST['indegree_id'];
-            $intermediate["totalmarks"]= $_POST['intotalmarks'];
-            $intermediate["obtainmarks"]= $_POST['inobtainmarks'];
-            //$matric["address_type_id"]= 1;
-            $intermediate['user_id']=$this->auth->userID();
+                $intermediate = array();
+                $intermediate["education_level_id"] = $_POST['ineducation_level_id'];
+                $intermediate["passingyears"] = $_POST['inpassingyears'];
+                $intermediate["board_id"] = $_POST['inboard_id'];
+                $intermediate["degree_id"] = $_POST['indegree_id'];
+                $intermediate["totalmarks"] = $_POST['intotalmarks'];
+                $intermediate["obtainmarks"] = $_POST['inobtainmarks'];
+                //$matric["address_type_id"]= 1;
+                $intermediate['user_id'] = $this->auth->userID();
 
-            $this->Crud_model->insert('education_details', $intermediate);
+                $this->Crud_model->insert('education_details', $intermediate);
 
-            // Guardian Addresses
+                //Todo: 14 years details
 
-            $fourteen=array();
-            $fourteen["education_level_id"]= $_POST['freducation_level_id'];
-            $fourteen["passingyears"]= $_POST['frpassingyears'];
-            $fourteen["board_id"]= $_POST['frboard_id'];
-            $fourteen["degree_id"]= $_POST['frdegree_id'];
-            $fourteen["totalmarks"]= $_POST['frtotalmarks'];
-            $fourteen["obtainmarks"]= $_POST['frobtainmarks'];
-            //$matric["address_type_id"]= 1;
-            $fourteen['user_id']=$this->auth->userID();
+                $fourteen = array();
+                $fourteen["education_level_id"] = $_POST['freducation_level_id'];
+                $fourteen["passingyears"] = $_POST['frpassingyears'];
+                $fourteen["board_id"] = $_POST['frboard_id'];
+                $fourteen["degree_id"] = $_POST['frdegree_id'];
+                $fourteen["totalmarks"] = $_POST['frtotalmarks'];
+                $fourteen["obtainmarks"] = $_POST['frobtainmarks'];
+                //$matric["address_type_id"]= 1;
+                $fourteen['user_id'] = $this->auth->userID();
 
-            $this->Crud_model->insert('education_details', $fourteen);
+                $this->Crud_model->insert('education_details', $fourteen);
 
-            // Todo: Education Details Status
-            $data["edetails"] = true;
-            $this->Crud_model->update("admission_process_status", $this->auth->userID(), $data);
+                // Todo: Education Details Status
+                $data["edetails"] = true;
+                $this->Crud_model->update("admission_process_status", $this->auth->userID(), $data);
+            }
         }
-        else{
             $data["education_levels"]= $this->Crud_model->get_all('education_levels');
             $data["degrees"]= $this->Crud_model->get_all('degrees');
             $data["boards"]= $this->Crud_model->get_all('boards');
 
             $this->viewLoad('educationdetails',$data);
-        }
     }
 
 
     public function nts_detail(){
 
         if ($this->input->post()){
-            $_POST['user_id']=$this->auth->userID();
-            $this->Crud_model->insert('nts_details', $_POST);
+//            var_dump($this->_validate());
+//            die();
+            if ($this->_validate() == FALSE){
+                $_POST['user_id']=$this->auth->userID();
+                if($_POST['testdate']) {
+                    $_POST['testdate'] = date('Y-m-d', strtotime($_POST['testdate']));
+                }
+                $this->Crud_model->insert('nts_details', $_POST);
+                // Todo: NTS Status
+                $data["ntsdetails"] = true;
+                $this->Crud_model->update("admission_process_status", $this->auth->userID(), $data);
 
-            // Todo: NTS Status
-            $data["ntsdetails"] = true;
-            $this->Crud_model->update("admission_process_status", $this->auth->userID(), $data);
+            }
+
         }
         else{
             $this->viewLoad('ntsdetails');
@@ -207,22 +218,21 @@ class User extends CI_Controller {
     public function program_choice(){
 
         if ($this->input->post()){
-            foreach ($_POST['program'] as $item){
-                $program=array();
-                $program["user_id"]=$this->auth->userID();
-                $program["degree_id"]=$item;
-                $this->Crud_model->insert('program_choices', $program);
-            };
+            if($this->_validate_programchoice() == True) {
+                foreach ($_POST['program'] as $item) {
+                    $program = array();
+                    $program["user_id"] = $this->auth->userID();
+                    $program["degree_id"] = $item;
+                    $this->Crud_model->insert('program_choices', $program);
+                };
 
-            // Todo: Program Choices Status
-            $data["prochoices"]= true;
-            $this->Crud_model->update("admission_process_status",$this->auth->userID(), $data);
+                // Todo: Program Choices Status
+                $data["prochoices"] = true;
+                $this->Crud_model->update("admission_process_status", $this->auth->userID(), $data);
+            }
         }
-        else{
-
-            $data['degrees']=$this->Crud_model->get_all("degrees");
-            $this->viewLoad('programchoices', $data);
-        }
+        $data['degrees']=$this->Crud_model->get_all("degrees");
+        $this->viewLoad('programchoices', $data);
     }
 
     public function work_history(){
@@ -305,7 +315,7 @@ class User extends CI_Controller {
         }
     }
 
-//Todo:ducoments photo upload
+    //Todo:ducoments photo upload
     public function documents_upload(){
 
         if ($_FILES){
@@ -361,19 +371,25 @@ class User extends CI_Controller {
         }
     }
 
-    public function confirm_fee(){
+    public function confirm_fee()
+    {
+        if ($this->input->post()) {
+            if ($this->_validate_fee() == True){
+                if ($_FILES) {
 
-        if ($this->input->post()){
-            $_POST['user_id']=$this->auth->userID();
-            $this->Crud_model->insert('confirm_fee', $_POST);
 
-            // Todo: Confirm Fee Status
-            $data["confirmfee"]= true;
-            $this->Crud_model->update("admission_process_status",$this->auth->userID(), $data);
-        }
-        else{
-            $this->viewLoad('confirmfee');
-        }
+                    $_POST['user_id'] = $this->auth->userID();
+                    $_POST['depositdate'] = date('Y-m-d', strtotime($_POST['depositdate']));
+                    $_POST['bankchallan'] = $this->do_upload('bankchallan');
+
+                    $this->Crud_model->insert('confirm_fee', $_POST);
+
+                    // Todo: Confirm Fee Status
+                    $data["confirmfee"] = true;
+                    $this->Crud_model->update("admission_process_status", $this->auth->userID(), $data);
+                }
+            }
+        }$this->viewLoad('confirmfee');
     }
 
     public function submit_data(){
@@ -419,5 +435,106 @@ class User extends CI_Controller {
         }
     }
 
+    private function _validate_personal(){
+
+        $this->form_validation->set_rules('fullname', 'Full Name','required|regex_match[/^[a-zA-Z][a-zA-Z ]+[a-zA-Z]$/]');
+        $this->form_validation->set_rules('dob', 'Date of birth','required');
+        $this->form_validation->set_rules('cnic', 'Your CNIC','required|regex_match[/^[0-9+]{5}-[0-9+]{7}-[0-9]{1}$/]|is_unique[personal_information.cnic]');
+        $this->form_validation->set_rules('mobnumbers', 'Mobile Number','required|regex_match[/^[0-9+]{4}-[0-9+]{7}$/]|is_unique[personal_information.mobnumbers]');
+        $this->form_validation->set_rules('country_id', 'Country","required');
+        $this->form_validation->set_rules('domicile_id', 'Domicile','required');
+        $this->form_validation->set_rules('gender', 'Gender','required');
+        $this->form_validation->set_rules('fathername', 'Father Name','required|regex_match[/^[a-zA-Z][a-zA-Z ]+[a-zA-Z]$/]');
+        $this->form_validation->set_rules('fcnic', 'Father CNIC','required|regex_match[/^[0-9+]{5}-[0-9+]{7}-[0-9]{1}$/]|is_unique[personal_information.fcnic]');
+        if ($this->form_validation->run() == FALSE) {
+            return FALSE;
+        }
+        else{
+            return TRUE;
+        }
+    }
+
+    private function _validate_address(){
+
+        $this->form_validation->set_rules('pline1', 'Address Permanent 1','required');
+        $this->form_validation->set_rules('pline2', 'Address Permanent 1','required');
+        $this->form_validation->set_rules('pcity_id', 'City','required|numeric');
+        $this->form_validation->set_rules('pphone', 'Contact Number','required|regex_match[/^[0-9+]{4}-[0-9+]{7}$/]|is_unique[address.phone]');
+        $this->form_validation->set_rules('mline1', 'Address Mailing 1','required');
+        $this->form_validation->set_rules('mline2', 'Address Mailing 2','required');
+        $this->form_validation->set_rules('mcity_id', 'City','required|numeric');
+        $this->form_validation->set_rules('mphone', 'Contact Number','required|regex_match[/^[0-9+]{4}-[0-9+]{7}$/]');
+        $this->form_validation->set_rules('gline1', 'Father/Guardian Address 1','required');
+        $this->form_validation->set_rules('gline2', 'Father/Guardian Address 2','required');
+        $this->form_validation->set_rules('gcity_id', 'City','required|numeric');
+        $this->form_validation->set_rules('gmobile', 'Father/Guardian Mobile','required|regex_match[/^[0-9+]{4}-[0-9+]{7}$/]|is_unique[address.phone]');
+        if ($this->form_validation->run() == FALSE) {
+            return FALSE;
+        }
+        else{
+            return TRUE;
+        }
+    }
+
+    private function _validate_edu(){
+
+        $this->form_validation->set_rules('meducation_level_id', 'Matric / O level','required|numeric|is_unique[education_details.education_level_id]');
+        $this->form_validation->set_rules('mpassingyears', 'Passing year','required|numeric|is_unique[education_details.passingyears]');
+        $this->form_validation->set_rules('mboard_id', 'Board','required|numeric');
+        $this->form_validation->set_rules('mdegree_id', 'Degree','required|numeric|is_unique[education_details.degree_id]');
+        $this->form_validation->set_rules('mtotalmarks', 'Total Marks','required|numeric');
+        $this->form_validation->set_rules('mobtainmarks', 'Obtained Marks','required|numeric');
+
+        $this->form_validation->set_rules('ineducation_level_id', 'Intermediate','required|numeric|is_unique[education_details.education_level_id]');
+        $this->form_validation->set_rules('inpassingyears', 'Passing year','required|numeric|is_unique[education_details.passingyears]');
+        $this->form_validation->set_rules('inboard_id', 'Board','required|numeric');
+        $this->form_validation->set_rules('indegree_id', 'Degree','required|numeric|is_unique[education_details.degree_id]');
+        $this->form_validation->set_rules('intotalmarks', 'Total Marks','required|numeric');
+        $this->form_validation->set_rules('inobtainmarks', 'Obtained Marks','required|numeric');
+
+        $this->form_validation->set_rules('freducation_level_id', '14 years','numeric|is_unique[education_details.education_level_id]');
+        $this->form_validation->set_rules('frpassingyears', 'Passing year','numeric|is_unique[education_details.passingyears]');
+        $this->form_validation->set_rules('frboard_id', 'Board / University','numeric');
+        $this->form_validation->set_rules('frdegree_id', 'Degree','numeric|is_unique[education_details.degree_id]');
+        $this->form_validation->set_rules('frtotalmarks', 'Total Marks','numeric');
+        $this->form_validation->set_rules('frobtainmarks', 'Obtained Marks','numeric');
+        if ($this->form_validation->run() == FALSE) {
+            return FALSE;
+        }
+        else{
+            return TRUE;
+        }
+    }
+
+    private function _validate_programchoice(){
+
+        $this->form_validation->set_rules('program[]', 'Choice Program 1','required|numeric|is_unique[program_choices.degree_id]');
+        $this->form_validation->set_rules('program[]', 'Choice Program 2','required|numeric|is_unique[program_choices.degree_id]');
+        $this->form_validation->set_rules('program[]', 'Choice Program 3','required|numeric|is_unique[program_choices.degree_id]');
+        $this->form_validation->set_rules('program[]', 'Choice Program 4','required|numeric|is_unique[program_choices.degree_id]');
+        $this->form_validation->set_rules('program[]', 'Choice Program 5','required|numeric|is_unique[program_choices.degree_id]');
+        $this->form_validation->set_rules('program[]', 'Choice Program 6','required|numeric|is_unique[program_choices.degree_id]');
+        $this->form_validation->set_rules('program[]', 'Choice Program 7','required|numeric|is_unique[program_choices.degree_id]');
+        if ($this->form_validation->run() == FALSE) {
+            return FALSE;
+        }
+        else{
+            return TRUE;
+        }
+    }
+
+    private function _validate_fee(){
+
+        $this->form_validation->set_rules('bankname', 'Choice Program 1','required|regex_match[/^[a-zA-Z][a-zA-Z ]+[a-zA-Z]$/]');
+        $this->form_validation->set_rules('branchcode', 'Choice Program 2','required|numeric');
+        $this->form_validation->set_rules('bankaddress', 'Choice Program 3','required');
+        $this->form_validation->set_rules('depositdate', 'Choice Program 4','required');
+        if ($this->form_validation->run() == FALSE) {
+            return FALSE;
+        }
+        else{
+            return TRUE;
+        }
+    }
 
 }

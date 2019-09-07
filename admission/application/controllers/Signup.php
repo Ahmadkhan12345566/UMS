@@ -84,6 +84,11 @@ class Signup extends CI_Controller {
         $educationlevel1["name"]="O Level";
         $educationlevel1["shortname"]="Ol";
 
+        // Education Levels 3
+        $educationlevel2=array();
+        $educationlevel2["name"]="Intermediate";
+        $educationlevel2["shortname"]="In";
+
         // Degrees 1
         $degree=array();
         $degree["name"]="Pre Engineering";
@@ -94,6 +99,11 @@ class Signup extends CI_Controller {
         $degree1["name"]="Computer Science";
         $degree1["shortname"]="CS";
 
+        // Degrees 3
+        $degree2=array();
+        $degree2["name"]="Pre Medical";
+        $degree2["shortname"]="PM";
+
         // boards 1
         $boards=array();
         $boards["boardname"]="BISE, Abbotabad";
@@ -103,6 +113,11 @@ class Signup extends CI_Controller {
         $boards1=array();
         $boards1["boardname"]="FBISE, Islamabad";
         $boards1["shortname"]="FBISE";
+
+        // boards 3
+        $boards2=array();
+        $boards2["boardname"]="FBISE, Mirpur";
+        $boards2["shortname"]="MIRFBISE";
 
         // Advertisement 1
         $advertisement=array();
@@ -126,6 +141,9 @@ class Signup extends CI_Controller {
         $this->Crud_model->insert('degrees', $degree1);
         $this->Crud_model->insert('boards', $boards1);
         $this->Crud_model->insert('advertisements', $advertisement1);
+        $this->Crud_model->insert('education_levels', $educationlevel2);
+        $this->Crud_model->insert('degrees', $degree2);
+        $this->Crud_model->insert('boards', $boards2);
 
 
         echo "<h2 style='color: blue;'>Welcome<h2><hr><p style='color: green;'>Your data inserted in your database</p>";

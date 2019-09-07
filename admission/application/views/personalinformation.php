@@ -36,18 +36,24 @@
                                                 <div class="form-group">
                                                     <label>Full Name</label>
                                                     <input type="text" class="form-control" name="fullname" aria-describedby="fullnameHelp" placeholder="Enter your name" required>
+                                                    <div class="text-danger">
+                                                        <?php echo form_error('fullname')?>
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div class="col-md-6 col-sm-12 col-xs-12">
                                                 <div class="form-group">
                                                     <label>Date of Birth</label>
                                                     <div class="input-group date">
-                                                        <input type="text" class="form-control" name="dob" readonly="" placeholder="Select date of birth" id="kt_datepicker_2" required>
+                                                        <input type="text" class="form-control" name="dob"  placeholder="Select date of birth" id="kt_datepicker_2" required>
                                                         <div class="input-group-append">
                                                     <span class="input-group-text">
                                                         <i class="la la-calendar-check-o"></i>
                                                     </span>
                                                         </div>
+                                                    </div>
+                                                    <div class="text-danger">
+                                                        <?php echo form_error('dob')?>
                                                     </div>
                                                 </div>
                                             </div>
@@ -58,6 +64,9 @@
                                                     <label>CNIC Number</label>
                                                     <input type="text" class="form-control" name="cnic" aria-describedby="emailHelp" placeholder="Enter your CNIC number" maxlength="15" required>
                                                     <small>Format : xxxxx-xxxxxxx-x</small>
+                                                    <div class="text-danger">
+                                                        <?php echo form_error('cnic')?>
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div class="col-md-6 col-sm-12 col-xs-12">
@@ -72,6 +81,9 @@
                                                         </div>
                                                     </div>
                                                     <small>Format : xxxxx-xxxxxxx</small>
+                                                    <div class="text-danger">
+                                                        <?php echo form_error('mobnumbers')?>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -84,6 +96,9 @@
                                                         <option value="<?php  echo  $country->id;?>"><?php echo $country->name;?></option>
                                                     <?php }?>
                                                 </select>
+                                                <div class="text-danger">
+                                                    <?php echo form_error('country_id')?>
+                                                </div>
                                             </div>
                                             <div class="col-md-6 col-sm-12 col-xs-12">
                                                 <div class="form-group">
@@ -94,6 +109,9 @@
                                                             <option value="<?php echo $domicile->id;?>"><?php echo $domicile->name;?></option>
                                                         <?php }?>
                                                     </select>
+                                                    <div class="text-danger">
+                                                        <?php echo form_error('domicile_id')?>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -107,6 +125,9 @@
                                                         <option value="Female">Female</option>
                                                         <option value="Others">Others</option>
                                                     </select>
+                                                    <div class="text-danger">
+                                                        <?php echo form_error('gender')?>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -116,12 +137,18 @@
                                                     <label>Father Name</label>
                                                     <input type="text" class="form-control" name="fathername" placeholder="Your father full name" required>
                                                 </div>
+                                                <div class="text-danger">
+                                                    <?php echo form_error('fathername')?>
+                                                </div>
                                             </div>
                                             <div class="col-md-6 col-sm-12 col-xs-12">
                                                 <div class="form-group">
                                                     <label>Father / Guardian CNIC</label>
                                                     <input type="text" class="form-control" name="fcnic" id="cnic" placeholder="Enter your father CNIC" maxlength="15" required>
                                                     <small>Format : xxxxx-xxxxxxx-x</small>
+                                                    <div class="text-danger">
+                                                        <?php echo form_error('fcnic')?>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>

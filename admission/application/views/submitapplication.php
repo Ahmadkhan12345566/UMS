@@ -3,7 +3,7 @@
     <div class="kt-container  kt-container--fluid ">
         <div class="kt-subheader__main" >
             <h3 class="kt-subheader__title">
-                Other Details </h3>
+                Submission </h3>
             <span class="kt-subheader__separator kt-hidden"></span>
             <div class="kt-subheader__breadcrumbs">
                 <a href="<?php echo base_url()?>instructions" class="kt-subheader__breadcrumbs-home"><i class="flaticon2-shelter"></i></a>
@@ -23,7 +23,7 @@
                 <div class="kt-portlet__head">
                     <div class="kt-portlet__head-label">
                         <h3 class="kt-portlet__head-title">
-                            Other Details
+                            Submit Application
                         </h3>
                     </div>
                 </div>
@@ -69,8 +69,8 @@
                     </div>
                     <div class="kt-portlet__foot">
                         <div class="kt-form__actions">
-                            <button type="submit" class="btn btn-primary">Submit</button>
-                            <button type="reset" class="btn btn-secondary">Cancel</button>
+                            <button type="button" class="btn btn-success">Preview Application</button>
+                            <button type="submit" class="btn btn-primary">Submit Application</button>
                         </div>
                     </div>
                 </form>

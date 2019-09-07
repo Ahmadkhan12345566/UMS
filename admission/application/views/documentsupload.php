@@ -51,13 +51,13 @@
                 </div>
 
                 <!--begin::Form-->
-                <form method="post" action="<?php echo base_url("documentsupload")?>" class="kt-form" enctype="multipart/form-data" novalidate>
+                <form method="post" action="<?php echo base_url("documentsupload")?>" enctype="multipart/form-data" novalidate>
                     <div class="kt-portlet">
                         <div class="kt-portlet__body">
                             <div class="kt-portlet">
                                 <div class="row">
                                     <div class="col-md-12 col-sm-12 col-xs-12">
-                                    <div class="form-group">
+                                    <div class="form-group mt-2 pl-2 text-dark">
                                         <h4 class="form-label">SSC Document</h4>
                                         <div class="row">
                                             <div class="col-md-10 col-sm-10 col-xs-10 offset-1">
@@ -69,12 +69,12 @@
                                             </div>
                                         </div>
                                         <div class="row">
-                                            <div class="col-lg-10 col-md-10 offset-1 col-sm-12 col-xs-12">
+                                            <div class="col-lg-10 col-md-10 offset-1 col-sm-10 col-xs-10">
                                                 <div class="form-group">
                                                     <label>File Browser</label>
                                                     <div></div>
                                                     <div class="custom-file">
-                                                        <input type="file" name="sscfile" class="custom-file-input" id="customFile" required>
+                                                        <input type="file" name="sscfile" class="custom-file-input" id="customFile" required="required">
                                                         <label class="custom-file-label" for="customFile">Choose file</label>
                                                     </div>
                                                 </div>
@@ -87,11 +87,11 @@
                             <div class="kt-portlet">
                                 <div class="row">
                                     <div class="col-md-12 col-sm-12 col-xs-12">
-                                        <div class="form-group mt-2">
+                                        <div class="form-group mt-2 pl-2 text-dark">
                                             <h4 class="form-label">HSSC / A-Level / DAE / Equivalent Document</h4>
                                         </div>
                                         <div class="row">
-                                            <div class="col-lg-10 col-md-10 offset-1 col-sm-12 col-xs-12">
+                                            <div class="col-lg-10 col-md-10 offset-1 col-sm-10 col-xs-10">
                                                 <div class="form-group">
                                                     <label>File Browser</label>
                                                     <div></div>
@@ -108,11 +108,11 @@
                             <div class="kt-portlet">
                                 <div class="row">
                                 <div class="col-md-12 col-sm-12 col-xs-12">
-                                    <div class="form-group mt-2">
+                                    <div class="form-group mt-2 pl-2 text-dark">
                                         <h4 class="form-label">Upload CNIC or B-form</h4>
                                     </div>
                                     <div class="row">
-                                        <div class="col-lg-10 col-md-10 offset-1 col-sm-12 col-xs-12">
+                                        <div class="col-lg-10 col-md-10 offset-1 col-sm-10 col-xs-10">
                                             <label class="kt-radio kt-radio--success" name="radio5">
                                                 <input type="radio" name="yesno" onclick="javascript:yesnoCheck();" id="yesCheck" checked> CNIC
                                                 <span></span>
@@ -125,7 +125,7 @@
                                     </div>
                                     <div id="ifYes" style="display:none">
                                         <div class="row">
-                                            <div class="col-lg-10 col-md-10 offset-1 col-sm-12 col-xs-12">
+                                            <div class="col-lg-10 col-md-10 offset-1 col-sm-10 col-xs-10">
                                             <div class="form-group">
                                                 <label>File Browser</label>
                                                 <div></div>
@@ -137,7 +137,7 @@
                                         </div>
                                         </div>
                                         <div class="row">
-                                            <div class="col-lg-10 col-md-10 offset-1 col-sm-12 col-xs-12">
+                                            <div class="col-lg-10 col-md-10 offset-1 col-sm-10 col-xs-10">
                                             <div class="form-group">
                                                 <label>File Browser</label>
                                                 <div></div>
@@ -151,7 +151,7 @@
                                     </div>
                                     <div id="ifNo" style="display:none">
                                         <div class="row">
-                                        <div class="col-lg-10 col-md-10 offset-1 col-sm-12 col-xs-12">
+                                        <div class="col-lg-10 col-md-10 offset-1 col-sm-10 col-xs-10">
                                             <div class="form-group">
                                                 <label>File Browser</label>
                                                 <div></div>
@@ -169,10 +169,10 @@
                             <div class="kt-portlet">
                                 <div class="row">
                                     <div class="col-md-12 col-sm-12 col-xs-12">
-                                    <div class="form-group mt-2">
+                                    <div class="form-group mt-2 pl-2 text-dark">
                                         <h4 class="form-label">BS / MSc / MA Transcript</h4>
                                         <div class="row">
-                                            <div class="col-md-10 col-sm-10 col-xs-10 offset-1">
+                                            <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 offset-1">
                                                 <div class="alert alert-solid-brand alert-bold" role="alert">
                                                     <div class="alert-icon"><i class="flaticon-warning"></i></div>
                                                     <div class="alert-text">Scan and upload BS / MSc / MA or equivalent transcript
@@ -181,7 +181,7 @@
                                             </div>
                                         </div>
                                         <div class="row">
-                                            <div class="col-lg-10 col-md-10 offset-1 col-sm-12 col-xs-12">
+                                            <div class="col-lg-10 col-md-10 offset-1 col-sm-10 col-xs-10">
                                                 <div class="form-group">
                                                     <label>File Browser</label>
                                                     <div></div>
@@ -199,11 +199,11 @@
                             <div class="kt-portlet">
                                 <div class="row">
                                 <div class="col-md-12 col-sm-12 col-xs-12">
-                                    <div class="form-group mt-2">
+                                    <div class="form-group mt-2 pl-2 text-dark">
                                         <h4 class="form-label">NTS Result (if any)</h4>
                                     </div>
                                     <div class="row">
-                                        <div class="col-lg-10 col-md-10 offset-1 col-sm-12 col-xs-12">
+                                        <div class="col-lg-10 col-md-10 offset-1 col-sm-10 col-xs-10">
                                             <div class="form-group">
                                                 <label>File Browser</label>
                                                 <div></div>

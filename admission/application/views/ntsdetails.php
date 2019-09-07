@@ -33,6 +33,7 @@
 
                         <!--begin::Form-->
                         <form class="kt-form" method="post" action="<?php echo base_url("ntsdetails")?>" novalidate>
+                            <?php echo validation_errors('<div class="alert alert-danger">', '</div>'); ?>
                             <div class="kt-portlet__body">
                                 <div id="ifYes" style="display:none">
                                     <div class="form-group row form-group-marginless">
@@ -52,11 +53,11 @@
                                         </div>
                                         <div class="form-group">
                                             <label class="kt-radio kt-radio--success">
-                                                Yes <input type="radio" value="University Test" name="test_type_id" onclick="javascript:yesnoCheck();" id="yesCheck">
+                                                Yes <input type="radio" value="1" name="test_type_id"  onclick="javascript:yesnoCheck();" id="yesCheck" checked>
                                                 <span></span>
                                             </label>
                                             <label class="kt-radio kt-radio--danger">
-                                                No <input type="radio" value="Other Test" name="test_type_id" onclick="javascript:yesnoCheck();" id="noCheck">
+                                                No <input type="radio" value="2" name="test_type_id"  onclick="javascript:yesnoCheck();" id="noCheck">
                                                 <span></span>
                                             </label>
                                         </div>
@@ -73,11 +74,11 @@
                                             <div class="form-group">
                                                 <div class="kt-radio-list">
                                                     <label class="kt-radio kt-radio--success">
-                                                        <input type="radio" value="already taken NTS" name="test_type_id" onclick="javascript:ynCheck();" id="checkYes"> NTS Test already taken?
+                                                        <input type="radio" value="3" name="test_type_id"  onclick="javascript:ynCheck();" id="checkYes"> NTS Test already taken?
                                                         <span></span>
                                                     </label>
                                                     <label class="kt-radio kt-radio--brand">
-                                                        <input type="radio" value="already registered in NTS" name="test_type_id" onclick="javascript:ynCheck();" id="checkNo"> If already registered in a NTS Test Centre?
+                                                        <input type="radio" value="4" name="test_type_id"  onclick="javascript:ynCheck();" id="checkNo"> If already registered in a NTS Test Centre?
                                                         <span></span>
                                                     </label>
                                                 </div>
@@ -162,7 +163,7 @@
                             </div>
                             <div class="kt-portlet__foot">
                                 <div class="kt-form__actions">
-                                    <button type="submit" class="btn btn-success">Submit</button>
+                                    <button type="submit" class="btn btn-primary">Submit</button>
                                     <button type="reset" class="btn btn-secondary">Cancel</button>
                                 </div>
                             </div>
