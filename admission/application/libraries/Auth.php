@@ -105,7 +105,6 @@ class Auth
      */
     protected function validate($request)
     {
-
         //$this->CI->form_validation->set_rules('username', 'User Username', 'required');
         $this->CI->form_validation->set_rules('email', 'User Email', 'required');
         $this->CI->form_validation->set_rules('password', 'Password', 'required');
