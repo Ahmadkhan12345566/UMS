@@ -205,7 +205,7 @@ class User extends CI_Controller {
         if ($this->input->post()){
 //            var_dump($this->_validate());
 //            die();
-            if ($this->_validate() == FALSE){
+
                 $_POST['user_id']=$this->auth->userID();
                 if($_POST['testdate']) {
                     $_POST['testdate'] = date('Y-m-d', strtotime($_POST['testdate']));
@@ -215,7 +215,7 @@ class User extends CI_Controller {
                 $data["ntsdetails"] = true;
                 $this->Crud_model->update("admission_process_status", $this->auth->userID(), $data);
 
-            }
+
 
             redirect(base_url('programchoices'));
 
