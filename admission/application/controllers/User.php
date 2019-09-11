@@ -132,7 +132,7 @@ class User extends CI_Controller {
                 $this->Crud_model->update("admission_process_status", $this->auth->userID(), $data);
             }
 
-            redirect(base_url('educationsetails'));
+            redirect(base_url('educationdetails'));
         }
 
         $this->viewLoad('photoupload');
