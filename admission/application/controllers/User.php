@@ -123,7 +123,7 @@ class User extends CI_Controller {
 
             $_POST['user_id']=$this->auth->userID();
             //$this->Crud_model->insert('photo_upload', $_POST);
-            $image = $this->do_upload('studentphoto');
+            $image['studentphoto'] = $this->do_upload('studentphoto');
             if($image) {
                 $this->Crud_model->update_photo($this->auth->userID(), $image);
                 $this->session->set_flashdata('success', 'Photo loaded');
