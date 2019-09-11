@@ -50,7 +50,7 @@ class User extends CI_Controller {
                 $this->Crud_model->update("admission_process_status",$this->auth->userID(),$data);
             }
 
-            redirect(base_url('address'));
+            redirect(base_url('addressdetail'));
         }
 
             $data['countries']= $this->Crud_model->get_all("countries");
