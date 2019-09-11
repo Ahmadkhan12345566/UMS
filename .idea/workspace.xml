@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="635fb193-293b-40f2-b0bf-d121a2ba5f4a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/admission/application/controllers/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/admission/application/controllers/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admission/application/views/photoupload.php" beforeDir="false" afterPath="$PROJECT_DIR$/admission/application/views/photoupload.php" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/admission/application/assets/vendors/general/handlebars/node_modules/" />
     <ignored path="$PROJECT_DIR$/admission/application/assets/vendors/general/markdown/node_modules/" />
@@ -23,8 +24,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/admission/application/controllers/User.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="52" column="44" selection-start-line="52" selection-start-column="44" selection-end-line="52" selection-end-column="44" />
+            <state relative-caret-position="408">
+              <caret line="134" column="41" selection-start-line="134" selection-start-column="41" selection-end-line="134" selection-end-column="41" />
               <folding>
                 <element signature="n#work_history#0;n#User#0;n#!!top" />
                 <element signature="n#work_history_submit#0;n#User#0;n#!!top" />
@@ -38,6 +39,33 @@
                 <element signature="n#_validate_edu#0;n#User#0;n#!!top" />
                 <element signature="n#_validate_programchoice#0;n#User#0;n#!!top" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admission/application/views/photoupload.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="44" column="74" selection-start-line="44" selection-start-column="74" selection-end-line="44" selection-end-column="74" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admission/application/migrations/003_photo_upload.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-17">
+              <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admission/application/migrations/019_users.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="40" column="14" lean-forward="true" selection-start-line="36" selection-start-column="12" selection-end-line="40" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -88,8 +116,8 @@
         <option value="$PROJECT_DIR$/admission/application/views/otherdetail.php" />
         <option value="$PROJECT_DIR$/admission/application/views/educationdetails.php" />
         <option value="$PROJECT_DIR$/admission/application/views/ntsdetails.php" />
-        <option value="$PROJECT_DIR$/admission/application/views/photoupload.php" />
         <option value="$PROJECT_DIR$/admission/application/views/programchoices.php" />
+        <option value="$PROJECT_DIR$/admission/application/views/photoupload.php" />
         <option value="$PROJECT_DIR$/admission/application/controllers/User.php" />
       </list>
     </option>
@@ -136,6 +164,20 @@
               <item name="admission" type="462c0819:PsiDirectoryNode" />
               <item name="application" type="462c0819:PsiDirectoryNode" />
               <item name="controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="UMS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="UMS" type="462c0819:PsiDirectoryNode" />
+              <item name="admission" type="462c0819:PsiDirectoryNode" />
+              <item name="application" type="462c0819:PsiDirectoryNode" />
+              <item name="migrations" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="UMS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="UMS" type="462c0819:PsiDirectoryNode" />
+              <item name="admission" type="462c0819:PsiDirectoryNode" />
+              <item name="application" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -184,12 +226,12 @@
       <workItem from="1567877952929" duration="223000" />
       <workItem from="1568176935424" duration="614000" />
       <workItem from="1568184409684" duration="3400000" />
-      <workItem from="1568188643894" duration="1037000" />
+      <workItem from="1568188643894" duration="3397000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="101228000" />
+    <option name="totallyTimeSpent" value="103588000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -358,13 +400,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admission/application/migrations/019_users.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="40" column="14" lean-forward="true" selection-start-line="36" selection-start-column="12" selection-end-line="40" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/admission/application/controllers/Login.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
@@ -414,13 +449,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admission/application/views/photoupload.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="55" column="115" selection-start-line="55" selection-start-column="115" selection-end-line="55" selection-end-column="115" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/admission/application/views/empty-page.php" />
     <entry file="file://$PROJECT_DIR$/admission/application/views/programchoices.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -448,10 +476,31 @@
         <state relative-caret-position="-204" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/admission/application/migrations/003_photo_upload.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-17">
+          <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admission/application/migrations/019_users.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="40" column="14" lean-forward="true" selection-start-line="36" selection-start-column="12" selection-end-line="40" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admission/application/views/photoupload.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="44" column="74" selection-start-line="44" selection-start-column="74" selection-end-line="44" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/admission/application/controllers/User.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="52" column="44" selection-start-line="52" selection-start-column="44" selection-end-line="52" selection-end-column="44" />
+        <state relative-caret-position="408">
+          <caret line="134" column="41" selection-start-line="134" selection-start-column="41" selection-end-line="134" selection-end-column="41" />
           <folding>
             <element signature="n#work_history#0;n#User#0;n#!!top" />
             <element signature="n#work_history_submit#0;n#User#0;n#!!top" />
