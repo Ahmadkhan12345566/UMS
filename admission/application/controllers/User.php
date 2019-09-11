@@ -50,7 +50,7 @@ class User extends CI_Controller {
                 $this->Crud_model->update("admission_process_status",$this->auth->userID(),$data);
             }
 
-            redirect('address');
+            redirect(base_url('address'));
         }
 
             $data['countries']= $this->Crud_model->get_all("countries");
@@ -106,7 +106,7 @@ class User extends CI_Controller {
                 $this->Crud_model->update("admission_process_status", $this->auth->userID(), $data);
             }
 
-            redirect('photoupload');
+            redirect(base_url('photoupload'));
         }
 
             $data["cities"]= $this->Crud_model->get_all("cities");
@@ -132,7 +132,7 @@ class User extends CI_Controller {
                 $this->Crud_model->update("admission_process_status", $this->auth->userID(), $data);
             }
 
-            redirect('educationsetails');
+            redirect(base_url('educationsetails'));
         }
 
         $this->viewLoad('photoupload');
@@ -190,7 +190,7 @@ class User extends CI_Controller {
                 $this->Crud_model->update("admission_process_status", $this->auth->userID(), $data);
             }
 
-            redirect('ntsdetails');
+            redirect(base_url('ntsdetails'));
         }
             $data["education_levels"]= $this->Crud_model->get_all('education_levels');
             $data["degrees"]= $this->Crud_model->get_all('degrees');
@@ -217,7 +217,7 @@ class User extends CI_Controller {
 
             }
 
-            redirect('programchoices');
+            redirect(base_url('programchoices'));
 
         }
         else{
@@ -241,7 +241,7 @@ class User extends CI_Controller {
                 $this->Crud_model->update("admission_process_status", $this->auth->userID(), $data);
             }
 
-            redirect('documentsupload');
+            redirect(base_url('documentsupload'));
         }
         $data['degrees']=$this->Crud_model->get_all("degrees");
         $this->viewLoad('programchoices', $data);
@@ -351,7 +351,7 @@ class User extends CI_Controller {
             $data["docupload"]= true;
             $this->Crud_model->update("admission_process_status",$this->auth->userID(), $data);
 
-            redirect('otherdetail');
+            redirect(base_url('otherdetail'));
         }
             $this->viewLoad('documentsupload');
 
@@ -378,7 +378,7 @@ class User extends CI_Controller {
             $data["othdetails"]= true;
             $this->Crud_model->update("admission_process_status",$this->auth->userID(), $data);
 
-            redirect('confirmfee');
+            redirect(base_url('confirmfee'));
 
         }
         else{
@@ -406,7 +406,7 @@ class User extends CI_Controller {
                 }
             }
 
-            redirect('submitapplication');
+            redirect(base_url('submitapplication'));
         }$this->viewLoad('confirmfee');
     }
 
