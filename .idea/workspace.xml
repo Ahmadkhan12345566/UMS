@@ -23,7 +23,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/admission/application/controllers/User.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
+            <state relative-caret-position="-238">
               <caret line="408" column="49" selection-start-line="408" selection-start-column="49" selection-end-line="408" selection-end-column="49" />
               <folding>
                 <element signature="n#work_history#0;n#User#0;n#!!top" />
@@ -98,56 +98,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="UMS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="UMS" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="UMS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="UMS" type="462c0819:PsiDirectoryNode" />
-              <item name="admission" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="UMS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="UMS" type="462c0819:PsiDirectoryNode" />
-              <item name="admission" type="462c0819:PsiDirectoryNode" />
-              <item name="application" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="UMS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="UMS" type="462c0819:PsiDirectoryNode" />
-              <item name="admission" type="462c0819:PsiDirectoryNode" />
-              <item name="application" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="UMS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="UMS" type="462c0819:PsiDirectoryNode" />
-              <item name="admission" type="462c0819:PsiDirectoryNode" />
-              <item name="application" type="462c0819:PsiDirectoryNode" />
-              <item name="libraries" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="UMS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="UMS" type="462c0819:PsiDirectoryNode" />
-              <item name="admission" type="462c0819:PsiDirectoryNode" />
-              <item name="application" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="UMS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="UMS" type="462c0819:PsiDirectoryNode" />
-              <item name="admission" type="462c0819:PsiDirectoryNode" />
-              <item name="application" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
+      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -190,16 +141,15 @@
       <workItem from="1567877483540" duration="136000" />
       <workItem from="1567877952929" duration="223000" />
       <workItem from="1568176935424" duration="614000" />
-      <workItem from="1568184409684" duration="3167000" />
+      <workItem from="1568184409684" duration="3400000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="99958000" />
+    <option name="totallyTimeSpent" value="100191000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22911051" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -215,7 +165,7 @@
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="TypeScript" order="9" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.32944608" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.3265306" />
+      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.3265306" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -460,7 +410,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/admission/application/controllers/User.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
+        <state relative-caret-position="-238">
           <caret line="408" column="49" selection-start-line="408" selection-start-column="49" selection-end-line="408" selection-end-column="49" />
           <folding>
             <element signature="n#work_history#0;n#User#0;n#!!top" />
