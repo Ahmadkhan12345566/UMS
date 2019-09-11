@@ -148,6 +148,26 @@
 
 <!--end::Page Scripts -->
 
+<script type="text/javascript">
+    window.onload = function() {
+        document.getElementById('ifYes').style.display = 'block';
+        document.getElementById('ifNo').style.display = 'none';
+    }
+    function yesnoCheck() {
+        if (document.getElementById('yesCheck').checked) {
+            document.getElementById('ifYes').style.display = 'block';
+            document.getElementById('ifNo').style.display = 'none';
+        }
+        else if(document.getElementById('noCheck').checked) {
+            document.getElementById('ifNo').style.display = 'block';
+            document.getElementById('ifYes').style.display = 'none';
+        }
+    }
+
+
+</script>
+
+
 </body>
 
 <!-- end::Body -->

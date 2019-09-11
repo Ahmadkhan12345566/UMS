@@ -36,31 +36,31 @@ class Migration_confirm_fee extends CI_Migration {
             'depositdate' => array(
                 'type' => 'DATE',
             ),
-            'challanfileupload' => array(
+            'bankchallan' => array(
                 'type' => 'VARCHAR',
                 'constraint' => '100',
                 'null' => TRUE,
             ),
-            'ntsbankname' => array(
-                'type' => 'VARCHAR',
-                'constraint' => '100',
-            ),
-            'ntsbranchcode' => array(
-                'type' => 'VARCHAR',
-                'constraint' => '100',
-            ),
-            'ntsbankaddress' => array(
-                'type' => 'VARCHAR',
-                'constraint' => '100',
-            ),
-            'ntsdepositdate' => array(
-                'type' => 'DATE',
-            ),
-            'ntschallanfileupload' => array(
-                'type' => 'VARCHAR',
-                'constraint' => '100',
-                'null' => TRUE,
-            ),
+//            'ntsbankname' => array(
+//                'type' => 'VARCHAR',
+//                'constraint' => '100',
+//            ),
+//            'ntsbranchcode' => array(
+//                'type' => 'VARCHAR',
+//                'constraint' => '100',
+//            ),
+//            'ntsbankaddress' => array(
+//                'type' => 'VARCHAR',
+//                'constraint' => '100',
+//            ),
+//            'ntsdepositdate' => array(
+//                'type' => 'DATE',
+//            ),
+//            'ntschallanfileupload' => array(
+//                'type' => 'VARCHAR',
+//                'constraint' => '100',
+//                'null' => TRUE,
+//            ),
             'created_at' => array(
                 'type' => 'timestamp',
                 'default' => NULL,

@@ -29,7 +29,7 @@
                 </div>
 
                 <!--begin::Form-->
-                <form method="post" action="<?php echo base_url("confirmfee")?>" class="kt-form" id="kt_form_2">
+                <form method="post" action="<?php echo base_url("confirmfee")?>" enctype="multipart/form-data" class="kt-form">
                     <div class="kt-portlet__body">
                         <div class="kt-section">
                             <div class="kt-section__content">
@@ -75,30 +75,43 @@
                             </div>
                         </div>
                         <div class="kt-portlet">
-                            <div class="row mt-2">
-                                <div class="col-md-6 col-sm-12 col-xs-12">
+                            <div class="row mt-3">
+                                <div class="col-md-4 offset-1 col-sm-10 col-sx-10">
                                     <div class="form-group">
                                         <label for="form-control-label">Bank Name</label>
                                         <input type="text" name="bankname" class="form-control" required>
+                                        <div class="text-danger">
+                                            <?php echo form_error('bankname')?>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="col-md-6 col-sm-12 col-xs-12">
+                                <div class="col-md-4 offset-1 col-sm-10 col-sx-10">
                                     <div class="form-group">
                                         <label for="form-control-label">Branch Code</label>
                                         <input type="text" name="branchcode" class="form-control" required>
-                                        </label>
+                                        <div class="text-danger">
+                                            <?php echo form_error('branchcode')?>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-md-6 col-sm-12 col-sx-12">
-                                    <label for="form-control-label">Bank Address</label>
-                                    <input type="text" name="bankaddress" class="form-control" required>
+                                <div class="col-md-4 offset-1 col-sm-10 col-sx-10">
+                                    <div class="form-group">
+                                        <label for="form-control-label">Bank Address</label>
+                                        <input type="text" name="bankaddress" class="form-control" required>
+                                        <div class="text-danger">
+                                            <?php echo form_error('bankaddress')?>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="col-md-6 col-sm-12 col-xs-12">
+                                <div class="col-md-4 offset-1 col-sm-10 col-sx-10">
                                     <div class="form-group">
                                         <label for="form-control-label">Deposit Date</label>
-                                        <input type="date" name="depositdate" class="form-control" required>
+                                        <input type="text" name="depositdate" class="form-control" placeholder="Select Date" id="kt_datepicker_2" required>
+                                        <div class="text-danger">
+                                            <?php echo form_error('depositdate')?>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -107,7 +120,7 @@
                             <div class="row mt-2">
                                 <div class="col-md-12 col-sm-12 col-xs-12">
                                     <div class="form-group">
-                                        <h4 class="form-label">Upload Challan</h4>
+                                        <h4 class="form-label mt-2 pl-2 text-dark">Upload Challan</h4>
                                     </div>
                                         <div class="row">
                                             <div class="col-md-10 col-sm-10 col-xs-10 offset-1">
@@ -119,88 +132,100 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="kt-dropzone dropzone" action="inc/api/dropzone/upload.php" id="m-dropzone-one">
-                                            <div class="kt-dropzone__msg dz-message needsclick">
-                                                <h5 class="kt-dropzone__msg-title">Drop files here or click to upload.</h5>
-                                                <span class="kt-dropzone__msg-desc">Upload only <b>Challan</b> documents file</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        <div class="kt-portlet">
-                            <div class="row mt-2">
-                                <div class="col-md-12 col-sm-12 col-xs-12">
-                                    <div class="form-group">
-                                        <h4 class="form-label">NTS Details</h4>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6 col-sm-12 col-xs-12">
-                                    <div class="form-group">
-                                        <label for="form-control-label">Bank Name</label>
-                                        <input type="text" name="ntsbankname" class="form-control" required>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-sm-12 col-xs-12">
-                                    <div class="form-group">
-                                        <label for="form-control-label">Branch Code</label>
-                                        <input type="text" name="ntsbranchcode" id="NTSbranchcode" class="form-control" required>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6 col-sm-12 col-xs-12">
-                                    <div class="form-group">
-                                        <label for="form-control-label">Bank Address</label>
-                                        <input type="text" name="ntsbankaddress" class="form-control" required>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-sm-12 col-xs-12">
-                                    <div class="form-group">
-                                        <label for="form-control-label">Deposit Date</label>
-                                        <div class="input-group date">
-                                            <input type="date" name="ntsdepositdate" class="form-control" readonly="" placeholder="Select Deposit Date" id="kt_datepicker_2" required>
-                                            <div class="input-group-append">
-                                                    <span class="input-group-text">
-                                                        <i class="la la-calendar-check-o"></i>
-                                                    </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="kt-portlet">
-                            <div class="row mt-2">
-                                <div class="col-md-12 col-sm-12 col-xs-12">
-                                    <div class="form-group">
-                                        <h4 class="form-label">Upload NTS Challan</h4>
-                                    </div>
                                     <div class="row">
-                                        <div class="col-md-10 col-sm-10 col-xs-10 offset-1">
-                                            <div class="alert alert-solid-brand alert-bold" role="alert">
-                                                <div class="alert-icon"><i class="flaticon-warning"></i></div>
-                                                <div class="alert-text">
-                                                    Make sure that bank stamp and signatures are clearly visible on the NTS challan image.
+                                        <div class="col-lg-10 col-md-10 offset-1 col-sm-10 col-xs-10">
+                                            <div class="form-group">
+                                                <label>File Browser</label>
+                                                <div></div>
+                                                <div class="custom-file">
+                                                    <input type="file" name="bankchallan" class="custom-file-input" id="customFile" required>
+                                                    <label class="custom-file-label" for="customFile">Choose file</label>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="kt-dropzone dropzone" action="inc/api/dropzone/upload.php" id="m-dropzone-one">
-                                        <div class="kt-dropzone__msg dz-message needsclick">
-                                            <h5 class="kt-dropzone__msg-title">Drop files here or click to upload.</h5>
-                                            <span class="kt-dropzone__msg-desc">Upload only <b>Challan</b> documents file</span>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+<!--                        <div class="kt-portlet">-->
+<!--                            <div class="row mt-2">-->
+<!--                                <div class="col-md-12 col-sm-12 col-xs-12">-->
+<!--                                    <div class="form-group mt-2 pl-2 text-dark">-->
+<!--                                        <h4 class="form-label">NTS Details</h4>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="row">-->
+<!--                                <div class="col-md-4 offset-1 col-sm-10 col-xs-10">-->
+<!--                                    <div class="form-group">-->
+<!--                                        <label for="form-control-label">Bank Name</label>-->
+<!--                                        <input type="text" name="ntsbankname" class="form-control" required>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                                <div class="col-md-4 offset-1 col-sm-10 col-xs-10">-->
+<!--                                    <div class="form-group">-->
+<!--                                        <label for="form-control-label">Branch Code</label>-->
+<!--                                        <input type="text" name="ntsbranchcode" id="NTSbranchcode" class="form-control" required>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="row">-->
+<!--                                <div class="col-md-4 offset-1 col-sm-10 col-xs-10">-->
+<!--                                    <div class="form-group">-->
+<!--                                        <label for="form-control-label">Bank Address</label>-->
+<!--                                        <input type="text" name="ntsbankaddress" class="form-control" required>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                                <div class="col-md-4 offset-1 col-sm-10 col-xs-10">-->
+<!--                                    <div class="form-group">-->
+<!--                                        <label for="form-control-label">Deposit Date</label>-->
+<!--                                        <div class="input-group date">-->
+<!--                                            <input type="text" name="ntsdepositdate" class="form-control" placeholder="Select Deposit Date" id="kt_datepicker_2" required>-->
+<!--                                            <div class="input-group-append">-->
+<!--                                                <span class="input-group-text">-->
+<!--                                                    <i class="la la-calendar-check-o"></i>-->
+<!--                                                </span>-->
+<!--                                            </div>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="kt-portlet">-->
+<!--                            <div class="row mt-2">-->
+<!--                                <div class="col-md-12 col-sm-12 col-xs-12">-->
+<!--                                    <div class="form-group mt-2 pl-2 text-dark">-->
+<!--                                        <h4 class="form-label">Upload NTS Challan</h4>-->
+<!--                                    </div>-->
+<!--                                    <div class="row">-->
+<!--                                        <div class="col-md-10 col-sm-10 col-xs-10 offset-1">-->
+<!--                                            <div class="alert alert-solid-brand alert-bold" role="alert">-->
+<!--                                                <div class="alert-icon"><i class="flaticon-warning"></i></div>-->
+<!--                                                <div class="alert-text">-->
+<!--                                                    Make sure that bank stamp and signatures are clearly visible on the NTS challan image.-->
+<!--                                                </div>-->
+<!--                                            </div>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                    <div class="row">-->
+<!--                                        <div class="col-lg-10 col-md-10 offset-1 col-sm-10 col-xs-10">-->
+<!--                                            <div class="form-group">-->
+<!--                                                <label>File Browser</label>-->
+<!--                                                <div></div>-->
+<!--                                                <div class="custom-file">-->
+<!--                                                    <input type="file" name="sscfile" class="custom-file-input" id="customFile" required>-->
+<!--                                                    <label class="custom-file-label" for="customFile">Choose file</label>-->
+<!--                                                </div>-->
+<!--                                            </div>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
                     </div>
                     <div class="kt-portlet__foot">
                         <div class="kt-form__actions">
-                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <button type="submit" class="btn btn-primary">Submit & Move Next</button>
                             <button type="reset" class="btn btn-secondary">Cancel</button>
                         </div>
                     </div>

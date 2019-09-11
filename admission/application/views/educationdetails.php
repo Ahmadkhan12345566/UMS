@@ -42,6 +42,9 @@
                                         <?php }?>
                                     </select>
                                     <span class="form-text text-muted">Please select your Degree.</span>
+                                    <div class="text-danger">
+                                        <?php echo form_error('meducation_level_id')?>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
@@ -49,7 +52,7 @@
                                     <label class="form-control-label">Years</label>
                                     <select name='mpassingyears' class="form-control kt-selectpicker" required>
                                         <option value=''>Years</option>
-                                        <option value=2019'>2019</option>
+                                        <option value='2019'>2019</option>
                                         <option value='2018'>2018</option>
                                         <option value='2017'>2017</option>
                                         <option value='2016'>2016</option>
@@ -58,6 +61,9 @@
                                         <option value='2013'>2013</option>
                                     </select>
                                     <span class="form-text text-muted">Please select your Passing Year.</span>
+                                    <div class="text-danger">
+                                        <?php echo form_error('mpassingyears')?>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -72,6 +78,9 @@
                                         <?php }?>
                                     </select>
                                     <span class="form-text text-muted">Please select your Board / Univsersity.</span>
+                                    <div class="text-danger">
+                                        <?php echo form_error('mboard_id')?>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-xl-6">
@@ -84,6 +93,9 @@
                                         <?php }?>
                                     </select>
                                     <span class="form-text text-muted">Please select your Subject.</span>
+                                    <div class="text-danger">
+                                        <?php echo form_error('mdegree_id')?>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -93,12 +105,18 @@
                                     <label>Total Marks</label>
                                     <input type="text" class="form-control" name="mtotalmarks" id="Matricminimum_marks" required>
                                     <span class="form-text text-muted">Please enter your Total Marks.</span>
+                                    <div class="text-danger">
+                                        <?php echo form_error('mtotalmarks')?>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-xl-6">
                                 <div class="form-group">
                                     <label>Obtained Marks</label>
                                     <input type="text" class="form-control" name="mobtainmarks" id="MatricObtainedmarks" required>
+                                    <div class="text-danger">
+                                        <?php echo form_error('mobtainmarks')?>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -120,6 +138,9 @@
                                         <?php }?>
                                     </select>
                                     <span class="form-text text-muted">Please select your Degree.</span>
+                                    <div class="text-danger">
+                                        <?php echo form_error('ineducation_level_id')?>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
@@ -127,7 +148,7 @@
                                     <label>Years</label>
                                     <select name="inpassingyears" class="form-control kt-selectpicker" required>
                                         <option value=''>Years</option>
-                                        <option value=2019'>2019</option>
+                                        <option value='2019'>2019</option>
                                         <option value='2018'>2018</option>
                                         <option value='2017'>2017</option>
                                         <option value='2016'>2016</option>
@@ -136,6 +157,9 @@
                                         <option value='2013'>2013</option>
                                     </select>
                                     <span class="form-text text-muted">Please select your Passing Year.</span>
+                                    <div class="text-danger">
+                                        <?php echo form_error('inpassingyears')?>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -150,6 +174,9 @@
                                         <?php }?>
                                     </select>
                                     <span class="form-text text-muted">Please select your Board / Univsersity.</span>
+                                    <div class="text-danger">
+                                        <?php echo form_error('inboard_id')?>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-xl-6">
@@ -162,6 +189,9 @@
                                         <?php }?>
                                     </select>
                                     <span class="form-text text-muted">Please select your Subject.</span>
+                                    <div class="text-danger">
+                                        <?php echo form_error('indegree_id')?>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -171,12 +201,18 @@
                                     <label>Total Marks</label>
                                     <input type="text" class="form-control" name="intotalmarks" required>
                                     <span class="form-text text-muted">Please enter your Total Marks.</span>
+                                    <div class="text-danger">
+                                        <?php echo form_error('intotalmarks')?>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-xl-6">
                                 <div class="form-group">
                                     <label>Obtained Marks</label>
                                     <input type="text" class="form-control" name="inobtainmarks" required>
+                                    <div class="text-danger">
+                                        <?php echo form_error('inobtainmarks')?>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -191,21 +227,24 @@
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
                                 <div class="form-group">
                                     <label>Degree</label>
-                                    <select name="freducation_level_id" class="form-control kt-selectpicker" required>
+                                    <select name="freducation_level_id" class="form-control kt-selectpicker">
                                         <option value="">Select Degree</option>
                                         <?php foreach ($education_levels as $education_level){?>
                                             <option value="<?php echo $education_level->id; ?>"><?php echo $education_level->name; ?></option>
                                         <?php }?>
                                     </select>
                                     <span class="form-text text-muted">Please select your Degree.</span>
+                                    <div class="text-danger">
+                                        <?php echo form_error('freducation_level_id')?>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
                                 <div class="form-group">
                                     <label>Years</label>
-                                    <select name="frpassingyears" class="form-control kt-selectpicker" required>
+                                    <select name="frpassingyears" class="form-control kt-selectpicker">
                                         <option value=''>Years</option>
-                                        <option value=2019'>2019</option>
+                                        <option value='2019'>2019</option>
                                         <option value='2018'>2018</option>
                                         <option value='2017'>2017</option>
                                         <option value='2016'>2016</option>
@@ -214,6 +253,9 @@
                                         <option value='2013'>2013</option>
                                     </select>
                                     <span class="form-text text-muted">Please select your Passing Year.</span>
+                                    <div class="text-danger">
+                                        <?php echo form_error('frpassingyears')?>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -221,25 +263,31 @@
                             <div class="col-xl-6">
                                 <div class="form-group">
                                     <label>Board</label>
-                                    <select name="frboard_id" class="form-control kt-selectpicker" required>
+                                    <select name="frboard_id" class="form-control kt-selectpicker">
                                         <option value="">Select Board / University</option>
                                         <?php foreach ($boards as $board){?>
                                             <option value="<?php echo $board->id; ?>"><?php echo $board->boardname; ?></option>
                                         <?php }?>
                                     </select>
                                     <span class="form-text text-muted">Please select your Board / Univsersity.</span>
+                                    <div class="text-danger">
+                                        <?php echo form_error('frboard_id')?>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-xl-6">
                                 <div class="form-group">
                                     <label>Subject</label>
-                                    <select name="frdegree_id" class="form-control kt-selectpicker" required>
+                                    <select name="frdegree_id" class="form-control kt-selectpicker">
                                         <option value="">Select Subject</option>
                                         <?php foreach ($degrees as $degree){?>
                                             <option value="<?php echo $degree->id;?>"><?php echo $degree->name;?></option>
                                         <?php }?>
                                     </select>
                                     <span class="form-text text-muted">Please select your Subject.</span>
+                                    <div class="text-danger">
+                                        <?php echo form_error('frdegree_id')?>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -247,21 +295,27 @@
                             <div class="col-xl-6">
                                 <div class="form-group">
                                     <label>Total Marks</label>
-                                    <input type="text" class="form-control" name="frtotalmarks" required>
+                                    <input type="text" class="form-control" name="frtotalmarks">
                                     <span class="form-text text-muted">Please enter your Total Marks.</span>
+                                    <div class="text-danger">
+                                        <?php echo form_error('frtotalmarks')?>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-xl-6">
                                 <div class="form-group">
                                     <label>Obtained Marks</label>
-                                    <input type="text" class="form-control" name="frobtainmarks" required>
+                                    <input type="text" class="form-control" name="frobtainmarks">
+                                    <div class="text-danger">
+                                        <?php echo form_error('frobtainmarks')?>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="kt-portlet__foot">
                         <div class="kt-form__actions">
-                            <button type="submit" class="btn btn-primary">Save and Move Next</button>
+                            <button type="submit" class="btn btn-primary">Save & Move Next</button>
                             <button type="reset" class="btn btn-secondary">Cancel</button>
                         </div>
                     </div>

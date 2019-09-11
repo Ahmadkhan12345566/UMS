@@ -44,6 +44,4 @@ class Crud_model extends CI_Model
         $this->db->update('users',$data);
     }
 
-
-
 }

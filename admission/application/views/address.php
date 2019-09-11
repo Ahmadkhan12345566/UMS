@@ -37,6 +37,9 @@
                                     <label>Address Line 1</label>
                                     <input type="text" class="form-control" name="pline1" placeholder="Address Line 1" required>
                                     <span class="form-text text-muted">Please enter your Address.</span>
+                                    <div class="text-danger">
+                                        <?php echo form_error('pline1')?>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -46,6 +49,9 @@
                                     <label>Address Line 2</label>
                                     <input type="text" class="form-control" name="pline2" placeholder="Address Line 2" required>
                                     <span class="form-text text-muted">Please enter your Address.</span>
+                                    <div class="text-danger">
+                                        <?php echo form_error('pline2')?>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -59,13 +65,19 @@
                                             <option value="<?php echo $city->id?>"><?php echo $city->name?></option>
                                         <?php }?>
                                     </select>
+                                    <div class="text-danger">
+                                        <?php echo form_error('pcity_id')?>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-xl-6">
                                 <div class="form-group">
                                     <label>Contact Number:</label>
-                                    <input type="text" class="form-control" name="pphone" placeholder="Contact Number" required>
+                                    <input type="text" class="form-control" name="pphone" placeholder="xxxx-xxxxxxx"  required>
                                     <span class="form-text text-muted">We'll never share your contact number with anyone else.</span>
+                                    <div class="text-danger">
+                                        <?php echo form_error('pphone')?>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -86,6 +98,9 @@
                                     <label>Address Line 1</label>
                                     <input type="text" class="form-control" name="mline1" placeholder="Address Line 1" required>
                                     <span class="form-text text-muted">Please enter your Address.</span>
+                                    <div class="text-danger">
+                                        <?php echo form_error('mline1')?>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -95,6 +110,9 @@
                                     <label>Address Line 2</label>
                                     <input type="text" class="form-control" name="mline2" placeholder="Address Line 2" required>
                                     <span class="form-text text-muted">Please enter your Address.</span>
+                                    <div class="text-danger">
+                                        <?php echo form_error('mline2')?>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -108,13 +126,19 @@
                                             <option value="<?php echo $city->id?>"><?php echo $city->name?></option>
                                         <?php }?>
                                     </select>
+                                    <div class="text-danger">
+                                        <?php echo form_error('mcity_id')?>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-xl-6">
                                 <div class="form-group">
                                     <label>Contact Number:</label>
-                                    <input type="text" class="form-control" name="mphone" placeholder="Contact Number" required>
+                                    <input type="text" class="form-control" name="mphone" placeholder="xxxx-xxxxxxx" required>
                                     <span class="form-text text-muted">We'll never share your contact number with anyone else.</span>
+                                    <div class="text-danger">
+                                        <?php echo form_error('mphone')?>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -135,6 +159,9 @@
                                     <label>Address Line 1</label>
                                     <input type="text" class="form-control" name="gline1" placeholder="Address Line 1" required>
                                     <span class="form-text text-muted">Please enter your Address.</span>
+                                    <div class="text-danger">
+                                        <?php echo form_error('gline1')?>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -144,6 +171,9 @@
                                     <label>Address Line 2</label>
                                     <input type="text" class="form-control" name="gline2" placeholder="Address Line 2" required>
                                     <span class="form-text text-muted">Please enter your Address.</span>
+                                    <div class="text-danger">
+                                        <?php echo form_error('gline2')?>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -157,22 +187,26 @@
                                             <option value="<?php echo $city->id?>"><?php echo $city->name?></option>
                                         <?php }?>
                                     </select>
+                                    <div class="text-danger">
+                                        <?php echo form_error('gcity_id')?>
+                                    </div>
                                 </div>
-
                             </div>
                             <div class="col-xl-6">
                                 <div class="form-group">
                                     <label>Mobile Number:</label>
-                                    <input type="text" class="form-control" name="gmobile" placeholder="Mobile Number" required>
+                                    <input type="text" class="form-control" name="gmobile" placeholder="xxxx-xxxxxxx" required>
                                     <span class="form-text text-muted">Enter you <b>Father / Guardian</b> mobile number here</span>
-
+                                    <div class="text-danger">
+                                        <?php echo form_error('gmobile')?>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="kt-portlet__foot">
                         <div class="kt-form__actions">
-                            <button type="submit" class="btn btn-primary">Save and Move Next</button>
+                            <button type="submit" class="btn btn-primary">Save & Move Next</button>
                             <button type="reset" class="btn btn-secondary">Cancel</button>
                         </div>
                     </div>
