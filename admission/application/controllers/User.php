@@ -49,6 +49,8 @@ class User extends CI_Controller {
                 $data["pinformation"]=true;
                 $this->Crud_model->update("admission_process_status",$this->auth->userID(),$data);
             }
+
+            redirect('address');
         }
 
             $data['countries']= $this->Crud_model->get_all("countries");
@@ -103,6 +105,8 @@ class User extends CI_Controller {
                 $data["address"] = true;
                 $this->Crud_model->update("admission_process_status", $this->auth->userID(), $data);
             }
+
+            redirect('photoupload');
         }
 
             $data["cities"]= $this->Crud_model->get_all("cities");
@@ -127,6 +131,8 @@ class User extends CI_Controller {
                 $data["pupload"] = true;
                 $this->Crud_model->update("admission_process_status", $this->auth->userID(), $data);
             }
+
+            redirect('educationsetails');
         }
 
         $this->viewLoad('photoupload');
@@ -183,6 +189,8 @@ class User extends CI_Controller {
                 $data["edetails"] = true;
                 $this->Crud_model->update("admission_process_status", $this->auth->userID(), $data);
             }
+
+            redirect('ntsdetails');
         }
             $data["education_levels"]= $this->Crud_model->get_all('education_levels');
             $data["degrees"]= $this->Crud_model->get_all('degrees');
@@ -209,6 +217,8 @@ class User extends CI_Controller {
 
             }
 
+            redirect('programchoices');
+
         }
         else{
             $this->viewLoad('ntsdetails');
@@ -230,6 +240,8 @@ class User extends CI_Controller {
                 $data["prochoices"] = true;
                 $this->Crud_model->update("admission_process_status", $this->auth->userID(), $data);
             }
+
+            redirect('documentsupload');
         }
         $data['degrees']=$this->Crud_model->get_all("degrees");
         $this->viewLoad('programchoices', $data);
@@ -338,6 +350,8 @@ class User extends CI_Controller {
             // Todo: Documents Upload Status
             $data["docupload"]= true;
             $this->Crud_model->update("admission_process_status",$this->auth->userID(), $data);
+
+            redirect('otherdetail');
         }
             $this->viewLoad('documentsupload');
 
@@ -364,6 +378,8 @@ class User extends CI_Controller {
             $data["othdetails"]= true;
             $this->Crud_model->update("admission_process_status",$this->auth->userID(), $data);
 
+            redirect('confirmfee');
+
         }
         else{
             $data['advertisements']= $this->Crud_model->get_all('advertisements');
@@ -389,6 +405,8 @@ class User extends CI_Controller {
                     $this->Crud_model->update("admission_process_status", $this->auth->userID(), $data);
                 }
             }
+
+            redirect('submitapplication');
         }$this->viewLoad('confirmfee');
     }
 

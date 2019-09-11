@@ -53,7 +53,7 @@
                     <div class="kt-form__actions">
                         <div class="row">
                             <div class="col-lg-9 ml-lg-auto">
-                                <button type="submit" class="btn btn-brand" value="Upload Image">Submit</button>
+                                <button type="submit" class="btn btn-brand" value="Upload Image">Submit & Move Next</button>
                                 <button type="reset" class="btn btn-secondary">Cancel</button>
                             </div>
                         </div>

@@ -206,7 +206,7 @@
                     </div>
                     <div class="kt-portlet__foot">
                         <div class="kt-form__actions">
-                            <button type="submit" class="btn btn-primary">Save and Move Next</button>
+                            <button type="submit" class="btn btn-primary">Save & Move Next</button>
                             <button type="reset" class="btn btn-secondary">Cancel</button>
                         </div>
                     </div>

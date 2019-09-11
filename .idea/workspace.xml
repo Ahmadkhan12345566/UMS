@@ -3,121 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="635fb193-293b-40f2-b0bf-d121a2ba5f4a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/application/controllers/Signup.php" beforeDir="false" afterPath="$PROJECT_DIR$/admission/application/controllers/Signup.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admission/application/controllers/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/admission/application/controllers/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/application/migrations/016_confirm_fee.php" beforeDir="false" afterPath="$PROJECT_DIR$/admission/application/migrations/016_confirm_fee.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/application/models/Crud_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/admission/application/models/Crud_model.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admission/application/views/address.php" beforeDir="false" afterPath="$PROJECT_DIR$/admission/application/views/address.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admission/application/views/confirmfee.php" beforeDir="false" afterPath="$PROJECT_DIR$/admission/application/views/confirmfee.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admission/application/views/documentsupload.php" beforeDir="false" afterPath="$PROJECT_DIR$/admission/application/views/documentsupload.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admission/application/views/educationdetails.php" beforeDir="false" afterPath="$PROJECT_DIR$/admission/application/views/educationdetails.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admission/application/views/ntsdetails.php" beforeDir="false" afterPath="$PROJECT_DIR$/admission/application/views/ntsdetails.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admission/application/views/otherdetail.php" beforeDir="false" afterPath="$PROJECT_DIR$/admission/application/views/otherdetail.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admission/application/views/personalinformation.php" beforeDir="false" afterPath="$PROJECT_DIR$/admission/application/views/personalinformation.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admission/application/views/photoupload.php" beforeDir="false" afterPath="$PROJECT_DIR$/admission/application/views/photoupload.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admission/application/views/programchoices.php" beforeDir="false" afterPath="$PROJECT_DIR$/admission/application/views/programchoices.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/application/views/submitapplication.php" beforeDir="false" afterPath="$PROJECT_DIR$/admission/application/views/submitapplication.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/uploads/201909040547524.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/uploads/201909040548314.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/uploads/201909040551154.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/uploads/2019090411341810.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/uploads/20190904113418101.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/uploads/20190904113418102.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/uploads/20190904113418103.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/uploads/20190904113418104.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/uploads/20190904113418105.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/uploads/20190904113418106.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/uploads/2019090411375210.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/uploads/20190904113752101.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/uploads/20190904113752102.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/uploads/20190904113752103.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/uploads/20190904113752104.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/uploads/20190904113752105.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/uploads/20190904113752106.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/uploads/2019090411391710.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/uploads/20190904113917101.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/uploads/20190904113917102.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/uploads/20190904113917103.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/uploads/20190904113917104.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/uploads/20190904113917105.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/uploads/20190904113917106.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/uploads/2019090411491610.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/uploads/2019090411505110.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/uploads/2019090411525010.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/uploads/2019090411535710.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/uploads/20190904115357101.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/uploads/20190904115357102.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/uploads/20190904115357103.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/uploads/20190904115357104.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/uploads/20190904115357105.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/uploads/20190904115357106.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/uploads/2019090411582610.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/uploads/20190904115826101.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/uploads/20190904115826102.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/uploads/20190904115826103.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/uploads/20190904115826104.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/uploads/20190904115826105.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/uploads/20190904115826106.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/uploads/2019090411592710.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/uploads/20190904115927101.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/uploads/20190904115927102.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/uploads/20190904115927103.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/uploads/20190904115927104.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/uploads/20190904115927105.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/uploads/20190904115927106.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/uploads/2019090412001610.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/uploads/20190904120016101.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/uploads/20190904120016102.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/uploads/20190904120016103.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/uploads/20190904120016104.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/uploads/20190904120016105.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/uploads/20190904120016106.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/uploads/2019090412023410.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/uploads/20190904120234101.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/uploads/20190904120234102.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/uploads/20190904120234103.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/uploads/20190904120234104.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/uploads/20190904120234105.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/uploads/20190904120234106.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/uploads/2019090413171210.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/uploads/20190904131712101.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/uploads/20190904131712102.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/uploads/20190904131712103.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/uploads/20190904131712104.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/uploads/20190904131712105.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/uploads/20190904131712106.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/uploads/20190905095024.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/uploads/201909050950241.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/uploads/201909050950242.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/uploads/201909050950243.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/uploads/201909050950244.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/uploads/201909050950245.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/uploads/20190905095118.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/admission/uploads/201909061245441.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/uploads/201909050951181.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/admission/uploads/201909061246481.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/uploads/20190905095158.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/admission/uploads/201909061247571.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/uploads/201909050951581.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/admission/uploads/201909061249061.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/uploads/201909050951582.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/admission/uploads/201909061258301.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/uploads/201909050951583.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/admission/uploads/201909061300561.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/uploads/201909050951584.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/admission/uploads/201909071416411.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/uploads/201909050951585.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/admission/uploads/201909071417091.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/uploads/20190905095310.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/uploads/201909050953101.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/uploads/201909050953102.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/uploads/201909050953103.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/uploads/201909050953104.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/uploads/201909050953105.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/uploads/201909050955221.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/uploads/2019090509552211.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/uploads/2019090509552212.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/uploads/2019090509552213.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/uploads/2019090509552214.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/uploads/2019090509552215.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/uploads/201909050956001.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/uploads/2019090509560011.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/uploads/2019090509560012.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/uploads/2019090509560013.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/uploads/2019090509560014.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/uploads/DSC_054.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/uploads/DSC_0541.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admission/uploads/Screenshot_2019-09-03_at_4_53_30_PM.png" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/admission/application/assets/vendors/general/handlebars/node_modules/" />
     <ignored path="$PROJECT_DIR$/admission/application/assets/vendors/general/markdown/node_modules/" />
@@ -138,27 +33,16 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/admission/application/controllers/User.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="104">
-              <caret line="389" column="16" lean-forward="true" selection-start-line="389" selection-start-column="16" selection-end-line="389" selection-end-column="16" />
+            <state relative-caret-position="561">
+              <caret line="408" column="39" selection-start-line="408" selection-start-column="39" selection-end-line="408" selection-end-column="39" />
               <folding>
-                <element signature="n#personal_information#0;n#User#0;n#!!top" />
-                <element signature="n#address_detail#0;n#User#0;n#!!top" />
-                <element signature="n#photo_upload#0;n#User#0;n#!!top" />
-                <element signature="n#education_detail#0;n#User#0;n#!!top" />
-                <element signature="n#nts_detail#0;n#User#0;n#!!top" />
-                <element signature="e#6966#7642#0#PHP" />
-                <element signature="n#program_choice#0;n#User#0;n#!!top" />
                 <element signature="n#work_history#0;n#User#0;n#!!top" />
                 <element signature="n#work_history_submit#0;n#User#0;n#!!top" />
                 <element signature="n#fund_detail#0;n#User#0;n#!!top" />
                 <element signature="n#publication_details#0;n#User#0;n#!!top" />
                 <element signature="n#publication_details_submit#0;n#User#0;n#!!top" />
                 <element signature="n#research_details#0;n#User#0;n#!!top" />
-                <element signature="n#documents_upload#0;n#User#0;n#!!top" />
-                <element signature="n#other_detail#0;n#User#0;n#!!top" />
-                <element signature="e#13378#13886#0#PHP" />
                 <element signature="n#submit_data#0;n#User#0;n#!!top" />
-                <element signature="n#do_upload#0;n#User#0;n#!!top" />
                 <element signature="n#_validate_personal#0;n#User#0;n#!!top" />
                 <element signature="n#_validate_address#0;n#User#0;n#!!top" />
                 <element signature="n#_validate_edu#0;n#User#0;n#!!top" />
@@ -168,60 +52,13 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admission/application/views/confirmfee.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="257">
-              <caret line="84" column="46" selection-start-line="84" selection-start-column="46" selection-end-line="84" selection-end-column="46" />
-              <folding>
-                <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" />
-                <element signature="n#div#1;n#div#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admission/application/views/documentsupload.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="884">
-              <caret line="76" column="150" selection-start-line="76" selection-start-column="150" selection-end-line="76" selection-end-column="150" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/admission/application/views/personalinformation.php">
+        <entry file="file://$PROJECT_DIR$/admission/application/views/programchoices.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="33" column="40" selection-start-line="33" selection-start-column="40" selection-end-line="33" selection-end-column="40" />
-              <folding>
-                <element signature="n#div#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" />
-                <element signature="n#div#1;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" />
-                <element signature="n#div#0;n#div#1;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" />
-                <element signature="n#div#1;n#div#1;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" />
-                <element signature="n#div#0;n#div#2;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" />
-                <element signature="n#div#1;n#div#2;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" />
-                <element signature="n#div#0;n#div#3;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" />
-                <element signature="n#div#0;n#div#4;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" />
-                <element signature="n#div#1;n#div#4;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" />
-              </folding>
+            <state relative-caret-position="187">
+              <caret line="149" column="92" selection-start-line="149" selection-start-column="92" selection-end-line="149" selection-end-column="92" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admission/application/views/address.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="197" column="117" selection-start-line="197" selection-start-column="117" selection-end-line="197" selection-end-column="117" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admission/application/views/otherdetail.php">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -247,7 +84,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/admission/application/assets/js/demo1/pages/custom/user/add-user.js" />
-        <option value="$PROJECT_DIR$/admission/application/views/photoupload.php" />
         <option value="$PROJECT_DIR$/admission/application/views/inc/footer.php" />
         <option value="$PROJECT_DIR$/admission/application/migrations/014_documents_upload.php" />
         <option value="$PROJECT_DIR$/admission/application/config/migration.php" />
@@ -256,15 +92,17 @@
         <option value="$PROJECT_DIR$/admission/application/views/submitapplication.php" />
         <option value="$PROJECT_DIR$/admission/application/models/Crud_model.php" />
         <option value="$PROJECT_DIR$/admission/application/migrations/016_confirm_fee.php" />
-        <option value="$PROJECT_DIR$/admission/application/views/ntsdetails.php" />
         <option value="$PROJECT_DIR$/admission/application/controllers/Signup.php" />
-        <option value="$PROJECT_DIR$/admission/application/views/educationdetails.php" />
-        <option value="$PROJECT_DIR$/admission/application/views/programchoices.php" />
-        <option value="$PROJECT_DIR$/admission/application/views/documentsupload.php" />
         <option value="$PROJECT_DIR$/admission/application/controllers/User.php" />
         <option value="$PROJECT_DIR$/admission/application/views/confirmfee.php" />
-        <option value="$PROJECT_DIR$/admission/application/views/address.php" />
+        <option value="$PROJECT_DIR$/admission/application/views/documentsupload.php" />
         <option value="$PROJECT_DIR$/admission/application/views/personalinformation.php" />
+        <option value="$PROJECT_DIR$/admission/application/views/address.php" />
+        <option value="$PROJECT_DIR$/admission/application/views/otherdetail.php" />
+        <option value="$PROJECT_DIR$/admission/application/views/educationdetails.php" />
+        <option value="$PROJECT_DIR$/admission/application/views/ntsdetails.php" />
+        <option value="$PROJECT_DIR$/admission/application/views/photoupload.php" />
+        <option value="$PROJECT_DIR$/admission/application/views/programchoices.php" />
       </list>
     </option>
   </component>
@@ -278,6 +116,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -329,13 +168,12 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../mentorships.ng" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -368,18 +206,22 @@
       <workItem from="1567657964925" duration="8154000" />
       <workItem from="1567668658857" duration="14812000" />
       <workItem from="1567744416609" duration="20611000" />
-      <workItem from="1567831347898" duration="26209000" />
+      <workItem from="1567831347898" duration="26862000" />
+      <workItem from="1567877483540" duration="136000" />
+      <workItem from="1567877952929" duration="223000" />
+      <workItem from="1568176935424" duration="614000" />
+      <workItem from="1568184409684" duration="2535000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="95165000" />
+    <option name="totallyTimeSpent" value="99326000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21563342" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22911051" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -446,20 +288,6 @@
     <entry file="file://$PROJECT_DIR$/admission/application/assets/js/demo1/pages/wizard/wizard-3.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/admission/application/views/photoupload.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="35" column="123" selection-start-line="35" selection-start-column="94" selection-end-line="35" selection-end-column="123" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admission/application/migrations/019_users.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/admission/application/views/signup.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -484,13 +312,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1207">
           <caret line="71" column="19" selection-start-line="71" selection-start-column="8" selection-end-line="71" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admission/application/controllers/Login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="7" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="7" />
         </state>
       </provider>
     </entry>
@@ -548,24 +369,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admission/application/models/Crud_model.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="44" column="5" selection-start-line="44" selection-start-column="5" selection-end-line="44" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/admission/application/migrations/016_confirm_fee.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="561">
           <caret line="38" column="23" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admission/application/views/ntsdetails.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="35" column="106" selection-start-line="35" selection-start-column="28" selection-end-line="35" selection-end-column="106" />
         </state>
       </provider>
     </entry>
@@ -582,57 +389,95 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admission/application/views/educationdetails.php">
+    <entry file="file://$PROJECT_DIR$/admission/application/models/Crud_model.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="54" column="55" selection-start-line="54" selection-start-column="55" selection-end-line="54" selection-end-column="55" />
+        <state relative-caret-position="289">
+          <caret line="31" column="19" selection-start-line="31" selection-start-column="19" selection-end-line="31" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admission/application/views/programchoices.php">
+    <entry file="file://$PROJECT_DIR$/admission/application/migrations/019_users.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="47" column="71" selection-start-line="47" selection-start-column="71" selection-end-line="47" selection-end-column="71" />
+        <state relative-caret-position="493">
+          <caret line="40" column="14" lean-forward="true" selection-start-line="36" selection-start-column="12" selection-end-line="40" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admission/application/controllers/Login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="45" selection-start-line="25" selection-start-column="39" selection-end-line="25" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admission/application/views/confirmfee.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="227" column="83" selection-start-line="227" selection-start-column="83" selection-end-line="227" selection-end-column="83" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admission/application/views/documentsupload.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="223" column="81" lean-forward="true" selection-start-line="223" selection-start-column="81" selection-end-line="223" selection-end-column="92" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admission/application/views/personalinformation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="157" column="106" selection-start-line="157" selection-start-column="106" selection-end-line="157" selection-end-column="106" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admission/application/views/address.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="208" column="90" selection-start-line="208" selection-start-column="90" selection-end-line="208" selection-end-column="90" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/admission/application/views/otherdetail.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admission/application/views/confirmfee.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="84" column="46" selection-start-line="84" selection-start-column="46" selection-end-line="84" selection-end-column="46" />
-          <folding>
-            <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" />
-            <element signature="n#div#1;n#div#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" />
-          </folding>
+        <state relative-caret-position="289">
+          <caret line="87" column="92" selection-start-line="87" selection-start-column="92" selection-end-line="87" selection-end-column="92" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admission/application/views/educationdetails.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="317" column="90" selection-start-line="317" selection-start-column="90" selection-end-line="317" selection-end-column="90" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admission/application/views/ntsdetails.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="165" column="100" selection-start-line="165" selection-start-column="100" selection-end-line="165" selection-end-column="100" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admission/application/views/photoupload.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="55" column="115" selection-start-line="55" selection-start-column="115" selection-end-line="55" selection-end-column="115" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/admission/application/controllers/User.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="389" column="16" lean-forward="true" selection-start-line="389" selection-start-column="16" selection-end-line="389" selection-end-column="16" />
+        <state relative-caret-position="561">
+          <caret line="408" column="39" selection-start-line="408" selection-start-column="39" selection-end-line="408" selection-end-column="39" />
           <folding>
-            <element signature="n#personal_information#0;n#User#0;n#!!top" />
-            <element signature="n#address_detail#0;n#User#0;n#!!top" />
-            <element signature="n#photo_upload#0;n#User#0;n#!!top" />
-            <element signature="n#education_detail#0;n#User#0;n#!!top" />
-            <element signature="n#nts_detail#0;n#User#0;n#!!top" />
-            <element signature="e#6966#7642#0#PHP" />
-            <element signature="n#program_choice#0;n#User#0;n#!!top" />
             <element signature="n#work_history#0;n#User#0;n#!!top" />
             <element signature="n#work_history_submit#0;n#User#0;n#!!top" />
             <element signature="n#fund_detail#0;n#User#0;n#!!top" />
             <element signature="n#publication_details#0;n#User#0;n#!!top" />
             <element signature="n#publication_details_submit#0;n#User#0;n#!!top" />
             <element signature="n#research_details#0;n#User#0;n#!!top" />
-            <element signature="n#documents_upload#0;n#User#0;n#!!top" />
-            <element signature="n#other_detail#0;n#User#0;n#!!top" />
-            <element signature="e#13378#13886#0#PHP" />
             <element signature="n#submit_data#0;n#User#0;n#!!top" />
-            <element signature="n#do_upload#0;n#User#0;n#!!top" />
             <element signature="n#_validate_personal#0;n#User#0;n#!!top" />
             <element signature="n#_validate_address#0;n#User#0;n#!!top" />
             <element signature="n#_validate_edu#0;n#User#0;n#!!top" />
@@ -641,35 +486,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admission/application/views/documentsupload.php">
+    <entry file="file://$PROJECT_DIR$/admission/application/views/programchoices.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="884">
-          <caret line="76" column="150" selection-start-line="76" selection-start-column="150" selection-end-line="76" selection-end-column="150" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admission/application/views/address.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="197" column="117" selection-start-line="197" selection-start-column="117" selection-end-line="197" selection-end-column="117" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admission/application/views/personalinformation.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="33" column="40" selection-start-line="33" selection-start-column="40" selection-end-line="33" selection-end-column="40" />
-          <folding>
-            <element signature="n#div#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" />
-            <element signature="n#div#1;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" />
-            <element signature="n#div#0;n#div#1;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" />
-            <element signature="n#div#1;n#div#1;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" />
-            <element signature="n#div#0;n#div#2;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" />
-            <element signature="n#div#1;n#div#2;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" />
-            <element signature="n#div#0;n#div#3;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" />
-            <element signature="n#div#0;n#div#4;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" />
-            <element signature="n#div#1;n#div#4;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" />
-          </folding>
+        <state relative-caret-position="187">
+          <caret line="149" column="92" selection-start-line="149" selection-start-column="92" selection-end-line="149" selection-end-column="92" />
         </state>
       </provider>
     </entry>
