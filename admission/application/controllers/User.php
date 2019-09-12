@@ -28,8 +28,9 @@ class User extends CI_Controller {
     }
 
     public  function  viewLoad($page ,$data=null){
+        $data['username']=$this->auth->userName();
         $this->load->view('inc/header');
-        $this->load->view('inc/bssidebar');
+        $this->load->view('inc/bssidebar',$data);
         //$this->load->view('inc/navbar');
         $this->load->view($page,$data);
         $this->load->view('inc/footer');
@@ -52,7 +53,9 @@ class User extends CI_Controller {
 
             redirect(base_url('addressdetail'));
         }
-
+         //   $data['username']=$this->auth->userName();
+    //        var_dump($data);
+    //        die();
             $data['countries']= $this->Crud_model->get_all("countries");
             $data['domiciles']= $this->Crud_model->get_all("domiciles");
 

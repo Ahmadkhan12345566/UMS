@@ -144,9 +144,14 @@ class Auth
      */
     protected function setUser()
     {
+
+
         $this->userID = $this->user->id;
-      // var_dump($this->userID);
-        //die();
+        $this->userName = $this->user->username;
+        //var_dump($this->userID,$this->userName);
+      //  die();
+//         var_dump($this->username);
+//        die();
         $this->CI->session->set_userdata(array(
             "userID" => $this->user->id,
             "username" => $this->user->username,
@@ -155,10 +160,9 @@ class Auth
             "loginStatus" => true
         ));
 
-      return redirect("personalinformation");
-       // return true;
+        return redirect("personalinformation");
+        return true;
     }
-
     /**
      * Get the error message for failed login
      *
@@ -240,7 +244,7 @@ class Auth
      */
     public function userName()
     {
-        return $this->userName;
+        return $this->CI->session->userdata('username');
     }
     /**
      * Read authenticated user email

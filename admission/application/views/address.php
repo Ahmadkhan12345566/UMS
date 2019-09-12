@@ -35,7 +35,7 @@
                             <div class="col-md-12 col-sm-12 col-xs-12">
                                 <div class="form-group">
                                     <label>Address Line 1</label>
-                                    <input type="text" class="form-control" name="pline1" placeholder="Address Line 1" required>
+                                    <input type="text" class="form-control" name="pline1" id="Form1Field1" placeholder="Address Line 1" required>
                                     <span class="form-text text-muted">Please enter your Address.</span>
                                     <div class="text-danger">
                                         <?php echo form_error('pline1')?>
@@ -47,7 +47,7 @@
                             <div class="col-md-12 col-sm-12 col-xs-12">
                                 <div class="form-group">
                                     <label>Address Line 2</label>
-                                    <input type="text" class="form-control" name="pline2" placeholder="Address Line 2" required>
+                                    <input type="text" class="form-control" name="pline2" id="Form1Field2" placeholder="Address Line 2" required>
                                     <span class="form-text text-muted">Please enter your Address.</span>
                                     <div class="text-danger">
                                         <?php echo form_error('pline2')?>
@@ -59,7 +59,7 @@
                             <div class="col-xl-6">
                                 <div class="form-group">
                                     <label>City:</label>
-                                    <select name="pcity_id"  class="form-control kt-selectpicker" required>
+                                    <select name="pcity_id" id="Form1Field3"  class="form-control kt-selectpicker" required>
                                         <option value="">Select City</option>
                                         <?php foreach($cities as $city){?>
                                             <option value="<?php echo $city->id?>"><?php echo $city->name?></option>
@@ -73,7 +73,7 @@
                             <div class="col-xl-6">
                                 <div class="form-group">
                                     <label>Contact Number:</label>
-                                    <input type="text" class="form-control" name="pphone" placeholder="xxxx-xxxxxxx"  required>
+                                    <input type="text" class="form-control" id="Form1Field4" name="pphone" placeholder="xxxx-xxxxxxx"  required>
                                     <span class="form-text text-muted">We'll never share your contact number with anyone else.</span>
                                     <div class="text-danger">
                                         <?php echo form_error('pphone')?>
@@ -89,14 +89,14 @@
                             </div>
                         </div>
                         <label class="kt-checkbox kt-checkbox--bold kt-checkbox--success mt-2">
-                            <input type="checkbox"> Same as above?
+                            <input type="checkbox" onclick="if( this.checked ) { fillForm2(); } else { clearForm2(); }" value=""> Same as above?
                             <span></span>
                         </label>
                         <div class="row mt-2">
                             <div class="col-md-12 col-sm-12 col-xs-12">
                                 <div class="form-group">
                                     <label>Address Line 1</label>
-                                    <input type="text" class="form-control" name="mline1" placeholder="Address Line 1" required>
+                                    <input type="text" class="form-control" id="Form2Field1" name="mline1" placeholder="Address Line 1" required>
                                     <span class="form-text text-muted">Please enter your Address.</span>
                                     <div class="text-danger">
                                         <?php echo form_error('mline1')?>
@@ -108,7 +108,7 @@
                             <div class="col-md-12 col-sm-12 col-xs-12">
                                 <div class="form-group">
                                     <label>Address Line 2</label>
-                                    <input type="text" class="form-control" name="mline2" placeholder="Address Line 2" required>
+                                    <input type="text" class="form-control" id="Form2Field2" name="mline2" placeholder="Address Line 2" required>
                                     <span class="form-text text-muted">Please enter your Address.</span>
                                     <div class="text-danger">
                                         <?php echo form_error('mline2')?>
@@ -120,7 +120,7 @@
                             <div class="col-xl-6">
                                 <div class="form-group">
                                     <label>City:</label>
-                                    <select name="mcity_id" class="form-control kt-selectpicker" required>
+                                    <select name="mcity_id" id="Form2Field3" class="form-control kt-selectpicker" required>
                                         <option value="">Select City</option>
                                         <?php foreach($cities as $city){?>
                                             <option value="<?php echo $city->id?>"><?php echo $city->name?></option>
@@ -134,7 +134,7 @@
                             <div class="col-xl-6">
                                 <div class="form-group">
                                     <label>Contact Number:</label>
-                                    <input type="text" class="form-control" name="mphone" placeholder="xxxx-xxxxxxx" required>
+                                    <input type="text" class="form-control" id="Form2Field4" name="mphone" placeholder="xxxx-xxxxxxx" required>
                                     <span class="form-text text-muted">We'll never share your contact number with anyone else.</span>
                                     <div class="text-danger">
                                         <?php echo form_error('mphone')?>
@@ -150,14 +150,14 @@
                             </div>
                         </div>
                         <label class="kt-checkbox kt-checkbox--bold kt-checkbox--success mt-2">
-                            <input type="checkbox"> Same as above?
+                            <input type="checkbox" onclick="if( this.checked ) { fillForm3(); } else { clearForm3(); }" value=""> Same as above?
                             <span></span>
                         </label>
                         <div class="row mt-2">
                             <div class="col-md-12 col-sm-12 col-xs-12">
                                 <div class="form-group">
                                     <label>Address Line 1</label>
-                                    <input type="text" class="form-control" name="gline1" placeholder="Address Line 1" required>
+                                    <input type="text" class="form-control" id="Form3Field1" name="gline1" placeholder="Address Line 1" required>
                                     <span class="form-text text-muted">Please enter your Address.</span>
                                     <div class="text-danger">
                                         <?php echo form_error('gline1')?>
@@ -169,7 +169,7 @@
                             <div class="col-md-12 col-sm-12 col-xs-12">
                                 <div class="form-group">
                                     <label>Address Line 2</label>
-                                    <input type="text" class="form-control" name="gline2" placeholder="Address Line 2" required>
+                                    <input type="text" class="form-control" id="Form3Field2" name="gline2" placeholder="Address Line 2" required>
                                     <span class="form-text text-muted">Please enter your Address.</span>
                                     <div class="text-danger">
                                         <?php echo form_error('gline2')?>
@@ -181,7 +181,7 @@
                             <div class="col-xl-6">
                                 <div class="form-group">
                                     <label>City:</label>
-                                    <select name='gcity_id' class="form-control kt-selectpicker" required>
+                                    <select name='gcity_id' id="Form3Field3" class="form-control kt-selectpicker" required>
                                         <option value="">Select City</option>
                                         <?php foreach($cities as $city){?>
                                             <option value="<?php echo $city->id?>"><?php echo $city->name?></option>

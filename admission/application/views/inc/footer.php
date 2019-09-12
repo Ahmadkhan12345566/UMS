@@ -1,9 +1,9 @@
 
 <!-- begin:: Footer -->
-<div class="kt-footer  kt-grid__item kt-grid kt-grid--desktop kt-grid--ver-desktop" id="kt_footer">
+<div class="kt-footer  kt-grid__item kt-grid kt-grid--desktop kt-grid--ver-desktop">
     <div class="kt-container  kt-container--fluid ">
         <div class="kt-footer__copyright">
-            2019&nbsp;&copy;&nbsp;<a href="#" target="_blank" class="kt-link">Tritechteal</a>
+            2019&nbsp;&copy;&nbsp;<a href="https://www.tritechteal.com" class="kt-link">Tritechteal</a>
         </div>
         <div class="kt-footer__menu">
             <a href="#" target="_blank" class="kt-footer__menu-link kt-link">About</a>
@@ -184,6 +184,28 @@
         }
     }
 
+    function fillForm2() {
+        document.getElementById( 'Form2Field1' ).value = document.getElementById( 'Form1Field1' ).value;
+        document.getElementById( 'Form2Field2' ).value = document.getElementById( 'Form1Field2' ).value;
+        document.getElementById( 'Form2Field3' ).value = document.getElementById( 'Form1Field3' ).value;
+        document.getElementById( 'Form2Field4' ).value = document.getElementById( 'Form1Field4' ).value;
+    }
+    function fillForm3() {
+        document.getElementById( 'Form3Field1' ).value = document.getElementById( 'Form1Field1' ).value;
+        document.getElementById( 'Form3Field2' ).value = document.getElementById( 'Form1Field2' ).value;
+        document.getElementById( 'Form3Field3' ).value = document.getElementById( 'Form1Field3' ).value;
+    }
+    function clearForm2() {
+        document.getElementById( 'Form2Field1' ).value = "";
+        document.getElementById( 'Form2Field2' ).value = "";
+        document.getElementById( 'Form2Field3' ).value = "";
+        document.getElementById( 'Form2Field4' ).value = "";
+    }
+    function clearForm3() {
+        document.getElementById( 'Form3Field1' ).value = "";
+        document.getElementById( 'Form3Field2' ).value = "";
+        document.getElementById( 'Form3Field3' ).value = "";
+    }
 
 </script>
 
