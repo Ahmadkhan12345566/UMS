@@ -35,7 +35,7 @@
                             <div class="col-md-12 col-sm-12 col-xs-12">
                                 <div class="form-group">
                                     <label>Address Line 1</label>
-                                    <input type="text" class="form-control" name="pline1" id="Form1Field1" placeholder="Address Line 1" required>
+                                    <input type="text" class="form-control" value="<?php if ($values != null){echo $values["0"]->address1;}?>" name="pline1" id="Form1Field1" placeholder="Address Line 1" required>
                                     <span class="form-text text-muted">Please enter your Address.</span>
                                     <div class="text-danger">
                                         <?php echo form_error('pline1')?>
@@ -47,7 +47,7 @@
                             <div class="col-md-12 col-sm-12 col-xs-12">
                                 <div class="form-group">
                                     <label>Address Line 2</label>
-                                    <input type="text" class="form-control" name="pline2" id="Form1Field2" placeholder="Address Line 2" required>
+                                    <input type="text" class="form-control" name="pline2" id="Form1Field2" value="<?php if ($values != null){echo $values["0"]->address2;}?>" placeholder="Address Line 2" required>
                                     <span class="form-text text-muted">Please enter your Address.</span>
                                     <div class="text-danger">
                                         <?php echo form_error('pline2')?>
@@ -62,7 +62,8 @@
                                     <select name="pcity_id" id="Form1Field3"  class="form-control kt-selectpicker" required>
                                         <option value="">Select City</option>
                                         <?php foreach($cities as $city){?>
-                                            <option value="<?php echo $city->id?>"><?php echo $city->name?></option>
+                                            <option value="<?php echo $city->id?>" <?php if ($values != null){ if ($city->id == $values["0"]->city_id){ echo "Selected";}}?>>
+                                                <?php echo $city->name?></option>
                                         <?php }?>
                                     </select>
                                     <div class="text-danger">
@@ -73,7 +74,7 @@
                             <div class="col-xl-6">
                                 <div class="form-group">
                                     <label>Contact Number:</label>
-                                    <input type="text" class="form-control" id="Form1Field4" name="pphone" placeholder="xxxx-xxxxxxx"  required>
+                                    <input type="text" class="form-control" id="Form1Field4" value="<?php if ($values != null){echo $values["0"]->phone;}?>" name="pphone" placeholder="xxxx-xxxxxxx"  required>
                                     <span class="form-text text-muted">We'll never share your contact number with anyone else.</span>
                                     <div class="text-danger">
                                         <?php echo form_error('pphone')?>
@@ -96,7 +97,7 @@
                             <div class="col-md-12 col-sm-12 col-xs-12">
                                 <div class="form-group">
                                     <label>Address Line 1</label>
-                                    <input type="text" class="form-control" id="Form2Field1" name="mline1" placeholder="Address Line 1" required>
+                                    <input type="text" class="form-control" id="Form2Field1" name="mline1" value="<?php if ($values != null){echo $values["1"]->address1;}?>" placeholder="Address Line 1" required>
                                     <span class="form-text text-muted">Please enter your Address.</span>
                                     <div class="text-danger">
                                         <?php echo form_error('mline1')?>
@@ -108,7 +109,7 @@
                             <div class="col-md-12 col-sm-12 col-xs-12">
                                 <div class="form-group">
                                     <label>Address Line 2</label>
-                                    <input type="text" class="form-control" id="Form2Field2" name="mline2" placeholder="Address Line 2" required>
+                                    <input type="text" class="form-control" id="Form2Field2" name="mline2" value="<?php if ($values != null){echo $values["1"]->address2;}?>" placeholder="Address Line 2" required>
                                     <span class="form-text text-muted">Please enter your Address.</span>
                                     <div class="text-danger">
                                         <?php echo form_error('mline2')?>
@@ -123,7 +124,8 @@
                                     <select name="mcity_id" id="Form2Field3" class="form-control kt-selectpicker" required>
                                         <option value="">Select City</option>
                                         <?php foreach($cities as $city){?>
-                                            <option value="<?php echo $city->id?>"><?php echo $city->name?></option>
+                                            <option value="<?php echo $city->id?>" <?php if ($values !=null ){ if ($city->id == $values["1"]->city_id){ echo "Selected";}}?>>
+                                                <?php echo $city->name?></option>
                                         <?php }?>
                                     </select>
                                     <div class="text-danger">
@@ -134,7 +136,7 @@
                             <div class="col-xl-6">
                                 <div class="form-group">
                                     <label>Contact Number:</label>
-                                    <input type="text" class="form-control" id="Form2Field4" name="mphone" placeholder="xxxx-xxxxxxx" required>
+                                    <input type="text" class="form-control" id="Form2Field4" name="mphone" value="<?php if ($values != null){echo $values["1"]->phone;}?>" placeholder="xxxx-xxxxxxx" required>
                                     <span class="form-text text-muted">We'll never share your contact number with anyone else.</span>
                                     <div class="text-danger">
                                         <?php echo form_error('mphone')?>
@@ -157,7 +159,7 @@
                             <div class="col-md-12 col-sm-12 col-xs-12">
                                 <div class="form-group">
                                     <label>Address Line 1</label>
-                                    <input type="text" class="form-control" id="Form3Field1" name="gline1" placeholder="Address Line 1" required>
+                                    <input type="text" class="form-control" id="Form3Field1" name="gline1" value="<?php if ($values != null){echo $values["2"]->address1;}?>" placeholder="Address Line 1" required>
                                     <span class="form-text text-muted">Please enter your Address.</span>
                                     <div class="text-danger">
                                         <?php echo form_error('gline1')?>
@@ -169,7 +171,7 @@
                             <div class="col-md-12 col-sm-12 col-xs-12">
                                 <div class="form-group">
                                     <label>Address Line 2</label>
-                                    <input type="text" class="form-control" id="Form3Field2" name="gline2" placeholder="Address Line 2" required>
+                                    <input type="text" class="form-control" id="Form3Field2" name="gline2" value="<?php if ($values != null){echo $values["2"]->address2;}?>" placeholder="Address Line 2" required>
                                     <span class="form-text text-muted">Please enter your Address.</span>
                                     <div class="text-danger">
                                         <?php echo form_error('gline2')?>
@@ -184,7 +186,8 @@
                                     <select name='gcity_id' id="Form3Field3" class="form-control kt-selectpicker" required>
                                         <option value="">Select City</option>
                                         <?php foreach($cities as $city){?>
-                                            <option value="<?php echo $city->id?>"><?php echo $city->name?></option>
+                                            <option value="<?php echo $city->id?>"  <?php if ($values != null){ if($city->id == $values["2"]->city_id) { echo "Selected";}}?>>
+                                                <?php echo $city->name?></option>
                                         <?php }?>
                                     </select>
                                     <div class="text-danger">
@@ -195,7 +198,7 @@
                             <div class="col-xl-6">
                                 <div class="form-group">
                                     <label>Mobile Number:</label>
-                                    <input type="text" class="form-control" name="gmobile" placeholder="xxxx-xxxxxxx" required>
+                                    <input type="text" class="form-control" name="gmobile" value="<?php if ($values != null){echo $values["2"]->phone;}?>" placeholder="xxxx-xxxxxxx" required>
                                     <span class="form-text text-muted">Enter you <b>Father / Guardian</b> mobile number here</span>
                                     <div class="text-danger">
                                         <?php echo form_error('gmobile')?>

@@ -29,6 +29,8 @@ class User extends CI_Controller {
 
     public  function  viewLoad($page ,$data=null){
         $data['username']=$this->auth->userName();
+//        var_dump($data);
+//        die();
         $this->load->view('inc/header');
         $this->load->view('inc/bssidebar',$data);
         //$this->load->view('inc/navbar');
@@ -53,9 +55,9 @@ class User extends CI_Controller {
 
             redirect(base_url('addressdetail'));
         }
-         //   $data['username']=$this->auth->userName();
-    //        var_dump($data);
-    //        die();
+            $data['values']=$this->Crud_model->get('personal_information', $this->auth->userID());
+//var_dump($data['values']);
+//die();
             $data['countries']= $this->Crud_model->get_all("countries");
             $data['domiciles']= $this->Crud_model->get_all("domiciles");
 
@@ -111,7 +113,7 @@ class User extends CI_Controller {
 
             redirect(base_url('photoupload'));
         }
-
+            $data['values']=$this->Crud_model->get_all('address');
             $data["cities"]= $this->Crud_model->get_all("cities");
             $this->viewLoad('address', $data);
 
@@ -120,7 +122,6 @@ class User extends CI_Controller {
 
     //Todo:profile photo upload
     public function photo_upload(){
-
 
         if ($_FILES){
 
@@ -137,8 +138,8 @@ class User extends CI_Controller {
 
             redirect(base_url('educationdetails'));
         }
-
-        $this->viewLoad('photoupload');
+        $data['values']=$this->Crud_model->get('users', $this->auth->userID());
+        $this->viewLoad('photoupload',$data);
 
     }
 
@@ -195,13 +196,15 @@ class User extends CI_Controller {
 
             redirect(base_url('ntsdetails'));
         }
+
+            $data['values']=$this->Crud_model->get_all('education_details');
+
             $data["education_levels"]= $this->Crud_model->get_all('education_levels');
             $data["degrees"]= $this->Crud_model->get_all('degrees');
             $data["boards"]= $this->Crud_model->get_all('boards');
 
             $this->viewLoad('educationdetails',$data);
     }
-
 
     public function nts_detail(){
 
@@ -246,6 +249,9 @@ class User extends CI_Controller {
 
             redirect(base_url('documentsupload'));
         }
+        $data["values"]=$this->Crud_model->get_all("program_choices");
+//        var_dump($data["values"]);
+//        die();
         $data['degrees']=$this->Crud_model->get_all("degrees");
         $this->viewLoad('programchoices', $data);
     }
@@ -368,26 +374,30 @@ class User extends CI_Controller {
              $otherdetails['seats']=$_POST['seats'];
              $otherdetails['transport']=$_POST['transport'];
              $otherdetails['user_id']=$this->auth->userID();
+             $otherdetails['advertisement_id']=$_POST['advertisement_id'];
              $this->Crud_model->insert('other_details', $otherdetails);
 
             // Advertisement out
-             $advertisementout=array();
-             $advertisementout['advertisement_id']=$_POST['advertisement_id'];
-             $advertisementout['user_id']=$this->auth->userID();
+//             $advertisementout=array();
+//             $advertisementout['advertisement_id']=$_POST['advertisement_id'];
+//             $advertisementout['user_id']=$this->auth->userID();
 
-             $this->Crud_model->insert('advertisement_out', $advertisementout);
+       //      $this->Crud_model->insert('advertisements', $advertisementout);
 
             // Todo: Other Details Status
             $data["othdetails"]= true;
             $this->Crud_model->update("admission_process_status",$this->auth->userID(), $data);
-
+//            var_dump($this->input->post());
+//            die();
             redirect(base_url('confirmfee'));
 
         }
-        else{
+            $data["values"]= $this->Crud_model->get('other_details',$this->auth->userID());
+        var_dump($this->auth->userID());
+        die();
             $data['advertisements']= $this->Crud_model->get_all('advertisements');
             $this->viewLoad('otherdetail', $data);
-        }
+
     }
 
     public function confirm_fee()
@@ -410,7 +420,9 @@ class User extends CI_Controller {
             }
 
             redirect(base_url('submitapplication'));
-        }$this->viewLoad('confirmfee');
+        }
+        $data['values']=$this->Crud_model->get('confirm_fee', $this->auth->userID());
+        $this->viewLoad('confirmfee', $data);
     }
 
     public function submit_data(){
@@ -421,7 +433,7 @@ class User extends CI_Controller {
             $data["subapplication"]= true;
             $this->Crud_model->update("admission_process_status",$this->auth->userID(), $data);
 
-            $this->viewLoad('submitapplication');
+            $this->viewLoad('submitapplication',$data);
         }
     }
 

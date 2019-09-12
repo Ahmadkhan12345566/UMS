@@ -47,7 +47,8 @@
                                     <select name='program[]' id='subject1' class="form-control kt-selectpicker" required>
                                         <option value="Program Choice 1">Select 1st Choice</option>
                                         <?php foreach ($degrees as $degree){?>
-                                            <option value="<?php echo $degree->id;?>"><?php echo $degree->name;?></option>
+                                            <option value="<?php echo $degree->id;?>" <?php if ($values !=null){ if ($degree->id == $values["0"]->degree_id){echo "Selected";}}?>>
+                                                <?php echo $degree->name;?></option>
                                         <?php }?>
                                     </select>
                                     <div class="text-danger">
@@ -61,7 +62,8 @@
                                     <select name='program[]' id='subject2' class="form-control kt-selectpicker" required>
                                         <option value="Program Choice 2">Select 2nd Choice</option>
                                         <?php foreach ($degrees as $degree){?>
-                                            <option value="<?php echo $degree->id;?>"><?php echo $degree->name;?></option>
+                                            <option value="<?php echo $degree->id;?>" <?php if ($values !=null){ if ($degree->id == $values["1"]->degree_id){echo "Selected";}}?>>
+                                                <?php echo $degree->name;?></option>
                                         <?php }?>
                                     </select>
                                     <div class="text-danger">
@@ -77,7 +79,8 @@
                                     <select name='program[]' id='subject3' class="form-control kt-selectpicker" required>
                                         <option value="Program Choice 3">Select 3rd Choice</option>
                                         <?php foreach ($degrees as $degree){?>
-                                            <option value="<?php echo $degree->id;?>"><?php echo $degree->name;?></option>
+                                            <option value="<?php echo $degree->id;?>" <?php if ($values !=null){ if ($degree->id == $values["2"]->degree_id){echo "Selected";}}?>>
+                                                <?php echo $degree->name;?></option>
                                         <?php }?>
                                     </select>
                                     <div class="text-danger">
@@ -91,7 +94,8 @@
                                     <select name='program[]' id='subject4' class="form-control kt-selectpicker" required>
                                         <option value="Program Choice 4">Select 4th Choice</option>
                                         <?php foreach ($degrees as $degree){?>
-                                            <option value="<?php echo $degree->id;?>"><?php echo $degree->name;?></option>
+                                            <option value="<?php echo $degree->id;?>" <?php if ($values !=null){ if ($degree->id == $values["3"]->degree_id){echo "Selected";}}?>>
+                                                <?php echo $degree->name;?></option>
                                         <?php }?>
                                     </select>
                                     <div class="text-danger">
@@ -106,7 +110,8 @@
                                 <select name='program[]' id='subject5' class="form-control kt-selectpicker" required>
                                     <option value="Program Choice 5">Select 5th Choice</option>
                                     <?php foreach ($degrees as $degree){?>
-                                        <option value="<?php echo $degree->id;?>"><?php echo $degree->name;?></option>
+                                        <option value="<?php echo $degree->id;?>" <?php if ($values !=null){ if ($degree->id == $values["4"]->degree_id){echo "Selected";}}?>>
+                                            <?php echo $degree->name;?></option>
                                     <?php }?>
                                 </select>
                                 <div class="text-danger">
@@ -119,7 +124,8 @@
                                     <select name='program[]' id='subject6' class="form-control kt-selectpicker" required>
                                         <option value="Program Choice 6">Select 6th Choice</option>
                                         <?php foreach ($degrees as $degree){?>
-                                            <option value="<?php echo $degree->id;?>"><?php echo $degree->name;?></option>
+                                            <option value="<?php echo $degree->id;?>" <?php if ($values !=null){ if ($degree->id == $values["5"]->degree_id){echo "Selected";}}?>>
+                                                <?php echo $degree->name;?></option>
                                         <?php }?>
                                     </select>
                                     <div class="text-danger">
@@ -135,7 +141,8 @@
                                     <select name='program[]' id='subject7' class="form-control kt-selectpicker" required>
                                         <option value="Program Choice 7">Select 7th Choice</option>
                                         <?php foreach ($degrees as $degree){?>
-                                            <option value="<?php echo $degree->id;?>"><?php echo $degree->name;?></option>
+                                            <option value="<?php echo $degree->id;?>" <?php if ($values !=null){ if ($degree->id == $values["6"]->degree_id){echo "Selected";}}?>>
+                                                <?php echo $degree->name;?></option>
                                         <?php }?>
                                     </select>
                                     <div class="text-danger">

@@ -40,11 +40,11 @@
                             <div class="col-md-3 col-sm-12 col-xs-12">
                                 <div class="form-group">
                                     <label class="kt-radio kt-radio--success">
-                                        Yes <input type="radio" name="seats">
+                                        Yes <input type="radio" name="seats" value="1">
                                         <span></span>
                                     </label>
                                     <label class="kt-radio kt-radio--danger">
-                                        No <input type="radio" name="seats" checked>
+                                        No <input type="radio" name="seats" value="2" checked>
                                         <span></span>
                                     </label>
                                 </div>
@@ -59,11 +59,11 @@
                             <div class="col-md-3 col-sm-12 col-xs-12">
                                 <div class="form-group">
                                     <label class="kt-radio kt-radio--success">
-                                        Yes <input type="radio" name="transport">
+                                        Yes <input type="radio" name="transport" value="1">
                                         <span></span>
                                     </label>
                                     <label class="kt-radio kt-radio--danger">
-                                        No <input type="radio" name="transport" checked>
+                                        No <input type="radio" name="transport" value="2" checked>
                                         <span></span>
                                     </label>
                                 </div>
@@ -76,7 +76,8 @@
                                     <select name="advertisement_id" class="form-control kt-selectpicker" required>
                                         <option value="">How you come to know about us </option>
                                         <?php foreach ($advertisements as $advertisement) { ?>
-                                            <option value="<?php echo $advertisement->id;?>"><?php echo $advertisement->name;?></option>
+                                            <option value="<?php echo $advertisement->id;?>" <?php if ($values !=null){if($advertisement->id == $values->advertisement_id){echo "Selected";}}?>>
+                                                <?php echo $advertisement->name;?></option>
                                         <?php }?>
                                     </select>
                                 </div>

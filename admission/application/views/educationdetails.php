@@ -38,7 +38,8 @@
                                     <select name="meducation_level_id" class="form-control kt-selectpicker" required>
                                         <option value="">Select Degree</option>
                                         <?php foreach ($education_levels as $education_level){?>
-                                            <option value="<?php echo $education_level->id;?>"><?php echo $education_level->name;?></option>
+                                            <option value="<?php echo $education_level->id;?>" <?php if ($values !=null){ if ($education_level->id == $values["0"]->education_level_id){ echo "Selected";}}?>>
+                                                <?php echo $education_level->name;?></option>
                                         <?php }?>
                                     </select>
                                     <span class="form-text text-muted">Please select your Degree.</span>
@@ -74,7 +75,8 @@
                                     <select name="mboard_id" class="form-control kt-selectpicker" required>
                                         <option value="">Select Board / University</option>
                                         <?php foreach ($boards as $board){?>
-                                            <option value="<?php echo $board->id;?>"><?php echo $board->boardname;?></option>
+                                            <option value="<?php echo $board->id;?>" <?php if ($values != null){ if($board->id == $values["0"]->board_id){ echo "Selected";}}?>>
+                                                <?php echo $board->boardname;?></option>
                                         <?php }?>
                                     </select>
                                     <span class="form-text text-muted">Please select your Board / Univsersity.</span>
@@ -89,7 +91,8 @@
                                     <select name="mdegree_id" class="form-control kt-selectpicker" required>
                                         <option value="">Select Subject</option>
                                         <?php foreach ($degrees as $degree){?>
-                                            <option value="<?php echo $degree->id;?>"><?php echo $degree->name;?></option>
+                                            <option value="<?php echo $degree->id;?>" <?php if ($values !=null){ if($degree->id == $values["0"]->degree_id){echo "Selected";}}?>>
+                                                <?php echo $degree->name;?></option>
                                         <?php }?>
                                     </select>
                                     <span class="form-text text-muted">Please select your Subject.</span>
@@ -103,7 +106,7 @@
                             <div class="col-xl-6">
                                 <div class="form-group">
                                     <label>Total Marks</label>
-                                    <input type="text" class="form-control" name="mtotalmarks" id="Matricminimum_marks" required>
+                                    <input type="text" class="form-control" name="mtotalmarks" id="Matricminimum_marks" value="<?php if ($values != null){echo $values["0"]->totalmarks;}?>" required>
                                     <span class="form-text text-muted">Please enter your Total Marks.</span>
                                     <div class="text-danger">
                                         <?php echo form_error('mtotalmarks')?>
@@ -113,7 +116,7 @@
                             <div class="col-xl-6">
                                 <div class="form-group">
                                     <label>Obtained Marks</label>
-                                    <input type="text" class="form-control" name="mobtainmarks" id="MatricObtainedmarks" required>
+                                    <input type="text" class="form-control" name="mobtainmarks" value="<?php if ($values !=null){echo $values["0"]->obtainmarks;}?>" id="MatricObtainedmarks" required>
                                     <div class="text-danger">
                                         <?php echo form_error('mobtainmarks')?>
                                     </div>
@@ -134,7 +137,8 @@
                                     <select name="ineducation_level_id" class="form-control kt-selectpicker" required>
                                         <option value="">Select Degree</option>
                                         <?php foreach ($education_levels as $education_level){?>
-                                            <option value="<?php echo $education_level->id; ?>"><?php echo $education_level->name; ?></option>
+                                            <option value="<?php echo $education_level->id;?>" <?php if ($values !=null){ if ($education_level->id == $values["1"]->education_level_id){echo "Selected";}}?>>
+                                                <?php echo $education_level->name; ?></option>
                                         <?php }?>
                                     </select>
                                     <span class="form-text text-muted">Please select your Degree.</span>
@@ -170,7 +174,8 @@
                                     <select name="inboard_id" class="form-control kt-selectpicker" required>
                                         <option value="">Select Board / University</option>
                                         <?php foreach ($boards as $board){?>
-                                            <option value="<?php echo $board->id; ?>"><?php echo $board->boardname; ?></option>
+                                            <option value="<?php echo $board->id; ?>" <?php if ($values !=null){if ($board->id == $values["1"]->board_id){echo "Selected";}}?>>
+                                                <?php echo $board->boardname; ?></option>
                                         <?php }?>
                                     </select>
                                     <span class="form-text text-muted">Please select your Board / Univsersity.</span>
@@ -185,7 +190,8 @@
                                     <select name="indegree_id" class="form-control kt-selectpicker" required>
                                         <option value="">Select Subject</option>
                                         <?php foreach ($degrees as $degree){?>
-                                            <option value="<?php echo $degree->id;?>"><?php echo $degree->name;?></option>
+                                            <option value="<?php echo $degree->id;?>" <?php if ($values !=null){if ($degree->id == $values["1"]->degree_id){echo "Selected";}}?>>
+                                                <?php echo $degree->name;?></option>
                                         <?php }?>
                                     </select>
                                     <span class="form-text text-muted">Please select your Subject.</span>
@@ -199,7 +205,7 @@
                             <div class="col-xl-6">
                                 <div class="form-group">
                                     <label>Total Marks</label>
-                                    <input type="text" class="form-control" name="intotalmarks" required>
+                                    <input type="text" class="form-control" name="intotalmarks" value="<?php if ($values !=null){echo $values["1"]->totalmarks;}?>" required>
                                     <span class="form-text text-muted">Please enter your Total Marks.</span>
                                     <div class="text-danger">
                                         <?php echo form_error('intotalmarks')?>
@@ -209,7 +215,7 @@
                             <div class="col-xl-6">
                                 <div class="form-group">
                                     <label>Obtained Marks</label>
-                                    <input type="text" class="form-control" name="inobtainmarks" required>
+                                    <input type="text" class="form-control" name="inobtainmarks" value="<?php if ($values !=null){echo $values["1"]->obtainmarks;}?>" required>
                                     <div class="text-danger">
                                         <?php echo form_error('inobtainmarks')?>
                                     </div>
@@ -230,7 +236,8 @@
                                     <select name="freducation_level_id" class="form-control kt-selectpicker">
                                         <option value="">Select Degree</option>
                                         <?php foreach ($education_levels as $education_level){?>
-                                            <option value="<?php echo $education_level->id; ?>"><?php echo $education_level->name; ?></option>
+                                            <option value="<?php echo $education_level->id; ?>" <?php if ($values !=null){if ($education_level->id == $values["2"]->education_level_id){echo "Selected";}}?>>
+                                                <?php echo $education_level->name; ?></option>
                                         <?php }?>
                                     </select>
                                     <span class="form-text text-muted">Please select your Degree.</span>
@@ -266,7 +273,8 @@
                                     <select name="frboard_id" class="form-control kt-selectpicker">
                                         <option value="">Select Board / University</option>
                                         <?php foreach ($boards as $board){?>
-                                            <option value="<?php echo $board->id; ?>"><?php echo $board->boardname; ?></option>
+                                            <option value="<?php echo $board->id; ?>" <?php if ($values !=null){if ($board->id == $values["2"]->board_id){echo "Selected";}}?>>
+                                                <?php echo $board->boardname; ?></option>
                                         <?php }?>
                                     </select>
                                     <span class="form-text text-muted">Please select your Board / Univsersity.</span>
@@ -281,7 +289,8 @@
                                     <select name="frdegree_id" class="form-control kt-selectpicker">
                                         <option value="">Select Subject</option>
                                         <?php foreach ($degrees as $degree){?>
-                                            <option value="<?php echo $degree->id;?>"><?php echo $degree->name;?></option>
+                                            <option value="<?php echo $degree->id;?>" <?php if ($values !=null){if ($degree->id == $values["1"]->degree_id){echo "Selected";}}?>>
+                                                <?php echo $degree->name;?></option>
                                         <?php }?>
                                     </select>
                                     <span class="form-text text-muted">Please select your Subject.</span>
@@ -295,7 +304,7 @@
                             <div class="col-xl-6">
                                 <div class="form-group">
                                     <label>Total Marks</label>
-                                    <input type="text" class="form-control" name="frtotalmarks">
+                                    <input type="text" class="form-control" name="frtotalmarks" value="<?php if ($values !=null){echo $values["2"]->totalmarks;}?>">
                                     <span class="form-text text-muted">Please enter your Total Marks.</span>
                                     <div class="text-danger">
                                         <?php echo form_error('frtotalmarks')?>
@@ -305,7 +314,7 @@
                             <div class="col-xl-6">
                                 <div class="form-group">
                                     <label>Obtained Marks</label>
-                                    <input type="text" class="form-control" name="frobtainmarks">
+                                    <input type="text" class="form-control" name="frobtainmarks" value="<?php if ($values !=null){echo $values["2"]->obtainmarks;}?>">
                                     <div class="text-danger">
                                         <?php echo form_error('frobtainmarks')?>
                                     </div>

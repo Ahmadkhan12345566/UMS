@@ -27,6 +27,9 @@ class Migration_other_details extends CI_Migration {
             'transport' => array(
                 'type' => 'BOOLEAN',
             ),
+            'advertisement_id' => array(
+                'type' => 'BIGINT',
+            ),
             'created_at' => array(
                 'type' => 'timestamp',
                 'default' => NULL,

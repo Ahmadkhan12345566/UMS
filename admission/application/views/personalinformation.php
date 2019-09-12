@@ -35,7 +35,7 @@
                                             <div class="col-md-6 col-sm-12 col-xs-12">
                                                 <div class="form-group">
                                                     <label>Full Name</label>
-                                                    <input type="text" class="form-control" name="fullname" aria-describedby="fullnameHelp" placeholder="Enter your name" required>
+                                                    <input type="text" class="form-control" name="fullname" aria-describedby="fullnameHelp"  placeholder="Enter your name" value="<?php if ($values != null){echo $values->fullname;}?>" required>
                                                     <div class="text-danger">
                                                         <?php echo form_error('fullname')?>
                                                     </div>
@@ -45,7 +45,7 @@
                                                 <div class="form-group">
                                                     <label>Date of Birth</label>
                                                     <div class="input-group date">
-                                                        <input type="text" class="form-control" name="dob"  placeholder="Select date of birth" id="kt_datepicker_2" required>
+                                                        <input type="text" class="form-control" name="dob"  placeholder="Select date of birth" value="<?php if ($values != null) {echo $values->dob;}?>" id="kt_datepicker_2" required>
                                                         <div class="input-group-append">
                                                     <span class="input-group-text">
                                                         <i class="la la-calendar-check-o"></i>
@@ -62,7 +62,7 @@
                                             <div class="col-md-6 col-sm-12 col-xs-12">
                                                 <div class="form-group">
                                                     <label>CNIC Number</label>
-                                                    <input type="text" class="form-control" name="cnic" aria-describedby="emailHelp" placeholder="Enter your CNIC number" maxlength="15" required>
+                                                    <input type="text" class="form-control" name="cnic" aria-describedby="emailHelp" value="<?php if ($values != null) {echo $values->cnic;}?>" placeholder="Enter your CNIC number" maxlength="15" required>
                                                     <small>Format : xxxxx-xxxxxxx-x</small>
                                                     <div class="text-danger">
                                                         <?php echo form_error('cnic')?>
@@ -73,7 +73,7 @@
                                                 <div class="form-group">
                                                     <label>Mobile Number</label>
                                                     <div class="input-group date">
-                                                        <input type="text" class="form-control" name="mobnumbers" placeholder="Enter your number" maxlength="17" required>
+                                                        <input type="text" class="form-control" name="mobnumbers" value="<?php if ($values != null){echo $values->mobnumbers;}?>" placeholder="Enter your number" maxlength="17" required>
                                                         <div class="input-group-append">
                                                     <span class="input-group-text">
                                                         <i class="la la-mobile-phone"></i>
@@ -93,7 +93,8 @@
                                                 <select name="country_id" class="form-control kt-selectpicker" id="country" required>
                                                     <option value="">Select Country</option>
                                                     <?php  foreach ($countries as $country){ ?>
-                                                        <option value="<?php  echo  $country->id;?>"><?php echo $country->name;?></option>
+                                                        <option value="<?php  echo  $country->id;?>" <?php if($values !=null ){ if ($country->id == $values->country_id){echo "Selected";}}?>>
+                                                            <?php echo $country->name;?></option>
                                                     <?php }?>
                                                 </select>
                                                 <div class="text-danger">
@@ -106,7 +107,8 @@
                                                     <select name='domicile_id' class="form-control kt-selectpicker" required>
                                                         <option value="">Select Domicile</option>
                                                         <?php foreach ($domiciles as $domicile){?>
-                                                            <option value="<?php echo $domicile->id;?>"><?php echo $domicile->name;?></option>
+                                                            <option value="<?php echo $domicile->id;?>" <?php if ($values !=null){if($domicile->id == $values->domicile_id){echo "Selected";}}?>>
+                                                                <?php echo $domicile->name;?></option>
                                                         <?php }?>
                                                     </select>
                                                     <div class="text-danger">
@@ -119,7 +121,7 @@
                                             <div class="col-md-6 col-sm-12 col-xs-12">
                                                 <div class="form-group">
                                                     <label>Gender</label>
-                                                    <select name='gender' class="form-control kt-selectpicker" required>
+                                                    <select name="gender" class="form-control kt-selectpicker" required>
                                                         <option value="">Select Gender</option>
                                                         <option value="Male">Male</option>
                                                         <option value="Female">Female</option>
@@ -135,7 +137,7 @@
                                             <div class="col-md-6 col-sm-12 col-xs-12">
                                                 <div class="form-group">
                                                     <label>Father Name</label>
-                                                    <input type="text" class="form-control" name="fathername" placeholder="Your father full name" required>
+                                                    <input type="text" class="form-control" value="<?php if ($values != null){echo $values->fathername;}?>" name="fathername" placeholder="Your father full name" required>
                                                 </div>
                                                 <div class="text-danger">
                                                     <?php echo form_error('fathername')?>
@@ -144,7 +146,7 @@
                                             <div class="col-md-6 col-sm-12 col-xs-12">
                                                 <div class="form-group">
                                                     <label>Father / Guardian CNIC</label>
-                                                    <input type="text" class="form-control" name="fcnic" id="cnic" placeholder="Enter your father CNIC" maxlength="15" required>
+                                                    <input type="text" class="form-control" value="<?php if ($values != null){echo $values->fcnic;}?>" name="fcnic" id="cnic" placeholder="Enter your father CNIC" maxlength="15" required>
                                                     <small>Format : xxxxx-xxxxxxx-x</small>
                                                     <div class="text-danger">
                                                         <?php echo form_error('fcnic')?>

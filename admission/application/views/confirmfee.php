@@ -79,7 +79,7 @@
                                 <div class="col-md-4 offset-1 col-sm-10 col-sx-10">
                                     <div class="form-group">
                                         <label for="form-control-label">Bank Name</label>
-                                        <input type="text" name="bankname" class="form-control" required>
+                                        <input type="text" name="bankname" value="<?php if ($values != null){echo $values->bankname;}?>" class="form-control" required>
                                         <div class="text-danger">
                                             <?php echo form_error('bankname')?>
                                         </div>
@@ -88,7 +88,7 @@
                                 <div class="col-md-4 offset-1 col-sm-10 col-sx-10">
                                     <div class="form-group">
                                         <label for="form-control-label">Branch Code</label>
-                                        <input type="text" name="branchcode" class="form-control" required>
+                                        <input type="text" name="branchcode" value="<?php if ($values != null){echo $values->branchcode;}?>" class="form-control" required>
                                         <div class="text-danger">
                                             <?php echo form_error('branchcode')?>
                                         </div>
@@ -99,7 +99,7 @@
                                 <div class="col-md-4 offset-1 col-sm-10 col-sx-10">
                                     <div class="form-group">
                                         <label for="form-control-label">Bank Address</label>
-                                        <input type="text" name="bankaddress" class="form-control" required>
+                                        <input type="text" name="bankaddress" value="<?php if ($values != null){echo $values->bankaddress;}?>" class="form-control" required>
                                         <div class="text-danger">
                                             <?php echo form_error('bankaddress')?>
                                         </div>
@@ -108,7 +108,7 @@
                                 <div class="col-md-4 offset-1 col-sm-10 col-sx-10">
                                     <div class="form-group">
                                         <label for="form-control-label">Deposit Date</label>
-                                        <input type="text" name="depositdate" class="form-control" placeholder="Select Date" id="kt_datepicker_2" required>
+                                        <input type="text" name="depositdate" value="<?php if ($values != null){echo $values->depositdate;}?>" class="form-control" placeholder="Select Date" id="kt_datepicker_2" required>
                                         <div class="text-danger">
                                             <?php echo form_error('depositdate')?>
                                         </div>
@@ -138,7 +138,7 @@
                                                 <label>File Browser</label>
                                                 <div></div>
                                                 <div class="custom-file">
-                                                    <input type="file" name="bankchallan" class="custom-file-input" id="customFile" required>
+                                                    <input type="file" name="bankchallan" value="<?php if ($values != null){echo $values->bankchallan;}?>" class="custom-file-input" id="customFile" required>
                                                     <label class="custom-file-label" for="customFile">Choose file</label>
                                                 </div>
                                             </div>

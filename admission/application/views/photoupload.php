@@ -40,7 +40,7 @@
                                         <label>File Browser</label>
                                         <div></div>
                                         <div class="custom-file">
-                                            <input type="file" name="studentphoto" class="custom-file-input" id="customFile" required>
+                                            <input type="file" name="studentphoto" class="custom-file-input" value="<?php echo $values->studentphoto;?>" id="customFile" required>
                                             <label class="custom-file-label" for="customFile">Choose file</label>
                                         </div>
                                     </div>
